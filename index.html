@@ -45,10 +45,10 @@
     <p class="step" id="step"></p>
     <h1 id="q"></h1>
     <p class="hint" id="how"></p>
-    <textarea id="t" rows="4" maxlength="400" autocomplete="off" aria-labelledby="q"></textarea>
+    <textarea id="t" rows="4" maxlength="200" autocomplete="off" aria-labelledby="q"></textarea>
     <div class="row">
       <button id="send">Send</button>
-      <span id="count">0 / 400</span>
+      <span id="count">0 / 200</span>
     </div>
     <p id="msg" role="status"></p>
     <button class="plain" id="jump" hidden>The next question is open. Go there</button>
@@ -76,7 +76,7 @@ const ROUNDS = {
   3: { step: 'Experiment · your shared answer', q: Q2, how: 'One phone per pair. Type the answer you found together, as bullet points.' },
 };
 const ERR = { round_closed: 'This question is not open yet.', full: 'Thank you. We already have enough answers for this question.',
-              bad_length: 'Please write between 3 and 400 characters.',
+              bad_length: 'Please write between 3 and 200 characters.',
               too_many_edits: 'This answer can no longer be changed. Your earlier version is saved.' };
 
 // Zufalls-ID nur im Arbeitsspeicher (nichts wird auf dem Geraet gespeichert): macht Doppeltipp und Retry idempotent.
@@ -108,7 +108,7 @@ function show(round, editing) {
   $('msg').textContent = '';
   count();
 }
-function count() { $('count').textContent = $('t').value.length + ' / 400'; }
+function count() { $('count').textContent = $('t').value.length + ' / 200'; }
 const unsent = () => !$('ask').hidden && $('t').value.trim() !== '' && $('t').value.trim() !== (sent[shown] || '');
 
 function onRound(r) {
