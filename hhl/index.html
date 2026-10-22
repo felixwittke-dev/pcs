@@ -6,35 +6,56 @@
 <meta name="robots" content="noindex, nofollow">
 <title>HHL · Tag 1</title>
 <style>
-  :root { --bg: #F7F3EB; --ink: #17222A; --teal: #0B7A7D; --orange: #E9742E; --gold: #C4943E; --mid: #6E6A62; --line: #DDD5C6; }
+  /* ---- Theme (Kunden-CI): nur diesen Block anpassen. Vertrag: Farben, Schrift, Logo, Kopfzeile. ---- */
+  :root {
+    --brand: #FAAA00;        /* HHL Gelb: Balken, Fokus, Zähler */
+    --brand-ink: #111111;    /* Text auf Gelb */
+    --accent: #E60073;       /* HHL Pink: Schritt-Label, Fehler */
+    --ok: #20918C;           /* HHL Teal: Bestätigung */
+    --bg: #FFFFFF;
+    --ink: #111111;
+    --muted: #5F5F5F;
+    --line: #E2E2E2;
+    --field: #FFFFFF;
+    --button: #111111;       /* HHL: Schwarz auf Weiß */
+    --button-ink: #FFFFFF;
+    --font: Verdana, Geneva, "DejaVu Sans", sans-serif;
+  }
+  /* ---------------------------------------------------------------------------------------------------- */
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.45 -apple-system, "Segoe UI", Roboto, system-ui, sans-serif;
-         border-top: 10px solid var(--teal); min-height: 100vh; }
-  main { max-width: 560px; margin: 0 auto; padding: 18px 20px 60vh; }   /* Platz zum Hochscrollen bei offener Tastatur */
-  .kicker { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); font-weight: 700; margin: 0 0 14px; }
-  .step { font-size: 14px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--font); border-top: 10px solid var(--brand); min-height: 100vh; }
+  main { max-width: 560px; margin: 0 auto; padding: 16px 20px 60vh; }   /* Platz zum Hochscrollen bei offener Tastatur */
+  header { margin: 0 0 24px; }
+  header img { display: block; height: 36px; width: auto; margin: 4px 0 10px; }
+  .kicker { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0; }
+  .step { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em;
+          border-left: 4px solid var(--accent); padding-left: 8px; margin: 0 0 10px; }
   h1 { font-size: 21px; line-height: 1.3; margin: 0 0 10px; }
   p { margin: 0 0 12px; }
-  .hint { color: var(--mid); font-size: 15px; }
-  textarea { display: block; width: 100%; font: inherit; font-size: 17px; color: var(--ink); background: #fff; border: 2px solid var(--line);
-             border-radius: 10px; padding: 12px; resize: vertical; }
-  textarea:focus { outline: none; border-color: var(--teal); }
+  .hint { color: var(--muted); font-size: 15px; }
+  textarea { display: block; width: 100%; font: inherit; font-size: 17px; color: var(--ink); background: var(--field); border: 2px solid var(--line);
+             border-radius: 8px; padding: 12px; resize: vertical; }
+  textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 30%, transparent); }
   .row { display: flex; align-items: center; gap: 14px; margin: 10px 0 14px; }
-  button { font: inherit; font-weight: 700; font-size: 18px; border: 0; border-radius: 10px; padding: 13px 26px; background: var(--teal); color: #fff; }
+  button { font: inherit; font-weight: 700; font-size: 17px; border: 0; border-radius: 8px; padding: 13px 26px; background: var(--button); color: var(--button-ink); }
   button:disabled { opacity: .55; }
-  button.plain { background: none; color: var(--teal); padding: 8px 0; font-size: 16px; text-decoration: underline; }
-  #count { color: var(--mid); font-size: 14px; margin-left: auto; }
-  #msg { font-weight: 700; color: var(--orange); min-height: 1.45em; }
-  .box { background: #fff; border-left: 6px solid var(--teal); border-radius: 6px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 14px; }
-  .ok { font-size: 22px; font-weight: 700; color: var(--teal); margin: 0 0 10px; }
-  .privacy { color: var(--mid); font-size: 13px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 22px; }
+  button.plain { background: none; color: var(--ink); padding: 8px 0; font-size: 15px; text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; }
+  #count { color: var(--muted); font-size: 14px; margin-left: auto; }
+  #msg { font-weight: 700; color: var(--accent); min-height: 1.5em; }
+  .box { background: var(--field); border: 1px solid var(--line); border-left: 6px solid var(--brand); border-radius: 6px; padding: 12px 14px;
+         white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 14px; }
+  .ok { font-size: 21px; font-weight: 700; color: var(--ok); margin: 0 0 10px; }
+  .privacy { color: var(--muted); font-size: 12.5px; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 22px; }
   [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 <main>
-  <p class="kicker">HHL · KI in Management und Führung · Tag 1</p>
+  <header>
+    <img src="logo.svg" alt="HHL Leipzig Graduate School of Management">
+    <p class="kicker">KI in Management und Führung · Tag 1</p>
+  </header>
 
   <section id="wait">
     <h1>Du bist drin.</h1>
