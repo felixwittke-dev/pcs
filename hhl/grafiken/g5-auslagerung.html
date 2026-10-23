@@ -94,13 +94,20 @@ svg text{font-family:Verdana,Geneva,sans-serif}
 #g5 .zitat .pills span{background:#fff;border:1.5px solid #9a9a9a;border-radius:10px;padding:1px 9px;font-size:13px;font-weight:bold;color:#333}
 #g5 .zitat.material{border-left-color:#9a9a9a;background:#f4f4f4}
 #g5 .zitat.material i{font-style:normal;font-weight:bold;font-size:15px}
+#g5 .zitat.hy{height:auto;min-height:106px;padding-top:7px;padding-bottom:7px;border-left-color:var(--magenta);background:#fdeef5}
+#g5 .zitat.hy .q svg{stroke:var(--magenta)}
+#g5 .zitat.hy i{font-style:normal;font-weight:bold;font-size:16px;line-height:1.2;color:var(--magenta)}
+#g5 .zitat.hy .pills{margin:5px 0 3px}
+#g5 .zitat.hy .pills span{border-color:var(--gelb);background:#fff8e6;color:#1a1a1a}
+#g5 .zitat.hy .pills span b{color:#9a6a00;margin-right:4px}
+#g5 .zitat.hy small.note{color:#1a1a1a}
 /* Stationen */
 #g5 .kreis{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;pointer-events:auto;
   transform:scale(.5);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.9,.3,1.2);background:#fff}
 #g5 .kreis.m{background:var(--gelb)}
 #g5 .kreis.h{border:3px solid var(--gelb)}
 #g5 .kreis.k{border:2.5px solid #9a9a9a}
-#g5 .kreis svg{width:30px;height:30px;fill:none;stroke:var(--schwarz);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+#g5 .kreis svg{position:static;width:30px;height:30px;fill:none;stroke:var(--schwarz);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 #g5 .sname{font-size:14.5px;font-weight:bold;text-align:center;line-height:1.2;white-space:nowrap}
 #g5 .sjahr{font-size:12px;color:#666;text-align:center;line-height:1.2}
 #g5 .blk{font-size:14px;line-height:1.3;text-align:center;color:#222;transform:translateY(6px)}
@@ -296,6 +303,7 @@ const NOTIZ = {
   4: `<i>„Effizienz heißt, die Dinge richtig zu tun. Effektivität heißt, die richtigen Dinge zu tun.“</i><small>Peter Drucker (1967), The Effective Executive</small>`,
   6: `<i>Das Material, aus dem ein Sprachmodell gemacht ist</i><div class="pills"><span>Wikipedia</span><span>Foren</span><span>Code</span><span>Bücher</span><span>wissenschaftliche Aufsätze</span></div><small>Millionen Fremde, die ohne Chef und ohne Vertrag zusammengearbeitet haben.</small>`,
   7: `<i>„KI hat das Betriebssystem der menschlichen Zivilisation gehackt: die Sprache.“</i><small>Yuval Noah Harari (2023), The Economist, 28.04.</small><small class="note">Sprache ist das Betriebssystem der Kultur. Wer die Sprache beherrscht, greift nach dem Generalschlüssel der Zivilisation.</small>`,
+  8: `<i>Hybride Intelligenz = kollektives Denken, erweitert um KI</i><div class="pills"><span><b>Mensch</b>Sinn, Erfahrung, Urteil</span><span><b>Gruppe</b>denkt gemeinsam</span><span><b>KI</b>fragt vorher tiefer, verdichtet nachher schneller</span></div><small class="note">Mehr als die Summe. Wer wann denkt, ist eine Führungsentscheidung.</small>`,
   9: "",
 };
 
@@ -560,7 +568,7 @@ function kopf(k) {   // Kopfzeile + Randnotiz für Schritt k (0-basiert)
   if (n !== notizStand) {
     notizStand = n;
     zitat.classList.remove("an");
-    if (n) setTimeout(() => { zitat.querySelector(".inhalt").innerHTML = n; zitat.classList.toggle("material", k === 6 && n === NOTIZ[6]); zitat.classList.add("an"); }, STILL ? 0 : 250);
+    if (n) setTimeout(() => { zitat.querySelector(".inhalt").innerHTML = n; zitat.classList.toggle("material", k === 6 && n === NOTIZ[6]); zitat.classList.toggle("hy", n === NOTIZ[8]); zitat.classList.add("an"); }, STILL ? 0 : 250);
   }
 }
 function spurBis(k) {   // Spur reicht bis zum Ende der Station (k-1), ab Schritt 7 bis zur Station 2012
