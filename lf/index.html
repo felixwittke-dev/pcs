@@ -32,8 +32,9 @@
   h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 22px 0 8px; }
   .note { background: var(--note); border-radius: 4px; padding: 12px 14px 6px; margin: 0 0 10px; box-shadow: 0 1px 2px rgba(0,0,0,.12);
           white-space: pre-wrap; overflow-wrap: anywhere; }
-  .note .acts { display: flex; gap: 18px; align-items: center; }
-  .note .state { font-size: 13px; color: var(--muted); margin-left: auto; }
+  .note .acts { display: flex; gap: 4px 18px; align-items: center; flex-wrap: wrap; }
+  .note .acts button { white-space: nowrap; }
+  .note .state { font-size: 13px; color: var(--muted); margin-left: auto; white-space: nowrap; }
   .note.pending { outline: 2px dashed var(--accent); }
   .away { text-align: center; padding: 8vh 0 0; }
   .away .icon { font-size: 64px; line-height: 1; margin: 0 0 12px; }
