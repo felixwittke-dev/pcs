@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Workshop · Wand</title>
+<style>
+  :root { --brand: #FFC83B; --accent: #B4530A; --ink: #1B1B1B; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #E7EEF9;
+          --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand); min-height: 100vh; }
+  header { display: flex; gap: 28px; align-items: flex-start; padding: 22px 36px 10px; }
+  .head { flex: 1; }
+  .step { font-size: 15px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+  h1 { font-size: clamp(26px, 3vw, 44px); line-height: 1.2; margin: 0 0 6px; }
+  .how { color: var(--muted); margin: 0; }
+  .join { text-align: center; font-size: 14px; color: var(--muted); }
+  .join img { display: block; width: 150px; height: 150px; margin: 0 auto 4px; background: #fff; padding: 6px; border-radius: 8px; }
+  .join.big img { width: min(46vh, 420px); height: min(46vh, 420px); }
+  .join.big { font-size: 22px; color: var(--ink); }
+  main { padding: 10px 36px 40px; }
+  #counter { text-align: center; padding: 8vh 0; }
+  #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
+  #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
+  #away { text-align: center; padding: 3vh 0 2vh; font-size: 24px; color: var(--muted); }
+  #notes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .note { background: var(--note); border-radius: 4px; padding: 14px 16px; box-shadow: 0 2px 4px rgba(0,0,0,.14); white-space: pre-wrap;
+          overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px; }
+  .note.alt { background: var(--note2); }
+  .note:nth-child(3n) { transform: rotate(.6deg); } .note:nth-child(3n+1) { transform: rotate(-.5deg); }
+  #result { background: var(--ai); border-left: 8px solid #3B5B92; border-radius: 6px; padding: 18px 22px; margin: 26px 0 0; }
+  #result h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: #3B5B92; margin: 0 0 8px; }
+  #result .headline { font-size: 26px; font-weight: 700; margin: 0 0 12px; }
+  #result h3 { font-size: 16px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
+  #result ul { margin: 0; padding-left: 22px; } #result li { margin: 0 0 6px; }
+  #result q { color: var(--muted); }
+  footer { position: fixed; right: 16px; bottom: 10px; font-size: 13px; color: var(--muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="head">
+    <p class="step" id="step"></p>
+    <h1 id="q"></h1>
+    <p class="how" id="how"></p>
+  </div>
+  <div class="join" id="join"><img src="qr.png" alt="QR-Code zum Mitschreiben"><span id="url"></span></div>
+</header>
+<main>
+  <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
+  <p id="away" hidden>💬 Gesprächszeit. Die Handys liegen weg.</p>
+  <div id="notes"></div>
+  <section id="result" hidden></section>
+</main>
+<footer id="foot"></footer>
+
+<script src="steps.js"></script>
+<script>
+$('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.html.*$/, '');
+let lastRev = null, lastStep = null;
+function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+
+function renderResult(r) {
+  const box = $('result'); box.textContent = ''; box.hidden = !r; if (!r) return;
+  box.append(el('h2', 'KI-Auswertung'));
+  if (r.headline) box.append(el('p', r.headline, 'headline'));
+  const sec = (title, arr, fn) => { if (!arr || !arr.length) return; box.append(el('h3', title)); const ul = el('ul'); arr.forEach(x => ul.append(fn(x))); box.append(ul); };
+  sec('Was viele ähnlich sehen', r.convergence, c => { const li = el('li'); li.append(el('strong', c.label + (c.ids ? ' (' + c.ids.length + ')' : '')));
+        if (c.quote) { li.append(document.createTextNode(' ')); li.append(el('q', c.quote)); } return li; });
+  sec('Wo es auseinandergeht', r.tension, t => { const li = el('li'); li.append(el('strong', t.label)); li.append(document.createTextNode(': ' + t.a + ' ↔ ' + t.b)); return li; });
+  sec('Was noch fehlt', r.blind_spots, b => { const li = el('li'); li.append(el('strong', b.label)); if (b.why) li.append(document.createTextNode(': ' + b.why)); return li; });
+}
+
+async function refresh(st) {
+  const s = stepById(st.step);
+  $('step').textContent = s.label; $('q').textContent = s.q; $('how').textContent = s.how || '';
+  $('join').className = 'join' + (st.step === 0 ? ' big' : '');
+  $('foot').textContent = st.people + (st.people === 1 ? ' Handy hat' : ' Handys haben') + ' schon beigetragen';
+  const counter = s.solo && st.wall === 'counter';
+  $('counter').hidden = !counter; $('n').textContent = st.count;
+  $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
+  $('away').hidden = s.mode !== 'away';
+  const notes = $('notes'); notes.hidden = counter;
+  if (!counter && s.show.length) {
+    const rows = await rpc('lf_wall', { p_steps: s.show });
+    notes.textContent = '';
+    rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
+  } else notes.textContent = '';
+  // KI-Auswertung: nur freigegebene, und nur fuer Schritte, die dieser Schritt zeigt.
+  const rel = s.show.filter(x => st.released.includes(String(x)));
+  renderResult(rel.length && !counter ? await rpc('lf_result', { p_step: rel[rel.length - 1] }) : null);
+}
+
+let polling = false;
+async function poll() {
+  if (polling) return; polling = true;
+  try { const st = await rpc('lf_get_state', null, 5000);
+        const sig = st.rev + '|' + st.step + '|' + st.wall + '|' + st.released.join(',');
+        if (sig !== lastRev) { lastRev = sig; await refresh(st); } }
+  catch (e) { lastRev = null; }
+  polling = false;
+}
+setInterval(poll, 2500); poll();
+</script>
+</body>
+</html>

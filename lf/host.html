@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Workshop · Steuerung</title>
+<style>
+  :root { --brand: #FFC83B; --accent: #B4530A; --ink: #1B1B1B; --muted: #5F5F5F; --line: #E2E2E2; --ai: #E7EEF9;
+          --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); font: 16px/1.45 var(--font); border-top: 10px solid var(--brand); }
+  main { max-width: 860px; margin: 0 auto; padding: 16px 20px 80px; }
+  h1 { font-size: 20px; margin: 0 0 4px; } h2 { font-size: 14px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 26px 0 8px; }
+  .now { background: #FFF8E0; border-left: 6px solid var(--brand); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+  .now .label { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+  .now .q { font-size: 19px; font-weight: 700; margin: 2px 0; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 10px 0; }
+  button { font: inherit; font-weight: 700; border: 0; border-radius: 8px; padding: 12px 18px; min-height: 46px; background: var(--ink); color: #fff; cursor: pointer; }
+  button.sec { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+  button.small { padding: 4px 10px; min-height: 32px; font-size: 13px; font-weight: 600; background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  button:disabled { opacity: .4; cursor: default; }
+  ol { margin: 0; padding: 0; list-style: none; }
+  ol li { padding: 8px 10px; border-radius: 6px; display: flex; gap: 10px; align-items: baseline; cursor: pointer; }
+  ol li:hover { background: #F4F4F1; } ol li.cur { background: #FFF1BF; font-weight: 700; }
+  ol li .m { font-size: 12px; color: var(--muted); min-width: 92px; }
+  .item { display: flex; gap: 10px; align-items: flex-start; border-bottom: 1px solid var(--line); padding: 8px 0; }
+  .item .b { flex: 1; white-space: pre-wrap; overflow-wrap: anywhere; } .item.hid .b { color: var(--muted); text-decoration: line-through; }
+  .draft { background: var(--ai); border-left: 6px solid #3B5B92; border-radius: 6px; padding: 12px 14px; margin: 8px 0; }
+  .draft pre { white-space: pre-wrap; font: inherit; margin: 6px 0; }
+  .muted { color: var(--muted); font-size: 14px; } #err { color: #B00020; font-weight: 700; }
+  code { background: #F1F1EE; padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Steuerung · Testlauf</h1>
+  <p class="muted" id="stat"></p><p id="err"></p>
+
+  <div class="now"><div class="label" id="label"></div><div class="q" id="q"></div><div class="muted" id="how"></div></div>
+  <div class="row">
+    <button class="sec" id="prev">← Zurück</button>
+    <button id="next">Weiter →</button>
+    <button class="sec" id="wall"></button>
+  </div>
+  <p class="muted" id="wallinfo"></p>
+
+  <h2>Ablauf</h2>
+  <ol id="steps"></ol>
+
+  <h2>Beiträge im aktuellen Schritt</h2>
+  <div id="items"></div>
+
+  <h2>KI-Auswertung</h2>
+  <p class="muted">Sag in Claude Code: <code>Schritt N auswerten</code>. Der Entwurf erscheint dann hier. Die Gruppe sieht ihn erst nach „Freigeben“.</p>
+  <div id="drafts"></div>
+</main>
+
+<script src="steps.js"></script>
+<script>
+const K = decodeURIComponent((location.hash.match(/k=([^&]+)/) || [])[1] || '');
+if (!K) $('err').textContent = 'Kein Schlüssel in der Adresse (…/host.html#k=…).';
+let st = null;
+const fail = e => { $('err').textContent = e === 'forbidden' ? 'Schlüssel falsch.' : 'Keine Verbindung, versuche es weiter …'; };
+const call = (fn, args) => rpc(fn, Object.assign({ p_key: K }, args)).then(r => { $('err').textContent = ''; return r; });
+function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+const MODE = { wait: 'warten', one: 'eine Antwort', many: 'Post-its', scribe: 'Schreibperson', away: 'Handy weg' };
+
+function go(step) { call('lf_set', { p_step: step, p_wall: null }).then(apply, fail); }
+$('prev').onclick = () => st && st.step > 0 && go(st.step - 1);
+$('next').onclick = () => st && st.step < STEPS.length - 1 && go(st.step + 1);
+$('wall').onclick = () => st && call('lf_set', { p_step: null, p_wall: st.wall === 'counter' ? 'wall' : 'counter' }).then(apply, fail);
+
+function apply(s) {
+  st = s; const cur = stepById(s.step);
+  $('label').textContent = 'Schritt ' + cur.id + ' · ' + cur.label + ' · ' + MODE[cur.mode];
+  $('q').textContent = cur.q; $('how').textContent = cur.how || '';
+  $('stat').textContent = s.people + ' Handys haben beigetragen · ' + s.count + ' Beiträge in diesem Schritt';
+  $('prev').disabled = s.step === 0; $('next').disabled = s.step === STEPS.length - 1;
+  $('wall').textContent = s.wall === 'counter' ? 'Beamer: Wand live zeigen' : 'Beamer: nur Zähler zeigen';
+  $('wallinfo').textContent = cur.solo ? (s.wall === 'counter' ? 'Der Beamer zeigt gerade nur den Zähler (stille Phase).' : 'Der Beamer zeigt die Wand live.')
+                                       : 'In diesem Schritt zeigt der Beamer immer die Wand.';
+  const ol = $('steps'); ol.textContent = '';
+  STEPS.forEach(x => { const li = el('li', null, x.id === s.step ? 'cur' : ''); li.append(el('span', x.id + ' · ' + MODE[x.mode], 'm'), el('span', x.label + ': ' + x.q));
+                       li.onclick = () => go(x.id); ol.append(li); });
+}
+
+async function refresh() {
+  if (!K) return;
+  try {
+    apply(await rpc('lf_get_state'));
+    const [rows, drafts] = await Promise.all([call('lf_read'), call('lf_drafts')]);
+    const box = $('items'); box.textContent = '';
+    const mine = rows.filter(r => r.step === st.step);
+    if (!mine.length) box.append(el('p', 'Noch keine Beiträge.', 'muted'));
+    mine.forEach(r => { const d = el('div', null, 'item' + (r.hidden ? ' hid' : '')); d.append(el('span', '#' + r.id, 'muted'), el('div', r.body, 'b'));
+      const b = el('button', r.hidden ? 'Wieder zeigen' : 'Ausblenden', 'small'); b.onclick = () => call('lf_hide', { p_id: r.id, p_hidden: !r.hidden }).then(refresh, fail);
+      d.append(b); box.append(d); });
+    const dz = $('drafts'); dz.textContent = '';
+    Object.keys(drafts || {}).sort((a, b) => a - b).forEach(k => {
+      const r = drafts[k], d = el('div', null, 'draft');
+      d.append(el('strong', 'Schritt ' + k + ' · ' + stepById(+k).label + (r.released ? ' · freigegeben' : ' · Entwurf, nur du siehst ihn')));
+      const x = r.data || {}; let t = (x.headline || '') + '\n';
+      (x.convergence || []).forEach(c => t += '\n• ' + c.label + (c.ids ? ' (' + c.ids.map(i => '#' + i).join(', ') + ')' : '') + (c.quote ? ' „' + c.quote + '“' : ''));
+      (x.tension || []).forEach(c => t += '\n↔ ' + c.label + ': ' + c.a + ' / ' + c.b);
+      (x.blind_spots || []).forEach(c => t += '\n? ' + c.label + (c.why ? ': ' + c.why : ''));
+      d.append(el('pre', t));
+      const b = el('button', r.released ? 'Zurückziehen' : 'Freigeben', r.released ? 'small' : '');
+      b.onclick = () => call('lf_release', { p_step: +k, p_released: !r.released }).then(refresh, fail);
+      d.append(b); dz.append(d);
+    });
+  } catch (e) { fail(e); }
+}
+setInterval(refresh, 3000); refresh();
+</script>
+</body>
+</html>
