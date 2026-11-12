@@ -29,6 +29,9 @@
           overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px; }
   .note.alt { background: var(--note2); }
   #notes.grouped { display: block; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0 0 22px; }
+  .legend span { padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: clamp(17px, 1.6vw, 26px); }
+  .legend small { font-weight: 400; color: var(--muted); font-size: inherit; }
   .theme { margin: 0 0 22px; }
   .theme h3 { display: inline-block; font-size: clamp(17px, 1.5vw, 24px); margin: 0 0 10px; padding: 4px 14px; border-radius: 999px; }
   .theme h3 span { font-weight: 400; color: var(--muted); }
@@ -104,6 +107,9 @@ async function refresh(st) {
       const byId = new Map(rows.map(r => [r.id, r])), used = new Set();
       const group = (label, cls, list) => { if (!list.length) return; const g = el('div', null, 'theme'), h = el('h3', label + ' ', cls), grid = el('div', null, 'grid');
         h.append(el('span', '· ' + list.length)); list.forEach(r => grid.append(el('div', r.body, 'note ' + cls))); g.append(h, grid); notes.append(g); };
+      // Uebersicht oben: alle Themen mit Anzahl auf einen Blick, auch wenn die Wand laenger ist als der Beamer.
+      const legend = el('div', null, 'legend'); notes.append(legend);
+      themes.forEach(t => { const c = el('span', t.label + ' ', 'c-' + t.color); c.append(el('small', '· ' + t.ids.filter(i => byId.has(i)).length)); legend.append(c); });
       themes.forEach(t => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id)); group(t.label, 'c-' + t.color, list); });
       group('Einzelstimmen', 'c-none', rows.filter(r => themed.includes(r.step) && !used.has(r.id)));
       s.show.filter(x => !themed.includes(x)).forEach(x => group(stepById(x).label, 'alt', rows.filter(r => r.step === x)));
