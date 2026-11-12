@@ -1,0 +1,604 @@
+{
+ "step": {
+  "label": "Wicked Questions · alle",
+  "lsDef": {
+   "name": "Wicked Questions",
+   "icon": "wicked-questions",
+   "panel": [
+    "Spannungen, die viele spüren",
+    "Die Pole Seite an Seite",
+    "Was noch keiner fragt"
+   ]
+  },
+  "phase": "alle",
+  "q": "Zusammenarbeit in unserer Organisation: Was ist beides wahr und beißt sich?",
+  "how": "Schreib auf, was du erlebst. Gerade das, was sich scheinbar widerspricht.",
+  "show": [
+   2
+  ]
+ },
+ "people": 38,
+ "rows": [
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Nicht jedes Jahr ein neues Tool, bitte!"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "nicht jeder Fehler muss in großer Runde auseinandergenommen werden"
+  },
+  {
+   "id": 1,
+   "step": 2,
+   "body": "ich will nicht für jede kleinigkeit 3 freigaben einholen"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Vertrauensarbeitszeit ernst nehmen"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Schnell was rausbringen und dann nachbessern, so lernt man am meisten"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "\"das haben wir immer so gemacht\" ist der teuerste satz hier"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Stabile Prozesse geben Sicherheit, gerade in der Produktion"
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "mehr kaffee 😅"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Gründlichkeit ist bei uns eigentlich ein Markenversprechen"
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Weniger Meetings, mehr reden."
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Wertschätzung kommt zu kurz"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Entscheidungen müssen für alle nachvollziehbar sein"
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Wenn wir uns nicht verändern, verändert uns der Markt"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "KI ausprobieren statt erstmal ein jahr arbeitskreis"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "einarbeitung remote ist echt hart, man traut sich nicht so schnell zu fragen"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Teams sollen selbst entscheiden dürfen wie sie arbeiten"
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Budget!!"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "zeit zum nachdenken ist keine verschwendung"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "ohne abstimmung baut team A was, das team B gerade abreißt"
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "ich weiß ehrlich gesagt nicht wer bei uns für was zuständig ist"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Qualität leidet wenn immer alles gestern fertig sein muss"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Fehler beim Kunden kosten mehr als eine Woche länger testen"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "ehrliches feedback, auch nach oben"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Konflikte gehören dazu, wir kehren sie unter den Teppich"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "beim mittagessen klärt sich mehr als in 5 mails"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "wir räumen monatelang auf was in 2 wochen schnell gebaut wurde"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "In Meetings nicken alle und auf dem Flur wird gelästert"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Mut zum Widerspruch!"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Viele sind gerade am limit, da braucht es auch mal Schonung"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Homeoffice hat mir mein Leben zurückgegeben, ehrlich"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Projekte dauern bei uns ewig, bis sie fertig sind ist der Bedarf weg"
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Warum sind Entscheidungen von oben so selten erklärt?"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "wir haben gute sachen die wir gerade kaputtmodernisieren"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "kurze zyklen, schnelles feedback"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Abstimmung zwischen den Teams fehlt total, doppelte Arbeit"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "verlässlichkeit ist auch ein wert"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "neue kollegen kenn ich nur als kachel"
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "die Kantine ist echt ein Grund ins Büro zu kommen lol"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Dokumentation macht keiner wenns schnell gehen muss… und dann sucht man ewig"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "flexible zeiten wegen kita, sonst geht das nicht"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Ich vermisse das Team. Wirklich."
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Wir sind ein Team auf dem Papier aber jeder sitzt allein vor seinem Bildschirm"
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "junge kollegen bringen ideen mit und laufen gegen wände"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "wo ich arbeite sollte egal sein solange das ergebnis stimmt"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "2 std pendeln für teams calls im büro? nein danke"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "lieber 80% heute als 100% in 3 monaten"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "wenn jeder sein ding macht wissen wir nicht mehr was der andere tut"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Freundlichkeit ist kein Zeichen von Schwäche"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Pilotprojekte ohne gleich alles umzustellen"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Erfahrung der Älteren wird zu wenig geschätzt"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "ich trau mich nur was zu sagen wenn ich weiß dass mir keiner nen strick draus dreht"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Change-Müdigkeit ist real. Die dritte Umorga in 4 Jahren"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Tempo! wir zerreden alles"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Mehr Eigenverantwortung, weniger Abnicken in Jour fixes"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Probleme werden bei uns totgeschwiegen"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "ich wünsch mir dass man auch mal sagt: das war nix"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "einfach mal machen dürfen ohne dass gleich alle mitreden 🙃"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Vertrauen statt Kontrolle!!"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Kunden warten nicht, die gehen halt zur Konkurrenz"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Kritik an der Sache darf nicht gleich als Angriff gelten"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Wir müssen experimentieren dürfen, auch mit dem Risiko dass es schiefgeht"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "wer nah dran ist weiß es meistens besser als die runde oben"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "gutes Miteinander ist für mich der Hauptgrund warum ich noch hier bin"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Die besten Ideen entstehen in der Kaffeeküche, nicht im Call"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Wir brauchen gemeinsame Regeln, sonst gibt es 12 Prozesse für dasselbe"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Schnittstellen klären bevor losgelegt wird"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Autonomie motiviert mich. Wenn alles abgestimmt werden muss, verliere ich die Lust."
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Zusammenhalt entsteht wenn man sich auch mal sieht"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Ich will Ergebnisse sehen, nicht nur Konzepte"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Ich arbeite zu Hause konzentrierter"
+  }
+ ],
+ "data": {
+  "viz": "pairs",
+  "pairs": [
+   {
+    "question": "Wie können wir zugleich selbst entscheiden und uns eng miteinander abstimmen?",
+    "color": "grün",
+    "a": {
+     "label": "Selbst entscheiden",
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    "b": {
+     "label": "Eng abstimmen",
+     "ids": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich schnell liefern und gründlich arbeiten?",
+    "color": "blau",
+    "a": {
+     "label": "Schnell liefern",
+     "ids": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    "b": {
+     "label": "Gründlich arbeiten",
+     "ids": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich offen Kritik äußern und einander Halt geben?",
+    "color": "rosa",
+    "a": {
+     "label": "Offen kritisieren",
+     "ids": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+     ]
+    },
+    "b": {
+     "label": "Einander Halt geben",
+     "ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich flexibel arbeiten, wo wir wollen, und echte Nähe im Team spüren?",
+    "color": "orange",
+    "a": {
+     "label": "Flexibel arbeiten",
+     "ids": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+     ]
+    },
+    "b": {
+     "label": "Nähe im Team",
+     "ids": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich Bewährtes verlässlich halten und ständig Neues ausprobieren?",
+    "color": "lila",
+    "a": {
+     "label": "Bewährtes halten",
+     "ids": [
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+     ]
+    },
+    "b": {
+     "label": "Neues ausprobieren",
+     "ids": [
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ]
+    }
+   }
+  ],
+  "rest": [
+   65,
+   66,
+   67,
+   68,
+   69,
+   70
+  ]
+ },
+ "ai": {
+  "headline": "Fast jede Klage hat ein Gegenstück, das genauso ernst gemeint ist. Am stärksten spürbar: Freiraum gegen Abstimmung.",
+  "convergence": [
+   {
+    "label": "Selbst entscheiden ↔ eng abstimmen",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "quote": "ohne abstimmung baut team A was, das team B gerade abreißt"
+   },
+   {
+    "label": "Schnell liefern ↔ gründlich arbeiten",
+    "ids": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "quote": "lieber 80% heute als 100% in 3 monaten"
+   },
+   {
+    "label": "Offen kritisieren ↔ einander Halt geben",
+    "ids": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "quote": "In Meetings nicken alle und auf dem Flur wird gelästert"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Flexibel arbeiten ↔ Nähe im Team",
+    "a": "„Homeoffice hat mir mein Leben zurückgegeben“",
+    "b": "„neue kollegen kenn ich nur als kachel“"
+   },
+   {
+    "label": "Bewährtes halten ↔ Neues ausprobieren",
+    "a": "„Change-Müdigkeit ist real. Die dritte Umorga in 4 Jahren“",
+    "b": "„‚das haben wir immer so gemacht‘ ist der teuerste satz hier“"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer entscheidet, was wie entschieden wird?",
+    "why": "Alle wollen Freiraum oder Abstimmung, kaum jemand fragt, wer die Regeln dafür festlegt."
+   },
+   {
+    "label": "Die Kundensicht",
+    "why": "Kunden tauchen nur beim Tempo auf, nicht bei Qualität, Nähe oder Verlässlichkeit."
+   }
+  ]
+ }
+}

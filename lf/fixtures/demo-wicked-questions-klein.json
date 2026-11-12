@@ -1,0 +1,134 @@
+{
+ "step": {
+  "label": "Wicked Questions · alle",
+  "lsDef": {
+   "name": "Wicked Questions",
+   "icon": "wicked-questions",
+   "panel": [
+    "Spannungen, die viele spüren",
+    "Die Pole Seite an Seite",
+    "Was noch keiner fragt"
+   ]
+  },
+  "phase": "alle",
+  "q": "Zusammenarbeit in unserer Organisation: Was ist beides wahr und beißt sich?",
+  "how": "Schreib auf, was du erlebst. Gerade das, was sich scheinbar widerspricht.",
+  "show": [
+   2
+  ]
+ },
+ "people": 6,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Teams sollen selbst entscheiden dürfen"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "ohne abstimmung macht jeder sein ding"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Vertrauen statt Kontrolle!!"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Schnittstellen klären bevor losgelegt wird"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "lieber 80% heute als 100% in 3 monaten"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Fehler beim Kunden kosten mehr als eine Woche länger testen"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Tempo! wir zerreden alles"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "mehr kaffee 😅"
+  }
+ ],
+ "data": {
+  "viz": "pairs",
+  "pairs": [
+   {
+    "question": "Wie können wir zugleich selbst entscheiden und uns eng abstimmen?",
+    "color": "grün",
+    "a": {
+     "label": "Selbst entscheiden",
+     "ids": [
+      1,
+      3
+     ]
+    },
+    "b": {
+     "label": "Eng abstimmen",
+     "ids": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich schnell liefern und gründlich arbeiten?",
+    "color": "blau",
+    "a": {
+     "label": "Schnell liefern",
+     "ids": [
+      5,
+      7
+     ]
+    },
+    "b": {
+     "label": "Gründlich arbeiten",
+     "ids": [
+      6
+     ]
+    }
+   }
+  ],
+  "rest": [
+   8
+  ]
+ },
+ "ai": {
+  "headline": "Zwei Spannungen tragen das Gespräch: Freiraum gegen Abstimmung und Tempo gegen Gründlichkeit.",
+  "convergence": [
+   {
+    "label": "Selbst entscheiden ↔ eng abstimmen",
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "quote": "Vertrauen statt Kontrolle!!"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Schnell liefern ↔ gründlich arbeiten",
+    "a": "„lieber 80% heute“",
+    "b": "„Fehler beim Kunden kosten mehr“"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer legt die Spielregeln fest?",
+    "why": "Niemand fragt, wer entscheidet, was selbst und was gemeinsam entschieden wird."
+   }
+  ]
+ }
+}

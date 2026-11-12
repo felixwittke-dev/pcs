@@ -11,6 +11,10 @@ const PANEL = ['Was viele ähnlich sehen', 'Wo es auseinandergeht', 'Was noch fe
 const LS = {
   '1-2-4-all':    { name: '1-2-4-All', icon: '1-2-4-all', panel: PANEL },
   '15-solutions': { name: '15% Solutions', icon: '15-percent-solution', panel: ['Was viele selbst anpacken', 'Wo es auseinandergeht', 'Was noch niemand anpackt'] },
+  'w3':           { name: 'What, So What, Now What?', icon: 'what-so-what-now-what', viz: 'lanes', panel: ['Was sich durchzieht', 'Wo es sich reibt', 'Was noch niemand anspricht'] },
+  '25-10':        { name: '25/10 Crowd Sourcing', icon: '25-10-crowdsourcing', viz: 'ranking', noun: 'Ideen', panel: ['Was ganz oben steht', 'Wo die Wertungen auseinandergehen', 'Mutige Ideen weiter unten'] },
+  'wicked':       { name: 'Wicked Questions', icon: 'wicked-questions', viz: 'pairs', panel: ['Spannungen, die viele spüren', 'Die Pole Seite an Seite', 'Was noch keiner fragt'] },
+  'appreciative': { name: 'Appreciative Interviews', icon: 'appreciative-interviews', viz: 'patterns', noun: 'Geschichten', panel: ['Was Erfolg möglich gemacht hat', 'Wo Geschichten sich widersprechen', 'Was in keiner Geschichte vorkommt'] },
 };
 
 // Darstellungs-Bausteine der Wand (viz-*.js tragen sich hier ein). Ohne Baustein gilt das Themen-Mosaik.

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>LibraFlow Wand · Beispiele</title>
+<style>
+  body { margin: 0; background: #FAFAF7; color: #1C1917; font: 18px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; border-top: 12px solid #40BFC0; }
+  main { max-width: 900px; margin: 0 auto; padding: 28px 20px 60px; }
+  h1 { font-size: 30px; margin: 0 0 4px; } p { color: #5F5F5F; margin: 0 0 22px; }
+  .ls { display: flex; gap: 16px; align-items: center; background: #fff; border-radius: 10px; padding: 14px 18px; margin: 0 0 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+  .ls img { width: 52px; height: 52px; flex: none; } .ls div { flex: 1; } .ls b { display: block; font-size: 20px; } .ls span { color: #5F5F5F; font-size: 15px; }
+  a { display: inline-block; text-decoration: none; font-weight: 700; padding: 6px 14px; border-radius: 999px; margin-left: 6px; white-space: nowrap; }
+  a.show { background: #40BFC0; color: #fff; } a.more { background: #EAF9F9; color: #2E6C6D; }
+  kbd { background: #ECECE6; border-radius: 4px; padding: 1px 6px; font: inherit; font-size: 15px; }
+</style></head><body><main>
+<h1>LibraFlow Wand · Beispiele je Struktur</h1>
+<p>Simulierte Beiträge, keine echten Teilnehmenden, keine KI-Aufrufe. Auf der Wand: <kbd>→</kbd> <kbd>←</kbd> durchklicken, <kbd>Esc</kbd> Übersicht, <kbd>R</kbd> Show-Effekt nochmal, oben rechts „KI-Auswertung“. Am besten im Vollbild (<kbd>F11</kbd>).</p>
+<div id="list"></div>
+</main><script>
+const L = [
+  ['1-2-4-all', '1-2-4-All', 'Themen-Mosaik · 132 Post-its', 'demo-1-2-4-all'],
+  ['what-so-what-now-what', 'What, So What, Now What?', 'Feste Bahnen · 90 Post-its', 'demo-w3'],
+  ['25-10-crowdsourcing', '25/10 Crowd Sourcing', 'Rangliste · 45 Ideen', 'demo-25-10'],
+  ['wicked-questions', 'Wicked Questions', 'Gegensatz-Paare · 70 Post-its', 'demo-wicked-questions'],
+  ['appreciative-interviews', 'Appreciative Interviews', 'Geschichten zu Mustern · 24 Geschichten', 'demo-appreciative-interviews'],
+];
+document.getElementById('list').innerHTML = L.map(([icon, name, sub, fx]) =>
+  `<div class="ls"><img src="icons/${icon}.svg" alt=""><div><b>${name}</b><span>${sub}</span></div>
+   <a class="show" href="wall.html?demo=fixtures/${fx}.json&show=reveal">Show-Effekt</a><a class="more" href="wall.html?demo=fixtures/${fx}.json">Ergebnis</a><a class="more" href="wall.html?demo=fixtures/${fx}.json&show=ai">KI-Auswertung</a></div>`).join('');
+</script></body></html>

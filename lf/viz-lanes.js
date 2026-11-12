@@ -1,1 +1,242 @@
-// Platzhalter: Baustein 'lanes' folgt.
+// Darstellungs-Baustein 'lanes' (feste Bahnen) fuer die LibraFlow-Wand. Stand 12.11.2026.
+// Fuer Strukturen mit festen Kategorien nebeneinander: What, So What, Now What? (Was? → Na und? → Was nun?),
+// TRIZ (3 Schritte), Min Specs („Muss“ / „Darf nicht“). 2 bis 4 Bahnen.
+//
+// Payload (von der KI):
+// { viz: 'lanes',
+//   flow: true,                      // optional, Standard true: Pfeile von links nach rechts zwischen den Bahnen. false = gleichrangige Bahnen (z. B. Min Specs).
+//   lanes: [                         // 2–4 Bahnen, Reihenfolge = links nach rechts
+//     { label: 'Was?',               // Ueberschrift der Bahn
+//       hint: 'Beobachtungen',       // optional: Untertitel (was in die Bahn gehoert)
+//       color: 'blau',               // optional: gelb grün blau rosa orange lila türkis koralle; Standard blau, lila, grün, orange
+//       ids: [1, 2, 3],              // Post-its dieser Bahn (Zuordnung durch die KI, nicht row.step)
+//       summary: 'Ein Satz der KI.', // optional: dezenter KI-Satz unter der Ueberschrift
+//       themes: [{ label: 'Unterthema', ids: [1, 2] }]   // optional: Gruppen innerhalb der Bahn; Rest erscheint unter „Weitere“
+//     } ] }
+// Post-its, die in keiner Bahn stehen, zeigt der Baustein nicht. Ein Post-it erscheint hoechstens einmal je Bahn.
+// count = Zahl der Bahnen (Fokus k = Bahn k gross, die anderen bleiben als schmale Streifen sichtbar).
+(() => {
+  const P = 'vz-lanes-';
+  const css = `
+  .${P}row { position: absolute; inset: 0; display: flex; align-items: stretch; }
+  .${P}lane { position: relative; min-width: 0; display: flex; flex-direction: column; background: #fff; border-radius: 10px;
+              box-shadow: 0 1px 3px rgba(0,0,0,.09); border-top: 6px solid var(--acc); padding: 10px 12px 10px; }
+  .${P}head { flex: none; display: flex; align-items: center; gap: .4em; font-weight: 800; line-height: 1.15; cursor: pointer; white-space: nowrap; min-width: 0;
+              font-size: clamp(18px, 1.55vw, 30px); }
+  .${P}one .${P}head { font-size: clamp(22px, 2.2vw, 40px); cursor: default; }
+  .${P}num { flex: none; display: inline-grid; place-items: center; width: 1.3em; height: 1.3em; border-radius: 50%; background: var(--acc); color: #fff; font-size: .78em; }
+  .${P}label { overflow: hidden; text-overflow: ellipsis; }
+  .${P}n { font-weight: 400; color: #5F5F5F; }
+  .${P}back { flex: none; border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-weight: 400; font-size: 15px; color: #5F5F5F;
+              padding: 3px 12px; border-radius: 999px; margin-right: .3em; }
+  .${P}hint { flex: none; color: #5F5F5F; font-size: clamp(12px, .85vw, 16px); margin: 1px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .${P}one .${P}hint { font-size: clamp(14px, 1.1vw, 20px); }
+  .${P}sum { flex: none; margin: 7px 0 0; padding: 5px 10px 6px; border-radius: 6px; background: #EAF9F9; color: #1C1917; line-height: 1.3;
+             font-size: clamp(12px, .9vw, 18px); border-left: 3px solid #40BFC0; }
+  .${P}one .${P}sum { font-size: clamp(15px, 1.3vw, 24px); padding: 7px 14px 8px; }
+  .${P}sum b { color: #409E9F; font-weight: 700; margin-right: .35em; }
+  .${P}body { flex: 1; min-height: 0; overflow: hidden; margin-top: 9px; }
+  .${P}grp + .${P}grp { margin-top: .6em; }
+  .${P}glabel { font-weight: 700; font-size: .95em; color: var(--acc); margin: 0 0 .25em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .${P}glabel span { font-weight: 400; color: #5F5F5F; }
+  .${P}tiles { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; --lines: 3; }
+  .${P}one .${P}tiles { --lines: 4; }
+  .${P}one.${P}tight .${P}tiles { --lines: 3; }
+  .${P}arrow { flex: none; width: 30px; position: relative; }
+  .${P}arrow svg { position: absolute; left: 3px; width: 24px; height: 24px; }
+  .${P}gap { flex: none; width: 14px; }
+  .${P}strip { position: relative; flex: none; width: clamp(46px, 3.4vw, 64px); cursor: pointer; background: #fff; border-radius: 10px; border-top: 6px solid var(--acc);
+               box-shadow: 0 1px 3px rgba(0,0,0,.09); display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px 0; overflow: hidden;
+               font-size: clamp(16px, 1.3vw, 24px); font-weight: 700; }
+  .${P}strip:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .${P}strip .${P}vlabel { writing-mode: vertical-rl; white-space: nowrap; }
+  .${P}strip .${P}n { writing-mode: vertical-rl; font-size: .85em; }
+  /* eng: wenn es sonst nicht passt, erst Rand und Untertitel sparen, dann blaettern */
+  .${P}tight .${P}lane { padding: 7px 10px 8px; }
+  .${P}tight .${P}hint { display: none; }
+  .${P}tight .${P}sum { margin-top: 5px; padding: 3px 8px 4px; }
+  .${P}tight .${P}body { margin-top: 6px; }
+  .${P}tight .${P}grp + .${P}grp { margin-top: .4em; }
+  .${P}ghost { position: absolute; inset: 0; z-index: 2; pointer-events: none; --lines: 3; }
+  .${P}ghost .tile { position: absolute; }
+  `;
+  document.head.append(Object.assign(document.createElement('style'), { textContent: css }));
+
+  const ACC = { gelb: '#B98D00', 'grün': '#3E9B63', blau: '#3F73C4', rosa: '#C4507F', orange: '#D07A22', lila: '#7A5CC2', 'türkis': '#409E9F', koralle: '#D9644A', none: '#8A8A80' };
+  const DEF = ['blau', 'lila', 'grün', 'orange'];
+  const FLOOR = { all: 9, one: 15 }, CEIL = { all: 32, one: 44 };
+  const emW = (t, lines, cap) => Math.max(8, Math.min(t.length, cap)) / lines * 0.5 + 1.7;
+  const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#EAF9F9"/><path d="M10 7l5 5-5 5" fill="none" stroke="#409E9F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function lanesOf(ctx) {
+    const byId = new Map(ctx.rows.map(r => [String(r.id), r]));
+    return ((ctx.data && ctx.data.lanes) || []).slice(0, 4).map((l, k) => {
+      const color = ACC[l.color] ? l.color : DEF[k], seen = new Set();
+      const rows = (l.ids || []).map(String).filter(i => byId.has(i) && !seen.has(i) && seen.add(i)).map(i => byId.get(i));
+      let groups = [{ label: null, rows }];
+      if (l.themes && l.themes.length) {
+        const inLane = new Set(rows.map(r => String(r.id))), used = new Set();
+        groups = l.themes.map(t => ({ label: t.label, rows: (t.ids || []).map(String).filter(i => inLane.has(i) && !used.has(i) && used.add(i)).map(i => byId.get(i)) }))
+          .filter(g => g.rows.length);
+        const rest = rows.filter(r => !used.has(String(r.id)));
+        if (rest.length) groups.push({ label: 'Weitere', rows: rest });
+      }
+      return { ...l, k, color, rows, groups };
+    });
+  }
+
+  // Seite p von n einer Bahn: Post-its in Reihenfolge der Gruppen gleichmaessig verteilt, Gruppenkoepfe wiederholt
+  function chunk(lane, n, p) {
+    if (n <= 1) return lane.groups;
+    const flat = lane.groups.flatMap(g => g.rows.map(r => ({ g, r }))), size = Math.ceil(flat.length / n), out = [];
+    flat.slice(p * size, (p + 1) * size).forEach(({ g, r }) => {
+      const last = out[out.length - 1];
+      if (last && last.src === g) last.rows.push(r); else out.push({ src: g, label: g.label, rows: [r], total: g.rows.length });
+    });
+    return out;
+  }
+
+  function tile(r, cls, lines, cap) {
+    const e = document.createElement('div'), w = emW(r.body, lines, cap);
+    e.className = 'tile ' + cls; e.dataset.id = r.id; e.title = r.body;
+    e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = `min(${(w * 2.4).toFixed(2)}em, 100%)`;
+    const s = document.createElement('span'); s.textContent = r.body; e.append(s); return e;
+  }
+
+  function laneEl(lane, groups, one, ctx, tight) {
+    const { el } = ctx, L = el('div', null, P + 'lane');
+    L.style.setProperty('--acc', ACC[lane.color]); L.dataset.lane = lane.k;
+    const head = el('div', null, P + 'head');
+    if (one) { const b = el('button', '← Alle', P + 'back'); b.onclick = () => ctx.go(null); head.append(b); }
+    else head.onclick = () => ctx.go(lane.k);
+    head.append(el('span', String(lane.k + 1), P + 'num'), el('span', lane.label, P + 'label'), el('span', '· ' + lane.rows.length, P + 'n'));
+    L.append(head);
+    if (lane.hint) L.append(el('div', lane.hint, P + 'hint'));
+    if (lane.summary) { const s = el('div', null, P + 'sum'); s.append(el('b', 'KI'), document.createTextNode(lane.summary)); L.append(s); }
+    const body = el('div', null, P + 'body'), inner = el('div', null, P + 'inner');
+    const lines = one && !tight ? 4 : 3, cap = one ? 400 : 150;
+    groups.forEach(g => {
+      const G = el('div', null, P + 'grp');
+      if (g.label) { const gl = el('div', g.label + ' ', P + 'glabel'); gl.append(el('span', '· ' + (g.total || g.rows.length))); G.append(gl); }
+      const T = el('div', null, P + 'tiles');
+      g.rows.forEach(r => T.append(tile(r, 'c-' + lane.color, lines, cap)));
+      G.append(T); inner.append(G);
+    });
+    body.append(inner); L.append(body);
+    return { L, body, inner, head };
+  }
+
+  // groesste Schrift in [lo, hi], bei der die Bahn ganz hineinpasst; null, wenn selbst lo nicht reicht
+  function fit(x, lo, hi) {
+    const ok = f => { x.inner.style.fontSize = f + 'px'; return x.inner.offsetHeight <= x.body.clientHeight + 1; };
+    if (!ok(lo)) return null;
+    if (ok(hi)) return hi;
+    for (let k = 0; k < 7; k++) { const mid = (lo + hi) / 2; if (ok(mid)) lo = mid; else hi = mid; }
+    return lo;
+  }
+
+  // Textmenge je Bahn → Breitenanteil (gedaempft, damit die Bahnen als feste Spalten erkennbar bleiben)
+  const weight = (lane, all) => {
+    const v = l => l.rows.reduce((a, r) => a + emW(r.body, 3, 150) + .3, 0) + 20;
+    const max = Math.max(...all.map(v));
+    return Math.max(0.55, Math.sqrt(v(lane) / max));
+  };
+
+  function build(box, ctx, lanes, n, p, tight) {
+    const one = ctx.focus != null && lanes[ctx.focus], flow = ctx.data.flow !== false;
+    box.textContent = '';
+    const row = ctx.el('div', null, P + 'row' + (one ? ' ' + P + 'one' : '') + (tight ? ' ' + P + 'tight' : '')), xs = [];
+    lanes.forEach((lane, k) => {
+      if (k) row.append(flow ? Object.assign(ctx.el('div', null, P + 'arrow'), { innerHTML: ARROW }) : ctx.el('div', null, P + 'gap'));
+      if (one && k !== ctx.focus) {   // andere Bahnen bleiben als schmaler Streifen sichtbar, Klick setzt sie in Szene
+        const s = ctx.el('div', null, P + 'strip'); s.style.setProperty('--acc', ACC[lane.color]); s.title = lane.label; s.onclick = () => ctx.go(k);
+        s.append(ctx.el('span', String(k + 1), P + 'num'), ctx.el('span', lane.label, P + 'vlabel'), ctx.el('span', '· ' + lane.rows.length, P + 'n'));
+        row.append(s); return;
+      }
+      const x = laneEl(lane, chunk(lane, n, p), !!one, ctx, tight);
+      x.L.style.flex = one ? '1 1 0' : `${weight(lane, lanes).toFixed(3)} 1 0`;
+      row.append(x.L); xs.push(x);
+    });
+    box.append(row);
+    // Pfeile auf Hoehe der Ueberschriften
+    const h = row.querySelector('.' + P + 'head, .' + P + 'num');
+    if (h) { const top = h.offsetTop + h.offsetHeight / 2 - 12 + (h.closest('.' + P + 'lane, .' + P + 'strip') || h).offsetTop;
+      row.querySelectorAll('.' + P + 'arrow svg').forEach(s => s.style.top = top + 'px'); }
+    return { row, xs, one: !!one };
+  }
+
+  function draw(box, ctx) {
+    const lanes = lanesOf(ctx);
+    if (!lanes.length) { box.textContent = ''; return { count: 0, pages: 1 }; }
+    if (ctx.focus != null && !lanes[ctx.focus]) ctx = { ...ctx, focus: null };
+    const one = ctx.focus != null, lo = one ? FLOOR.one : FLOOR.all, hi = one ? CEIL.one : CEIL.all;
+    const most = Math.max(1, ...(one ? [lanes[ctx.focus]] : lanes).map(l => l.rows.length));
+    // So wenige Seiten wie moeglich: erst wenn die Schrift unter die Untergrenze fiele, wird geblaettert.
+    const fitsAt = (n, tight) => { for (let p = 0; p < n; p++) if (!build(box, ctx, lanes, n, p, tight).xs.every(x => fit(x, lo, lo) !== null)) return false; return true; };
+    let n = 1, tight = false;
+    for (; n < most; n++) { if (fitsAt(n, false)) break; if (fitsAt(n, true)) { tight = true; break; } }
+    if (n === most) tight = true;
+    const p = Math.min(ctx.page || 0, n - 1), b = build(box, ctx, lanes, n, p, tight);
+    const fs = b.xs.map(x => fit(x, lo, hi) || lo), least = Math.min(...fs);
+    b.xs.forEach((x, i) => x.inner.style.fontSize = Math.min(fs[i], least * 1.25) + 'px');   // Bahnen duerfen etwas groesser sein als die engste, aber nicht wild verschieden
+    if (ctx.dir) b.row.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
+    return { count: lanes.length, pages: n };
+  }
+
+  // Show-Effekt: das ungeordnete Mosaik bleibt als Bild liegen; Bahn fuer Bahn erscheint die Ueberschrift,
+  // ihre Post-its faerben sich im Mosaik und fliegen in die Bahn. Zum Schluss Pfeile und die KI-Saetze.
+  async function reveal(box, ctx) {
+    const { sleep } = ctx, from = ctx.from || new Map(), lanes = lanesOf(ctx);
+    draw(box, { ...ctx, focus: null, page: 0, dir: 0 });
+    const row = box.querySelector('.' + P + 'row'); if (!row) return;
+    const laneEls = [...row.querySelectorAll('.' + P + 'lane')];
+    const fade = (e, ms, delay = 0, dx = 0) => e.animate([{ opacity: 0, transform: `translateX(${dx}px)` }, { opacity: 1, transform: 'none' }], { duration: ms, delay, easing: 'ease-out', fill: 'backwards' });
+    laneEls.forEach(L => { L.style.opacity = 0; L.querySelectorAll('.tile').forEach(t => t.style.visibility = 'hidden');
+      const s = L.querySelector('.' + P + 'sum'); if (s) s.style.opacity = 0; });
+    row.querySelectorAll('.' + P + 'arrow').forEach(a => a.style.opacity = 0);
+    // Geister-Mosaik an den alten Plaetzen
+    const B = box.getBoundingClientRect(), ghost = ctx.el('div', null, P + 'ghost'), ghosts = new Map();
+    const mb = document.querySelector('#mosaic .block'); ghost.style.fontSize = (mb && mb.style.fontSize) || '12px';
+    const byId = new Map(ctx.rows.map(r => [String(r.id), r]));
+    from.forEach((a, id) => { const r = byId.get(id); if (!r || !a.width) return;
+      const g = ctx.el('div', null, 'tile' + (ctx.s && ctx.s.show && r.step !== ctx.s.show[0] ? ' alt' : '')); g.append(ctx.el('span', r.body));
+      g.style.cssText = `left:${a.left - B.left}px;top:${a.top - B.top}px;width:${a.width}px;height:${a.height}px`;
+      ghost.append(g); ghosts.set(id, g); });
+    box.append(ghost);
+    await sleep(400);
+    // Mosaik rueckt unter die Kopfzeilen der Bahnen, damit die Ueberschriften frei erscheinen koennen
+    const top = Math.max(...laneEls.map(L => L.querySelector('.' + P + 'body').getBoundingClientRect().top)) - B.top, sc = Math.min(1, (B.height - top) / B.height);
+    if (ghosts.size && sc < 1) {   // jede Kachel bekommt sofort ihren neuen Platz und gleitet dorthin (Endlage haengt nicht an der Animation)
+      const dx = B.width * (1 - sc) / 2;
+      ghost.style.fontSize = parseFloat(ghost.style.fontSize) * sc + 'px';
+      ghosts.forEach(g => { const x = parseFloat(g.style.left), y = parseFloat(g.style.top), w = parseFloat(g.style.width), h = parseFloat(g.style.height);
+        g.style.cssText = `left:${dx + x * sc}px;top:${top + y * sc}px;width:${w * sc}px;height:${h * sc}px;transform-origin:0 0`;
+        g.animate([{ transform: `translate(${x - dx - x * sc}px,${y - top - y * sc}px) scale(${1 / sc})` }, { transform: 'none' }], { duration: 700, easing: 'ease-in-out' }); });
+      await sleep(760);
+    }
+    await sleep(200);
+    for (const lane of lanes) {
+      const L = laneEls[lane.k]; if (!L) continue;
+      L.style.opacity = 1; fade(L, 500, 0, -24);
+      const tiles = [...L.querySelectorAll('.tile')];
+      tiles.forEach((t, j) => { const g = ghosts.get(t.dataset.id); if (g) setTimeout(() => { g.className = 'tile pop c-' + lane.color; }, Math.min(j * 25, 500)); });
+      await sleep(Math.min(tiles.length * 25, 500) + 650);
+      tiles.forEach((t, j) => {
+        const g = ghosts.get(t.dataset.id), b = t.getBoundingClientRect(), delay = Math.min(j * 8, 400);
+        if (!g) { t.style.visibility = ''; fade(t, 400, delay); return; }
+        const a = g.getBoundingClientRect(); g.style.transformOrigin = '0 0';
+        g.animate([{ transform: 'none' }, { transform: `translate(${b.left - a.left}px,${b.top - a.top}px) scale(${b.width / a.width},${b.height / a.height})` }],
+                  { duration: 1000, delay, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+      });
+      await sleep(1450);
+      tiles.forEach(t => { t.style.visibility = ''; const g = ghosts.get(t.dataset.id); if (g) { g.remove(); ghosts.delete(t.dataset.id); } });
+    }
+    ghost.querySelectorAll('.tile').forEach(g => g.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 500, fill: 'forwards' }));
+    row.querySelectorAll('.' + P + 'arrow').forEach((a, i) => { a.style.opacity = 1; fade(a, 500, i * 150, -10); });
+    await sleep(600); ghost.remove();
+    for (const L of laneEls) { const s = L.querySelector('.' + P + 'sum'); if (s) { s.style.opacity = 1; fade(s, 600); await sleep(550); } }
+    await sleep(600);
+  }
+
+  VIZ.lanes = { draw, reveal: (b, c) => reveal(b, c).catch(e => console.error('viz-lanes reveal', e)) };   // Fehler im Show-Effekt: Rahmen zeichnet trotzdem den Endzustand
+})();

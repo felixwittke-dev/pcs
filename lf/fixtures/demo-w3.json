@@ -1,0 +1,830 @@
+{
+ "step": {
+  "label": "What, So What, Now What? · alle",
+  "lsDef": {
+   "name": "What, So What, Now What?",
+   "icon": "what-so-what-now-what",
+   "panel": [
+    "Was sich durchzieht",
+    "Wo es sich reibt",
+    "Was noch niemand anspricht"
+   ]
+  },
+  "phase": "alle",
+  "q": "Schaut auf unseren Workshop-Tag zurück: Was ist passiert, was bedeutet es, und was machen wir jetzt?",
+  "how": "Erst beobachten, dann deuten, dann entscheiden.",
+  "show": [
+   2,
+   3,
+   4
+  ]
+ },
+ "people": 31,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Die Stimmung kippte kurz als es um das Budget ging, dann war es still"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "es tut gut mal nicht nur über Zahlen zu reden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Ablauf war klar, wusste immer was als nächstes kommt"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Die Leute aus dem Vertrieb haben fast nix gesagt"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Mittagessen kam 20 min zu spät, dadurch alles verschoben"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "die remote leute waren quasi nicht da, ton schlecht"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Kundenbeschwerden kamen in fast jeder Gruppe vor"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "GF war nur vormittag da"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "die Pausen waren zu kurz für das was wir besprechen wollten"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "5 min für allein nachdenken waren knapp"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Als Thomas seine Story aus dem Projekt erzählt hat, war es mucksmäuschenstill"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "nach der mittagspause war die luft komplett raus"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Zu Kundenzufriedenheit gabs die meisten Post-its, zu Prozessen fast keine"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Tina hat am Ende nochmal widersprochen und keiner ist drauf eingegangen"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "In den Zweiergesprächen haben auch die Stillen viel gesagt"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Wir haben über Schnittstellen gesprochen, nicht über Personen. War neu"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Die Wand mit den Themen hat gut gezeigt wo wir stehen"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Zeitplan hat nicht gehalten, 30 min überzogen"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Ende war hektisch, keine richtige abschlussrunde"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "wir haben 3 Themen gesammelt aber keins zu Ende besprochen"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "keine einzige Folie den ganzen Tag"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Der Raum war zu warm, Fenster ging nicht auf"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "kurz vor schluss sind 4 leute schon gegangen"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "am ende lag eine liste mit 12 ideen auf dem tisch"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "neue kollegen haben sich getraut nachzufragen"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "beim 1-2-4-All wurde es richtig laut 😄"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Handy-Post-its gingen schnell, nur WLAN war am Anfang zickig"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Wir haben pünktlich angefangen!! Selten"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "viel mehr fragen als sonst bei uns"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Vormittag super lebendig, alle haben durcheinander geredet"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Die Wand war nach 20 min voll mit Post-its"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Die 15% Lösungen waren sehr konkret, z.B. Übergabe-Checkliste"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "energie am morgen hoch, nachmittag zäh"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "es wurde viel gelacht"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Um 15 Uhr haben 3 Leute nur noch aufs Handy geschaut"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Das Thema IT-Tickets wurde 2x vertagt"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "eigentlich haben immer die gleichen 4 geredet"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "thema onboarding tauchte 5 oder 6 mal auf"
+  },
+  {
+   "id": 39,
+   "step": 3,
+   "body": "Kundenbeschwerden = Symptom. ursache sitzt bei uns intern"
+  },
+  {
+   "id": 40,
+   "step": 3,
+   "body": "Wenn GF nicht mitentscheidet bleibt es Gerede"
+  },
+  {
+   "id": 41,
+   "step": 3,
+   "body": "Jeder kennt das Silo-Problem, keiner fühlt sich zuständig"
+  },
+  {
+   "id": 42,
+   "step": 3,
+   "body": "Wenn das Format stimmt, reden auch die, die sonst schweigen. Liegt also nicht an den Leuten"
+  },
+  {
+   "id": 43,
+   "step": 3,
+   "body": "vertrieb und technik reden über denselben kunden aber mit völlig anderen infos"
+  },
+  {
+   "id": 44,
+   "step": 3,
+   "body": "Weniger Themen, dafür wirklich fertig machen"
+  },
+  {
+   "id": 45,
+   "step": 3,
+   "body": "12 ideen sind zu viele, wir müssen priorisieren sonst passiert garnix"
+  },
+  {
+   "id": 46,
+   "step": 3,
+   "body": "Kleine Gruppen > große Runde. eindeutig"
+  },
+  {
+   "id": 47,
+   "step": 3,
+   "body": "Viele kleine Ärgernisse ergeben zusammen ein großes"
+  },
+  {
+   "id": 48,
+   "step": 3,
+   "body": "Wir lösen dauernd Symptome statt Ursachen"
+  },
+  {
+   "id": 49,
+   "step": 3,
+   "body": "nach dem spaziergang zu zweit waren alle wieder wach"
+  },
+  {
+   "id": 50,
+   "step": 3,
+   "body": "Ich bin skeptisch ob sich was ändert. Das hatten wir 2024 schon mal genau so"
+  },
+  {
+   "id": 51,
+   "step": 3,
+   "body": "Das Wort \"Silos\" ist bestimmt 10 mal gefallen"
+  },
+  {
+   "id": 52,
+   "step": 3,
+   "body": "Nach 14 Uhr keine schweren Themen mehr. Das ist einfach so"
+  },
+  {
+   "id": 53,
+   "step": 3,
+   "body": "vertrauen ist da, nur im alltag merkt man es nicht"
+  },
+  {
+   "id": 54,
+   "step": 3,
+   "body": "der spaziergang war das beste am tag, sagt eigentlich alles"
+  },
+  {
+   "id": 55,
+   "step": 3,
+   "body": "onboarding ist kein HR thema sondern betrifft alle"
+  },
+  {
+   "id": 56,
+   "step": 3,
+   "body": "Zuhören ist anstrengend aber lohnt sich, hab 2 Sachen über Team B gelernt die ich nicht wusste"
+  },
+  {
+   "id": 57,
+   "step": 3,
+   "body": "Wenn die Luft raus ist bringt Disziplin auch nix"
+  },
+  {
+   "id": 58,
+   "step": 3,
+   "body": "Wenn Tinas Einwand untergeht, machen wir den gleichen Fehler wie immer"
+  },
+  {
+   "id": 59,
+   "step": 3,
+   "body": "Unsere Meetings sind das Problem, nicht die Themen"
+  },
+  {
+   "id": 60,
+   "step": 3,
+   "body": "ohne folien sind wir näher an den echten problemen"
+  },
+  {
+   "id": 61,
+   "step": 3,
+   "body": "ohne entscheidung am ende fühlt es sich an wie die letzten workshops"
+  },
+  {
+   "id": 62,
+   "step": 3,
+   "body": "remote kollegen sind abgehängt, das ist ne zwei klassen gesellschaft"
+  },
+  {
+   "id": 63,
+   "step": 3,
+   "body": "Unser eigentliches Problem sind die Übergaben zwischen den Teams, nicht die Leute"
+  },
+  {
+   "id": 64,
+   "step": 3,
+   "body": "wir planen immer zu viel in einen tag"
+  },
+  {
+   "id": 65,
+   "step": 3,
+   "body": "wir können offener reden als wir dachten"
+  },
+  {
+   "id": 66,
+   "step": 3,
+   "body": "Bewegung hilft mehr als der dritte Kaffee"
+  },
+  {
+   "id": 67,
+   "step": 3,
+   "body": "Die Stillen haben Ideen, wir geben ihnen sonst nur keinen Raum"
+  },
+  {
+   "id": 68,
+   "step": 4,
+   "body": "Bei jedem Meeting 5 Min Abschlussrunde: was nehme ich mit"
+  },
+  {
+   "id": 69,
+   "step": 4,
+   "body": "Ein gemeinsames Board für alle offenen Kundenthemen statt 4 Excel-Listen"
+  },
+  {
+   "id": 70,
+   "step": 4,
+   "body": "Uns fehlt eher Mut als Ideen"
+  },
+  {
+   "id": 71,
+   "step": 4,
+   "body": "GF muss bis zum 30.11. sagen was sie mitträgt"
+  },
+  {
+   "id": 72,
+   "step": 4,
+   "body": "Ich lade die Stillen vorher ein, ihre Gedanken aufzuschreiben"
+  },
+  {
+   "id": 73,
+   "step": 4,
+   "body": "Onboarding-Pate für jeden Neuen ab Januar"
+  },
+  {
+   "id": 74,
+   "step": 4,
+   "body": "Nachmittags nur noch kurze Formate, schwere Themen vormittags"
+  },
+  {
+   "id": 75,
+   "step": 4,
+   "body": "Teammeeting nächste Woche mit 1-2-4-All statt Statusrunde ausprobieren"
+  },
+  {
+   "id": 76,
+   "step": 4,
+   "body": "Übergabe-Checkliste Vertrieb → Technik bis Ende Monat, ich mach den ersten Entwurf (Jonas)"
+  },
+  {
+   "id": 77,
+   "step": 4,
+   "body": "Top 3 der 12 Ideen per Punkten bis Freitag auswählen"
+  },
+  {
+   "id": 78,
+   "step": 4,
+   "body": "Einen Kunden-Fall gemeinsam durchspielen, von Anfrage bis Rechnung"
+  },
+  {
+   "id": 79,
+   "step": 4,
+   "body": "In 6 Wochen nochmal treffen und schauen was draus geworden ist"
+  },
+  {
+   "id": 80,
+   "step": 4,
+   "body": "keine ahnung ehrlich gesagt, erstmal abwarten was die GF sagt"
+  },
+  {
+   "id": 81,
+   "step": 4,
+   "body": "Fotoprotokoll heute noch rumschicken!!"
+  },
+  {
+   "id": 82,
+   "step": 4,
+   "body": "mehr spaziergänge zu zweit statt sitzen"
+  },
+  {
+   "id": 83,
+   "step": 4,
+   "body": "beim nächsten mal mikro für die remote leute testen vorher"
+  },
+  {
+   "id": 84,
+   "step": 4,
+   "body": "jede gruppe sucht sich einen paten der nachhält"
+  },
+  {
+   "id": 85,
+   "step": 4,
+   "body": "jour fixe vertrieb+technik alle 2 wochen, 30 min max"
+  },
+  {
+   "id": 86,
+   "step": 4,
+   "body": "Tinas punkt nochmal aufgreifen, im nächsten teammeeting"
+  },
+  {
+   "id": 87,
+   "step": 4,
+   "body": "ich frag morgen mal bei team B nach wie die das mit den tickets machen"
+  },
+  {
+   "id": 88,
+   "step": 4,
+   "body": "IT-Tickets: einer ist verantwortlich, nicht alle"
+  },
+  {
+   "id": 89,
+   "step": 4,
+   "body": "Keine Folien mehr im Montagsmeeting, nur Fragen"
+  },
+  {
+   "id": 90,
+   "step": 4,
+   "body": "remote nur noch wenn alle remote sind, sonst ist es unfair"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": true,
+  "lanes": [
+   {
+    "label": "Was?",
+    "hint": "Was haben wir beobachtet?",
+    "color": "blau",
+    "ids": [
+     1,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     49,
+     51
+    ],
+    "themes": [
+     {
+      "label": "Energie im Raum",
+      "ids": [
+       1,
+       12,
+       22,
+       26,
+       30,
+       33,
+       34,
+       35,
+       49
+      ]
+     },
+     {
+      "label": "Zeit & Ablauf",
+      "ids": [
+       3,
+       5,
+       9,
+       10,
+       17,
+       18,
+       19,
+       23,
+       27,
+       28
+      ]
+     },
+     {
+      "label": "Wer hat gesprochen",
+      "ids": [
+       4,
+       6,
+       8,
+       11,
+       14,
+       15,
+       25,
+       29,
+       37
+      ]
+     },
+     {
+      "label": "Inhalte & Ergebnisse",
+      "ids": [
+       7,
+       13,
+       16,
+       20,
+       21,
+       24,
+       31,
+       32,
+       36,
+       38,
+       51
+      ]
+     }
+    ],
+    "summary": "Ein lebendiger Vormittag mit viel Lachen und Beteiligung, ein zäher Nachmittag, und immer wieder dieselben Themen: Übergaben, Onboarding, Kundenbeschwerden."
+   },
+   {
+    "label": "Na und?",
+    "hint": "Was bedeutet das?",
+    "color": "lila",
+    "ids": [
+     2,
+     39,
+     40,
+     41,
+     42,
+     43,
+     45,
+     46,
+     47,
+     48,
+     50,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     70
+    ],
+    "themes": [
+     {
+      "label": "Wir können anders reden",
+      "ids": [
+       2,
+       42,
+       46,
+       53,
+       56,
+       60,
+       65,
+       67
+      ]
+     },
+     {
+      "label": "Das Problem sind die Übergaben",
+      "ids": [
+       39,
+       41,
+       43,
+       47,
+       48,
+       55,
+       63
+      ]
+     },
+     {
+      "label": "Ohne Entscheidung verpufft es",
+      "ids": [
+       40,
+       45,
+       50,
+       58,
+       59,
+       61,
+       62,
+       70
+      ]
+     },
+     {
+      "label": "Energie braucht Pausen",
+      "ids": [
+       52,
+       54,
+       57,
+       64,
+       66
+      ]
+     }
+    ],
+    "summary": "Die Gruppe kann offener reden als gedacht. Das eigentliche Problem liegt zwischen den Teams, und ohne Entscheidung droht alles zu verpuffen."
+   },
+   {
+    "label": "Was nun?",
+    "hint": "Was machen wir jetzt?",
+    "color": "grün",
+    "ids": [
+     44,
+     68,
+     69,
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90
+    ],
+    "themes": [
+     {
+      "label": "Entscheiden & dranbleiben",
+      "ids": [
+       44,
+       71,
+       77,
+       79,
+       80,
+       81,
+       84,
+       86
+      ]
+     },
+     {
+      "label": "Anders tagen",
+      "ids": [
+       68,
+       72,
+       74,
+       75,
+       82,
+       83,
+       89,
+       90
+      ]
+     },
+     {
+      "label": "Übergaben klären",
+      "ids": [
+       69,
+       73,
+       76,
+       78,
+       85,
+       87,
+       88
+      ]
+     }
+    ],
+    "summary": "Konkrete Schritte zu Übergaben und Meetings, dazu der Ruf nach einer Auswahl der Top 3 und einem Termin, an dem nachgehalten wird."
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Der Tag hat gezeigt, dass das Team anders miteinander reden kann. Die Energie kippt aber, sobald es zäh wird oder Entscheidungen fehlen, und die Übergaben zwischen den Teams sind der gemeinsame Kern.",
+  "convergence": [
+   {
+    "label": "Übergaben sind das eigentliche Problem",
+    "ids": [
+     39,
+     41,
+     43,
+     47,
+     48,
+     55,
+     63,
+     69,
+     73,
+     76,
+     78,
+     85,
+     87,
+     88
+    ],
+    "quote": "Unser eigentliches Problem sind die Übergaben zwischen den Teams, nicht die Leute"
+   },
+   {
+    "label": "Kleine Formate holen die Stillen rein",
+    "ids": [
+     2,
+     42,
+     46,
+     53,
+     56,
+     60,
+     65,
+     67
+    ],
+    "quote": "Wenn das Format stimmt, reden auch die, die sonst schweigen."
+   },
+   {
+    "label": "Es braucht eine Entscheidung",
+    "ids": [
+     44,
+     71,
+     77,
+     79,
+     80,
+     81,
+     84,
+     86
+    ],
+    "quote": "12 ideen sind zu viele, wir müssen priorisieren sonst passiert garnix"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Aufbruch oder Skepsis",
+    "a": "„wir können offener reden als wir dachten“",
+    "b": "„Das hatten wir 2024 schon mal genau so“"
+   },
+   {
+    "label": "Selbst anfangen oder auf die GF warten",
+    "a": "„ich mach den ersten Entwurf (Jonas)“",
+    "b": "„erstmal abwarten was die GF sagt“"
+   },
+   {
+    "label": "Mehr schaffen oder weniger planen",
+    "a": "„3 Themen gesammelt aber keins zu Ende besprochen“",
+    "b": "„wir planen immer zu viel in einen tag“"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Die Remote-Kolleginnen und -Kollegen",
+    "why": "Zwei Post-its sagen, dass sie abgehängt waren. Die beiden Schritte dazu sind Technik oder Ausschluss („remote nur noch wenn alle remote sind“), niemand fragt sie selbst."
+   },
+   {
+    "label": "Tinas Einwand",
+    "why": "Drei Post-its erwähnen ihn, aber niemand sagt, worum es inhaltlich ging."
+   },
+   {
+    "label": "Kundinnen und Kunden selbst",
+    "why": "Beschwerden kommen oft vor, die Kundensicht selbst taucht in keinem nächsten Schritt auf."
+   }
+  ]
+ }
+}

@@ -59,13 +59,13 @@
   #pager { position: fixed; left: 50%; bottom: 4px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); }
   #pager button { border: 0; background: #ECECE6; cursor: pointer; font: inherit; font-size: 18px; width: 34px; height: 26px; border-radius: 999px; }
   /* KI-Auswertung: eigene Ansicht auf der Wand, per Knopf. */
-  #panel { position: absolute; inset: 0; overflow-y: auto; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
-  #panel h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
-  #panel .headline { font-size: clamp(24px, 2.5vw, 40px); font-weight: 800; line-height: 1.2; margin: 0 0 20px; max-width: 34em; }
-  #panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; }
-  #panel .card { background: rgba(255,255,255,.75); border-radius: 8px; padding: 14px 18px; }
-  #panel h3 { font-size: 15px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
-  #panel .item { margin: 0 0 12px; font-size: clamp(16px, 1.25vw, 21px); }
+  #panel { position: absolute; inset: 0; overflow: hidden; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
+  #panel h2 { font-size: .72em; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
+  #panel .headline { font-size: 1.8em; font-weight: 800; line-height: 1.2; margin: 0 0 .55em; max-width: 34em; }
+  #panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); gap: .8em; }
+  #panel .card { background: rgba(255,255,255,.75); border-radius: 8px; padding: .7em .9em; }
+  #panel h3 { font-size: .72em; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
+  #panel .item { margin: 0 0 .6em; }
   #panel .item b { display: block; }
   #panel .item button { border: 0; cursor: pointer; font: inherit; font-weight: 700; padding: 2px 12px; border-radius: 999px; margin: 0 0 3px; }
   #panel q { color: var(--muted); }
@@ -225,7 +225,7 @@ const rectsOf = box => new Map([...box.querySelectorAll('[data-id]')].map(e => [
 // ---------- Navigation: Themen stehen nur als Ueberschrift ueber ihren Post-its (Felix, 12.11.). Klick oder Pfeiltasten setzen eins in Szene.
 function aiButton() {
   const b = $('aibtn'); b.hidden = !ai; if (!ai) return;
-  b.textContent = focus === 'ai' ? '← Post-its' : '✨ KI-Auswertung';
+  b.textContent = focus === 'ai' ? '← ' + (view && (view.s.lsDef || LS[view.s.ls] || {}).noun || 'Post-its') : '✨ KI-Auswertung';
   b.onclick = () => go(focus === 'ai' ? null : 'ai');
 }
 
@@ -250,16 +250,23 @@ $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 function renderPanel() {
   const box = $('panel'), r = ai.data || {}, titles = ai.titles || (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
   const rv = e => { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; return e; };
-  box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' Post-its' : 'euren Post-its'))));
+  const noun = view && ((view.s.lsDef || LS[view.s.ls] || {}).noun) || 'Post-its';
+  box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' ' + noun : 'euren Beiträgen'))));
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
   const cols = el('div', null, 'cols'); box.append(cols);
   const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
-  card(titles[0], r.convergence, c => { const d = el('div', null, 'item'), k = view ? view.themes.findIndex(t => t.label === c.label) : -1;
-    if (k >= 0) { const b = el('button', c.label + ' · ' + c.ids.length, 'c-' + view.themes[k].color); b.onclick = () => go(k); d.append(b); }   // fuehrt zu den Post-its des Themas
-    else d.append(el('b', c.label + (c.ids ? ' · ' + c.ids.length : '')));
+  // Eintraege, deren Name zu einem Thema / einer Bahn / einem Muster / einem Paar passt, fuehren per Klick dorthin.
+  const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes || d0.patterns || d0.pairs || []) : [];
+  const find = label => things.findIndex(t => t.label === label || t.question === label);
+  const link = (d, label, text) => { const k = find(label); if (k < 0) return d.append(el('b', text));
+    const b = el('button', text, 'c-' + (things[k].color || 'none')); b.onclick = () => go(k); d.append(b); };
+  card(titles[0], r.convergence, c => { const d = el('div', null, 'item');
+    link(d, c.label, c.label + (c.ids ? ' · ' + c.ids.length : ''));
     if (c.quote) d.append(el('q', c.quote)); return d; });
-  card(titles[1], r.tension, t => { const d = el('div', null, 'item'); d.append(el('b', t.label), document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
+  card(titles[1], r.tension, t => { const d = el('div', null, 'item'); link(d, t.label, t.label); d.append(document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
   card(titles[2], r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
+  // Schrift so waehlen, dass die Auswertung ohne Scrollen auf die Flaeche passt
+  let f = 28; do { box.style.fontSize = f + 'px'; f -= 1; } while (box.scrollHeight > box.clientHeight + 1 && f >= 10);
 }
 
 function draw(animate, dir) {
@@ -315,7 +322,8 @@ let wheelAt = 0;   // Mausrad oder Wischen blaettert, wenn es mehrere Seiten gib
 addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
   if (pages < 2 || focus === 'ai' || Math.abs(d) < 20 || Date.now() - wheelAt < 500) return; wheelAt = Date.now();
   const n = page + Math.sign(d); if (n >= 0 && n < pages) turn(Math.sign(d)); }, { passive: true });
-let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (!busy) draw(false); }, 150); });
+// Neu einpassen, sobald sich die Flaeche aendert (Fenster, Vollbild, Beamerwechsel)
+let rz; new ResizeObserver(() => { clearTimeout(rz); rz = setTimeout(() => { if (!busy && (view || focus === 'ai')) draw(false); }, 150); }).observe($('stage'));
 
 // Kopf: Icon + Name der Struktur, darunter die Frage (kursiv, Teal)
 function header(s, people) {
