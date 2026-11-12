@@ -13,6 +13,15 @@
 //       summary: 'Ein Satz der KI.', // optional: dezenter KI-Satz unter der Ueberschrift
 //       themes: [{ label: 'Unterthema', ids: [1, 2] }]   // optional: Gruppen innerhalb der Bahn; Rest erscheint unter „Weitere“
 //     } ] }
+//
+// Erweiterungen (12.11., fuer Min Specs und WINFY; beide optional, ohne sie bleibt alles wie bei What, So What, Now What?):
+//   lanes[k].emphasis: 'muted' | 'strong'
+//       'muted'  = Material: Post-its grau und gedaempft (z. B. „Max Specs“, alle gesammelten Regeln).
+//                  Post-its, die zusaetzlich in einer anderen Bahn stehen, behalten dort die Farbe jener Bahn: so sieht man, was ausgesiebt wurde.
+//       'strong' = Ergebnis: Schrift wird nicht an die anderen Bahnen angeglichen, sondern so gross wie es passt (z. B. die wenigen Min Specs).
+//                  Steht ein Post-it schon in einer frueheren Bahn, fliegt es im Show-Effekt von dort herueber.
+//   badges: { '<id>': 'Yes' }   // kleines Text-Abzeichen unten im Post-it (z. B. WINFY-Antworten „Yes“, „No“, „I will try“, „Whatever“).
+//       Bekannte Antworten bekommen eine dezente Toenung, jeder andere Text ein neutrales Abzeichen.
 // Post-its, die in keiner Bahn stehen, zeigt der Baustein nicht. Ein Post-it erscheint hoechstens einmal je Bahn.
 // count = Zahl der Bahnen (Fokus k = Bahn k gross, die anderen bleiben als schmale Streifen sichtbar).
 (() => {
@@ -58,6 +67,23 @@
   .${P}tight .${P}sum { margin-top: 5px; padding: 3px 8px 4px; }
   .${P}tight .${P}body { margin-top: 6px; }
   .${P}tight .${P}grp + .${P}grp { margin-top: .4em; }
+  /* Erweiterungen: gedaempfte Material-Bahn, Abzeichen */
+  .${P}muted { border-top-color: #C9C9C2; }
+  .${P}muted .${P}head, .${P}muted .${P}glabel { color: #5F5F5F; }
+  .${P}strong .tile { flex: 1 1 100% !important; max-width: 100% !important; height: auto; }
+  .${P}strong .tile span:first-child { display: block; }   /* wenige Ergebnisse: ganzer Text, keine Kuerzung */
+  .${P}strong .${P}head { display: block; white-space: normal; }
+  .${P}strong .${P}num { vertical-align: .12em; margin-right: .3em; }
+  .${P}strong .${P}n { margin-left: .25em; white-space: nowrap; }
+  .tile.${P}dim { background: #F1F1EC; color: #6B6B66; box-shadow: none; outline: 1px solid #E2E2DA; }
+  .tile.${P}kept { box-shadow: 0 0 0 2px var(--kacc), 0 1px 2px rgba(0,0,0,.16); font-weight: 600; }
+  .tile.${P}badged { display: flex; flex-direction: column; height: calc(var(--lines) * 1.25em + 1.95em); }
+  .${P}badge { flex: none; margin-top: auto; align-self: flex-start; font-size: .82em; font-weight: 700; line-height: 1.2; padding: .1em .6em; border-radius: 999px;
+               background: rgba(255,255,255,.75); color: #5F5F5F; border: 1px solid rgba(0,0,0,.12); white-space: nowrap; }
+  .${P}b-yes { color: #2F6F70; border-color: #9FD8D8; background: #F1FBFB; }
+  .${P}b-no { color: #6B6B66; border-color: #C9C9C2; background: #FAFAF7; }
+  .${P}b-try { color: #8A6400; border-color: #F3D27A; background: #FFF8E2; }
+  .${P}b-whatever { color: #6B6B66; border-color: #DADAD2; background: transparent; font-weight: 400; font-style: italic; }
   .${P}ghost { position: absolute; inset: 0; z-index: 2; pointer-events: none; --lines: 3; }
   .${P}ghost .tile { position: absolute; }
   `;
@@ -86,6 +112,14 @@
     });
   }
 
+  // Wo ein Post-it einer gedaempften Bahn sonst noch steht: id → Farbe der ersten nicht gedaempften Bahn
+  function keptOf(lanes) {
+    const m = new Map();
+    lanes.forEach(l => { if (l.emphasis !== 'muted') l.rows.forEach(r => { if (!m.has(String(r.id))) m.set(String(r.id), l.color); }); });
+    return m;
+  }
+  const BADGE = { yes: 'yes', ja: 'yes', no: 'no', nein: 'no', 'i will try': 'try', 'ich versuche es': 'try', whatever: 'whatever' };
+
   // Seite p von n einer Bahn: Post-its in Reihenfolge der Gruppen gleichmaessig verteilt, Gruppenkoepfe wiederholt
   function chunk(lane, n, p) {
     if (n <= 1) return lane.groups;
@@ -97,15 +131,19 @@
     return out;
   }
 
-  function tile(r, cls, lines, cap) {
-    const e = document.createElement('div'), w = emW(r.body, lines, cap);
+  function tile(r, cls, lines, cap, badge) {
+    const e = document.createElement('div'), w = emW(r.body, lines, cap) + (badge ? .4 : 0);
     e.className = 'tile ' + cls; e.dataset.id = r.id; e.title = r.body;
     e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = `min(${(w * 2.4).toFixed(2)}em, 100%)`;
-    const s = document.createElement('span'); s.textContent = r.body; e.append(s); return e;
+    const s = document.createElement('span'); s.textContent = r.body; e.append(s);
+    if (badge) { const b = document.createElement('span'); b.textContent = badge;
+      b.className = P + 'badge' + (BADGE[String(badge).trim().toLowerCase()] ? ' ' + P + 'b-' + BADGE[String(badge).trim().toLowerCase()] : '');
+      e.classList.add(P + 'badged'); e.append(b); }
+    return e;
   }
 
-  function laneEl(lane, groups, one, ctx, tight) {
-    const { el } = ctx, L = el('div', null, P + 'lane');
+  function laneEl(lane, groups, one, ctx, tight, kept) {
+    const { el } = ctx, L = el('div', null, P + 'lane' + (lane.emphasis === 'muted' || lane.emphasis === 'strong' ? ' ' + P + lane.emphasis : ''));
     L.style.setProperty('--acc', ACC[lane.color]); L.dataset.lane = lane.k;
     const head = el('div', null, P + 'head');
     if (one) { const b = el('button', '← Alle', P + 'back'); b.onclick = () => ctx.go(null); head.append(b); }
@@ -120,7 +158,13 @@
       const G = el('div', null, P + 'grp');
       if (g.label) { const gl = el('div', g.label + ' ', P + 'glabel'); gl.append(el('span', '· ' + (g.total || g.rows.length))); G.append(gl); }
       const T = el('div', null, P + 'tiles');
-      g.rows.forEach(r => T.append(tile(r, 'c-' + lane.color, lines, cap)));
+      const badges = (ctx.data && ctx.data.badges) || {};
+      g.rows.forEach(r => {
+        const id = String(r.id), keep = lane.emphasis === 'muted' && kept.get(id);
+        const t = tile(r, lane.emphasis === 'muted' ? (keep ? 'c-' + keep + ' ' + P + 'kept' : P + 'dim') : 'c-' + lane.color, lines, cap, badges[id]);
+        if (keep) t.style.setProperty('--kacc', ACC[keep]);
+        T.append(t);
+      });
       G.append(T); inner.append(G);
     });
     body.append(inner); L.append(body);
@@ -140,13 +184,13 @@
   const weight = (lane, all) => {
     const v = l => l.rows.reduce((a, r) => a + emW(r.body, 3, 150) + .3, 0) + 20;
     const max = Math.max(...all.map(v));
-    return Math.max(0.55, Math.sqrt(v(lane) / max));
+    return lane.emphasis === 'strong' ? 0.42 : Math.max(0.55, Math.sqrt(v(lane) / max));   // wenige Ergebnisse: schmal, dafuer grosse Schrift
   };
 
   function build(box, ctx, lanes, n, p, tight) {
     const one = ctx.focus != null && lanes[ctx.focus], flow = ctx.data.flow !== false;
     box.textContent = '';
-    const row = ctx.el('div', null, P + 'row' + (one ? ' ' + P + 'one' : '') + (tight ? ' ' + P + 'tight' : '')), xs = [];
+    const row = ctx.el('div', null, P + 'row' + (one ? ' ' + P + 'one' : '') + (tight ? ' ' + P + 'tight' : '')), xs = [], kept = keptOf(lanes);
     lanes.forEach((lane, k) => {
       if (k) row.append(flow ? Object.assign(ctx.el('div', null, P + 'arrow'), { innerHTML: ARROW }) : ctx.el('div', null, P + 'gap'));
       if (one && k !== ctx.focus) {   // andere Bahnen bleiben als schmaler Streifen sichtbar, Klick setzt sie in Szene
@@ -154,7 +198,8 @@
         s.append(ctx.el('span', String(k + 1), P + 'num'), ctx.el('span', lane.label, P + 'vlabel'), ctx.el('span', '· ' + lane.rows.length, P + 'n'));
         row.append(s); return;
       }
-      const x = laneEl(lane, chunk(lane, n, p), !!one, ctx, tight);
+      const x = laneEl(lane, chunk(lane, n, p), !!one, ctx, tight, kept);
+      x.lane = lane;
       x.L.style.flex = one ? '1 1 0' : `${weight(lane, lanes).toFixed(3)} 1 0`;
       row.append(x.L); xs.push(x);
     });
@@ -173,8 +218,11 @@
     const one = ctx.focus != null, lo = one ? FLOOR.one : FLOOR.all, hi = one ? CEIL.one : CEIL.all;
     // Schrift nie unter die lesbare Untergrenze: passt eine Bahn dann nicht, ist sie nach unten scrollbar (Felix, 12.11.). Kein Blaettern.
     const b = build(box, ctx, lanes, 1, 0, false);
-    const fs = b.xs.map(x => fit(x, lo, hi)), least = Math.min(...fs.map(f => f || lo));
-    b.xs.forEach((x, i) => { x.inner.style.fontSize = (fs[i] === null ? lo : Math.min(fs[i], least * 1.25)) + 'px';
+    // Bahnen mit emphasis 'strong' werden nur untereinander angeglichen, nicht an die anderen (die wenigen Ergebnisse duerfen gross sein)
+    const fs = b.xs.map(x => fit(x, lo, hi)), isS = i => b.xs[i].lane.emphasis === 'strong';
+    const low = want => Math.min(...fs.filter((f, i) => isS(i) === want).map(f => f || lo));
+    const least = low(false), leastS = low(true);
+    b.xs.forEach((x, i) => { x.inner.style.fontSize = (fs[i] === null ? lo : Math.min(fs[i], (isS(i) ? leastS : least) * 1.25)) + 'px';
       if (x.inner.offsetHeight > x.body.clientHeight + 1) { x.body.style.overflowY = 'auto'; x.L.append(ctx.el('div', '↓ weiter nach unten scrollen', P + 'more')); } });
     if (ctx.dir) b.row.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
     return { count: lanes.length, pages: 1 };
@@ -216,7 +264,16 @@
       const L = laneEls[lane.k]; if (!L) continue;
       L.style.opacity = 1; fade(L, 500, 0, -24);
       const tiles = [...L.querySelectorAll('.tile')];
-      tiles.forEach((t, j) => { const g = ghosts.get(t.dataset.id); if (g) setTimeout(() => { g.className = 'tile pop c-' + lane.color; }, Math.min(j * 25, 500)); });
+      tiles.forEach((t, j) => { const g = ghosts.get(t.dataset.id); if (g) setTimeout(() => { g.className = t.className.replace(P + 'badged', '') + ' pop';
+        if (t.style.getPropertyValue('--kacc')) g.style.setProperty('--kacc', t.style.getPropertyValue('--kacc')); }, Math.min(j * 25, 500)); });
+      // Post-its, die schon in einer frueheren Bahn stehen (Auswahl, z. B. Min Specs aus Max Specs): Kopie fliegt von dort herueber
+      tiles.forEach(t => { if (ghosts.has(t.dataset.id)) return;
+        const src = [...row.querySelectorAll('.tile[data-id="' + t.dataset.id + '"]')].find(o => o !== t && o.style.visibility !== 'hidden' && !L.contains(o));
+        if (!src) return; const a = src.getBoundingClientRect(), vb = src.closest('.' + P + 'body').getBoundingClientRect();
+        if (a.top < vb.top || a.bottom > vb.bottom + 1) return;   // weggescrollte Quelle: lieber einblenden als aus dem Nichts fliegen
+        const g = src.cloneNode(true);
+        g.style.cssText = `left:${a.left - B.left}px;top:${a.top - B.top}px;width:${a.width}px;height:${a.height}px;font-size:${getComputedStyle(src).fontSize}`;
+        ghost.append(g); ghosts.set(t.dataset.id, g); });
       await sleep(Math.min(tiles.length * 25, 500) + 650);
       tiles.forEach((t, j) => {
         const g = ghosts.get(t.dataset.id), b = t.getBoundingClientRect(), delay = Math.min(j * 8, 400);

@@ -1,0 +1,577 @@
+{
+ "step": {
+  "label": "Min Specs · alle",
+  "lsDef": {
+   "name": "Min Specs",
+   "icon": "min-specs",
+   "noun": "Regeln",
+   "panel": [
+    "Was übrig bleibt",
+    "Worum noch gerungen wird",
+    "Was beim Aussieben verloren geht"
+   ]
+  },
+  "phase": "alle",
+  "q": "Was müssen wir unbedingt tun und lassen, damit unsere Projektübergaben gelingen?",
+  "how": "Erst alle Regeln sammeln, dann streichen: Was bleibt, ohne das die Übergabe sicher scheitert?",
+  "show": [
+   2
+  ]
+ },
+ "people": 28,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Übergabedokument nach Vorlage ausfüllen, IMMER"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "alle offenen Punkte in einer Liste mit Verantwortlichem"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Doku muss vor der Übergabe fertig sein, nicht 'reiche ich nach'"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Passwörter und Zugänge sauber übergeben (Passwortmanager!)"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Ablagestruktur im Teams-Kanal einheitlich"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Entscheidungslog führen, warum was so entschieden wurde"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Vertragsunterlagen und Angebote verlinken"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Lessons Learned dokumentieren"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Glossar mit Kundenbegriffen"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Versionsstand aller Dokumente klar markieren"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Risiken-Liste aktualisieren vor Übergabe"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Budgetstand mit Stichtag"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Stakeholder-Map mitgeben"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Fotos vom letzten Workshop-Board ablegen"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kontaktliste Kundenseite inkl. wer was entscheidet"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Persönliches Übergabegespräch, nicht nur Mail"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Übergabegespräch mindestens 60 min"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Kunde muss beim Übergabetermin dabei sein"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Gemeinsamer Termin beim Kunden, alter und neuer PL zusammen"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Übergabe nie am Freitagnachmittag"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Mindestens 2 Wochen Überlappung"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Nach 4 Wochen Nachgespräch zw. alt und neu"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Agenda für Übergabegespräch vorher verschicken"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Protokoll vom Übergabegespräch"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Übergabe nicht in der Urlaubszeit planen"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "auch die informellen Sachen erzählen (wer kann mit wem)"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Ab Stichtag ist der neue PL verantwortlich, nicht 'irgendwie beide'"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Alter PL bleibt 3 Monate ansprechbar"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Abteilungsleitung zeichnet Übergabe ab"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Neue PL darf Übergabe ablehnen wenns unvollständig ist"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Klare Ansage an den Kunden wer ab wann zuständig ist"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Rollen im Projektteam neu bestätigen"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Eskalationsweg klären"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Keine Übergabe mitten in einer kritischen Phase (z.B. Abnahme)"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Vertretungsregel festlegen"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Wer darf Budget freigeben? muss klar sein"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Nichts schönreden, auch die Leichen im Keller nennen"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Keine Schuldzuweisungen an den Vorgänger"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Nicht sofort alles umwerfen was der Vorgänger aufgebaut hat"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Fragen sind erwünscht, auch dumme"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "ehrlich sagen was man selbst nicht weiß"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Wertschätzung für die bisherige Arbeit"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "keine Übergabe per WhatsApp"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Nicht über den Kunden lästern bei der Übergabe"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Respekt vor den Absprachen, die schon mit dem Kunden getroffen wurden"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Checkliste Übergabe im Wiki"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Ticketsystem aufräumen vor Übergabe"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "alle Mailverteiler umstellen"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Kalendereinladungen übertragen"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Zugriff auf alle Ordner VOR dem Stichtag"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Jira-Board aufräumen"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Zeiterfassungs-Projektnummern umstellen"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Lizenzen (Miro etc) übertragen"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Reporting-Termine übergeben"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Rechnungsstellung klären wer was macht"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Teams-Kanal umbenennen falls nötig"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Übergabe im Projektstatusbericht vermerken"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "standardisierter Übergabeprozess für alle Bereiche"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Schulung Übergabeprozess für alle PLs"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Übergaben jährlich auswerten"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": false,
+  "lanes": [
+   {
+    "label": "Max Specs",
+    "hint": "Alle Regeln, die uns einfallen",
+    "color": "blau",
+    "emphasis": "muted",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ],
+    "themes": [
+     {
+      "label": "Dokumentation",
+      "ids": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13,
+       14,
+       15
+      ]
+     },
+     {
+      "label": "Gespräch & Termine",
+      "ids": [
+       16,
+       17,
+       18,
+       19,
+       20,
+       21,
+       22,
+       23,
+       24,
+       25,
+       26
+      ]
+     },
+     {
+      "label": "Verantwortung",
+      "ids": [
+       27,
+       28,
+       29,
+       30,
+       31,
+       32,
+       33,
+       34,
+       35,
+       36
+      ]
+     },
+     {
+      "label": "Haltung & Ton",
+      "ids": [
+       37,
+       38,
+       39,
+       40,
+       41,
+       42,
+       43,
+       44,
+       45
+      ]
+     },
+     {
+      "label": "Werkzeuge & Ablauf",
+      "ids": [
+       46,
+       47,
+       48,
+       49,
+       50,
+       51,
+       52,
+       53,
+       54,
+       55,
+       56,
+       57,
+       58,
+       59,
+       60
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Min Specs · Must Do",
+    "hint": "Was wir unbedingt tun",
+    "color": "grün",
+    "emphasis": "strong",
+    "ids": [
+     2,
+     16,
+     27,
+     18,
+     50
+    ],
+    "summary": "Fünf Regeln überleben: offene Punkte mit Namen, ein echtes Gespräch, ein klarer Stichtag, der Kunde am Tisch und Zugänge vorher."
+   },
+   {
+    "label": "Min Specs · Must Not Do",
+    "hint": "Was wir auf keinen Fall tun",
+    "color": "koralle",
+    "emphasis": "strong",
+    "ids": [
+     37,
+     34
+    ],
+    "summary": "Zwei Verbote: nichts verschweigen und nie mitten in einer kritischen Phase übergeben."
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Von 60 Regeln bleiben 7. Übrig bleibt, was Verantwortung eindeutig macht und Wissen ehrlich weitergibt; fast alle Werkzeug- und Ablageregeln sind entbehrlich.",
+  "convergence": [
+   {
+    "label": "Min Specs · Must Do",
+    "ids": [
+     2,
+     16,
+     27,
+     18,
+     50
+    ],
+    "quote": "Ab Stichtag ist der neue PL verantwortlich, nicht 'irgendwie beide'"
+   },
+   {
+    "label": "Min Specs · Must Not Do",
+    "ids": [
+     37,
+     34
+    ],
+    "quote": "Nichts schönreden, auch die Leichen im Keller nennen"
+   },
+   {
+    "label": "Werkzeuge sind keine Min Specs",
+    "ids": [
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ],
+    "quote": "Checkliste Übergabe im Wiki"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Klarer Schnitt oder sanfter Übergang",
+    "a": "„Ab Stichtag ist der neue PL verantwortlich, nicht 'irgendwie beide'“",
+    "b": "„Alter PL bleibt 3 Monate ansprechbar“"
+   },
+   {
+    "label": "Standard oder Urteilskraft",
+    "a": "„standardisierter Übergabeprozess für alle Bereiche“",
+    "b": "„Neue PL darf Übergabe ablehnen wenns unvollständig ist“"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer prüft die Min Specs",
+    "why": "Keine der sieben Regeln sagt, woran man merkt, dass sie eingehalten wurde, und wer das anspricht."
+   },
+   {
+    "label": "Das Team unter der Projektleitung",
+    "why": "Alle Regeln drehen sich um alte und neue Projektleitung und den Kunden; das Projektteam taucht nur einmal auf."
+   }
+  ]
+ }
+}
