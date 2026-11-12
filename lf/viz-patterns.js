@@ -31,7 +31,7 @@ style.textContent = `
 .${N}ctitle { display: flex; gap: .45em; align-items: flex-start; font-weight: 800; line-height: 1.15; font-size: 1.15em; }
 .${N}n { color: #5F5F5F; font-size: .78em; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .${N}q { font-style: italic; line-height: 1.3; overflow-wrap: anywhere; }
-.${N}clamp .${N}q { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.${N}clamp .${N}q { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; flex: none; }   /* flex: none, sonst drueckt die Karte das Zitat unbemerkt auf null */
 .${N}dot { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.6em; height: 1.6em; border-radius: 50%;
            color: #fff; font-weight: 800; font-size: .7em; line-height: 1; font-style: normal; transition: opacity .4s; }
 .${N}ctitle .${N}dot { font-size: .72em; margin-top: .08em; }
@@ -117,7 +117,7 @@ function overview(box, ctx, m) {
     cards.append(c); return c; });
   if (P) wrap.append(cards);
   // Karten: groesste gemeinsame Schrift, bei der jede Karte ganz hineinpasst; wird es zu klein, Zitat auf 3 Zeilen kuerzen.
-  const fitCards = (lo, hi) => { const ok = f => { cards.style.fontSize = f + 'px'; return cardEls.every(c => c.scrollHeight <= c.clientHeight + 1); };
+  const fitCards = (lo, hi) => { const ok = f => { cards.style.fontSize = f + 'px'; return cardEls.every(c => c.scrollHeight <= c.clientHeight + 1 && c.scrollWidth <= c.clientWidth + 1); };   // auch Breite: lange Woerter im Titel
     if (!ok(lo)) return null; if (ok(hi)) return hi;
     for (let i = 0; i < 7; i++) { const mid = (lo + hi) / 2; if (ok(mid)) lo = mid; else hi = mid; }
     return lo; };
@@ -128,7 +128,8 @@ function overview(box, ctx, m) {
   for (const fr of fracs) {
     const cardsH = Math.round(H * fr); let cf = 0, clamp = false;
     if (P) { cards.classList.remove(N + 'clamp'); cards.style.height = cardsH + 'px'; cf = fitCards(13, 44);
-      if (cf === null) { clamp = true; cards.classList.add(N + 'clamp'); cf = fitCards(9, 44) || 9; } }
+      if (cf === null || cf < 18) { cards.classList.add(N + 'clamp'); const cc = fitCards(9, 44) || 9;
+        if (cf === null || cc > cf * 1.3) { clamp = true; cf = cc; } else cards.classList.remove(N + 'clamp'); } }
     const lay = gridFor(lens, W, H - cardsH - (P ? gap * 2 : 0), g), score = P ? Math.min(cf / 1.5 - (clamp ? 3 : 0), lay.f) : lay.f;
     if (!best || score > best.score + .01) best = { fr, cardsH, cf, clamp, lay, score };
   }
@@ -145,7 +146,7 @@ function overview(box, ctx, m) {
     const t = el('div', null, N + 'tile' + (ks.length ? '' : ' ' + N + 'none')); t.dataset.id = id; t.title = r.body; t.style.width = Math.floor(lay.w) + 'px'; t.style.height = Math.floor(lay.h) + 'px';
     t._ks = ks; t._ink = Object.fromEntries(ks.map(k => [k, m.pats[k].ink]));
     const ds = el('div', null, N + 'dots'); ks.forEach(k => ds.append(dot(m.pats[k])));
-    if (ks.length > lay.L) ds.style.cssText = 'display:grid;grid-template-columns:auto auto;align-content:start';
+    if (ks.length > lay.L) ds.style.cssText = `display:grid;grid-template-columns:repeat(${Math.max(2, Math.ceil(ks.length / lay.L))},auto);align-content:start`;
     const tx = el('span', r.body, N + 'txt'); tx.style.webkitLineClamp = lay.L;
     if (ks.length) t.append(ds); t.append(tx); t.onclick = () => ks.length && ctx.go(ks[0]);
     stories.append(t); tiles.set(id, t); });
@@ -181,9 +182,8 @@ function focusView(box, ctx, m, k) {
   if (!fits(list, LO)) { parts = [[]];
     list.forEach(r => { const cur = parts[parts.length - 1]; if (cur.length && !fits(cur.concat(r), LO)) parts.push([r]); else cur.push(r); }); }
   const page = Math.min(ctx.page || 0, parts.length - 1), rs = parts[page];
-  let lo = LO, hi = HI;
-  if (fits(rs, hi)) lo = hi; else for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (fits(rs, mid)) lo = mid; else hi = mid; }
-  make(rs, Math.floor(lo * 2) / 2);
+  const size = p => { let lo = LO, hi = HI; if (fits(p, hi)) return hi; for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (fits(p, mid)) lo = mid; else hi = mid; } return lo; };
+  make(rs, Math.floor(Math.min(...parts.map(size)) * 2) / 2);   // alle Seiten in gleicher Schrift (sonst springt sie beim Blaettern)
   if (ctx.dir) area.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
   return parts.length;
 }

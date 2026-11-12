@@ -85,11 +85,11 @@ const css = `
             box-shadow: 0 1px 3px rgba(0,0,0,.1); cursor: pointer; display: flex; flex-direction: column; gap: .25em; transition: opacity .3s; }
 .${N}hlc .${N}card:not(.${N}on) { opacity: .45; }
 .${N}name { display: flex; align-items: baseline; gap: .4em; font-weight: 800; font-size: 1.25em; line-height: 1.12; }
-.${N}name small { font-weight: 400; font-size: .68em; color: #5F5F5F; white-space: nowrap; }
+.${N}name small { font-weight: 400; font-size: .68em; color: #5F5F5F; white-space: nowrap; flex-shrink: 0; max-width: 60%; overflow: hidden; text-overflow: ellipsis; }
 .${N}name .${N}cnt { margin-left: auto; font-weight: 700; font-size: .7em; color: #5F5F5F; white-space: nowrap; }
 .${N}sum { line-height: 1.3; color: #1C1917; }
 .${N}sum b, .${N}ksum b { color: #409E9F; font-weight: 800; margin-right: .35em; font-size: .85em; letter-spacing: .03em; }
-.${N}clamp .${N}sum { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.${N}clamp .${N}sum { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; flex: none; }
 /* 2×2 mit Kacheln */
 .${N}grid { grid-row: 1; grid-column: 2; min-height: 0; display: grid; gap: 10px; border-left: 2px solid #8A8A80; border-bottom: 2px solid #8A8A80; padding: 0 0 10px 10px; }
 .${N}cell { position: relative; min-width: 0; min-height: 0; display: flex; flex-direction: column; background: #fff; border-radius: 10px; border-top: 6px solid;
@@ -117,15 +117,16 @@ const css = `
 .${N}mini .${N}field { border-width: 0 0 2px 2px; }
 .${N}mpole { font-size: 13px; color: #5F5F5F; white-space: nowrap; }
 .${N}mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; border-left: 2px solid #8A8A80; border-bottom: 2px solid #8A8A80; padding: 0 0 5px 5px; }
-.${N}mcell { border-radius: 6px; padding: 6px 8px; font-size: 14px; font-weight: 700; line-height: 1.15; cursor: pointer; background: #F1F1EC; color: #8A8A80; overflow: hidden; }
+.${N}mcell { border-radius: 6px; padding: 6px 8px; font-size: 14px; font-weight: 700; line-height: 1.15; cursor: pointer; background: #F1F1EC; color: #8A8A80; overflow: hidden; hyphens: auto; overflow-wrap: anywhere; }
 .${N}mcell.${N}on { color: #1C1917; }
 .${N}mcell small { display: block; font-weight: 400; font-size: 12px; margin-top: 2px; }
 .${N}main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .${N}head { flex: none; display: flex; align-items: center; gap: 14px; margin: 0 0 10px; min-width: 0; }
 .${N}back { flex: none; border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-size: 15px; color: #5F5F5F; padding: 3px 12px; border-radius: 999px; }
 .${N}pill { display: flex; align-items: baseline; gap: .45em; font-weight: 800; font-size: clamp(20px, 2vw, 34px); padding: 4px 22px 5px 18px; border-radius: 999px; min-width: 0; }
-.${N}pill span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.${N}pill small { font-weight: 400; color: #5F5F5F; font-size: .66em; white-space: nowrap; }
+.${N}pill small:last-child { flex-shrink: 0; }   /* die Zahl bleibt ganz */
+.${N}pill span { flex: 0 1 auto; min-width: 4em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.${N}pill small { flex: 0 1000 auto; min-width: 0; font-weight: 400; color: #5F5F5F; font-size: .66em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .${N}ksum { flex: none; margin: 0 0 14px; padding: 7px 14px 8px; border-radius: 6px; background: #EAF9F9; border-left: 4px solid #40BFC0; line-height: 1.3;
             font-size: clamp(16px, 1.35vw, 25px); }
 .${N}area { flex: 1; min-height: 0; overflow: hidden; position: relative; }
@@ -138,9 +139,9 @@ const css = `
 .${N}eco .${N}card { flex: 1 1 auto; }
 .${N}eco .${N}card > * { flex: none; }
 .${N}eco .${N}name { flex-wrap: wrap; row-gap: .1em; }
-.${N}eco .${N}name small { flex-basis: 100%; order: 3; font-size: .62em; }
+.${N}eco .${N}name small { flex-basis: 100%; max-width: 100%; order: 3; font-size: .62em; }
 .${N}eco .${N}name > span:first-child { flex: 1 1 0; min-width: 0; }
-.${N}stuck { color: #5F5F5F; line-height: 1.28; font-size: .9em; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.${N}stuck { color: #5F5F5F; line-height: 1.28; font-size: .9em; overflow-wrap: anywhere; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
 .${N}seg { transition: opacity .4s; }
 .${N}ghost { position: absolute; inset: 0; z-index: 3; pointer-events: none; transition: opacity .6s; }
 .${N}ghost .tile { position: absolute; }
@@ -150,7 +151,7 @@ document.head.append(Object.assign(document.createElement('style'), { textConten
 const clamp01 = v => Math.max(0, Math.min(1, +v));
 function model(ctx) {
   const d = ctx.data || {}, rows = ctx.rows || [], byId = new Map(rows.map(r => [String(r.id), r]));
-  const pos = new Map((d.items || []).filter(i => i && isFinite(i.x) && isFinite(i.y)).map(i => [String(i.id), { x: clamp01(i.x), y: clamp01(i.y), short: i.short }]));
+  const pos = new Map((d.items || []).filter(i => i && i.x != null && i.y != null && i.x !== '' && i.y !== '' && isFinite(i.x) && isFinite(i.y)).map(i => [String(i.id), { x: clamp01(i.x), y: clamp01(i.y), short: i.short }]));
   const shorts = new Map((d.items || []).filter(i => i && i.short).map(i => [String(i.id), i.short]));
   const layout = d.layout === 'grid' || d.layout === 'bands' || d.layout === 'ecocycle' ? d.layout : pos.size ? 'bands' : 'grid';
   const seen = new Set(), zoneOf = new Map();
@@ -184,7 +185,7 @@ function model(ctx) {
 }
 function ecoModel(ctx, d, rows, byId, shorts) {
   const raw = d.zones || [], seen = new Set(), zoneOf = new Map(), pos = new Map();
-  const ts = new Map((d.items || []).filter(i => i && isFinite(i.t)).map(i => [String(i.id), clamp01(i.t)]));
+  const ts = new Map((d.items || []).filter(i => i && i.t != null && i.t !== '' && isFinite(i.t)).map(i => [String(i.id), clamp01(i.t)]));
   const zones = [];
   ECO.forEach((e, j) => {
     const z = raw.find(r => r && r.phase === e.phase) || (raw.every(r => r && !r.phase) ? raw[j] : null);
@@ -267,7 +268,7 @@ function place(m, field, W, H, k, small) {
   const dots = new Map(), labs = new Map();
   ids.forEach(id => { const z = m.zones[m.zoneOf.get(id)], [x, y] = at(id), d = el('div', null, N + 'dot');
     d.style.cssText = `left:${x}px;top:${y}px;background:${z.ink}`; d.dataset.mid = id; d._z = z.k;
-    if (small) { d.style.width = d.style.height = '9px'; d.style.margin = '-4.5px 0 0 -4.5px'; d.style.borderWidth = '1.5px';
+    if (small) { d.style.pointerEvents = 'none'; d.style.width = d.style.height = '9px'; d.style.margin = '-4.5px 0 0 -4.5px'; d.style.borderWidth = '1.5px';
       if (k != null && z.k !== k) d.style.background = '#C9C9C2'; }
     field.append(d); dots.set(id, d); });
   if (small) return { dots, labs, lines: new Map(), font: 0 };
@@ -357,7 +358,7 @@ function pointsView(box, ctx, m) {
   const pl = place(m, field, fw, fh);
   const v = { m, wrap, field, cardsBox, cards, axes: [xa, ya], ...pl };
   // Karten: groesste gemeinsame Schrift, bei der jede ganz hineinpasst; sonst KI-Satz auf 3 Zeilen kuerzen
-  const fit = (lo, hi) => { const ok = f => { cardsBox.style.fontSize = f + 'px'; return cards.every(c => !c || c.scrollHeight <= c.clientHeight + 1); };
+  const fit = (lo, hi) => { const ok = f => { cardsBox.style.fontSize = f + 'px'; return cards.every(c => !c || (c.scrollHeight <= c.clientHeight + 1 && c.scrollWidth <= c.clientWidth + 1)); };
     if (!ok(lo)) return null; if (ok(hi)) return hi; for (let i = 0; i < 7; i++) { const mid = (lo + hi) / 2; if (ok(mid)) lo = mid; else hi = mid; } return lo; };
   const cap = Math.max(16, Math.min(26, Math.round(H / 26)));
   let f = fit(14, cap); if (f === null) { cardsBox.classList.add(N + 'clamp'); f = fit(13, cap) || 13; }
@@ -386,7 +387,7 @@ function ecoView(box, ctx, m) {
   const pl = place(m, field, fw, fh);
   const v = { m, wrap, field, cardsBox: wrap, cards, axes: [], ...pl };
   const all = cards.filter(Boolean);
-  const fit = (lo, hi) => { const ok = f => { colL.style.fontSize = colR.style.fontSize = f + 'px'; return all.every(c => c.scrollHeight <= c.clientHeight + 1) && [colL, colR].every(c => c.scrollHeight <= c.clientHeight + 1); };
+  const fit = (lo, hi) => { const ok = f => { colL.style.fontSize = colR.style.fontSize = f + 'px'; return all.every(c => c.scrollHeight <= c.clientHeight + 1 && c.scrollWidth <= c.clientWidth + 1) && [colL, colR].every(c => c.scrollHeight <= c.clientHeight + 1); };
     if (!ok(lo)) return null; if (ok(hi)) return hi; for (let i = 0; i < 7; i++) { const mid = (lo + hi) / 2; if (ok(mid)) lo = mid; else hi = mid; } return lo; };
   const cap = Math.max(16, Math.min(24, Math.round(H / 30)));
   let f = fit(14, cap); if (f === null) { wrap.classList.add(N + 'clamp'); f = fit(13, cap) || 13; }
@@ -432,7 +433,8 @@ function gridView(box, ctx, m) {
     if (!over()) return;
     const more = el('button', null, N + 'morebtn'); more.onclick = () => ctx.go(x.z.k); x.inner.append(more);
     let n = 0; while (over() && n < ts.length) { ts[ts.length - 1 - n].hidden = true; n++; more.textContent = '+ ' + n + ' weitere'; } });
-  const tiles = new Map(); xs.forEach(x => x.inner.querySelectorAll('.tile').forEach(t => { t._z = x.z.k; tiles.set(t.dataset.mid, t); }));
+  const tiles = new Map(); xs.forEach(x => x.inner.querySelectorAll('.tile').forEach(t => { t._z = x.z.k; tiles.set(t.dataset.mid, t);
+    t.style.cursor = 'pointer'; t.onclick = () => ctx.go(x.z.k); }));   // wie Punkte und Kurztexte: Klick fuehrt in den Fokus
   return { m, wrap, grid, xs, axes: [xa, ya], tiles };
 }
 
@@ -448,7 +450,7 @@ function mini(m, ctx, k, w) {
     field.append(background(m, w, h, k, ctx.go)); place(m, field, w, h, k, true);
   } else {
     const g = el('div', null, N + 'mgrid'), { xa, ya } = axes(m, true), plot = el('div', null, N + 'plot');
-    g.style.cssText += `grid-row:1;grid-column:2;width:${w}px;height:${Math.round(w * .62)}px`;
+    g.style.cssText += `grid-row:1;grid-column:2;width:${w}px;min-height:${Math.round(w * .62)}px`;   // min-height: lange Szenario-Namen duerfen die Felder strecken
     m.zones.forEach(z => { const c = el('div', null, N + 'mcell' + (z.k === k ? ' ' + N + 'on' : ''));
       if (z.k === k) { c.style.background = z.pastel; c.style.boxShadow = `inset 0 0 0 2px ${z.ink}`; }
       c.append(document.createTextNode(z.label), el('small', many(m, z.ids.length))); c.onclick = () => ctx.go(z.k); g.append(c); });
@@ -480,9 +482,8 @@ function focusView(box, ctx, m, k) {
   if (!fits(z.rows, LO)) { parts = [[]];
     z.rows.forEach(r => { const cur = parts[parts.length - 1]; if (cur.length && !fits(cur.concat(r), LO)) parts.push([r]); else cur.push(r); }); }
   const page = Math.min(ctx.page || 0, parts.length - 1), rs = parts[page];
-  let lo = LO, hi = HI;
-  if (fits(rs, hi)) lo = hi; else for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (fits(rs, mid)) lo = mid; else hi = mid; }
-  make(rs, Math.floor(lo * 2) / 2);
+  const size = p => { let lo = LO, hi = HI; if (fits(p, hi)) return hi; for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (fits(p, mid)) lo = mid; else hi = mid; } return lo; };
+  make(rs, Math.floor(Math.min(...parts.map(size)) * 2) / 2);   // alle Seiten in gleicher Schrift (sonst springt sie beim Blaettern)
   if (ctx.dir) area.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
   return parts.length;
 }
@@ -511,6 +512,16 @@ function draw(box, ctx) {
 const view = (box, ctx, m) => m.layout === 'ecocycle' ? ecoView(box, ctx, m) : m.points ? pointsView(box, ctx, m) : gridView(box, ctx, m);
 
 // ---------- Show-Effekt
+// Flug aus dem Mosaik: verschieben und gleichmaessig skalieren. ctx.flip skaliert Breite und Hoehe getrennt; bei Kurztexten und Punkten,
+// die viel kleiner und flacher sind als die Mosaik-Kacheln, sah die Schrift im Flug riesig und verzerrt aus.
+function fly(els, from) {
+  let i = 0;
+  els.forEach(e => { const a = from.get(e.dataset.mid), b = e.getBoundingClientRect();
+    if (!a || !a.width || !b.width) { e.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); return; }
+    const s = Math.max(.4, Math.min(a.width / b.width, a.height / b.height, 1.6)), dx = a.left + a.width / 2 - b.left - b.width / 2, dy = a.top + a.height / 2 - b.top - b.height / 2;
+    e.animate([{ transform: `translate(${dx}px,${dy}px) scale(${s})`, transformOrigin: '50% 50%' }, { transform: 'none', transformOrigin: '50% 50%' }],
+              { duration: 1200, delay: Math.min(i++ * 4, 450), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
+}
 async function reveal(box, ctx) {
   const { sleep } = ctx, from = ctx.from || new Map(), m = model(ctx);
   if (!m.zones.length) return;
@@ -562,10 +573,9 @@ async function show(box, ctx, m, sleep, from) {
     z.ids.forEach((id, j) => { const g = ghosts.get(id); if (g) { g.className = 'tile pop c-' + z.color; g.style.opacity = 1; g.style.zIndex = 2; } });
     ghost.style.opacity = 1; ghosts.forEach((g, id) => { if (m.zoneOf.get(id) !== z.k) g.style.opacity = .25; });
     await sleep(450);
-    els.forEach(e => { e.style.visibility = ''; e.dataset.id = e.dataset.mid; if (!e.style.position && getComputedStyle(e).position === 'static') e.style.position = 'relative'; e.style.zIndex = 4; });   // ueber dem Geister-Mosaik
+    els.forEach(e => { e.style.visibility = ''; if (!e.style.position && getComputedStyle(e).position === 'static') e.style.position = 'relative'; e.style.zIndex = 4; });   // ueber dem Geister-Mosaik
     z.ids.forEach(id => { const g = ghosts.get(id); if (g) { g.remove(); ghosts.delete(id); } });
-    ctx.flip(box, from);
-    els.forEach(e => delete e.dataset.id);
+    fly(els, from);
     await sleep(per - 450);
     extra.get(z.k).forEach(e => { e.style.visibility = ''; if (e.tagName !== 'line') e.style.zIndex = 4; fade(e, 350); });
     await sleep(250);
