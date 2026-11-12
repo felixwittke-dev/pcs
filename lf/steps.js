@@ -24,6 +24,8 @@ const STEPS = [
   { id: 8, mode: 'one', label: 'Rückblick', q: 'Wie war es für dich, am Handy zu schreiben? Was hat geholfen, was hat gestört?',
     how: 'Deine ehrliche Rückmeldung hilft uns beim Weiterbauen.', show: [8], solo: true },
 ];
+// Themen (Einfaerben) zu Schritt N liegen als Ergebnis unter Schluessel THEMES + N und sind sofort freigegeben (Felix, 12.11.).
+const THEMES = 100;
 const stepById = id => STEPS.find(s => s.id === id) || STEPS[0];
 
 function rpc(fn, args, ms = 8000) {

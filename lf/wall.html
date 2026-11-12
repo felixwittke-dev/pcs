@@ -28,6 +28,16 @@
   .note { background: var(--note); border-radius: 4px; padding: 14px 16px; box-shadow: 0 2px 4px rgba(0,0,0,.14); white-space: pre-wrap;
           overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px; }
   .note.alt { background: var(--note2); }
+  #notes.grouped { display: block; }
+  .theme { margin: 0 0 22px; }
+  .theme h3 { display: inline-block; font-size: clamp(17px, 1.5vw, 24px); margin: 0 0 10px; padding: 4px 14px; border-radius: 999px; }
+  .theme h3 span { font-weight: 400; color: var(--muted); }
+  .theme .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .theme .note { min-height: 0; padding: 10px 12px; font-size: clamp(14px, 1.05vw, 18px); animation: tint .8s ease-out; }
+  @keyframes tint { from { background: var(--note); } }
+  .c-gelb { background: #FFF1B8; } .c-grün { background: #D3EFDD; } .c-blau { background: #D6E6FB; } .c-rosa { background: #FAD9E6; }
+  .c-orange { background: #FFDDBB; } .c-lila { background: #E6DBF7; } .c-türkis { background: #CDEEEE; } .c-koralle { background: #FFD5CC; }
+  .c-none { background: #ECECE6; }
   .note:nth-child(3n) { transform: rotate(.6deg); } .note:nth-child(3n+1) { transform: rotate(-.5deg); }
   #result { background: var(--ai); border-left: 8px solid #3B5B92; border-radius: 6px; padding: 18px 22px; margin: 26px 0 0; }
   #result h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: #3B5B92; margin: 0 0 8px; }
@@ -85,12 +95,23 @@ async function refresh(st) {
   const notes = $('notes'); notes.hidden = counter;
   if (!counter && s.show.length) {
     const rows = await rpc('lf_wall', { p_steps: s.show });
-    notes.textContent = '';
-    rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
+    // Themen: sobald die KI zugeordnet hat, haengen die Post-its nach Themen gruppiert und eingefaerbt (ohne Freigabe).
+    const themed = s.show.filter(x => st.released.includes(String(THEMES + x)));
+    const themes = (await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })))).flatMap(t => (t && t.themes) || []);
+    notes.textContent = ''; notes.className = themes.length ? 'grouped' : '';
+    if (!themes.length) rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
+    else {
+      const byId = new Map(rows.map(r => [r.id, r])), used = new Set();
+      const group = (label, cls, list) => { if (!list.length) return; const g = el('div', null, 'theme'), h = el('h3', label + ' ', cls), grid = el('div', null, 'grid');
+        h.append(el('span', '· ' + list.length)); list.forEach(r => grid.append(el('div', r.body, 'note ' + cls))); g.append(h, grid); notes.append(g); };
+      themes.forEach(t => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id)); group(t.label, 'c-' + t.color, list); });
+      group('Einzelstimmen', 'c-none', rows.filter(r => themed.includes(r.step) && !used.has(r.id)));
+      s.show.filter(x => !themed.includes(x)).forEach(x => group(stepById(x).label, 'alt', rows.filter(r => r.step === x)));
+    }
   } else notes.textContent = '';
   // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt, auch im Zaehler-Modus (Felix, 12.11.).
   // Sonst bleibt die angezeigte stehen; beim Laden: die zum Schritt passende, sonst die hoechste.
-  const rel = st.released.map(Number);
+  const rel = st.released.map(Number).filter(x => x < THEMES);
   const fresh = prevReleased ? rel.filter(x => !prevReleased.includes(x)) : [];
   if (fresh.length) shownResult = Math.max(...fresh);
   else if (!rel.includes(shownResult)) {

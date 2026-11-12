@@ -97,11 +97,11 @@ async function refresh() {
       const b = el('button', r.hidden ? 'Wieder zeigen' : 'Ausblenden', 'small'); b.onclick = () => call('lf_hide', { p_id: r.id, p_hidden: !r.hidden }).then(refresh, fail);
       d.append(b); box.append(d); });
     const dz = $('drafts'); dz.textContent = '';
-    Object.keys(drafts || {}).sort((a, b) => a - b).forEach(k => {
+    Object.keys(drafts || {}).filter(k => +k < THEMES).sort((a, b) => a - b).forEach(k => {
       const r = drafts[k], d = el('div', null, 'draft');
       d.append(el('strong', 'Schritt ' + k + ' · ' + stepById(+k).label + (r.released ? ' · freigegeben' : ' · Entwurf, nur du siehst ihn')));
       const x = r.data || {}; let t = (x.headline || '') + '\n';
-      (x.convergence || []).forEach(c => t += '\n• ' + c.label + (c.ids ? ' (' + c.ids.map(i => '#' + i).join(', ') + ')' : '') + (c.quote ? ' „' + c.quote + '“' : ''));
+      (x.convergence || []).forEach(c => t += '\n• ' + c.label + (c.ids ? ' (' + (c.ids.length > 6 ? c.ids.length + ' Post-its' : c.ids.map(i => '#' + i).join(', ')) + ')' : '') + (c.quote ? ' „' + c.quote + '“' : ''));
       (x.tension || []).forEach(c => t += '\n↔ ' + c.label + ': ' + c.a + ' / ' + c.b);
       (x.blind_spots || []).forEach(c => t += '\n? ' + c.label + (c.why ? ': ' + c.why : ''));
       d.append(el('pre', t));
