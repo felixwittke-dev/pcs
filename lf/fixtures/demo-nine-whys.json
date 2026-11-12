@@ -1,0 +1,409 @@
+{
+ "step": {
+  "label": "Nine Whys · alle",
+  "lsDef": {
+   "name": "Nine Whys",
+   "icon": "nine-whys",
+   "panel": [
+    "Wofür wir wirklich da sind",
+    "Wo unser Zweck sich reibt",
+    "Wen unser Zweck noch nicht erreicht"
+   ],
+   "noun": "Zweck-Sätze"
+  },
+  "phase": "alle",
+  "q": "Warum ist unsere Arbeit wichtig? Wofür gibt es unser Team wirklich?",
+  "how": "Schaut nach vorn: Welcher Zweck trägt uns?",
+  "show": [
+   2
+  ]
+ },
+ "people": 45,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Weil eine früh geklärte Abschlagsänderung zehn Mahnungen spart."
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Weil wir für die Stadt da sind, nicht für Rendite."
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Energie ist kein Produkt wie Handyverträge. Das vergisst man im Vertrieb manchmal."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "füreinander da sein wenn die schicht hart war"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Damit niemand mit seiner Nachzahlung allein am Küchentisch sitzt."
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Damit der Chef ruhig schlafen kann. (Spaß. Halb.)"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Wir sind der Grund, warum jemand uns weiterempfiehlt oder eben nicht."
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "damit jemand zurückruft. klingt banal, ist es nicht"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "wir sehen probleme zuerst. wenn wir das weitergeben, muss es keiner ausbaden"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Weil die Technik nicht mit Kunden redet und die Kunden nicht mit der Technik."
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "ruf der stadtwerke hängt an uns, nicht an der werbung"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Weil Strom und Wärme kein Luxus sind. Wenn das ausfällt, geht's um Gesundheit."
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Weil wir uns gegenseitig auffangen, sonst hält das keiner lange durch."
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Damit keiner von uns abstumpft. Das ist auch Arbeit."
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Wir bringen die Kundensicht in die Projekte, sonst baut die IT am Bedarf vorbei."
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "wir sind ein team in dem man nach nem schlimmen gespräch kurz durchatmen darf"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Im Winter merkt man, dass wir eigentlich Daseinsvorsorge machen."
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Weil ein freundlicher Satz am Telefon manchmal mehr hilft als die Gutschrift."
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Weil Vertrauen am Telefon verloren geht, nicht im Marketing."
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "wir fangen auf bevor es knallt"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Weil irgendwer die Telefone abnehmen muss."
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Damit Versprechen vom Vertrieb auch eingehalten werden. Wir räumen das auf."
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Weil Leute bei uns anrufen, wenn sie nicht mehr weiterwissen, und dann jemand da sein muss."
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Damit der Monteur weiß, dass die Kundin nur vormittags kann. Kleine Info, großer Unterschied."
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "gute frage. ehrlich gesagt weiß ich es nach 9 warums nicht mehr"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "damit bei familie x die heizung läuft. punkt."
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Damit der Fehler im System auffällt, bevor 3000 falsche Rechnungen rausgehen."
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Damit Leute nach der Preiserhöhung trotzdem bleiben, weil sie sich fair behandelt fühlen."
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "brücke sein zwischen technik und draußen"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Damit die Erfahrenen weitergeben, was in keinem Handbuch steht."
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Damit die neue Kollegin nach dem fiesen Anruf nicht alleine sitzt."
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "damit die KPIs grün sind 🙃"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Weil Tarifänderungen erst verständlich werden, wenn wir sie erklärt haben."
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Weil hinter jeder Kundennummer ein Mensch steckt, der gerade Sorgen hat."
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "wir erklären smart meter so dass oma es versteht. und der techniker auch"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Früh anrufen statt spät entschuldigen."
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Wir sind die Stimme der Firma, wenn's eng wird für die Leute."
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Weil wir die Firma sind, für die meisten Kunden. Die sehen keinen Vorstand, die hören uns."
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Damit Menschen mit Sprachbarriere trotzdem zu ihrem Recht kommen."
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Damit Sperrungen gar nicht erst nötig werden. Ratenplan statt Strom aus."
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "ehrlich sagen was geht und was nicht. dafür sind wir da"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Wir sorgen dafür, dass Versorgung bezahlbar bleibt, auch für die, die knapp sind."
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "wir sind oft die einzigen die einer alten dame die abrechnung erklären"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Wir übersetzen Netzbetreiber-Deutsch in normales Deutsch."
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Damit aus einer Frage keine Beschwerde wird und aus der Beschwerde kein Anwalt."
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Kunden nicht allein lassen",
+    "color": "gelb",
+    "ids": [
+     5,
+     8,
+     18,
+     23,
+     34,
+     37,
+     39,
+     43
+    ]
+   },
+   {
+    "label": "Bevor aus Fragen Ärger wird",
+    "color": "grün",
+    "ids": [
+     1,
+     9,
+     20,
+     27,
+     36,
+     40,
+     45
+    ]
+   },
+   {
+    "label": "Übersetzer zwischen Technik und Kunde",
+    "color": "blau",
+    "ids": [
+     10,
+     15,
+     24,
+     29,
+     33,
+     35,
+     44
+    ]
+   },
+   {
+    "label": "Wir sind die Firma",
+    "color": "rosa",
+    "ids": [
+     7,
+     11,
+     19,
+     22,
+     28,
+     38,
+     41
+    ]
+   },
+   {
+    "label": "Uns gegenseitig auffangen",
+    "color": "orange",
+    "ids": [
+     4,
+     13,
+     14,
+     16,
+     30,
+     31
+    ]
+   },
+   {
+    "label": "Grundversorgung, kein Produkt",
+    "color": "lila",
+    "ids": [
+     2,
+     3,
+     12,
+     17,
+     26,
+     42
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Euer Zweck ist nicht das Abarbeiten von Anrufen, sondern dass Menschen mit Sorgen um Strom und Geld nicht allein bleiben.",
+  "convergence": [
+   {
+    "label": "Kunden nicht allein lassen",
+    "ids": [
+     5,
+     8,
+     18,
+     23,
+     34,
+     37,
+     39,
+     43
+    ],
+    "quote": "Damit niemand mit seiner Nachzahlung allein am Küchentisch sitzt."
+   },
+   {
+    "label": "Bevor aus Fragen Ärger wird",
+    "ids": [
+     1,
+     9,
+     20,
+     27,
+     36,
+     40,
+     45
+    ],
+    "quote": "Früh anrufen statt spät entschuldigen."
+   },
+   {
+    "label": "Wir sind die Firma",
+    "ids": [
+     7,
+     11,
+     19,
+     22,
+     28,
+     38,
+     41
+    ],
+    "quote": "Weil Vertrauen am Telefon verloren geht, nicht im Marketing."
+   },
+   {
+    "label": "Grundversorgung, kein Produkt",
+    "ids": [
+     2,
+     3,
+     12,
+     17,
+     26,
+     42
+    ],
+    "quote": "Weil Strom und Wärme kein Luxus sind. Wenn das ausfällt, geht's um Gesundheit."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Menschen vs. Kennzahlen",
+    "a": "\"Weil ein freundlicher Satz am Telefon manchmal mehr hilft als die Gutschrift.\"",
+    "b": "\"damit die KPIs grün sind 🙃\""
+   },
+   {
+    "label": "Daseinsvorsorge vs. Vertrieb",
+    "a": "\"Weil wir für die Stadt da sind, nicht für Rendite.\"",
+    "b": "\"Damit Versprechen vom Vertrieb auch eingehalten werden. Wir räumen das auf.\""
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Was die Arbeit euch selbst gibt",
+    "why": "Fast jeder Satz handelt von anderen. Warum diese Arbeit euch persönlich wichtig ist, bleibt offen. Eine Runde dazu könnte sich lohnen."
+   },
+   {
+    "label": "Wer gar nicht erst anruft",
+    "why": "Alles beginnt beim Anruf. Wer sich aus Scham bei Zahlungsproblemen nie meldet, kommt nicht vor. Wie würdet ihr diese Menschen erreichen?"
+   }
+  ]
+ }
+}

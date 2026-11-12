@@ -44,7 +44,7 @@
   .inner { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; }
   .tile { height: calc(var(--lines) * 1.25em + .7em); padding: .35em .55em; border-radius: .25em; background: var(--note); box-shadow: 0 1px 2px rgba(0,0,0,.16);
           line-height: 1.25; overflow: hidden; transform-origin: 0 0; transition: background-color .6s; }
-  .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; }
+  .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; hyphens: auto; }
   .tile.alt { background: var(--note2); }
   .tile.pop { animation: pop .5s ease-out; z-index: 1; }
   @keyframes pop { 40% { transform: scale(1.12); } }
@@ -62,7 +62,7 @@
   #panel { position: absolute; inset: 0; overflow: hidden; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
   #panel h2 { font-size: .72em; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
   #panel .headline { font-size: 1.8em; font-weight: 800; line-height: 1.2; margin: 0 0 .55em; max-width: 34em; }
-  #panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(15em, 1fr)); gap: .8em; }
+  #panel .cols { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: .8em; }
   #panel .card { background: rgba(255,255,255,.75); border-radius: 8px; padding: .7em .9em; }
   #panel h3 { font-size: .72em; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
   #panel .item { margin: 0 0 .6em; }
@@ -118,7 +118,7 @@ function el(tag, text, cls) { const e = document.createElement(tag); if (text !=
 
 // ---------- Mosaik ----------
 function tileEl(r) { const e = el('div', null, 'tile'); e.dataset.id = r.id; e.append(el('span', r.body)); return e; }
-const emWidth = (text, lines, cap) => Math.max(8, Math.min(text.length, cap)) / lines * 0.5 + 1.7;
+const emWidth = (text, lines, cap) => Math.max(8, Math.min(text.length, cap)) / lines * (cap > 200 ? 0.58 : 0.5) + 1.7;   // Einzelansicht: breiter, damit nichts gekuerzt wird
 
 function blocks() {
   const { rows, themes, themed, s } = view;
@@ -250,9 +250,9 @@ function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
 }
 $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 
-function renderPanel() {
+function renderPanel(animate) {
   const box = $('panel'), r = ai.data || {}, titles = ai.titles || (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
-  const rv = e => { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; return e; };
+  const rv = e => { if (animate) { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; } return e; };   // nur beim Oeffnen einblenden, nicht beim Neu-Einpassen
   const noun = view && ((view.s.lsDef || LS[view.s.ls] || {}).noun) || 'Post-its';
   box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' ' + noun : 'euren Beiträgen'))));
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
@@ -276,7 +276,7 @@ function draw(animate, dir) {
   aiButton();
   const showAi = focus === 'ai' && ai && ai.released;
   $('counter').hidden = !counter || showAi;
-  $('panel').hidden = !showAi; if (showAi) renderPanel();
+  $('panel').hidden = !showAi; if (showAi) renderPanel(animate);
   const viz = !forceFlat && custom(), off = counter || showAi || !view;
   $('mosaic').hidden = off || !!viz; $('custom').hidden = off || !viz;
   if (off) { $('pager').hidden = true; if (!view) $('mosaic').textContent = ''; }
@@ -326,7 +326,7 @@ addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.delta
   if (pages < 2 || focus === 'ai' || Math.abs(d) < 20 || Date.now() - wheelAt < 500) return; wheelAt = Date.now();
   const n = page + Math.sign(d); if (n >= 0 && n < pages) turn(Math.sign(d)); }, { passive: true });
 // Neu einpassen, sobald sich die Flaeche aendert (Fenster, Vollbild, Beamerwechsel)
-let rz; new ResizeObserver(() => { clearTimeout(rz); rz = setTimeout(() => { if (!busy && (view || focus === 'ai')) draw(false); }, 150); }).observe($('stage'));
+let rz; new ResizeObserver(() => { cancelAnimationFrame(rz); rz = requestAnimationFrame(() => { if (!busy && (view || focus === 'ai')) draw(false); }); }).observe($('stage'));
 
 // Kopf: Icon + Name der Struktur, darunter die Frage (kursiv, Teal)
 function header(s, people) {
@@ -368,7 +368,7 @@ async function refresh(st) {
   if (fresh.length) focus = 'ai';                       // frisch freigegeben: sofort zeigen, egal in welchem Schritt
   if (focus === 'ai' && !(ai && ai.released)) focus = null;
   if (has && !wasThemed && focus === null && !$('mosaic').hidden && $('mosaic').querySelector('.tile')) await reveal();   // Post-its hingen schon: Uebergang zeigen
-  else draw(false);
+  else draw(fresh.length > 0);
   wasThemed = has;
 }
 

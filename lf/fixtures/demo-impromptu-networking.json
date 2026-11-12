@@ -1,0 +1,508 @@
+{
+ "step": {
+  "label": "Impromptu Networking · alle",
+  "lsDef": {
+   "name": "Impromptu Networking",
+   "icon": "impromptu-networking",
+   "panel": [
+    "Was viele mitbringen",
+    "Wo Erwartungen auseinandergehen",
+    "Was noch niemand anspricht"
+   ]
+  },
+  "phase": "alle",
+  "q": "Welche große Herausforderung bringst du heute mit, und was erhoffst du dir von dieser Gruppe?",
+  "how": "Schaut nach vorn: Was bringt der Raum mit?",
+  "show": [
+   2
+  ]
+ },
+ "people": 60,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "KI-Strategie soll bis Q1 stehen. Wir wissen nicht mal was wir wollen"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Stellen seit 8 Monaten unbesetzt. Brauche Ideen jenseits von Stellenanzeigen"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "wie erkläre ich das WARUM so dass es ankommt"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Sandwich-Position: oben Druck, unten Erwartungen. Erhoffe mir Leute die das kennen"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "wie sag ich meinem vorstand dass nicht alles gleichzeitig geht"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "IT und Fachbereich sprechen verschiedene Sprachen. Brauche Dolmetscher 😄"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "entscheidungen allein treffen müssen und nachts drüber grübeln"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Wie kriegt man Bereiche zusammen, die sich seit Jahren nicht mögen?"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Angst im Team dass KI Jobs wegnimmt. Wie redet man darüber ehrlich?"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Vertrieb und Produktion reden nicht miteinander, nur über mich"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Mein Team sagt ja und macht dann weiter wie bisher. Kennt das wer?"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "leute mitnehmen die schon 30 jahre dabei sind und alles gesehen haben"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Führung in Teilzeit, fühlt sich an wie zwischen allen Stühlen"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "chatgpt nutzen alle heimlich, offiziell ist es verboten"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kündigungswelle im IT-Team, ich will verstehen warum"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Change von oben verordnet, ich soll's verkaufen. Will hören wie ihr das macht"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Suche ein kleines Netzwerk für regelmäßigen Austausch, nicht nur heute"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "suche jemand der KI im Mittelstand wirklich eingeführt hat, nicht nur pilot"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "widerstand gegen das neue schichtmodell. hoffe auf ideen aus anderen branchen"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "erstmal ankommen. herausforderung: wach bleiben"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Umstellung auf agile Teams, viele fühlen sich degradiert"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "wie fangen andere mit KI an ohne datenschutz-drama"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "fachkräftemangel. klassiker. aber ehrlich, wer hat was das funktioniert"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "wie bring ich erfahrene kollegen dazu was neues zu probieren ohne dass sie sich vorgeführt fühlen"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Unsere Azubis sind bei KI weiter als die Führung. Peinlich aber wahr"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Wie halten andere ihre Leute ohne mehr Geld zahlen zu können?"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "als GF bist du einsam. suche peers"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "To-do-Liste wächst schneller als ich abhaken kann"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Ich weiß es ehrlich gesagt noch nicht. Bin neugierig was andere sagen"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "seit der beförderung sind meine kollegen nicht mehr meine kollegen"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Mein Kalender ist eine Zumutung. Wie macht ihr das mit Fokuszeit??"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Ich hab 3 Rollen in einer Stelle. Will hören wie andere ihre Prioritäten verteidigen"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "ständig feuerwehr spielen statt strategie"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "zu viele projekte gleichzeitig, alle prio 1. hoffe auf tipps wie andere das sortieren"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "zu viel parallel. erhoffe mir 1 konkreten trick, mehr nicht"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Ich hab niemanden, mit dem ich zweifeln darf"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Copilot-Lizenzen gekauft, keiner nutzt sie"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "alles ist dringend, nix ist wichtig. suche leute die das kennen"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Pflegekräfte finden in der Uckermark. Viel Glück mir 🙃"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Wir starten dauernd neue Initiativen und beenden keine. Hoffe auf Mut zum Weglassen"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Meetings fressen meinen Tag, gearbeitet wird abends"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Ich brauch Geschichten wo Veränderung mal geklappt hat 🙏"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Standorte arbeiten gegeneinander statt miteinander"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "überlastung im team und ich bin teil davon 😅 austausch wäre gut"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Nachhaltigkeitsbericht nach CSRD, wer noch?"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Unsere Besten werben die Großen ab"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Neu in der Führung, keiner zum Reden außer meinem Chef. Will hier Gleichgesinnte"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "wir testen 5 KI-tools gleichzeitig und keiner hat den überblick"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "info fließt nicht. ich erfahr wichtige sachen aus dem flurfunk"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Neue Software, altes Denken. Wie kriege ich die Kollegen mit ins Boot?"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "veränderungsmüdigkeit nach 3 reorgs in 2 jahren"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Azubis fürs Handwerk – erhoffe mir Kontakte zu Schulen"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "junge leute kommen, bleiben 1 jahr, gehen"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "meine größte herausforderung heute: die parkplatzsuche"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "ich soll KI-Botschafterin sein und versteh es selbst nur halb"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "abteilungsdenken. jeder schützt sein budget"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "jede abteilung hat ihr eigenes excel. single source of truth? lol"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "bewerbungen kommen, aber passen nicht. was machen andere beim onboarding anders?"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "bin nur wegen dem catering hier 😇"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "KI in der Pflegedoku? Hoffe auf Erfahrungen"
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Alles gleichzeitig, nichts richtig",
+    "color": "gelb",
+    "ids": [
+     5,
+     28,
+     31,
+     32,
+     33,
+     34,
+     35,
+     38,
+     40,
+     41,
+     44
+    ]
+   },
+   {
+    "label": "Team mitnehmen bei Veränderung",
+    "color": "grün",
+    "ids": [
+     3,
+     11,
+     12,
+     16,
+     19,
+     21,
+     24,
+     42,
+     50,
+     51
+    ]
+   },
+   {
+    "label": "KI kommt, keiner weiß wie",
+    "color": "blau",
+    "ids": [
+     1,
+     9,
+     14,
+     18,
+     22,
+     25,
+     37,
+     48,
+     55,
+     60
+    ]
+   },
+   {
+    "label": "Leute finden, die bleiben",
+    "color": "rosa",
+    "ids": [
+     2,
+     15,
+     23,
+     26,
+     39,
+     46,
+     52,
+     53,
+     58
+    ]
+   },
+   {
+    "label": "Allein in der Führungsrolle",
+    "color": "orange",
+    "ids": [
+     4,
+     7,
+     13,
+     17,
+     27,
+     30,
+     36,
+     47
+    ]
+   },
+   {
+    "label": "Abteilungen arbeiten gegeneinander",
+    "color": "lila",
+    "ids": [
+     6,
+     8,
+     10,
+     43,
+     49,
+     56,
+     57
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Ihr bringt vor allem Überlastung und Veränderungsdruck mit und sucht weniger Rezepte als Menschen, die das kennen.",
+  "convergence": [
+   {
+    "label": "Alles gleichzeitig, nichts richtig",
+    "ids": [
+     5,
+     28,
+     31,
+     32,
+     33,
+     34,
+     35,
+     38,
+     40,
+     41,
+     44
+    ],
+    "quote": "alles ist dringend, nix ist wichtig. suche leute die das kennen"
+   },
+   {
+    "label": "Team mitnehmen bei Veränderung",
+    "ids": [
+     3,
+     11,
+     12,
+     16,
+     19,
+     21,
+     24,
+     42,
+     50,
+     51
+    ],
+    "quote": "Mein Team sagt ja und macht dann weiter wie bisher. Kennt das wer?"
+   },
+   {
+    "label": "KI kommt, keiner weiß wie",
+    "ids": [
+     1,
+     9,
+     14,
+     18,
+     22,
+     25,
+     37,
+     48,
+     55,
+     60
+    ],
+    "quote": "Copilot-Lizenzen gekauft, keiner nutzt sie"
+   },
+   {
+    "label": "Allein in der Führungsrolle",
+    "ids": [
+     4,
+     7,
+     13,
+     17,
+     27,
+     30,
+     36,
+     47
+    ],
+    "quote": "Ich hab niemanden, mit dem ich zweifeln darf"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Schneller Trick vs. dauerhaftes Netzwerk",
+    "a": "\"zu viel parallel. erhoffe mir 1 konkreten trick, mehr nicht\"",
+    "b": "\"Suche ein kleines Netzwerk für regelmäßigen Austausch, nicht nur heute\""
+   },
+   {
+    "label": "Veränderung verkaufen vs. Warum verstehen",
+    "a": "\"Change von oben verordnet, ich soll's verkaufen\"",
+    "b": "\"wie erkläre ich das WARUM so dass es ankommt\""
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Was ihr selbst anbieten könnt",
+    "why": "Fast alle Post-its nennen, was fehlt. Was ihr anderen hier geben könntet, steht kaum da. Vielleicht eine Frage für die nächste Runde?"
+   },
+   {
+    "label": "Die Sicht eurer Teams",
+    "why": "Über Teams wird viel gesprochen, aus ihrer Sicht kaum. Welche Herausforderung würden eure Mitarbeitenden heute mitbringen?"
+   }
+  ]
+ }
+}

@@ -1,0 +1,457 @@
+{
+ "step": {
+  "label": "Troika Consulting · alle",
+  "lsDef": {
+   "name": "Troika Consulting",
+   "icon": "troika-consulting",
+   "panel": [
+    "Rat, der oft fiel",
+    "Wo Ratschläge sich widersprechen",
+    "Worüber niemand Rat suchte"
+   ],
+   "noun": "Ratschläge"
+  },
+  "phase": "alle",
+  "q": "Welchen Rat hast du in deiner Troika bekommen, den du wirklich umsetzen willst?",
+  "how": "Schaut nach vorn: Welcher Rat zieht sich durch?",
+  "show": [
+   2
+  ]
+ },
+ "people": 50,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Rat zum Parkplatz an Standort B: vergiss es"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "einfach mal 10 sek still sein nachdem ich ne frage gestellt hab"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Prototyp zeigen statt 20 Seiten Konzept schreiben"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "nicht sofort lösungen liefern wenn jemand mit nem problem kommt. erst fragen was er schon probiert hat"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Mit dem anderen Standortleiter reden, der hat das gleiche Problem"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Frage: was brauchst du von mir? statt: so machst dus"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "die leistungssache nicht mehr in watte packen"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "ich soll aufhören jede mail innerhalb von 5 min zu beantworten"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Mit der Personalabteilung VOR dem Gespräch reden, nicht danach"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "eine meinte ich soll kündigen 😂 denke drüber nach"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "ehrlich gesagt nix neues gehört, aber war gut es mal laut zu sagen"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Erst eine Abteilung, dann reden wir über alle"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Freitagnachmittag blocken für mich. Nicht verhandelbar"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Einen Mentor außerhalb der Firma suchen"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Bei der Azubi-Sache erst verstehen, warum sie so reagiert, bevor ich urteile"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Pilot statt Rollout. Klingt simpel, hab ich trotzdem nicht gemacht"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "ich soll mein team die lösung finden lassen. auch wenns länger dauert. puh"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Meine Kollegin fragen, wie SIE das Problem sieht. Bin nie auf die Idee gekommen 🙈"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Abends Handy in die Schublade. Mein Team überlebt das"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Die beiden haben sich gegenseitig widersprochen, ich nehm beides mit"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Nicht die Retterin spielen."
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Die Controllerin früh ins Boot holen, die hat mehr Einfluss als ich dachte"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Termin noch heute rausschicken, sonst mach ichs nie"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "nicht gleich das ganze konzept, erstmal mit einem team 4 wochen testen"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Das KI-Thema mit 3 Freiwilligen anfangen, nicht mit allen 40"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Feedback geben, solange es noch klein ist"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Im nächsten 1:1 mehr fragen als reden. Die beiden haben mir gespiegelt, dass ich sofort in den Lösungsmodus gehe"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Die Steuerungsgruppe abgeben. Muss nicht alles ich machen"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Grenze ziehen bei Anrufen nach 19 Uhr"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Nein sagen zu dem Zusatzprojekt. Mit Begründung, ohne Entschuldigung"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Eine Sache pro Woche streichen statt eine dazunehmen"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Das schwierige Gespräch mit einem Satz beginnen, der sagt worum es geht. Kein Smalltalk-Vorlauf"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Weniger erklären, mehr nachfragen. Wurde mir 2x gesagt, also wird was dran sein"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "konflikt im team ansprechen statt hoffen dass es sich legt"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "kleinster nächster schritt: montag die eine excel weglassen und schauen ob's wer merkt"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "ich soll aufhören mich für müdigkeit zu entschuldigen"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "nach meetings 5 min puffer einplanen statt durchzurennen"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "meiner stellvertreterin sagen dass ich unzufrieden bin. ehrlich. seit monaten vor mir hergeschoben"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Weniger planen, früher Feedback holen"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "die troika hier einfach monatlich weitermachen 👍"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Meinem Chef die Liste zeigen und fragen, was dafür wegfällt"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Mir Verbündete im Betriebsrat suchen, bevor ich das Thema groß mache"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "nicht allein gegen die geschäftsführung anrennen. erst 2-3 leute gewinnen"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Urlaub nehmen bevor ich muss"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "einfach ausprobieren und es experiment nennen, dann darf's auch schiefgehen"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Das Gespräch mit Herrn K. diese Woche führen, nicht nach Weihnachten"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "nein ist ein vollständiger satz. hat mir die eine aus der logistik gesagt, sitzt"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Mittagspause wieder ohne Laptop. Klingt lächerlich, ist es nicht"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "nicht jede anfrage sofort annehmen. erst 24h drüber schlafen"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "netzwerk nutzen. ich frag nie um hilfe, sollte ich aber"
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Erst fragen, dann lösen",
+    "color": "gelb",
+    "ids": [
+     2,
+     4,
+     6,
+     15,
+     17,
+     18,
+     21,
+     27,
+     33
+    ]
+   },
+   {
+    "label": "Öfter Nein sagen",
+    "color": "grün",
+    "ids": [
+     8,
+     28,
+     29,
+     30,
+     31,
+     41,
+     47,
+     49
+    ]
+   },
+   {
+    "label": "Das Gespräch nicht länger aufschieben",
+    "color": "blau",
+    "ids": [
+     7,
+     9,
+     23,
+     26,
+     32,
+     34,
+     38,
+     46
+    ]
+   },
+   {
+    "label": "Pilot statt Rollout",
+    "color": "rosa",
+    "ids": [
+     3,
+     12,
+     16,
+     24,
+     25,
+     35,
+     39,
+     45
+    ]
+   },
+   {
+    "label": "Erst Verbündete gewinnen",
+    "color": "orange",
+    "ids": [
+     5,
+     14,
+     22,
+     40,
+     42,
+     43,
+     50
+    ]
+   },
+   {
+    "label": "Eigene Pausen ernst nehmen",
+    "color": "lila",
+    "ids": [
+     13,
+     19,
+     36,
+     37,
+     44,
+     48
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Der Rat, den ihr mitnehmt, zielt weniger auf neue Methoden als auf euer eigenes Verhalten: weniger retten, früher sprechen, kleiner anfangen.",
+  "convergence": [
+   {
+    "label": "Erst fragen, dann lösen",
+    "ids": [
+     2,
+     4,
+     6,
+     15,
+     17,
+     18,
+     21,
+     27,
+     33
+    ],
+    "quote": "Nicht die Retterin spielen."
+   },
+   {
+    "label": "Öfter Nein sagen",
+    "ids": [
+     8,
+     28,
+     29,
+     30,
+     31,
+     41,
+     47,
+     49
+    ],
+    "quote": "nein ist ein vollständiger satz. hat mir die eine aus der logistik gesagt, sitzt"
+   },
+   {
+    "label": "Das Gespräch nicht länger aufschieben",
+    "ids": [
+     7,
+     9,
+     23,
+     26,
+     32,
+     34,
+     38,
+     46
+    ],
+    "quote": "Feedback geben, solange es noch klein ist"
+   },
+   {
+    "label": "Pilot statt Rollout",
+    "ids": [
+     3,
+     12,
+     16,
+     24,
+     25,
+     35,
+     39,
+     45
+    ],
+    "quote": "Pilot statt Rollout. Klingt simpel, hab ich trotzdem nicht gemacht"
+   },
+   {
+    "label": "Erst Verbündete gewinnen",
+    "ids": [
+     5,
+     14,
+     22,
+     40,
+     42,
+     43,
+     50
+    ],
+    "quote": "netzwerk nutzen. ich frag nie um hilfe, sollte ich aber"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Zurückhalten vs. klar ansprechen",
+    "a": "\"ich soll mein team die lösung finden lassen. auch wenns länger dauert\"",
+    "b": "\"die leistungssache nicht mehr in watte packen\""
+   },
+   {
+    "label": "Erst absichern vs. sofort loslegen",
+    "a": "\"Mir Verbündete im Betriebsrat suchen, bevor ich das Thema groß mache\"",
+    "b": "\"Termin noch heute rausschicken, sonst mach ichs nie\""
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer in zwei Wochen nachfragt",
+    "why": "Viele Vorsätze, kaum ein Wann oder Wer. Wer aus eurer Troika könnte nachhaken, ob der Rat gelandet ist?"
+   },
+   {
+    "label": "Was ihr als Beratende gelernt habt",
+    "why": "Die Post-its zeigen, was ihr bekommen habt. Was ihr beim Beraten der anderen über euch selbst gemerkt habt, fehlt noch."
+   }
+  ]
+ }
+}

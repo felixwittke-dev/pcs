@@ -1,0 +1,592 @@
+{
+ "step": {
+  "label": "Conversation Café · alle",
+  "lsDef": {
+   "name": "Conversation Café",
+   "icon": "conversation-cafe",
+   "panel": [
+    "Was uns klar geworden ist",
+    "Wo wir verschieden sehen",
+    "Worüber wir noch schweigen"
+   ]
+  },
+  "phase": "alle",
+  "q": "Was ist dir in eurem Gespräch über Vertrauen in unserer Organisation klar geworden?",
+  "how": "Schaut nach vorn: Was wurde an den Tischen klar?",
+  "show": [
+   2
+  ]
+ },
+ "people": 70,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "die kleinen versprechen zählen mehr als die großen visionen"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "kollegen gucken wer wann online ist. das sind keine chefs, das sind wir"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Die Kündigungen kamen ohne Vorwarnung. Seitdem hab ich innerlich einen Fuß draußen."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Mein Chef fragt dreimal nach, ob ich's wirklich erledigt hab. Nach 12 Jahren."
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Ich vertraue meinem Team blind, aber dem Nachbarteam null. Warum eigentlich?"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Niemand erklärt, warum entschieden wird. Nur dass."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Die neue Zeiterfassung fühlt sich an wie ein Misstrauensvotum"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Mir ist klar geworden, dass ich meinen Leuten nie zeige, wenn ich selbst was verbockt hab"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "flurfunk ist schneller als das intranet"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Das Homeoffice-Versprechen von 2024 hängt uns immer noch nach"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "selbst offener sein, dann ziehen andere vielleicht nach"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "können wir das nächstes jahr wieder machen? mit der GL am tisch?"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Ich hab in unserer Runde zum ersten Mal erzählt, dass ich letztes Jahr einen Fehler vertuscht habe. Aus Angst."
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "freigabeschleifen ohne ende. keiner traut sich zu entscheiden"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Ich warte immer darauf, dass andere den ersten Schritt machen. Könnte ich auch selbst."
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Ich will in meinem Team anfangen, nicht auf die GL warten"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "der kaffee im café war besser als der in der kantine ☕"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Die Gehaltsrunde wurde dreimal verschoben. Seitdem glaub ich keiner Rundmail mehr"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Wer kontrolliert wird, hört auf mitzudenken."
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Selbst die Teamleiter wussten nichts. Das hat mich erschreckt."
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "intransparenz macht misstrauisch, auch wenn gar nix schlimmes passiert"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "zwischen den standorten herrscht mehr misstrauen als zwischen chef und team"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "fehlerkultur steht im leitbild. das wars dann aber auch"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Wenn die Geschäftsführung was ankündigt und es dann still wird, sinkt das Vertrauen jedes Mal ein Stück."
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "bei uns wird nach fehlern erst der schuldige gesucht, dann die lösung"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Mein Teamleiter macht nie große Worte, aber er hält alles. Deswegen vertraue ich ihm"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Ich hab gemerkt, dass ich meiner neuen Chefin nie eine echte Chance gegeben habe"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "wenn du sagst bis freitag, dann freitag. oder vorher absagen"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Transparenz heißt nicht alles sagen, sondern sagen was man nicht sagen darf und warum"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "mir ist klar geworden dass ich vertrauen einfordere aber selbst sehr vorsichtig bin"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Protokolle der GL-Sitzung wären schon ein Anfang"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "mir wird zugetraut millionenaufträge zu betreuen, aber nicht nen kuli zu bestellen 🙃"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "In meinem Team wird hinter dem Rücken geredet, das ist das eigentliche Problem"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "solang fehler in der beurteilung auftauchen, sagt die keiner"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Vertrauen braucht Zeit, und wir hatten seit 2023 keine ruhige Phase"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "vertrieb vs. technik. seit jahren. hat mit der GL nix zu tun"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Seit dem Stellenabbau sagt keiner mehr offen seine Meinung. Könnte ja der Nächste sein."
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Vorschuss geben, auch wenn's mal schiefgeht"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "neue struktur, neue chefs, alte wunden"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Vertrauen heißt auch: Ich lasse dich machen, auch wenn ich's anders gemacht hätte"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Wenn ich 'Ich weiß es nicht' sage, gilt das als Schwäche."
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Vertrauen heißt für mich: ich kann sagen 'das hab ich verbockt' und der Tag geht normal weiter"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "verlässlichkeit > sympathie"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "hab mehr zugehört als geredet, war ungewohnt"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Angst ist leise. Man merkt sie daran, dass keiner was sagt."
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Spannend: Wir haben nur über 'die da oben' geredet. Untereinander ist es auch nicht besser."
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "vor der reorg haben wir uns vertraut. jetzt weiß keiner wer bleibt"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "die standortentscheidung kam per mail um 17:58 am freitag"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "vertrauen ist ne entscheidung, keine belohnung. das nehm ich mit"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Gerüchte füllen jede Lücke, die die Führung lässt."
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "kontrolle ersetzt bei uns das gespräch"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "die neuen aus der übernahme heißen immer noch 'die anderen'"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "die fehlerrunde im lager funktioniert. warum nicht auch im büro?"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Ich teile mein Wissen nicht, weil ich Angst hab, dass es jemand als seins verkauft"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "jede reisekostenabrechnung über 3 unterschriften. sagt alles"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "im meeting zustimmen, danach in der kaffeeküche das gegenteil sagen. machen wir alle"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "vertrauen ist wie n konto. einzahlen dauert ewig, abheben geht in 1 sekunde"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Wir reden über Vertrauen, meinen aber oft Verlässlichkeit."
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "vertrauen entsteht wenn das gesagte auch passiert. so simpel"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Homeoffice nur mit Statusmeldung alle 2 Stunden? Echt jetzt?"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "termine einhalten ist auch respekt"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Vertrauen ist ein großes Wort. Ich weiß nicht, ob es das richtige ist."
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Mir ist klar geworden: Ich vertraue Leuten, die zurückrufen, wenn sie es versprochen haben."
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Mir ist klar geworden, dass ich selbst kontrolliere, weil ich Angst vor Fehlern nach oben habe"
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "Wer in der Runde dabei war, weiß mehr. Der Rest rät."
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Wir erwarten Vertrauen von oben, geben es aber nicht zur Seite"
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "wir erfahren entscheidungen aus der presse. kein witz"
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Wer einen Fehler zugibt, steht im nächsten Meeting als Beispiel da"
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Gutes Gespräch. Mehr davon, weniger Umfragen."
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "Die Umstrukturierung hat mehr kaputt gemacht als die Zahlen zeigen"
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Gehaltene Zusagen, auch kleine",
+    "color": "gelb",
+    "ids": [
+     1,
+     10,
+     18,
+     24,
+     26,
+     28,
+     43,
+     57,
+     58,
+     59,
+     61,
+     63
+    ]
+   },
+   {
+    "label": "Fehler zugeben darf nicht schaden",
+    "color": "grün",
+    "ids": [
+     8,
+     13,
+     23,
+     25,
+     34,
+     41,
+     42,
+     45,
+     53,
+     68
+    ]
+   },
+   {
+    "label": "Wir erfahren es zuletzt",
+    "color": "blau",
+    "ids": [
+     6,
+     9,
+     20,
+     21,
+     29,
+     31,
+     48,
+     50,
+     65,
+     67
+    ]
+   },
+   {
+    "label": "Kontrolle statt Zutrauen",
+    "color": "rosa",
+    "ids": [
+     4,
+     7,
+     14,
+     19,
+     32,
+     40,
+     51,
+     55,
+     60,
+     64
+    ]
+   },
+   {
+    "label": "Wir misstrauen uns auch gegenseitig",
+    "color": "orange",
+    "ids": [
+     2,
+     5,
+     22,
+     33,
+     36,
+     46,
+     54,
+     56,
+     66
+    ]
+   },
+   {
+    "label": "Seit der Umstrukturierung ist's kaputt",
+    "color": "lila",
+    "ids": [
+     3,
+     35,
+     37,
+     39,
+     47,
+     52,
+     70
+    ]
+   },
+   {
+    "label": "Vertrauen beginnt bei mir",
+    "color": "türkis",
+    "ids": [
+     11,
+     15,
+     16,
+     27,
+     30,
+     38,
+     49
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Vertrauen entsteht für euch aus erlebter Verlässlichkeit, und es leidet weniger an großen Brüchen als an vielen kleinen.",
+  "convergence": [
+   {
+    "label": "Gehaltene Zusagen, auch kleine",
+    "ids": [
+     1,
+     10,
+     18,
+     24,
+     26,
+     28,
+     43,
+     57,
+     58,
+     59,
+     61,
+     63
+    ],
+    "quote": "die kleinen versprechen zählen mehr als die großen visionen"
+   },
+   {
+    "label": "Fehler zugeben darf nicht schaden",
+    "ids": [
+     8,
+     13,
+     23,
+     25,
+     34,
+     41,
+     42,
+     45,
+     53,
+     68
+    ],
+    "quote": "Wer einen Fehler zugibt, steht im nächsten Meeting als Beispiel da"
+   },
+   {
+    "label": "Wir erfahren es zuletzt",
+    "ids": [
+     6,
+     9,
+     20,
+     21,
+     29,
+     31,
+     48,
+     50,
+     65,
+     67
+    ],
+    "quote": "Gerüchte füllen jede Lücke, die die Führung lässt."
+   },
+   {
+    "label": "Kontrolle statt Zutrauen",
+    "ids": [
+     4,
+     7,
+     14,
+     19,
+     32,
+     40,
+     51,
+     55,
+     60,
+     64
+    ],
+    "quote": "Wer kontrolliert wird, hört auf mitzudenken."
+   },
+   {
+    "label": "Wir misstrauen uns auch gegenseitig",
+    "ids": [
+     2,
+     5,
+     22,
+     33,
+     36,
+     46,
+     54,
+     56,
+     66
+    ],
+    "quote": "Wir erwarten Vertrauen von oben, geben es aber nicht zur Seite"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Verdienen vs. schenken",
+    "a": "\"vertrauen ist wie n konto. einzahlen dauert ewig, abheben geht in 1 sekunde\"",
+    "b": "\"vertrauen ist ne entscheidung, keine belohnung\""
+   },
+   {
+    "label": "Auf die GL warten vs. selbst anfangen",
+    "a": "\"können wir das nächstes jahr wieder machen? mit der GL am tisch?\"",
+    "b": "\"Ich will in meinem Team anfangen, nicht auf die GL warten\""
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Woran ihr merkt, dass es wächst",
+    "why": "Ihr beschreibt genau, wie Vertrauen verloren geht. Woran ihr merken würdet, dass es zurückkommt, steht kaum da."
+   },
+   {
+    "label": "Wer nicht am Tisch saß",
+    "why": "Wer innerlich schon gegangen ist, kommt in solchen Runden selten zu Wort. Wie könnten diese Stimmen gehört werden?"
+   }
+  ]
+ }
+}
