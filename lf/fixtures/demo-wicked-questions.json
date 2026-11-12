@@ -386,9 +386,7 @@
       5,
       6,
       7
-     ],
-     "quote": "ich will nicht für jede kleinigkeit 3 freigaben einholen",
-     "quoteId": 1
+     ]
     },
     "b": {
      "label": "Eng abstimmen",
@@ -399,9 +397,7 @@
       11,
       12,
       13
-     ],
-     "quote": "ohne abstimmung baut team A was, das team B gerade abreißt",
-     "quoteId": 12
+     ]
     }
    },
    {
@@ -417,9 +413,7 @@
       18,
       19,
       20
-     ],
-     "quote": "lieber 80% heute als 100% in 3 monaten",
-     "quoteId": 15
+     ]
     },
     "b": {
      "label": "Gründlich arbeiten",
@@ -430,9 +424,7 @@
       24,
       25,
       26
-     ],
-     "quote": "Fehler beim Kunden kosten mehr als eine Woche länger testen",
-     "quoteId": 23
+     ]
     }
    },
    {
@@ -448,9 +440,7 @@
       31,
       32,
       33
-     ],
-     "quote": "In Meetings nicken alle und auf dem Flur wird gelästert",
-     "quoteId": 31
+     ]
     },
     "b": {
      "label": "Einander Halt geben",
@@ -461,9 +451,7 @@
       37,
       38,
       39
-     ],
-     "quote": "Freundlichkeit ist kein Zeichen von Schwäche",
-     "quoteId": 37
+     ]
     }
    },
    {
@@ -478,9 +466,7 @@
       43,
       44,
       45
-     ],
-     "quote": "Homeoffice hat mir mein Leben zurückgegeben",
-     "quoteId": 40
+     ]
     },
     "b": {
      "label": "Nähe im Team",
@@ -492,9 +478,7 @@
       50,
       51,
       52
-     ],
-     "quote": "neue kollegen kenn ich nur als kachel",
-     "quoteId": 46
+     ]
     }
    },
    {
@@ -509,9 +493,7 @@
       56,
       57,
       58
-     ],
-     "quote": "Change-Müdigkeit ist real",
-     "quoteId": 57
+     ]
     },
     "b": {
      "label": "Neues ausprobieren",
@@ -522,9 +504,7 @@
       62,
       63,
       64
-     ],
-     "quote": "\"das haben wir immer so gemacht\" ist der teuerste satz hier",
-     "quoteId": 61
+     ]
     }
    }
   ],
