@@ -19,7 +19,7 @@
   .join img { display: block; width: 150px; height: 150px; margin: 0 auto 4px; background: #fff; padding: 6px; border-radius: 8px; }
   .join.big img { width: min(46vh, 420px); height: min(46vh, 420px); }
   .join.big { font-size: 22px; color: var(--ink); }
-  main { padding: 10px 36px 40px; }
+  main { padding: 10px 36px 60px; }
   #counter { text-align: center; padding: 8vh 0; }
   #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
   #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
@@ -35,7 +35,7 @@
   #result h3 { font-size: 16px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
   #result ul { margin: 0; padding-left: 22px; } #result li { margin: 0 0 6px; }
   #result q { color: var(--muted); }
-  footer { position: fixed; right: 16px; bottom: 10px; font-size: 13px; color: var(--muted); }
+  footer { position: fixed; right: 16px; bottom: 10px; background: var(--bg, #fff); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: var(--muted); }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -59,7 +59,7 @@
 <script src="steps.js"></script>
 <script>
 $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.html.*$/, '');
-let lastRev = null, lastStep = null;
+let lastRev = null, lastStep = null, prevReleased = null, shownResult = null;
 function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
 
 function renderResult(r) {
@@ -88,9 +88,17 @@ async function refresh(st) {
     notes.textContent = '';
     rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
   } else notes.textContent = '';
-  // KI-Auswertung: nur freigegebene, und nur fuer Schritte, die dieser Schritt zeigt.
-  const rel = s.show.filter(x => st.released.includes(String(x)));
-  renderResult(rel.length && !counter ? await rpc('lf_result', { p_step: rel[rel.length - 1] }) : null);
+  // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt (Felix, 12.11.).
+  // Sonst bleibt die angezeigte stehen; beim Laden: die zum Schritt passende, sonst die hoechste.
+  const rel = st.released.map(Number);
+  const fresh = prevReleased ? rel.filter(x => !prevReleased.includes(x)) : [];
+  if (fresh.length) shownResult = Math.max(...fresh);
+  else if (!rel.includes(shownResult)) {
+    const mine = s.show.filter(x => rel.includes(x));
+    shownResult = mine.length ? mine[mine.length - 1] : (rel.length ? Math.max(...rel) : null);
+  }
+  prevReleased = rel;
+  renderResult(shownResult != null && !counter ? await rpc('lf_result', { p_step: shownResult }) : null);
 }
 
 let polling = false;
