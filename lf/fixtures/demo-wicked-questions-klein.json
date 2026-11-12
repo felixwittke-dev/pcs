@@ -71,14 +71,18 @@
      "ids": [
       1,
       3
-     ]
+     ],
+     "quote": "Vertrauen statt Kontrolle!!",
+     "quoteId": 3
     },
     "b": {
      "label": "Eng abstimmen",
      "ids": [
       2,
       4
-     ]
+     ],
+     "quote": "Schnittstellen klären bevor losgelegt wird",
+     "quoteId": 4
     }
    },
    {
@@ -89,13 +93,17 @@
      "ids": [
       5,
       7
-     ]
+     ],
+     "quote": "lieber 80% heute als 100% in 3 monaten",
+     "quoteId": 5
     },
     "b": {
      "label": "Gründlich arbeiten",
      "ids": [
       6
-     ]
+     ],
+     "quote": "Fehler beim Kunden kosten mehr als eine Woche länger testen",
+     "quoteId": 6
     }
    }
   ],
