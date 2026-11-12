@@ -21,14 +21,9 @@
   .join.big img { width: min(46vh, 420px); height: min(46vh, 420px); }
   .join.big { font-size: 22px; color: var(--ink); }
   main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 6px 36px 34px; }
-  .legend { flex: none; display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 10px; }
-  .legend button { border: 0; cursor: pointer; font-family: inherit; color: inherit; padding: 4px 14px; border-radius: 999px; font-weight: 700;
-                   font-size: clamp(15px, 1.3vw, 22px); transition: opacity .35s, transform .35s, box-shadow .2s; }
-  .legend button:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
-  .legend button.off { opacity: 0; transform: scale(.7); }
-  .legend button.dim { opacity: .4; }
-  .legend small { font-weight: 400; color: var(--muted); font-size: inherit; }
-  .legend .c-ai { background: var(--aiink); color: #fff; margin-left: auto; } .legend .c-ai small { color: #D5E0F5; }
+  #aibtn { border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: clamp(14px, 1.1vw, 19px); padding: 6px 16px; border-radius: 999px;
+           background: var(--aiink); color: #fff; align-self: center; white-space: nowrap; }
+  #aibtn:hover { box-shadow: 0 2px 8px rgba(0,0,0,.25); }
   #stage { flex: 1; min-height: 0; position: relative; }
   #counter { text-align: center; padding: 8vh 0; }
   #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
@@ -36,10 +31,14 @@
   /* Mosaik: alle Post-its passen immer auf den Bildschirm. Schriftgroesse und Kachelbreite ergeben sich aus Anzahl, Textlaenge und Flaeche. */
   #mosaic { position: absolute; inset: 0; --lines: 3; }
   .block { position: absolute; display: flex; flex-direction: column; padding: 3px; }
+  .bhead { flex: none; display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
+  .bhead .btitle { font-size: clamp(20px, 2vw, 32px); padding: 3px 18px; margin: 0; cursor: default; }
+  .bhead button { border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-size: 15px; color: var(--muted); padding: 3px 12px; border-radius: 999px; }
   .btitle { flex: none; align-self: flex-start; cursor: pointer; font-weight: 700; font-size: clamp(12px, 1vw, 17px); padding: 1px 10px; border-radius: 999px; margin: 0 0 3px;
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .btitle span { font-weight: 400; color: var(--muted); }
-  .tiles { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; overflow: hidden; }
+  .tiles { flex: 1; min-height: 0; overflow: hidden; }
+  .inner { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; }
   .tile { height: calc(var(--lines) * 1.25em + .7em); padding: .35em .55em; border-radius: .25em; background: var(--note); box-shadow: 0 1px 2px rgba(0,0,0,.16);
           line-height: 1.25; overflow: hidden; transform-origin: 0 0; transition: background-color .6s; }
   .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; }
@@ -49,6 +48,13 @@
   .c-gelb { background: #FFF1B8; } .c-grün { background: #D3EFDD; } .c-blau { background: #D6E6FB; } .c-rosa { background: #FAD9E6; }
   .c-orange { background: #FFDDBB; } .c-lila { background: #E6DBF7; } .c-türkis { background: #CDEEEE; } .c-koralle { background: #FFD5CC; }
   .c-none { background: #ECECE6; }
+  #say { position: absolute; left: 50%; top: 38%; transform: translate(-50%, -50%); z-index: 3; pointer-events: none; font-weight: 800; white-space: nowrap;
+         font-size: clamp(26px, 3.4vw, 56px); padding: 10px 34px; border-radius: 999px; box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+  #say small { font-weight: 400; color: var(--muted); font-size: .7em; }
+  #say.in { animation: say .65s ease-out both; }
+  @keyframes say { 0% { opacity: 0; transform: translate(-50%, -50%) scale(.7); } 25%, 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; } }
+  #pager { position: fixed; left: 50%; bottom: 4px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); }
+  #pager button { border: 0; background: #ECECE6; cursor: pointer; font: inherit; font-size: 18px; width: 34px; height: 26px; border-radius: 999px; }
   /* KI-Auswertung: eigene Ansicht auf der Wand, per Knopf. */
   #panel { position: absolute; inset: 0; overflow-y: auto; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
   #panel h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
@@ -73,16 +79,18 @@
     <h1 id="q"></h1>
     <p class="how" id="how"></p>
   </div>
+  <button id="aibtn" hidden></button>
   <div class="join" id="join"><img src="qr.png" alt="QR-Code zum Mitschreiben"><span id="url"></span></div>
 </header>
 <main>
-  <div id="legend" class="legend" hidden></div>
   <div id="stage">
     <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
     <div id="mosaic"></div>
+    <div id="say" hidden></div>
     <section id="panel" hidden></section>
   </div>
 </main>
+<div id="pager" hidden><button id="pprev">‹</button><span id="pnum"></span><button id="pnext">›</button></div>
 <footer id="foot"></footer>
 
 <script src="steps.js"></script>
@@ -93,6 +101,7 @@ $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.
 let polling = false, busy = false, lastRev = null, prevReleased = null;
 let view = null, counter = false, wasThemed = false, forceFlat = false;
 let focus = null;   // null = alle Post-its, Zahl = ein Thema, 'ai' = KI-Auswertung
+let page = 0, pages = 1;   // wenn nicht alles lesbar auf einen Bildschirm passt: Seiten, die von rechts nachruecken
 let ai = null;      // { step, released, data }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
@@ -128,26 +137,67 @@ function squarify(vals, x, y, w, h) {
   return rects;
 }
 
-function layoutMosaic(animate) {
-  const m = $('mosaic'), W = m.clientWidth, H = m.clientHeight;
+// Kleinste Schrift, bevor geblaettert statt weiter verkleinert wird.
+const FLOOR = { all: 9, one: 15 };
+
+function buildBlocks(m, bl, old, one, lines, cap) {
+  const W = m.clientWidth, H = m.clientHeight;
+  const rects = bl.length > 1 ? squarify(bl.map(b => b.v), 0, 0, W, H) : [{ x: 0, y: 0, w: W, h: H }];
+  m.textContent = '';
+  return bl.map((b, n) => { const r = rects[n], box = el('div', null, 'block'), tiles = el('div', null, 'tiles'), inner = el('div', null, 'inner');
+    box.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px`;
+    if (b.label && one) { const h = el('div', null, 'bhead'), back = el('button', '← Alle'), t = el('div', b.label + ' ', 'btitle ' + b.cls());
+      back.onclick = () => go(null); t.append(el('span', '· ' + b.rows.length)); h.append(back, t); box.append(h); }
+    else if (b.label) { const t = el('div', b.label + ' ', 'btitle ' + b.cls()); t.append(el('span', '· ' + b.rows.length));
+      if (typeof b.key === 'number') t.onclick = () => go(b.key); box.append(t); }
+    b.rows.forEach(r => { const e = old.get(String(r.id)) || tileEl(r), w = emWidth(r.body, lines, cap);
+      e.className = 'tile ' + b.cls(r); e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = w * 2.4 + 'em'; e.title = r.body; inner.append(e); });
+    tiles.append(inner); box.append(tiles); m.append(box);
+    return { box, tiles, inner }; });
+}
+// groesste Schrift in [lo, hi], bei der der Block ganz hineinpasst; null, wenn selbst lo nicht reicht
+function fitBlock(x, lo, hi) {
+  const fits = f => { x.box.style.fontSize = f + 'px'; return x.inner.offsetHeight <= x.tiles.clientHeight + 1; };
+  if (!fits(lo)) return null;
+  if (fits(hi)) return hi;
+  for (let k = 0; k < 7; k++) { const mid = (lo + hi) / 2; if (fits(mid)) lo = mid; else hi = mid; }
+  return lo;
+}
+// Themen auf n Seiten verteilen, grob gleich viel Text pro Seite
+function partition(bl, n) {
+  const target = bl.reduce((a, b) => a + b.v, 0) / n, parts = [[]]; let sum = 0;
+  bl.forEach(b => { if (sum + b.v / 2 > target && parts.length < n && parts[parts.length - 1].length) { parts.push([]); sum = 0; } parts[parts.length - 1].push(b); sum += b.v; });
+  return parts;
+}
+
+function layoutMosaic(animate, dir) {
+  const m = $('mosaic');
   const old = new Map([...m.querySelectorAll('.tile')].map(e => [e.dataset.id, e]));
   const first = new Map(animate ? [...old].map(([id, e]) => [id, e.getBoundingClientRect()]) : []);
   const one = typeof focus === 'number', lines = one ? 4 : 3, cap = one ? 400 : 150;
   const bl = blocks().map(b => ({ ...b, v: b.rows.reduce((a, r) => a + emWidth(r.body, lines, cap) + .3, 0) + 6 })).sort((a, b) => b.v - a.v);
-  const rects = bl.length > 1 ? squarify(bl.map(b => b.v), 0, 0, W, H) : [{ x: 0, y: 0, w: W, h: H }];
-  m.textContent = ''; m.style.setProperty('--lines', lines);
-  bl.forEach((b, n) => { const r = rects[n], box = el('div', null, 'block'), tiles = el('div', null, 'tiles');
-    box.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px`;
-    if (b.label && !one) { const t = el('div', b.label + ' ', 'btitle ' + b.cls()); t.append(el('span', '· ' + b.rows.length));
-      if (typeof b.key === 'number') t.onclick = () => go(b.key); box.append(t); }
-    b.rows.forEach(r => { const e = old.get(String(r.id)) || tileEl(r), w = emWidth(r.body, lines, cap);
-      e.className = 'tile ' + b.cls(r); e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = w * 2.4 + 'em'; e.title = r.body; tiles.append(e); });
-    box.append(tiles); m.append(box); });
-  // groesste Schrift suchen, bei der in jedem Block alles hineinpasst
-  let lo = 5, hi = bl.length > 1 ? 22 : 30;
-  const fits = f => { m.style.fontSize = f + 'px'; return [...m.querySelectorAll('.tiles')].every(t => t.scrollHeight <= t.clientHeight + 1); };
-  if (fits(hi)) lo = hi; else for (let k = 0; k < 8; k++) { const mid = (lo + hi) / 2; if (fits(mid)) lo = mid; else hi = mid; }
-  m.style.fontSize = lo + 'px';
+  m.style.setProperty('--lines', lines);
+  if (bl.length > 1) {
+    // Uebersicht: alle Themen auf einer Seite; nur wenn die Schrift unter die Untergrenze fiele, auf mehrere Seiten verteilen.
+    let parts = [bl];
+    for (let n = 1; n <= bl.length; n++) { parts = partition(bl, n);
+      if (n === bl.length || parts.every(p => buildBlocks(m, p, old, one, lines, cap).every(x => fitBlock(x, FLOOR.all, FLOOR.all) !== null))) break; }
+    pages = parts.length; page = Math.min(page, pages - 1);
+    const xs = buildBlocks(m, parts[page], old, one, lines, cap), fs = xs.map(x => fitBlock(x, FLOOR.all, 22) || FLOOR.all), least = Math.min(...fs);
+    xs.forEach((x, i) => x.box.style.fontSize = Math.min(fs[i], least * 1.3) + 'px');   // Themen duerfen etwas groesser sein als das engste, aber nicht wild verschieden
+  } else {
+    // Ein Block (ungefaerbt oder ein Thema): passt er bei der Untergrenze nicht, wird zeilenweise geblaettert.
+    const x = buildBlocks(m, bl, old, one, lines, cap)[0], floor = one ? FLOOR.one : FLOOR.all, f = fitBlock(x, floor, 30);
+    pages = 1;
+    if (f !== null) x.box.style.fontSize = f + 'px';
+    else { x.box.style.fontSize = floor + 'px';
+      const t = x.inner.firstElementChild, gap = parseFloat(getComputedStyle(x.inner).rowGap) || 0, rowH = t.offsetHeight + gap;
+      const pageH = Math.max(1, Math.floor((x.tiles.clientHeight + gap) / rowH)) * rowH;
+      pages = Math.ceil((x.inner.offsetHeight + gap) / pageH); page = Math.min(page, pages - 1);
+      x.tiles.style.flex = 'none'; x.tiles.style.height = (pageH - gap) + 'px'; x.inner.style.transform = `translateY(${-page * pageH}px)`; }
+  }
+  $('pager').hidden = pages < 2; $('pnum').textContent = (page + 1) + ' / ' + pages;
+  if (dir) { m.animate([{ transform: `translateX(${dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' }); return; }   // Seite rueckt von der Seite nach
   if (!animate) return;
   let i = 0;
   m.querySelectorAll('.btitle').forEach(t => t.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 700, fill: 'backwards' }));
@@ -158,16 +208,11 @@ function layoutMosaic(animate) {
               { duration: 1200, delay: Math.min(i++ * 4, 450), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
 }
 
-// ---------- Knoepfe: Alle · Themen · KI-Auswertung ----------
-function buildLegend() {
-  const legend = $('legend'); legend.textContent = '';
-  const chip = (label, n, cls, key) => { const b = el('button', label + ' ', cls); if (n != null) b.append(el('small', '· ' + n)); b.dataset.key = String(key);
-    b.classList.toggle('dim', focus !== null && focus !== key); b.onclick = () => go(focus === key ? null : key); legend.append(b); };
-  if (view && view.themes.length && !counter) { const ids = new Set(view.rows.map(r => r.id));
-    chip('Alle', view.rows.filter(r => view.themed.includes(r.step)).length, 'c-none', null);
-    view.themes.forEach((t, k) => chip(t.label, t.ids.filter(i => ids.has(i)).length, 'c-' + t.color, k)); }
-  if (ai) chip('✨ KI-Auswertung', ai.released ? null : 'zeigen', 'c-ai', 'ai');
-  legend.hidden = !legend.children.length;
+// ---------- Navigation: Themen stehen nur als Ueberschrift ueber ihren Post-its (Felix, 12.11.). Klick oder Pfeiltasten setzen eins in Szene.
+function aiButton() {
+  const b = $('aibtn'); b.hidden = !ai; if (!ai) return;
+  b.textContent = focus === 'ai' ? '← Post-its' : '✨ KI-Auswertung';
+  b.onclick = () => go(focus === 'ai' ? null : 'ai');
 }
 
 async function go(key) {
@@ -176,8 +221,16 @@ async function go(key) {
     await rpc('lf_release', { p_key: K, p_step: ai.step, p_released: true });
     ai.released = true; if (prevReleased) prevReleased.push(ai.step);
   }
-  focus = key; draw(true);
+  focus = key; page = 0; draw(true);
 }
+function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
+  if (busy || !view) return;
+  if (page + d >= 0 && page + d < pages && focus !== 'ai') { page += d; draw(false, d); return; }
+  if (!view.themes.length) return;
+  const order = [null, ...view.themes.map((t, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
+  go(order[(i + d + order.length) % order.length]);
+}
+$('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 
 function renderPanel() {
   const box = $('panel'), r = ai.data || {}; box.textContent = ''; let n = 0;
@@ -194,41 +247,44 @@ function renderPanel() {
   card('Was noch fehlt', r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
 }
 
-function draw(animate) {
-  buildLegend();
+function draw(animate, dir) {
+  aiButton();
   const showAi = focus === 'ai' && ai && ai.released;
   $('counter').hidden = !counter || showAi;
   $('panel').hidden = !showAi; if (showAi) renderPanel();
   $('mosaic').hidden = counter || showAi || !view;
-  if (!$('mosaic').hidden) layoutMosaic(animate); else if (!view) $('mosaic').textContent = '';
+  if (!$('mosaic').hidden) layoutMosaic(animate, dir); else { $('pager').hidden = true; if (!view) $('mosaic').textContent = ''; }
 }
 
 // Show-Effekt (reine Browser-Animation, keine KI): Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle,
 // dann fliegen alle in ihre Themenflaeche.
 async function showThemes() {
-  busy = true;
-  buildLegend(); const chips = [...$('legend').children]; chips.forEach(c => c.classList.add('off'));
-  const els = new Map([...$('mosaic').querySelectorAll('.tile')].map(e => [+e.dataset.id, e]));
+  busy = true; page = 0;
+  const say = $('say'), els = new Map([...$('mosaic').querySelectorAll('.tile')].map(e => [+e.dataset.id, e]));
   await sleep(500);
-  for (const [k, t] of view.themes.entries()) {
-    chips[k + 1].classList.remove('off');
+  for (const t of view.themes) {
+    say.className = 'c-' + t.color; say.textContent = t.label + ' '; say.append(el('small', '· ' + t.ids.filter(id => els.has(id)).length));
+    say.hidden = false; void say.offsetWidth; say.classList.add('in');   // Themenname blitzt gross auf
     t.ids.forEach((id, j) => { const e = els.get(id); if (e) setTimeout(() => { e.className = 'tile pop c-' + t.color; }, j * 30); });
-    await sleep(650);
+    await sleep(700);
   }
-  chips.forEach(c => c.classList.remove('off')); await sleep(900);
+  say.hidden = true; await sleep(500);
   layoutMosaic(true); await sleep(1800);
   busy = false;
 }
 
 addEventListener('keydown', async e => {
-  if (busy || polling || !view || !view.themes.length) return;
-  const order = [null, ...view.themes.map((t, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
-  if (e.key === 'ArrowRight') go(order[(i + 1) % order.length]);
-  else if (e.key === 'ArrowLeft') go(order[(i - 1 + order.length) % order.length]);
+  if (busy || polling || !view) return;
+  if (e.key === 'ArrowRight') turn(1);
+  else if (e.key === 'ArrowLeft') turn(-1);
   else if (e.key === 'Escape') go(null);
-  else if (e.key.toLowerCase() === 'r') {   // Uebergang nochmal zeigen
-    focus = null; forceFlat = true; draw(false); $('legend').hidden = true; forceFlat = false; busy = true; await sleep(1200); await showThemes(); }
+  else if (e.key.toLowerCase() === 'r' && view.themes.length) {   // Uebergang nochmal zeigen
+    focus = null; page = 0; forceFlat = true; draw(false); forceFlat = false; busy = true; await sleep(1200); await showThemes(); }
 });
+let wheelAt = 0;   // Mausrad oder Wischen blaettert, wenn es mehrere Seiten gibt
+addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+  if (pages < 2 || focus === 'ai' || Math.abs(d) < 20 || Date.now() - wheelAt < 500) return; wheelAt = Date.now();
+  const n = page + Math.sign(d); if (n >= 0 && n < pages) turn(Math.sign(d)); }, { passive: true });
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (!busy) draw(false); }, 150); });
 
 // ---------- Zustand holen ----------
