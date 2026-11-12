@@ -12,7 +12,7 @@
   body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand);
          height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
   header { display: flex; gap: 28px; align-items: flex-start; padding: 16px 36px 4px; flex: none; }
-  .head { flex: 1; }
+  .head { flex: 1; min-width: 0; overflow-wrap: anywhere; }   /* lange Woerter in der Frage duerfen den QR-Code nicht aus dem Bild schieben */
   .step { display: flex; align-items: center; gap: 12px; font-size: clamp(17px, 1.5vw, 24px); font-weight: 800; color: var(--ink); text-transform: uppercase; letter-spacing: .05em; margin: 0 0 6px; }
   .step img { width: 1.9em; height: 1.9em; }
   .step small { font-weight: 400; color: var(--muted); font-size: inherit; }
@@ -35,8 +35,9 @@
   #custom { position: absolute; inset: 0; overflow: hidden; }
   .block { position: absolute; display: flex; flex-direction: column; padding: 3px; }
   .bhead { flex: none; display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
-  .bhead .btitle { font-size: clamp(20px, 2vw, 32px); padding: 3px 18px; margin: 0; cursor: default; }
-  .bhead button { border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-size: 15px; color: var(--muted); padding: 3px 12px; border-radius: 999px; }
+  .bhead .btitle { font-size: clamp(20px, 2vw, 32px); padding: 3px 18px; margin: 0; cursor: default; flex: 0 1 auto; min-width: 0; white-space: normal; overflow-wrap: anywhere; border-radius: .8em; }
+  .bhead button { flex: none; white-space: nowrap; border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-size: 15px; color: var(--muted); padding: 3px 12px; border-radius: 999px; }
+  .empty { position: absolute; top: 30%; width: 100%; text-align: center; font-size: clamp(20px, 2vw, 32px); color: var(--muted); margin: 0; }
   .btitle { flex: none; align-self: flex-start; cursor: pointer; font-weight: 700; font-size: clamp(12px, 1vw, 17px); padding: 1px 10px; border-radius: 999px; margin: 0 0 3px;
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .btitle span { font-weight: 400; color: var(--muted); }
@@ -44,7 +45,7 @@
   .inner { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; }
   .tile { height: calc(var(--lines) * 1.25em + .7em); padding: .35em .55em; border-radius: .25em; background: var(--note); box-shadow: 0 1px 2px rgba(0,0,0,.16);
           line-height: 1.25; overflow: hidden; transform-origin: 0 0; transition: background-color .6s; }
-  .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; hyphens: auto; }
+  .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; hyphens: auto; hyphenate-limit-chars: 8 4 3; white-space: pre-line; }
   .tile.alt { background: var(--note2); }
   .tile.pop { animation: pop .5s ease-out; z-index: 1; }
   @keyframes pop { 40% { transform: scale(1.12); } }
@@ -59,16 +60,20 @@
   #pager { position: fixed; left: 50%; bottom: 4px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); }
   #pager button { border: 0; background: #ECECE6; cursor: pointer; font: inherit; font-size: 18px; width: 34px; height: 26px; border-radius: 999px; }
   /* KI-Auswertung: eigene Ansicht auf der Wand, per Knopf. */
-  #panel { position: absolute; inset: 0; overflow: hidden; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
-  #panel h2 { font-size: .72em; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
+  #panel { position: absolute; inset: 0; overflow: hidden; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; overflow-wrap: anywhere; }
+  #panel.scroll { overflow-y: auto; }   /* passt selbst bei Mindestschrift nicht: lieber scrollen als Winzschrift */
+  #panel h2 { font-size: max(12px, .72em); letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
   #panel .headline { font-size: 1.8em; font-weight: 800; line-height: 1.2; margin: 0 0 .55em; max-width: 34em; }
   #panel .cols { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: .8em; }
   #panel .card { background: rgba(255,255,255,.75); border-radius: 8px; padding: .7em .9em; }
-  #panel h3 { font-size: .72em; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
+  #panel h3 { font-size: max(12px, .72em); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
   #panel .item { margin: 0 0 .6em; }
   #panel .item b { display: block; }
   #panel .item button { border: 0; cursor: pointer; font: inherit; font-weight: 700; padding: 2px 12px; border-radius: 999px; margin: 0 0 3px; }
   #panel q { color: var(--muted); }
+  #panel.clamp .det { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--cl, 4); overflow: hidden; }
+  #panel.bare q.det { display: none; }
+  #panel.clamp .headline { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
   .rv { animation: rise .6s ease-out backwards; }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
   footer { position: fixed; right: 16px; bottom: 8px; font-size: 13px; color: var(--muted); }
@@ -109,7 +114,9 @@
 const K = decodeURIComponent((location.hash.match(/k=([^&]+)/) || [])[1] || '');
 $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.html.*$/, '');
 let polling = false, busy = false, lastRev = null, prevReleased = null;
-let view = null, counter = false, wasThemed = false, forceFlat = false;
+let view = null, counter = false, forceFlat = false;
+let lastStep = null, abortGen = 0;   // Schritt der gezeigten Wand; Zaehler, der einen laufenden Show-Effekt abbricht
+const revealed = new Set();          // Themen-Ergebnisse (Schluessel THEMES+Schritt), deren Show-Effekt schon lief
 let focus = null;   // null = alle Post-its, Zahl = ein Thema, 'ai' = KI-Auswertung
 let navCount = 0;    // Zahl der Dinge, die ein Baustein einzeln in Szene setzen kann (Pfeiltasten)
 let page = 0, pages = 1;   // wenn nicht alles lesbar auf einen Bildschirm passt: Seiten, die von rechts nachruecken
@@ -121,13 +128,23 @@ function el(tag, text, cls) { const e = document.createElement(tag); if (text !=
 function tileEl(r) { const e = el('div', null, 'tile'); e.dataset.id = r.id; e.append(el('span', r.body)); return e; }
 const emWidth = (text, lines, cap) => Math.max(8, Math.min(text.length, cap)) / lines * (cap > 200 ? 0.58 : 0.5) + 1.7;   // Einzelansicht: breiter, damit nichts gekuerzt wird
 
+// KI-Themen aufraeumen: jedes Post-it hoechstens einmal (erstes Thema gewinnt), unbekannte Nummern raus, leere Themen raus,
+// fehlende oder unbekannte Farbe -> naechste Farbe der Palette. Sonst stimmen Zahlen nicht und Pfeiltasten landen auf leeren Themen.
+const COLORS = ['gelb', 'grün', 'blau', 'rosa', 'orange', 'lila', 'türkis', 'koralle'];
+function cleanThemes(themes, rows) {
+  const known = new Map(rows.map(r => [String(r.id), r.id])), used = new Set();   // Nummern auch als Text ("5") akzeptieren
+  return (Array.isArray(themes) ? themes : []).filter(t => t && Array.isArray(t.ids)).map((t, k) => ({ ...t,
+    label: String(t.label || 'Thema ' + (k + 1)), color: COLORS.includes(t.color) ? t.color : COLORS[k % COLORS.length],
+    ids: t.ids.map(id => known.get(String(id))).filter(id => id !== undefined && !used.has(id) && used.add(id)) })).filter(t => t.ids.length);
+}
+
 function blocks() {
   const { rows, themes, themed, s } = view;
   if (!themes.length || forceFlat) return [{ key: 'flat', rows, cls: r => r.step !== s.show[0] ? 'alt' : '' }];
   const byId = new Map(rows.map(r => [r.id, r])), used = new Set();
   const out = themes.map((t, k) => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id));
     return { key: k, label: t.label, rows: list, cls: () => 'c-' + t.color }; });
-  if (typeof focus === 'number') return [out[focus]];
+  if (typeof focus === 'number') return out[focus] ? [out[focus]] : [];
   out.push({ key: 'x', label: 'Einzelstimmen', rows: rows.filter(r => themed.includes(r.step) && !used.has(r.id)), cls: () => 'c-none' });
   s.show.filter(x => !themed.includes(x)).forEach(x => out.push({ key: 'o' + x, label: stepById(x).label, rows: rows.filter(r => r.step === x), cls: () => 'alt' }));
   return out.filter(b => b.rows.length);
@@ -149,7 +166,8 @@ function squarify(vals, x, y, w, h) {
 }
 
 // Kleinste Schrift, bevor geblaettert statt weiter verkleinert wird.
-const FLOOR = { all: 9, one: 15 };
+// Uebersicht: 9.5 haelt ca. 130 Post-its bei 1920x1080 auf einer Seite (von Felix abgenommen). Zum Vergleich: wall.html?...&floor=13 = groessere Schrift, dafuer Seiten.
+const FLOOR = { all: +new URLSearchParams(location.search).get('floor') || 9.5, one: 15 };
 
 function buildBlocks(m, bl, old, one, lines, cap) {
   const W = m.clientWidth, H = m.clientHeight;
@@ -159,7 +177,7 @@ function buildBlocks(m, bl, old, one, lines, cap) {
     box.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px`;
     if (b.label && one) { const h = el('div', null, 'bhead'), back = el('button', '← Alle'), t = el('div', b.label + ' ', 'btitle ' + b.cls());
       back.onclick = () => go(null); t.append(el('span', '· ' + b.rows.length)); h.append(back, t); box.append(h); }
-    else if (b.label) { const t = el('div', b.label + ' ', 'btitle ' + b.cls()); t.append(el('span', '· ' + b.rows.length));
+    else if (b.label) { const t = el('div', b.label + ' ', 'btitle ' + b.cls()); t.append(el('span', '· ' + (b.total || b.rows.length)));
       if (typeof b.key === 'number') t.onclick = () => go(b.key); box.append(t); }
     b.rows.forEach(r => { const e = old.get(String(r.id)) || tileEl(r), w = emWidth(r.body, lines, cap);
       e.className = 'tile ' + b.cls(r); e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = w * 2.4 + 'em'; e.title = r.body; inner.append(e); });
@@ -180,6 +198,49 @@ function partition(bl, n) {
   bl.forEach(b => { if (sum + b.v / 2 > target && parts.length < n && parts[parts.length - 1].length) { parts.push([]); sum = 0; } parts[parts.length - 1].push(b); sum += b.v; });
   return parts;
 }
+// Themen auf moeglichst wenige Seiten verteilen: erst der Reihe nach auffuellen (ergibt die kleinste Seitenzahl N),
+// dann versuchen, gleichmaessig auf N Seiten zu verteilen (ruhiger: aehnliche Schrift auf allen Seiten). Rueckgabe [{ part: Bloecke, fit }].
+let paged = null;
+function paginate(m, bl, old, one, lines, cap) {
+  const fp = part => fitPart(m, part, old, one, lines, cap), seq = []; let cur = [], fit = null, split = false;
+  const close = () => { if (cur.length) seq.push({ part: cur, fit }); cur = []; fit = null; };
+  for (const b of bl) {
+    let r = fp([...cur, b]);
+    if (r) { cur.push(b); fit = r; continue; }
+    if (cur.length) { close(); r = fp([b]); if (r) { cur = [b]; fit = r; continue; } }
+    // Ein Thema passt allein nicht bei der Untergrenze: auf mehrere Seiten teilen (Ueberschrift mit „weiter“), statt die Schrift zu schrumpfen
+    split = true; let rows = b.rows, n = 0;
+    const chunk = k => ({ ...b, rows: rows.slice(0, k), v: b.v * k / b.rows.length, total: b.rows.length, label: b.label + (n ? ' (weiter)' : '') });
+    let lo = 0, hi = rows.length;   // wie viele Post-its passen hoechstens auf eine Seite?
+    while (lo < hi) { const mid = Math.ceil((lo + hi) / 2); if (fp([chunk(mid)])) lo = mid; else hi = mid - 1; }
+    const size = Math.ceil(rows.length / Math.ceil(rows.length / Math.max(1, lo)));   // gleich grosse Stuecke statt einer Rest-Seite
+    while (rows.length) {
+      const k = Math.min(size, rows.length), c = chunk(k);
+      if (k === rows.length) { cur = [c]; fit = fp(cur); }   // letztes Stueck darf sich die Seite mit den naechsten Themen teilen
+      else seq.push({ part: [c], fit: fp([c]) });
+      rows = rows.slice(k); n++;
+    }
+  }
+  close();
+  if (seq.length > 1 && !split) { const bal = partition(bl, seq.length).map(part => ({ part }));
+    if (bal.length === seq.length && bal.every(p => (p.fit = fp(p.part)))) return bal; }
+  return seq;
+}
+// Eine Seite mit mehreren Themen einpassen: alle Themen in derselben Schrift. Die geschaetzten Flaechen (v) werden zweimal nach dem
+// gemessenen Platzbedarf nachjustiert, damit kein Thema Luft hat, waehrend ein anderes eng wird (sonst enden Spalten ausgefranst).
+// Rueckgabe { f, v } (groesste gemeinsame Schrift >= Untergrenze) oder null, wenn die Seite selbst bei der Untergrenze nicht passt.
+function fitPart(m, part, old, one, lines, cap) {
+  let v = part.map(b => b.v), best = null;
+  for (let it = 0; it < 3; it++) {
+    const xs = buildBlocks(m, part.map((b, i) => ({ ...b, v: v[i] })), old, one, lines, cap);
+    const fs = xs.map(x => fitBlock(x, FLOOR.all, 24)), f = fs.includes(null) ? null : Math.min(...fs);
+    if (f !== null && (!best || f > best.f)) best = { f, v: v.slice() };
+    if (xs.length < 2) break;
+    xs.forEach(x => x.box.style.fontSize = (f || FLOOR.all) + 'px');
+    v = xs.map(x => Math.max(1, x.inner.offsetHeight + x.box.clientHeight - x.tiles.clientHeight) * x.box.clientWidth);
+  }
+  return best;
+}
 
 function layoutMosaic(animate, dir) {
   const m = $('mosaic');
@@ -190,12 +251,15 @@ function layoutMosaic(animate, dir) {
   m.style.setProperty('--lines', lines);
   if (bl.length > 1) {
     // Uebersicht: alle Themen auf einer Seite; nur wenn die Schrift unter die Untergrenze fiele, auf mehrere Seiten verteilen.
-    let parts = [bl];
-    for (let n = 1; n <= bl.length; n++) { parts = partition(bl, n);
-      if (n === bl.length || parts.every(p => buildBlocks(m, p, old, one, lines, cap).every(x => fitBlock(x, FLOOR.all, FLOOR.all) !== null))) break; }
-    pages = parts.length; page = Math.min(page, pages - 1);
-    const xs = buildBlocks(m, parts[page], old, one, lines, cap), fs = xs.map(x => fitBlock(x, FLOOR.all, 22) || FLOOR.all), least = Math.min(...fs);
-    xs.forEach((x, i) => x.box.style.fontSize = Math.min(fs[i], least * 1.3) + 'px');   // Themen duerfen etwas groesser sein als das engste, aber nicht wild verschieden
+    // Seitenaufteilung kostet einige hundert ms bei vielen Post-its: nur neu rechnen, wenn sich Flaeche oder Themen aendern (nicht beim Blaettern).
+    const key = m.clientWidth + 'x' + m.clientHeight + '|' + view.s.label + '|' + bl.map(b => b.key + ':' + b.rows.length).join(',');
+    if (!paged || paged.key !== key) paged = { key, pp: paginate(m, bl, old, one, lines, cap) };
+    pages = paged.pp.length; page = Math.min(page, pages - 1);
+    const { part, fit } = paged.pp[page];
+    const xs = buildBlocks(m, part.map((b, i) => ({ ...b, v: fit ? fit.v[i] : b.v })), old, one, lines, cap);
+    // Notfall (selbst ein einzelnes Post-it passt nicht bei der Untergrenze, winzige Flaeche): kleiner statt abgeschnitten
+    const f = fit ? fit.f : Math.min(...xs.map(x => fitBlock(x, 9, FLOOR.all) || 9));
+    xs.forEach(x => x.box.style.fontSize = f + 'px');   // eine Schrift fuer alle Themen der Seite (Felix, 12.11.)
   } else {
     // Ein Block (ungefaerbt oder ein Thema): passt er bei der Untergrenze nicht, wird zeilenweise geblaettert.
     const x = buildBlocks(m, bl, old, one, lines, cap)[0], floor = one ? FLOOR.one : FLOOR.all, f = fitBlock(x, floor, 30);
@@ -208,6 +272,7 @@ function layoutMosaic(animate, dir) {
       x.tiles.style.flex = 'none'; x.tiles.style.height = (pageH - gap) + 'px'; x.inner.style.transform = `translateY(${-page * pageH}px)`; }
   }
   $('pager').hidden = pages < 2; $('pnum').textContent = (page + 1) + ' / ' + pages;
+  if (!view.rows.length) m.append(el('p', 'Noch keine Post-its. Scannt den QR-Code oben rechts.', 'empty'));
   if (dir) { m.animate([{ transform: `translateX(${dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' }); return; }   // Seite rueckt von der Seite nach
   if (!animate) return;
   m.querySelectorAll('.btitle').forEach(t => t.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 700, fill: 'backwards' }));
@@ -227,7 +292,7 @@ const rectsOf = box => new Map([...box.querySelectorAll('[data-id]')].map(e => [
 // ---------- Navigation: Themen stehen nur als Ueberschrift ueber ihren Post-its (Felix, 12.11.). Klick oder Pfeiltasten setzen eins in Szene.
 function aiButton() {
   const b = $('aibtn'); b.hidden = !ai; if (!ai) return;
-  b.textContent = focus === 'ai' ? '← ' + (view && (view.s.lsDef || LS[view.s.ls] || {}).noun || 'Post-its') : '✨ KI-Auswertung';
+  b.textContent = focus === 'ai' ? '← ' + (view && (view.s.lsDef || LS[view.s.ls] || {}).noun || 'Post-its') : ai.released ? '✨ KI-Auswertung' : '✨ KI-Auswertung zeigen';   // Entwurf: Klick gibt frei
   b.onclick = () => go(focus === 'ai' ? null : 'ai');
 }
 
@@ -245,8 +310,8 @@ function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
   if (busy || !view) return;
   if (page + d >= 0 && page + d < pages && focus !== 'ai') { page += d; draw(false, d); return; }
   const n = custom() ? navCount : view.themes.length;
-  if (!n) return;
   const order = [null, ...Array.from({ length: n }, (x, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
+  if (order.length < 2) return;   // ohne Themen, aber mit KI-Auswertung: Pfeiltaste fuehrt trotzdem dorthin
   go(order[(i + d + order.length) % order.length], d);
 }
 $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
@@ -259,18 +324,31 @@ function renderPanel(animate) {
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
   const cols = el('div', null, 'cols'); box.append(cols);
   const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
-  // Eintraege, deren Name zu einem Thema / einer Bahn / einem Muster / einem Paar passt, fuehren per Klick dorthin.
+  // Eintraege, deren Name zu einem Thema / einer Bahn / einem Muster / einem Paar passt, fuehren per Klick dorthin; sonst ruhiger Text.
   const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes ? (d0.banner ? [d0.banner, ...d0.lanes] : d0.lanes) : d0.patterns || d0.pairs || d0.zones || []) : [];
-  const find = label => things.findIndex(t => t.label === label || t.question === label);
+  // Vergleich ohne Gross/Kleinschreibung und Satzzeichen („What?“ = „what“); Paare auch als „A ↔ B“; Bahnen auch ueber ihre Unterthemen.
+  const nm = x => String(x == null ? '' : x).toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const names = t => [t.label, t.question, t.a && t.b && (t.a.label + ' ' + t.b.label)].map(nm).filter(Boolean);
+  const find = label => { const l = nm(label); if (!l) return -1; const k = things.findIndex(t => t && names(t).includes(l));
+    return k >= 0 ? k : things.findIndex(t => t && Array.isArray(t.themes) && t.themes.some(u => u && nm(u.label) === l)); };
   const link = (d, label, text) => { const k = find(label); if (k < 0) return d.append(el('b', text));
-    const b = el('button', text, 'c-' + (things[k].color || 'none')); b.onclick = () => go(k); d.append(b); };
+    const b = el('button', text, 'c-' + (COLORS.includes(things[k].color) ? things[k].color : 'none')); b.onclick = () => go(k); d.append(b); };
+  const lab = x => String(x.label == null ? '' : x.label);
   card(titles[0], r.convergence, c => { const d = el('div', null, 'item');
-    link(d, c.label, c.label + (c.ids ? ' · ' + c.ids.length : ''));
-    if (c.quote) d.append(el('q', c.quote)); return d; });
-  card(titles[1], r.tension, t => { const d = el('div', null, 'item'); link(d, t.label, t.label); d.append(document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
-  card(titles[2], r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
-  // Schrift so waehlen, dass die Auswertung ohne Scrollen auf die Flaeche passt
-  let f = 28; do { box.style.fontSize = f + 'px'; f -= 1; } while (box.scrollHeight > box.clientHeight + 1 && f >= 10);
+    link(d, c.label, lab(c) + (Array.isArray(c.ids) && c.ids.length ? ' · ' + c.ids.length : ''));
+    if (c.quote) d.append(el('q', c.quote, 'det')); return d; });
+  card(titles[1], r.tension, t => { const d = el('div', null, 'item'); link(d, t.label, lab(t)); d.append(el('span', [t.a, t.b].filter(Boolean).join(' ↔ '), 'det')); return d; });
+  card(titles[2], r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', lab(b)), el('span', b.why || '', 'det')); return d; });
+  // Schrift so waehlen, dass die Auswertung ohne Scrollen auf die Flaeche passt (Untergrenze 13 px, Ueberschriften nie unter 12 px);
+  // reicht das nicht, werden Zitate und Erlaeuterungen auf 3, dann 2 Zeilen gekuerzt (…), erst ganz zuletzt scrollt die Auswertung.
+  const over = () => box.scrollHeight > box.clientHeight + 1;
+  box.classList.remove('scroll', 'clamp', 'bare');
+  const fitFont = () => { let f = 28; do { box.style.fontSize = f + 'px'; f -= 1; } while (over() && f >= FLOOR.all); };
+  const clamp = () => { box.classList.add('clamp'); for (let cl = 3; cl >= 2; cl--) { box.style.setProperty('--cl', cl); if (!over()) return true; } return false; };
+  fitFont();
+  // dann Zitate weglassen (Themen samt Zahl bleiben, die Zitate stehen in der Einzelansicht) und die Schrift neu einpassen
+  if (over() && !clamp()) { box.classList.remove('clamp'); box.classList.add('bare'); fitFont(); if (over()) clamp(); }
+  box.classList.toggle('scroll', box.scrollHeight > box.clientHeight + 1);
 }
 
 function draw(animate, dir) {
@@ -293,8 +371,10 @@ async function reveal() {
   const viz = custom(); if (!viz) return showThemes();
   busy = true; page = 0;
   const from = rectsOf($('mosaic'));
+  const gen = abortGen;
   if (viz.reveal) { $('mosaic').hidden = true; $('custom').hidden = false; await viz.reveal($('custom'), ctx(0, from)); }
-  busy = false; draw(false);
+  busy = false; resized = false; draw(false);
+  if (gen !== abortGen && !DEMO) setTimeout(poll);   // Schritt hat waehrend des Effekts gewechselt: sofort nachholen
 }
 
 // Show-Effekt (reine Browser-Animation, keine KI): Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle,
@@ -302,20 +382,22 @@ async function reveal() {
 async function showThemes() {
   busy = true; page = 0;
   const say = $('say'), els = new Map([...$('mosaic').querySelectorAll('.tile')].map(e => [+e.dataset.id, e]));
-  await sleep(500);
+  const gen = abortGen, stop = () => { if (gen === abortGen) return false; say.hidden = true; busy = false; if (!DEMO) setTimeout(poll); return true; };   // Schritt gewechselt: abbrechen
+  await sleep(500); if (stop()) return;
   for (const t of view.themes) {
     say.className = 'c-' + t.color; say.textContent = t.label + ' '; say.append(el('small', '· ' + t.ids.filter(id => els.has(id)).length));
     say.hidden = false; void say.offsetWidth; say.classList.add('in');   // Themenname blitzt gross auf
     t.ids.forEach((id, j) => { const e = els.get(id); if (e) setTimeout(() => { e.className = 'tile pop c-' + t.color; }, j * 30); });
-    await sleep(700);
+    await sleep(700); if (stop()) return;
   }
-  say.hidden = true; await sleep(500);
-  layoutMosaic(true); await sleep(1800);
+  say.hidden = true; await sleep(500); if (stop()) return;
+  layoutMosaic(true); await sleep(1800); if (stop()) return;
   busy = false;
+  if (resized) { resized = false; draw(false); }   // Fenster hat sich waehrend des Show-Effekts geaendert: jetzt einpassen
 }
 
 addEventListener('keydown', async e => {
-  if (busy || polling || !view) return;
+  if (busy || !view) return;   // nicht auf polling warten: ein Abruf laeuft alle 2,5 s und darf keine Tastendruecke verschlucken
   if (e.key === 'ArrowRight') turn(1);
   else if (e.key === 'ArrowLeft') turn(-1);
   else if (e.key === 'Escape') go(null);
@@ -327,7 +409,7 @@ addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.delta
   if (pages < 2 || focus === 'ai' || Math.abs(d) < 20 || Date.now() - wheelAt < 500) return; wheelAt = Date.now();
   const n = page + Math.sign(d); if (n >= 0 && n < pages) turn(Math.sign(d)); }, { passive: true });
 // Neu einpassen, sobald sich die Flaeche aendert (Fenster, Vollbild, Beamerwechsel)
-let rz; new ResizeObserver(() => { cancelAnimationFrame(rz); rz = requestAnimationFrame(() => { if (!busy && (view || focus === 'ai')) draw(false); }); }).observe($('stage'));
+let rz, resized = false; new ResizeObserver(() => { if (busy) resized = true; cancelAnimationFrame(rz); rz = requestAnimationFrame(() => { if (!busy && (view || focus === 'ai')) { resized = false; draw(false); } }); }).observe($('stage'));
 
 // Kopf: Icon + Name der Struktur, darunter die Frage (kursiv, Teal)
 function header(s, people) {
@@ -339,45 +421,56 @@ function header(s, people) {
 
 // ---------- Zustand holen ----------
 async function refresh(st) {
-  const s = stepById(st.step);
-  header(s, st.people); $('join').className = 'join' + (st.step === 0 ? ' big' : '');
-  counter = s.solo && st.wall === 'counter';
-  $('n').textContent = st.count; $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
-  let themes = [];
-  if (!counter && s.show.length) {
+  const s = stepById(st.step), stepChanged = st.step !== lastStep;
+  const isCounter = s.solo && st.wall === 'counter';
+  let themes = [], nv = null;
+  if (!isCounter && s.show.length) {
     const rows = await rpc('lf_wall', { p_steps: s.show });
     // Themen: sobald die KI zugeordnet hat, erscheinen sie ohne Freigabe (Felix, 12.11.).
     const themed = s.show.filter(x => st.released.includes(String(THEMES + x)));
     const payloads = await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })));
     const data = payloads.find(t => t && t.viz && VIZ[t.viz]) || null;   // Struktur mit eigenem Baustein
-    themes = data ? [] : payloads.flatMap(t => (t && t.themes) || []);
-    view = { rows, themes, themed, s, data };
-  } else view = null;
-  const has = themes.length > 0 || !!(view && view.data);
-  if (typeof focus === 'number' && !custom() && focus >= themes.length) focus = null;
+    themes = data ? [] : cleanThemes(payloads.flatMap(t => (t && t.themes) || []), rows);
+    nv = { rows, themes, themed, s, data };
+  }
   // KI-Auswertung: mit Schluessel sieht die Wand auch Entwuerfe (Knopf gibt frei), sonst nur Freigegebenes.
   const rel = st.released.map(Number).filter(x => x < THEMES);
   const drafts = K ? await rpc('lf_drafts', { p_key: K }).catch(() => ({})) : {};
   const have = [...new Set([...rel, ...Object.keys(drafts || {}).map(Number).filter(x => x < THEMES)])];
   const fresh = prevReleased ? rel.filter(x => !prevReleased.includes(x)) : [];
   const mine = s.show.filter(x => have.includes(x));
-  const pick = fresh.length ? Math.max(...fresh) : mine.length ? mine[mine.length - 1] : have.length ? Math.max(...have) : null;
+  // frisch Freigegebenes immer (egal in welchem Schritt), sonst nur die Auswertung, die zu den gezeigten Schritten gehoert
+  const pick = fresh.length ? Math.max(...fresh) : mine.length ? mine[mine.length - 1] : null;
   prevReleased = rel;
-  if (pick == null) ai = null;
-  else { const released = rel.includes(pick);
-    ai = { step: pick, released, data: released ? await rpc('lf_result', { p_step: pick }) : (drafts[pick] || {}).data }; }
+  let nai = null;
+  if (pick != null) { const released = rel.includes(pick);
+    nai = { step: pick, released, data: released ? await rpc('lf_result', { p_step: pick }) : (drafts[pick] || {}).data }; }
+  // Ab hier keine Abrufe mehr: alles auf einmal umstellen (Kopf und Flaeche gemeinsam, kein Mischzustand).
+  // Fokus erst jetzt pruefen: Tastendruecke waehrend der Abrufe haben ihn evtl. veraendert.
+  const oldLabel = typeof focus === 'number' && view && !custom() && view.themes[focus] ? view.themes[focus].label : null;
+  view = nv; ai = nai; counter = isCounter; lastStep = st.step;
+  header(s, st.people); $('join').className = 'join' + (st.step === 0 ? ' big' : '');
+  $('n').textContent = st.count; $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
+  if (stepChanged) { focus = null; page = 0; }
+  else if (oldLabel !== null) { const k = themes.findIndex(t => t.label === oldLabel); focus = k >= 0 ? k : null; }   // Themen neu geschrieben: dem Thema folgen, nicht der Nummer
+  else if (typeof focus === 'number' && !custom() && focus >= themes.length) focus = null;
   if (fresh.length) focus = 'ai';                       // frisch freigegeben: sofort zeigen, egal in welchem Schritt
   if (focus === 'ai' && !(ai && ai.released)) focus = null;
-  if (has && !wasThemed && focus === null && !$('mosaic').hidden && $('mosaic').querySelector('.tile')) await reveal();   // Post-its hingen schon: Uebergang zeigen
-  else draw(fresh.length > 0);
-  wasThemed = has;
+  const has = themes.length > 0 || !!(view && view.data), key = view ? view.themed.map(x => THEMES + x).join(',') : '';
+  // Show-Effekt nur einmal je Themen-Ergebnis und nur, wenn die Post-its, die gerade haengen, zu diesem Schritt gehoeren
+  const ids = view ? new Set(view.rows.map(r => String(r.id))) : new Set(), tiles = [...$('mosaic').querySelectorAll('.tile')];
+  const mine2 = !stepChanged && !$('mosaic').hidden && tiles.length > 0 && tiles.every(e => ids.has(e.dataset.id));
+  const show = has && !revealed.has(key) && focus === null && mine2;
+  if (has) revealed.add(key);
+  if (show) reveal(); else draw(fresh.length > 0);   // nicht abwarten: Abrufe laufen weiter und koennen den Effekt bei Schrittwechsel abbrechen
 }
 
 async function poll() {
-  if (polling || busy) return; polling = true;
+  if (polling) return; polling = true;
   try { const st = await rpc('lf_get_state', null, 5000);
         const sig = st.rev + '|' + st.step + '|' + st.wall + '|' + st.released.join(',');
-        if (sig !== lastRev) { lastRev = sig; await refresh(st); } }
+        if (busy) { if (st.step !== lastStep) abortGen++; }   // waehrend des Show-Effekts nur Schrittwechsel melden (bricht ihn ab); Rest beim naechsten Abruf
+        else if (sig !== lastRev) { lastRev = sig; await refresh(st); } }
   catch (e) { lastRev = null; }
   polling = false;
 }
@@ -388,7 +481,7 @@ async function demo() {
   header(fx.step, fx.people || 0);
   view = { rows: fx.rows, themes: [], themed: fx.step.show, s: fx.step, data: null };
   ai = fx.ai ? { step: null, released: true, data: fx.ai, titles: (fx.step.lsDef || {}).panel } : null;
-  const apply = () => { const d = fx.data; if (d && d.viz && VIZ[d.viz]) view.data = d; else if (d) view.themes = d.themes || []; };
+  const apply = () => { const d = fx.data; if (d && d.viz && VIZ[d.viz]) view.data = d; else if (d) view.themes = cleanThemes(d.themes, view.rows); };
   if (show.includes('flat')) return draw(false);
   if (show.includes('reveal')) { draw(false); await sleep(800); apply(); return reveal(); }
   apply();
