@@ -1,0 +1,65 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Nur Pausen",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 2,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Vorschlag A"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Vorschlag B"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "10:00",
+    "kind": "break"
+   },
+   {
+    "label": "12:00",
+    "kind": "plenum"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "A"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1
+    ],
+    "slot": 0,
+    "space": 0
+   }
+  ],
+  "open": [
+   2
+  ]
+ },
+ "ai": null
+}

@@ -1,0 +1,226 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Viele Vorschläge ohne Platz",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 26,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "KI im Einkauf – Lia"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Lieferketten – Fiona"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Nachhaltige Verpackung – Lia"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Remote Onboarding – Goran"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Mentoring – Fiona"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Lagerroboter – Kemal"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Fahrermangel – Goran"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Zoll nach Brexit – Dana"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Retourenquote – Ali"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Datenqualität – Mo"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Kundenportal – Emre"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Teilzeit-Führung – Lia"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Sicherheit im Lager – Nele"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "E-Lkw – Ivo"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kantine – Bea"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Weiterbildung – Dana"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Sprache am Band – Hanna"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Kennzahlen – Dana"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Schichtmodelle – Emre"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Lärm – Mo"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Noch eine Idee zu KI im Einkauf"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Noch eine Idee zu Lieferketten"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Noch eine Idee zu Nachhaltige Verpackung"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Noch eine Idee zu Remote Onboarding"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Noch eine Idee zu Mentoring"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Noch eine Idee zu Lagerroboter"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "10:00–10:45"
+   },
+   {
+    "label": "11:00–11:45"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Raum 1"
+   },
+   {
+    "label": "Raum 2"
+   }
+  ],
+  "themes": [
+   {
+    "label": "Alles",
+    "color": "lila"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ],
+    "title": "Großer Topf: Lieferkette von Einkauf bis Retoure",
+    "host": "Ali, Bea, Chen, Dana, Emre, Fiona, Goran, Hanna, Ivo",
+    "slot": 0,
+    "space": 0,
+    "theme": 0,
+    "interest": 41
+   },
+   {
+    "ids": [
+     10
+    ],
+    "slot": 1,
+    "space": 1,
+    "theme": 0
+   }
+  ],
+  "open": [
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ]
+ },
+ "ai": null
+}

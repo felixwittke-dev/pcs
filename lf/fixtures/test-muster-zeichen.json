@@ -1,0 +1,137 @@
+{
+ "step": {
+  "label": "Appreciative Interviews · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Appreciative Interviews",
+   "icon": "appreciative-interviews",
+   "noun": "Geschichten",
+   "panel": [
+    "Was Erfolg möglich gemacht hat",
+    "Wo Geschichten sich widersprechen",
+    "Was in keiner Geschichte vorkommt"
+   ]
+  },
+  "q": "Erzählt von einem Moment, in dem Zusammenarbeit wirklich gelungen ist.",
+  "how": "Paare erzählen sich Erfolgsgeschichten.",
+  "show": [
+   2
+  ]
+ },
+ "people": 7,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "🎉🎉 Wir haben gefeiert 🥳 und alle waren da 👏"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "<script>alert(1)</script> war der Titel unserer Präsentation"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "我们一起完成了这个项目，大家都很高兴，没有人掉队。"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "عملنا معا كفريق واحد ونجحنا في النهاية"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Donaudampfschifffahrtselektrizitätenhauptbetriebswerkbauunterbeamtengesellschaft hat geholfen"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "<img src=x onerror=alert(2)>"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\n\nZeile vier"
+  }
+ ],
+ "data": {
+  "viz": "patterns",
+  "patterns": [
+   {
+    "label": "🎉 Feiern <b>fett</b>",
+    "ids": [
+     1,
+     2,
+     6
+    ],
+    "quote": "<script>alert(1)</script>",
+    "quoteId": 2
+   },
+   {
+    "label": "中文条件",
+    "ids": [
+     3,
+     4,
+     5
+    ],
+    "quote": "大家都很高兴",
+    "quoteId": 3
+   },
+   {
+    "label": "شرط عربي",
+    "ids": [
+     4,
+     7
+    ],
+    "quote": "عملنا معا",
+    "quoteId": 4
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusammenarbeit gelingt, wenn jemand den Raum hält.",
+  "convergence": [
+   {
+    "label": "🎉 Feiern <b>fett</b>",
+    "ids": [
+     1,
+     2,
+     6
+    ],
+    "quote": "<script>alert(1)</script>"
+   },
+   {
+    "label": "中文条件",
+    "ids": [
+     3,
+     4,
+     5
+    ],
+    "quote": "大家都很高兴"
+   },
+   {
+    "label": "شرط عربي",
+    "ids": [
+     4,
+     7
+    ],
+    "quote": "عملنا معا"
+   }
+  ],
+  "tension": [
+   {
+    "label": "🎉 Feiern <b>fett</b>",
+    "a": "Struktur",
+    "b": "Freiheit"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Konflikte",
+    "why": "Keine Geschichte erzählt von einem gelösten Streit."
+   }
+  ]
+ }
+}

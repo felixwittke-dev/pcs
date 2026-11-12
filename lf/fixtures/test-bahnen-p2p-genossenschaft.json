@@ -1,0 +1,209 @@
+{
+ "step": {
+  "label": "Purpose-to-Practice · alle",
+  "lsDef": {
+   "name": "Purpose-to-Practice",
+   "icon": "purpose-to-practice",
+   "panel": [
+    "Was trägt",
+    "Wo es sich reibt",
+    "Was noch fehlt"
+   ],
+   "noun": "Beiträge"
+  },
+  "phase": "alle",
+  "q": "Wofür gibt es unsere Genossenschaft in 30 Jahren noch?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 22,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Bezahlbar wohnen, auch in 30 Jahren"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Nachbarschaft statt Anonymität"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Mitglieder bestimmen mit"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Niemand muss im Alter ausziehen"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Ökologisch sanieren ohne Mietsprung"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Jede Entscheidung erklären wir"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Keine Miete über 7,50 €/m²"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Erst fragen, dann bauen"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Mitglieder aus allen Häusern"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Junge Familien und Alleinlebende"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Hausmeisterei"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Vorstand nur beratend"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Hausräte je Block"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Monatliches offenes Forum"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Online-Abstimmung + Papier"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Sprechstunde im Gemeinschaftsraum"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Sanierungsplan jährlich offenlegen"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Patenschaften für Neue"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": true,
+  "banner": {
+   "label": "Purpose",
+   "hint": "Warum ist diese Arbeit wichtig?",
+   "color": "türkis",
+   "ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "statement": "Wir sichern bezahlbares, gemeinsames Wohnen über Generationen: Mitglieder entscheiden mit, und niemand muss gehen, weil er älter wird.",
+   "summary": "Bezahlbarkeit, Nachbarschaft, Mitbestimmung."
+  },
+  "lanes": [
+   {
+    "label": "Principles",
+    "hint": "Welche Regeln gelten unbedingt?",
+    "color": "blau",
+    "ids": [
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "label": "Participants",
+    "hint": "Wer muss dabei sein?",
+    "color": "lila",
+    "ids": [
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "label": "Structure",
+    "hint": "Wie organisieren wir uns?",
+    "color": "grün",
+    "ids": [
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "label": "Practices",
+    "hint": "Was tun wir konkret?",
+    "color": "orange",
+    "ids": [
+     16,
+     17,
+     18
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Bezahlbar und gemeinsam.",
+  "convergence": [
+   {
+    "label": "Purpose",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Principles",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Practices",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

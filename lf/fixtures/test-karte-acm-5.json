@@ -1,0 +1,160 @@
+{
+ "step": {
+  "label": "Agreement & Certainty Matrix · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Agreement & Certainty Matrix",
+   "icon": "agreement-certainty-matrix",
+   "noun": "Herausforderungen",
+   "panel": [
+    "Wo sich Herausforderungen ballen",
+    "Wo die Einschätzungen auseinandergehen",
+    "Was auf keiner Karte steht"
+   ]
+  },
+  "q": "Wo stehen unsere Herausforderungen auf der Matrix?",
+  "how": "Ordnet jede Herausforderung ein: Wie einig, wie sicher?",
+  "show": [
+   3
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 3,
+   "body": "Dienstplan wird erst 5 Tage vorher fertig"
+  },
+  {
+   "id": 2,
+   "step": 3,
+   "body": "Übergabe dauert 45 statt 20 Minuten"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Pieper vom Oberarzt ist nachts oft nicht erreichbar"
+  },
+  {
+   "id": 4,
+   "step": 3,
+   "body": "Medikamentenschrank wird falsch bestückt"
+  },
+  {
+   "id": 5,
+   "step": 3,
+   "body": "Neue Software für die Pflegedoku, keiner weiß wie"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "bands",
+  "bands": [
+   0.38,
+   0.75,
+   1.1
+  ],
+  "x": {
+   "label": "Wie sicher wissen wir, was wirkt?",
+   "lo": "sicher",
+   "hi": "unklar"
+  },
+  "y": {
+   "label": "Wie einig sind wir uns?",
+   "lo": "einig",
+   "hi": "uneinig"
+  },
+  "zones": [
+   {
+    "label": "Simple",
+    "hint": "Einfach",
+    "color": "grün",
+    "ids": [
+     1,
+     2,
+     4
+    ],
+    "summary": "Schnell lösbar."
+   },
+   {
+    "label": "Complicated",
+    "hint": "Kompliziert",
+    "color": "blau",
+    "ids": [
+     3,
+     5
+    ],
+    "summary": "Braucht Fachleute."
+   },
+   {
+    "label": "Complex",
+    "hint": "Komplex",
+    "color": "lila",
+    "ids": [],
+    "summary": ""
+   },
+   {
+    "label": "Chaotic",
+    "hint": "Chaotisch",
+    "color": "koralle",
+    "ids": [],
+    "summary": ""
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "x": 0.12,
+    "y": 0.2,
+    "short": "Dienstplan zu spät"
+   },
+   {
+    "id": 2,
+    "x": 0.3,
+    "y": 0.18,
+    "short": "Übergabe zu lang"
+   },
+   {
+    "id": 3,
+    "x": 0.15,
+    "y": 0.35,
+    "short": "OA nachts nicht erreichbar"
+   },
+   {
+    "id": 4,
+    "x": 0.08,
+    "y": 0.1,
+    "short": "Schrank falsch bestückt"
+   },
+   {
+    "id": 5,
+    "x": 0.55,
+    "y": 0.25,
+    "short": "Doku-Software unklar"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten Herausforderungen hängen an Einigkeit, nicht an Wissen.",
+  "convergence": [
+   {
+    "label": "Complex",
+    "ids": [],
+    "quote": "Dienstplan zu spät"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Complicated",
+    "a": "Das ist eine Fachfrage",
+    "b": "Das ist eine Haltungsfrage"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patient*innen",
+    "why": "Niemand fragt die Betroffenen."
+   }
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Eine Session",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 1,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Wie geht es weiter mit dem Projekt? – Ines"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "10:00–11:00"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Saal"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1
+    ],
+    "slot": 0,
+    "space": 0
+   }
+  ]
+ },
+ "ai": null
+}

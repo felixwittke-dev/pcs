@@ -1,0 +1,229 @@
+{
+ "step": {
+  "label": "Celebrity Interview",
+  "lsDef": {
+   "name": "Celebrity Interview",
+   "icon": "celebrity-interview",
+   "panel": [
+    "Was viele wissen wollen",
+    "Wo die Fragen auseinandergehen",
+    "Was noch niemand gefragt hat"
+   ],
+   "noun": "Fragen"
+  },
+  "phase": "Test",
+  "q": "Was möchtest du Dr. Aylin Demir fragen? Sie hat in einem Dorf ohne Arzt eine Gemeinschaftspraxis aufgebaut.",
+  "how": "Schreib deine Frage und stimm für die Fragen anderer.",
+  "show": [
+   2
+  ]
+ },
+ "people": 60,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Mehr 🚀 und weniger 🐌 bitte! 🎉🎉"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenaufbewahrungsschrankschlüsselanhänger"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Siehe https://example.org/sehr/langer/pfad/zur/dokumentation?id=12345&ansicht=vollständig#abschnitt-7"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "<script>alert(1)</script> soll als Text erscheinen"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "<b>fett?</b> &amp; <img src=x onerror=alert(2)>"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "שיתוף פעולה בין צוותים חשוב לנו"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "我们需要更多的跨部门合作和透明的沟通"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "مرحبا بالجميع، نحتاج إلى وقت أكثر"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "\"Anführungszeichen\" und 'Apostrophe' & Ampersand"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\nZeile drei"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "   Leerzeichen am Anfang und Ende   "
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Wie haben Sie die Gemeinde überzeugt, das Gebäude zu stellen?"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Was war der Moment, in dem Sie fast aufgegeben hätten?"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Wie finden Sie Ärztinnen, die aufs Land wollen?"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Wer hat das Risiko getragen, Sie oder die Gemeinde?"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Wie viele Stunden arbeiten Sie wirklich pro Woche?"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Was machen Sie anders als die Praxis, die vorher geschlossen hat?"
+  }
+ ],
+ "data": {
+  "viz": "ranking",
+  "mode": "upvotes",
+  "items": [
+   {
+    "id": 1,
+    "votes": 12
+   },
+   {
+    "id": 2,
+    "votes": 11
+   },
+   {
+    "id": 3,
+    "votes": 10
+   },
+   {
+    "id": 4,
+    "votes": 9
+   },
+   {
+    "id": 5,
+    "votes": 8
+   },
+   {
+    "id": 6,
+    "votes": 7
+   },
+   {
+    "id": 7,
+    "votes": 6
+   },
+   {
+    "id": 8,
+    "votes": 5
+   },
+   {
+    "id": 9,
+    "votes": 4
+   },
+   {
+    "id": 10,
+    "votes": 3
+   },
+   {
+    "id": 11,
+    "votes": 2
+   },
+   {
+    "id": 12,
+    "votes": 1
+   },
+   {
+    "id": 13,
+    "votes": 0
+   },
+   {
+    "id": 14,
+    "votes": -1
+   },
+   {
+    "id": 15,
+    "votes": -2
+   },
+   {
+    "id": 16,
+    "votes": -3
+   },
+   {
+    "id": 17,
+    "votes": -4
+   },
+   {
+    "id": 18,
+    "votes": -5
+   }
+  ],
+  "themes": [
+   {
+    "label": "<b>T</b>",
+    "color": "blau",
+    "ids": [
+     4,
+     5
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten wollen wissen, wie man so etwas anfängt und wer das Risiko trägt.",
+  "convergence": [
+   {
+    "label": "Der Anfang",
+    "ids": [
+     1,
+     4,
+     12
+    ],
+    "quote": "Wer hat das Risiko getragen"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Beruf und Leben",
+    "a": "Wie viele Stunden",
+    "b": "Was sagt Ihre Familie"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patientensicht",
+    "why": "Kaum eine Frage aus Sicht der Kranken."
+   }
+  ]
+ }
+}

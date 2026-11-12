@@ -1,0 +1,630 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Logistik 2030",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 90,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "KI im Einkauf – Lia"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Lieferketten – Mo"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Nachhaltige Verpackung – Mo"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Remote Onboarding – Hanna"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Mentoring – Jule"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Lagerroboter – Hanna"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Fahrermangel – Ali"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Zoll nach Brexit – Bea"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Retourenquote – Goran"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Datenqualität – Nele"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Kundenportal – Ivo"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Teilzeit-Führung – Nele"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Sicherheit im Lager – Hanna"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "E-Lkw – Hanna"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kantine – Dana"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Weiterbildung – Mo"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Sprache am Band – Bea"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Kennzahlen – Dana"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Schichtmodelle – Chen"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Lärm – Chen"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "KI im Einkauf – Ivo"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Lieferketten – Kemal"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Nachhaltige Verpackung – Bea"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Remote Onboarding – Nele"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Mentoring – Lia"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Lagerroboter – Lia"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Fahrermangel – Kemal"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Zoll nach Brexit – Nele"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Retourenquote – Mo"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Datenqualität – Hanna"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Kundenportal – Bea"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Teilzeit-Führung – Ivo"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Sicherheit im Lager – Mo"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "E-Lkw – Ali"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Kantine – Ali"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Weiterbildung – Mo"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Sprache am Band – Chen"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Kennzahlen – Dana"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Schichtmodelle – Jule"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Lärm – Ali"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "9:00–9:40"
+   },
+   {
+    "label": "9:45–10:25"
+   },
+   {
+    "label": "10:30",
+    "kind": "break"
+   },
+   {
+    "label": "10:45–11:25"
+   },
+   {
+    "label": "11:30–12:10"
+   },
+   {
+    "label": "12:15",
+    "kind": "break",
+    "title": "Mittag"
+   },
+   {
+    "label": "13:00–13:40"
+   },
+   {
+    "label": "13:45–14:25"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Raum A"
+   },
+   {
+    "label": "Raum B"
+   },
+   {
+    "label": "Raum C"
+   },
+   {
+    "label": "Raum D"
+   },
+   {
+    "label": "Raum E"
+   },
+   {
+    "label": "Raum F"
+   },
+   {
+    "label": "Raum G"
+   },
+   {
+    "label": "Raum H"
+   }
+  ],
+  "themes": [
+   {
+    "label": "Technik",
+    "color": "blau"
+   },
+   {
+    "label": "Menschen",
+    "color": "grün"
+   },
+   {
+    "label": "Umwelt",
+    "color": "türkis"
+   },
+   {
+    "label": "Kunden",
+    "color": "orange"
+   },
+   {
+    "label": "Steuerung",
+    "color": "lila"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1
+    ],
+    "host": "Kemal",
+    "slot": 0,
+    "space": 0,
+    "theme": 0,
+    "interest": 24
+   },
+   {
+    "ids": [
+     2
+    ],
+    "host": "Emre",
+    "slot": 1,
+    "space": 3,
+    "theme": 1,
+    "interest": 6
+   },
+   {
+    "ids": [
+     3
+    ],
+    "host": "Kemal",
+    "slot": 3,
+    "space": 6,
+    "theme": 2,
+    "interest": 10
+   },
+   {
+    "ids": [
+     4
+    ],
+    "host": "Ivo",
+    "slot": 4,
+    "space": 1,
+    "theme": 3,
+    "interest": 22
+   },
+   {
+    "ids": [
+     5
+    ],
+    "host": "Goran",
+    "slot": 6,
+    "space": 4,
+    "theme": 4,
+    "interest": 24
+   },
+   {
+    "ids": [
+     6
+    ],
+    "host": "Mo",
+    "slot": 7,
+    "space": 7,
+    "theme": 0,
+    "interest": 5
+   },
+   {
+    "ids": [
+     7
+    ],
+    "host": "Bea",
+    "slot": 0,
+    "space": 2,
+    "theme": 1,
+    "interest": 4
+   },
+   {
+    "ids": [
+     8
+    ],
+    "host": "Emre",
+    "slot": 1,
+    "space": 5,
+    "theme": 2,
+    "interest": 18
+   },
+   {
+    "ids": [
+     9
+    ],
+    "host": "Jule",
+    "slot": 3,
+    "space": 0,
+    "theme": 3,
+    "interest": 8
+   },
+   {
+    "ids": [
+     10
+    ],
+    "host": "Goran",
+    "slot": 4,
+    "space": 3,
+    "theme": 4,
+    "interest": 10
+   },
+   {
+    "ids": [
+     11
+    ],
+    "host": "Dana",
+    "slot": 6,
+    "space": 6,
+    "theme": 0,
+    "interest": 27
+   },
+   {
+    "ids": [
+     12
+    ],
+    "host": "Jule",
+    "slot": 7,
+    "space": 1,
+    "theme": 1,
+    "interest": 2
+   },
+   {
+    "ids": [
+     13
+    ],
+    "host": "Ali",
+    "slot": 0,
+    "space": 4,
+    "theme": 2,
+    "interest": 19
+   },
+   {
+    "ids": [
+     14
+    ],
+    "host": "Emre",
+    "slot": 1,
+    "space": 7,
+    "theme": 3,
+    "interest": 16
+   },
+   {
+    "ids": [
+     15
+    ],
+    "host": "Emre",
+    "slot": 3,
+    "space": 2,
+    "theme": 4,
+    "interest": 12
+   },
+   {
+    "ids": [
+     16
+    ],
+    "host": "Kemal",
+    "slot": 4,
+    "space": 5,
+    "theme": 0,
+    "interest": 28
+   },
+   {
+    "ids": [
+     17
+    ],
+    "host": "Dana",
+    "slot": 6,
+    "space": 0,
+    "theme": 1,
+    "interest": 17
+   },
+   {
+    "ids": [
+     18
+    ],
+    "host": "Ivo",
+    "slot": 7,
+    "space": 3,
+    "theme": 2,
+    "interest": 9
+   },
+   {
+    "ids": [
+     19
+    ],
+    "host": "Ivo",
+    "slot": 0,
+    "space": 6,
+    "theme": 3,
+    "interest": 9
+   },
+   {
+    "ids": [
+     20
+    ],
+    "host": "Ali",
+    "slot": 1,
+    "space": 1,
+    "theme": 4,
+    "interest": 15
+   },
+   {
+    "ids": [
+     21
+    ],
+    "host": "Lia",
+    "slot": 3,
+    "space": 4,
+    "theme": 0,
+    "interest": 22
+   },
+   {
+    "ids": [
+     22
+    ],
+    "host": "Emre",
+    "slot": 4,
+    "space": 7,
+    "theme": 1,
+    "interest": 3
+   },
+   {
+    "ids": [
+     23
+    ],
+    "host": "Ali",
+    "slot": 6,
+    "space": 2,
+    "theme": 2,
+    "interest": 8
+   },
+   {
+    "ids": [
+     24
+    ],
+    "host": "Hanna",
+    "slot": 7,
+    "space": 5,
+    "theme": 3,
+    "interest": 30
+   },
+   {
+    "ids": [
+     25
+    ],
+    "host": "Kemal",
+    "slot": 0,
+    "space": 1,
+    "theme": 4,
+    "interest": 22
+   },
+   {
+    "ids": [
+     26
+    ],
+    "host": "Goran",
+    "slot": 0,
+    "space": 1,
+    "theme": 0,
+    "interest": 4
+   },
+   {
+    "ids": [
+     27
+    ],
+    "host": "Emre",
+    "slot": 0,
+    "space": 1,
+    "theme": 1,
+    "interest": 9
+   },
+   {
+    "ids": [
+     28
+    ],
+    "host": "Kemal",
+    "slot": 0,
+    "space": 1,
+    "theme": 2,
+    "interest": 15
+   },
+   {
+    "ids": [
+     29
+    ],
+    "host": "Fiona",
+    "slot": 0,
+    "space": 1,
+    "theme": 3,
+    "interest": 9
+   },
+   {
+    "ids": [
+     30
+    ],
+    "host": "Hanna",
+    "slot": 0,
+    "space": 1,
+    "theme": 4,
+    "interest": 3
+   },
+   {
+    "ids": [
+     31,
+     32,
+     33
+    ],
+    "title": "Drei in einer Zelle",
+    "host": "Ali",
+    "slot": 0,
+    "space": 1,
+    "theme": 0,
+    "interest": 7
+   }
+  ],
+  "open": [
+   34,
+   35,
+   36
+  ]
+ },
+ "ai": {
+  "headline": "Viel.",
+  "convergence": [],
+  "tension": [],
+  "blind_spots": []
+ }
+}

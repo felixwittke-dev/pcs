@@ -1,0 +1,244 @@
+{
+ "step": {
+  "label": "Appreciative Interviews · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Appreciative Interviews",
+   "icon": "appreciative-interviews",
+   "noun": "Geschichten",
+   "panel": [
+    "Was Erfolg möglich gemacht hat",
+    "Wo Geschichten sich widersprechen",
+    "Was in keiner Geschichte vorkommt"
+   ]
+  },
+  "q": "Erzählt von einem Moment, in dem Zusammenarbeit an unserer Schule wirklich gelungen ist.",
+  "how": "Paare erzählen sich Erfolgsgeschichten.",
+  "show": [
+   2
+  ]
+ },
+ "people": 22,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Bei der Projektwoche Klimaschule hat Frau Demir einfach gesagt: macht ihr das, ich halte euch den Rücken frei. Wir Referendare haben zum ersten Mal selbst geplant und es lief."
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Als der Server vor den Abschlussprüfungen ausgefallen ist, hat der Hausmeister mit zwei Schülern aus der 10b die ganze Nacht durchgearbeitet. Morgens lief alles."
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Unsere Fachschaft Mathe hat ein Jahr lang jede Woche 20 Minuten gemeinsam Aufgaben angeschaut. Kein Protokoll, keine Tagesordnung, nur Aufgaben. Die Noten sind besser geworden."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Ich habe in der Lehrerkonferenz zugegeben, dass ich mit der Klasse 8c nicht mehr klarkomme. Danach kamen drei Kollegen und haben angeboten, mal mit reinzukommen."
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Der Elternabend in der 5a war anders: wir haben die Eltern in Gruppen gesetzt und sie haben sich gegenseitig Fragen beantwortet. Keiner ist früher gegangen."
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Die Schulleitung hat die Ganztagsplanung den Erzieherinnen überlassen. Die wussten viel besser, welche Kinder wann müde sind."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Beim Umzug in das Containergebäude haben alle mit angepackt, auch die Sekretärin und der Schulleiter. Es gab Pizza und eine Liste, wer was trägt."
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Beim Austausch mit Lyon hat die Partnerschule angerufen, statt Mails zu schreiben. Seitdem klären wir alles in zehn Minuten am Telefon."
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "In der Inklusionsklasse haben wir jeden Morgen fünf Minuten Lagebesprechung zu dritt gemacht. Klingt wenig, hat alles verändert."
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Für das Schulfest gab es ein einziges Ziel: jedes Kind soll etwas vorführen. Daran haben wir jede Idee gemessen, auch die vom Förderverein."
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Mein Mentor hat mir nach der ersten verpatzten Stunde nicht gesagt, was falsch war, sondern gefragt, was ich selbst ändern würde."
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Die Schülervertretung durfte das Handykonzept selbst schreiben. Es ist strenger geworden als unser Entwurf und alle halten sich dran."
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Ich habe die Kollegin aus der Grundschule einfach angerufen, als ein Kind zu uns kam, mit dem es Probleme gab. Ein Anruf, und wir wussten, was hilft."
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Bei der Corona-Umstellung hat der IT-Kollege jeden Abend eine offene Sprechstunde gemacht. Wer Hilfe brauchte, kam einfach rein."
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Unser Kollegium hat sich auf eine Regel geeinigt: keine Mails nach 18 Uhr. Seitdem fragt man lieber gleich im Lehrerzimmer."
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Als die Abiturfahrt zu platzen drohte, haben die Schüler die Verhandlung mit dem Busunternehmen selbst übernommen. Wir haben nur unterschrieben."
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Die Sportfachschaft hat Sportabzeichen für alle Klassen organisiert, an einem Tag, mit einem Plan an der Wand, den jeder sehen konnte."
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Als ich krank war, hat die Parallelklassenlehrerin meinen Unterricht so übernommen, dass ich danach nahtlos weitermachen konnte. Wir hatten vorher alles in einem gemeinsamen Ordner."
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Bei der Bewerbung um den Schulpreis hat jeder einen kleinen Teil geschrieben. Die Schulleitung hat nur am Ende vorgelesen und gesagt: das sind wir."
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Ich habe beim Fachtag gesagt, dass ich Digitalunterricht nicht kann. Eine Kollegin, die ich kaum kannte, hat sich danach zwei Nachmittage Zeit genommen."
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Mittagessen"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Die Theater-AG hat ohne Lehrkraft geprobt, weil die Schüler wussten, was das Ziel ist: im Juni vor vollem Saal spielen."
+  }
+ ],
+ "data": {
+  "viz": "patterns",
+  "patterns": [
+   {
+    "label": "Schwäche zeigen dürfen",
+    "ids": [
+     4,
+     11,
+     20,
+     14,
+     13
+    ],
+    "quote": "dass ich mit der Klasse 8c nicht mehr klarkomme",
+    "quoteId": 4
+   },
+   {
+    "label": "Verantwortung abgeben",
+    "ids": [
+     1,
+     6,
+     12,
+     16,
+     22,
+     19
+    ],
+    "quote": "macht ihr das, ich halte euch den Rücken frei",
+    "quoteId": 1
+   },
+   {
+    "label": "Ein klares gemeinsames Ziel",
+    "ids": [
+     10,
+     22,
+     17,
+     19,
+     2
+    ],
+    "quote": "jedes Kind soll etwas vorführen",
+    "quoteId": 10
+   },
+   {
+    "label": "Kurzer Draht",
+    "ids": [
+     8,
+     13,
+     15,
+     9
+    ],
+    "quote": "Ein Anruf, und wir wussten, was hilft",
+    "quoteId": 13
+   },
+   {
+    "label": "Kleine feste Routinen",
+    "ids": [
+     3,
+     9,
+     14,
+     18,
+     7
+    ],
+    "quote": "nur Aufgaben",
+    "quoteId": 3
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusammenarbeit gelingt, wenn jemand den Raum hält.",
+  "convergence": [
+   {
+    "label": "Schwäche zeigen dürfen",
+    "ids": [
+     4,
+     11,
+     20
+    ],
+    "quote": "dass ich mit der Klasse 8c nicht mehr klarkomme"
+   },
+   {
+    "label": "Verantwortung abgeben",
+    "ids": [
+     1,
+     6,
+     12
+    ],
+    "quote": "macht ihr das, ich halte euch den Rücken frei"
+   },
+   {
+    "label": "Ein klares gemeinsames Ziel",
+    "ids": [
+     10,
+     22,
+     17
+    ],
+    "quote": "jedes Kind soll etwas vorführen"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Schwäche zeigen dürfen",
+    "a": "Struktur",
+    "b": "Freiheit"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Konflikte",
+    "why": "Keine Geschichte erzählt von einem gelösten Streit."
+   }
+  ]
+ }
+}

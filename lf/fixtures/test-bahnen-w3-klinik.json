@@ -1,0 +1,412 @@
+{
+ "step": {
+  "label": "What, So What, Now What? · alle",
+  "lsDef": {
+   "name": "What, So What, Now What?",
+   "icon": "what-so-what-now-what",
+   "panel": [
+    "Was sich durchzieht",
+    "Wo es sich reibt",
+    "Was noch niemand anspricht"
+   ]
+  },
+  "phase": "alle",
+  "q": "Was ist bei der Frühübergabe in der Notaufnahme diese Woche passiert, was heißt das, was tun wir?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 24,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Übergabe um 6:30 dauerte heute 40 Minuten"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Zwei Patienten wurden doppelt übergeben"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Das neue Board war um 7 Uhr schon voll"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Ärztin kam erst nach der Übergabe dazu"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Telefon klingelte die ganze Zeit"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Niemand wusste, wer Bett 4 hat"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Labor war schneller als sonst"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Wir haben uns im Flur übergeben, nicht im Raum"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Nachtschicht war sichtlich erschöpft"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Die Checkliste lag, aber keiner nahm sie"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Pflegeschülerin hat die meisten Fragen gestellt"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Zwei Sprachen am Bett, kein Dolmetscher"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Der Rettungsdienst stand 15 min im Gang"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Kaffee war leer, Stimmung kippte"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Übergabe am Bett lief bei Team B ruhiger"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Tablets hatten keinen Akku"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Medikamentenliste war veraltet"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Wir haben dreimal dasselbe erzählt"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Pause der Nacht fiel komplett aus"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Leitstelle rief zweimal wegen freier Betten an"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Angehörige standen mitten in der Übergabe"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Neue Kollegin traute sich nicht nachzufragen"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Wir verlieren Infos genau an der Schnittstelle"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Die Checkliste ist zu lang, also nutzt sie keiner"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Ohne Ärztin fehlt die halbe Wahrheit"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Müdigkeit macht Übergaben gefährlich"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Ruhe am Bett wirkt, Flur nicht"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Technik, die nicht geladen ist, ist keine Technik"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Neue sagen nichts, weil es hektisch ist"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Wir reden mehr als wir zeigen"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Unterbrechungen kosten uns die Konzentration"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Das Board hilft nur, wenn es aktuell ist"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Sprache ist ein Sicherheitsthema, kein Extra"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Wir haben keinen Ort für die Übergabe"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Doppelte Übergaben zeigen: Zuständigkeit ist unklar"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Die Nacht trägt zu viel allein"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Es gibt kein Signal: jetzt bitte nicht stören"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Übergabe immer am Bett, Flur ist tabu"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Checkliste auf 5 Punkte kürzen"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Ärztin 6:25 fest im Kalender"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Tablets laden in der Nacht, feste Station"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Rotes Schild „Übergabe – bitte warten“"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Telefon in der Übergabe an die Leitung umleiten"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Neue bekommen eine Patin für die ersten 4 Wochen"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Dolmetsch-App testen, 4 Wochen"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Board-Pflege: wer übergibt, aktualisiert"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Kurzer Check-out nach jeder Übergabe: Was fehlte?"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "In 6 Wochen wieder W³ mit Nacht und Ärzten"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": true,
+  "lanes": [
+   {
+    "label": "What?",
+    "hint": "Was haben wir beobachtet?",
+    "color": "blau",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ],
+    "summary": "Die Übergabe zerfasert: Flur, Telefon, fehlende Ärztin, leere Akkus.",
+    "themes": [
+     {
+      "label": "Ort & Störungen",
+      "ids": [
+       5,
+       8,
+       13,
+       21,
+       20,
+       14
+      ]
+     },
+     {
+      "label": "Information",
+      "ids": [
+       2,
+       6,
+       10,
+       17,
+       18,
+       3,
+       16
+      ]
+     },
+     {
+      "label": "Menschen",
+      "ids": [
+       4,
+       9,
+       11,
+       12,
+       22,
+       19,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "label": "So What?",
+    "hint": "Was bedeutet das?",
+    "color": "lila",
+    "ids": [
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ],
+    "summary": "Die Schnittstelle ist unser größtes Risiko, nicht die einzelne Person."
+   },
+   {
+    "label": "Now What?",
+    "hint": "Was machen wir jetzt?",
+    "color": "grün",
+    "ids": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "summary": "Klein anfangen: Ort, Zeit, Schild. In 6 Wochen nachschauen."
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die Übergabe scheitert am Ort und an Unterbrechungen, nicht am Wollen.",
+  "convergence": [
+   {
+    "label": "What?",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "So What?",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Now What?",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

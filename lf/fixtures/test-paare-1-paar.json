@@ -1,0 +1,147 @@
+{
+ "step": {
+  "label": "Wicked Questions",
+  "lsDef": {
+   "name": "Wicked Questions",
+   "icon": "wicked-questions",
+   "panel": [
+    "Spannungen, die viele spüren",
+    "Die Pole Seite an Seite",
+    "Was noch keiner fragt"
+   ]
+  },
+  "phase": "Test",
+  "q": "Unsere Schule im Wandel: Was ist beides wahr und beißt sich?",
+  "how": "Schreib auf, was du erlebst.",
+  "show": [
+   2
+  ]
+ },
+ "people": 50,
+ "rows": [
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Mehr Grün auf dem Schulhof"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Im Mai ist Prüfung, Punkt"
+  },
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Lena braucht dreimal so lange, und sie lernt"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Wer entscheidet eigentlich über das Budget?"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Die Kopierer sind immer kaputt"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Wir sind schon jetzt zwei Kapitel hinten"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Vergleichsarbeiten messen den Plan"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Inklusion ohne Doppelbesetzung ist Show"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Förderplan ernst nehmen, nicht abheften"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Die Eltern fragen nach dem Stoff, nicht nach Gefühlen"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Fachkonferenz will einheitliche Tests"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Differenzieren kostet Kraft, lohnt sich aber"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Ich will Zeit für die Leisen haben"
+  }
+ ],
+ "data": {
+  "viz": "pairs",
+  "pairs": [
+   {
+    "question": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "a": {
+     "label": "Jedem Kind gerecht",
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "b": {
+     "label": "Lehrplan schaffen",
+     "ids": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   }
+  ],
+  "rest": [
+   11,
+   12,
+   13
+  ]
+ },
+ "ai": {
+  "headline": "Fast jede Belastung hat eine Kehrseite, die genauso ernst gemeint ist.",
+  "convergence": [
+   {
+    "label": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Beides stimmt"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "a": "A",
+    "b": "B"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Schülersicht",
+    "why": "Die Kinder selbst kommen kaum vor."
+   }
+  ]
+ }
+}

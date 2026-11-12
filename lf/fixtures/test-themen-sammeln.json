@@ -1,0 +1,155 @@
+{
+ "step": {
+  "label": "1-2-4-all · Schülervertretung",
+  "phase": "Schülervertretung",
+  "q": "Was würde unsere Schule zu einem besseren Ort zum Lernen machen?",
+  "how": "Schreibt alles auf, was euch einfällt.",
+  "show": [
+   2
+  ],
+  "ls": "1-2-4-all"
+ },
+ "people": 22,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "mehr Zeit für Projekte"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "weniger Hausaufgaben am Wochenende"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Mensa mit vegetarischem Essen jeden Tag"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Tablets funktionieren endlich"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Lehrer die zuhören"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Klassenrat ernst nehmen"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Toiletten sauber"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Schulhof mit Schatten"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "mehr Sport"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Theater-AG wieder"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Noten erklären statt nur geben"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Schließfächer für alle"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "frühere Rückmeldung zu Klausuren"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Bibliothek länger offen"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Pause länger als 15 Min"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "mehr Zeit für Projekte (Klasse 8b)"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "weniger Hausaufgaben am Wochenende wäre toll"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Mensa mit vegetarischem Essen jeden Tag bitte"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Tablets funktionieren endlich bitte"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Lehrer die zuhören wäre toll"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Klassenrat ernst nehmen bitte"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Toiletten sauber (Klasse 8b)"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Schulhof mit Schatten bitte"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "mehr Sport (Klasse 8b)"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Theater-AG wieder wäre toll"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Noten erklären statt nur geben wäre toll"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Schließfächer für alle (Klasse 8b)"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "frühere Rückmeldung zu Klausuren (Klasse 8b)"
+  }
+ ]
+}

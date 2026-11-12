@@ -6,7 +6,8 @@
 //     max: 25,                 // hoechste moegliche Punktzahl (Standard 25 = 5 Runden x 5 Punkte)
 //     items: [{ id, votes: [5,4,3,5,4], score? }],   // score optional, sonst Summe der votes. id = Post-it-id aus rows.
 //     themes?: [{ label, color, ids }] }             // optional: Kachelfarbe nach Thema (color = gelb|grün|blau|rosa|orange|lila|türkis|koralle)
-// Post-its ohne Eintrag in items gelten als unbewertet und stehen am Ende der weiteren Ideen (Punktzahl „–“).
+// Post-its ohne Eintrag in items gelten als unbewertet und stehen am Ende der weiteren Ideen (Punktzahl „–“). Ist noch gar nichts bewertet: nur „Alle Ideen“.
+// Einzelwertungen ausserhalb 1..5 werden auf 0..5 begrenzt; score ohne votes ergibt einen durchgehenden Balken.
 // Rangfolge: Punkte absteigend, Gleichstand = gleicher Rang (1, 2, 3, 3, 5 …).
 //
 // Modus 'upvotes' (Celebrity Interview, Fragen mit Zustimmung):
@@ -29,11 +30,11 @@
   .${P}h { flex: none; display: flex; align-items: baseline; gap: .45em; margin: 0 0 8px; font-weight: 800; font-size: clamp(16px, 1.45vw, 26px); white-space: nowrap; overflow: hidden; }
   .${P}h span { font-weight: 400; color: #5F5F5F; font-size: .8em; overflow: hidden; text-overflow: ellipsis; }
   .${P}list { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: .3em; overflow: hidden; padding: 4px 4px 4px 3px; }
-  .${P}row { flex: 1 0 auto; display: grid; grid-template-columns: 1.75em minmax(0, 1fr) auto 1.9em; align-items: center; gap: .65em;
+  .${P}row { flex: 1 0 auto; display: grid; grid-template-columns: 1.75em minmax(0, 1fr) auto minmax(1.9em, max-content); align-items: center; gap: .65em;
              padding: .28em .7em .28em .4em; border-radius: .3em; box-shadow: 0 1px 2px rgba(0,0,0,.16); cursor: pointer; line-height: 1.22; }
   .${P}row:hover { box-shadow: 0 2px 8px rgba(0,0,0,.22); }
   .${P}rank { width: 1.65em; height: 1.65em; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.85); font-weight: 800; font-variant-numeric: tabular-nums; }
-  .${P}txt span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; overflow-wrap: anywhere; }
+  .${P}txt span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--clamp, 3); overflow: hidden; overflow-wrap: anywhere; }
   .${P}bar { --u: .56em; display: flex; height: 1.3em; width: calc(var(--max) * var(--u)); background: rgba(28,25,23,.08); border-radius: .25em; overflow: hidden; }
   .${P}bar i { flex: none; width: calc(var(--v) * var(--u)); background: #40BFC0; display: grid; place-items: center; font-style: normal;
                box-shadow: inset -2px 0 0 rgba(255,255,255,.9); transform-origin: 0 50%; }
@@ -42,6 +43,7 @@
   .${P}first { box-shadow: 0 0 0 3px ${AMBER}, 0 3px 10px rgba(0,0,0,.18); }
   .${P}first .${P}rank, .${P}first .${P}bar i { background: ${AMBER}; }
   .${P}plain { background: #FFF4C7; }
+  .${P}dense { gap: .12em; } .${P}dense .${P}row { padding-top: .04em; padding-bottom: .04em; } .${P}dense .${P}rank { width: 1.25em; height: 1.25em; } .${P}dense .${P}bar { height: 1em; }
   .${P}tiles { flex: 1; min-height: 0; overflow: hidden; }
   .${P}inner { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; --lines: 3; }
   .${P}sc { float: right; margin: 0 0 0 .35em; padding: 0 .4em; border-radius: .7em; background: rgba(255,255,255,.75); font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -64,20 +66,26 @@
   `;
   document.head.append(Object.assign(document.createElement('style'), { textContent: css }));
 
+  const COLORS = ['gelb', 'grün', 'blau', 'rosa', 'orange', 'lila', 'türkis', 'koralle'];
+  const num = v => (v === null || v === '' || !Number.isFinite(+v)) ? null : +v;
+  const arr = a => Array.isArray(a) ? a : [];
   function model(ctx) {
-    const d = ctx.data || {}, max = d.max || 25, top = d.top || 10;
-    const byId = new Map((d.items || []).map(it => [String(it.id), it]));
-    const theme = new Map(); (d.themes || []).forEach(t => (t.ids || []).forEach(id => theme.set(String(id), t)));
-    const all = ctx.rows.map(r => { const id = String(r.id), it = byId.get(id), votes = (it && it.votes) || [];
-      const score = it ? (it.score != null ? it.score : votes.reduce((a, b) => a + b, 0)) : null;
+    const d = ctx.data || {}, max = num(d.max) > 0 ? +d.max : 25, top = num(d.top) >= 1 ? Math.round(d.top) : 10;
+    const byId = new Map(arr(d.items).filter(it => it && it.id != null).map(it => [String(it.id), it]));
+    const theme = new Map(); arr(d.themes).forEach(t => t && arr(t.ids).forEach(id => theme.set(String(id), t)));
+    // Wertungen 1..5 je Runde; Werte ausserhalb werden auf 0..5 begrenzt, Unlesbares faellt weg
+    const all = ctx.rows.map(r => { const id = String(r.id), it = byId.get(id), votes = it ? arr(it.votes).map(num).filter(v => v !== null).map(v => Math.max(0, Math.min(5, v))) : [];
+      const score = it ? (num(it.score) !== null ? +it.score : votes.reduce((a, b) => a + b, 0)) : null;
       return { id, body: r.body, votes, score, theme: theme.get(id) || null }; });
     const scored = all.filter(x => x.score != null).sort((a, b) => b.score - a.score || (+a.id - +b.id) || (a.id < b.id ? -1 : 1));
     scored.forEach((x, i) => { x.rank = i && x.score === scored[i - 1].score ? scored[i - 1].rank : i + 1; });
     const best = scored.filter(x => x.rank <= top);
     const rest = scored.filter(x => x.rank > top).concat(all.filter(x => x.score == null));
-    return { max, top, all, best, rest, unscored: all.length - scored.length };
+    const ones = scored.filter(x => x.rank === 1).length, win = ones > 0 && ones < scored.length;   // Sieger-Akzent fuer Platz 1, aber nicht, wenn alle gleichauf sind
+    return { max, top, all, best, rest, win, unscored: all.length - scored.length };
   }
-  const colorCls = x => x.theme ? 'c-' + x.theme.color : P + 'plain';
+  const colorCls = x => x.theme && COLORS.includes(x.theme.color) ? 'c-' + x.theme.color : P + 'plain';
+  const isFirst = (x, m) => x.rank === 1 && m.win;
 
   // groesste Schrift in [lo, hi], bei der ok() gilt; null, wenn nicht einmal lo reicht
   function fit(set, ok, lo, hi) {
@@ -89,11 +97,12 @@
 
   function bar(x, max) {
     const b = document.createElement('div'); b.className = P + 'bar'; b.style.setProperty('--max', max);
-    x.votes.forEach(v => { const i = document.createElement('i'); i.style.setProperty('--v', v); const n = document.createElement('b'); n.textContent = v; i.append(n); b.append(i); });
+    if (!x.votes.length && x.score > 0) { const i = document.createElement('i'); i.style.setProperty('--v', Math.min(x.score, max)); b.append(i); }
+    x.votes.forEach(v => { if (!v) return; const i = document.createElement('i'); i.style.setProperty('--v', v); const n = document.createElement('b'); n.textContent = v; i.append(n); b.append(i); });
     return b;
   }
   function row(x, m, ctx, k) {
-    const e = ctx.el('div', null, P + 'row ' + colorCls(x) + (x.rank === 1 ? ' ' + P + 'first' : ''));
+    const e = ctx.el('div', null, P + 'row ' + colorCls(x) + (isFirst(x, m) ? ' ' + P + 'first' : ''));
     const t = ctx.el('div', null, P + 'txt'); t.append(ctx.el('span', x.body));
     e.append(ctx.el('div', String(x.rank), P + 'rank'), t, bar(x, m.max), ctx.el('div', String(x.score), P + 'score'));
     e.title = x.body; e.onclick = () => ctx.go(k);
@@ -112,10 +121,12 @@
   function overview(box, ctx, m, pre, frac) {
     box.textContent = '';
     const wrap = ctx.el('div', null, P + 'wrap'); box.append(wrap);
-    const W = box.clientWidth, mos = pre ? m.all : m.rest;
-    const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(frac * W - (frac < 1 ? 14 : 0))}px`;
+    const W = box.clientWidth, mos = pre ? m.all : m.rest, none = !m.best.length;   // none: noch keine Wertung, keine leere Rangliste zeigen
+    const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(frac * W - (frac < 1 ? 14 : 0))}px`; if (none) left.style.display = 'none';
     const h = ctx.el('div', m.best.length < m.all.length ? 'Top ' + m.top : 'Rangliste', P + 'h');
-    h.append(ctx.el('span', m.best.length > m.top ? '· ' + m.best.length + ' Ideen, Gleichstand auf den letzten Plätzen'
+    const same = m.best.length > 1 && m.best.every(x => x.rank === 1);
+    h.append(ctx.el('span', same ? '· ' + m.best.length + ' Ideen gleichauf mit je ' + m.best[0].score + ' Punkten'
+                         : m.best.length > m.top ? '· ' + m.best.length + ' Ideen, Gleichstand auf den letzten Plätzen'
                          : m.best.length < m.all.length ? '· von ' + m.all.length + ' Ideen, höchstens ' + m.max + ' Punkte'
                          : '· ' + m.all.length + ' Ideen, höchstens ' + m.max + ' Punkte'));
     const list = ctx.el('div', null, P + 'list');
@@ -123,19 +134,24 @@
     left.append(h, list); wrap.append(left);
     // Rangliste: groesste Schrift, bei der alles hineinpasst, moeglichst ohne gekuerzte Ideen
     const spans = [...list.querySelectorAll('span')], setL = f => { left.style.fontSize = f + 'px'; };
-    const fitsL = () => list.scrollHeight <= list.clientHeight + 1, whole = () => fitsL() && spans.every(s => s.scrollHeight <= s.clientHeight + 1);
+    // Text der Idee mind. 10em breit, sonst druecken Balken und Punkte ihn bei schmaler Spalte (Hochformat) auf null
+    const txt0 = list.querySelector('.' + P + 'txt'), wide = () => !txt0 || txt0.clientWidth >= 10 * parseFloat(left.style.fontSize);
+    const fitsL = () => list.scrollHeight <= list.clientHeight + 1 && wide(), whole = () => fitsL() && spans.every(s => s.scrollHeight <= s.clientHeight + 1);
     const hiL = Math.min(44, Math.max(14, list.clientHeight / Math.max(m.best.length, 4) / 1.9));
-    let fL = fit(setL, whole, 12, hiL); if (fL === null) fL = fit(setL, fitsL, 9, hiL) || 9; setL(fL);
+    let fL = fit(setL, whole, 12, hiL); if (fL === null) fL = fit(setL, fitsL, 9, hiL);
+    for (const c of [2, 1]) { if (fL !== null) break; list.style.setProperty('--clamp', c); fL = fit(setL, fitsL, 9, hiL); }
+    if (fL === null) { list.classList.add(P + 'dense'); fL = fit(setL, fitsL, 9, hiL); }   // sehr viele Plaetze (Gleichstand): Zeilen enger
+    if (fL === null) fL = 9; setL(fL);
     let pages = 1, fR = null;
     const tiles = new Map();
     if (mos.length && frac < 1) {
-      const right = ctx.el('div', null, P + 'col ' + P + 'right'), rh = ctx.el('div', pre ? 'Alle Ideen' : 'Weitere Ideen', P + 'h');
-      rh.append(ctx.el('span', '· ' + mos.length + (!pre && m.unscored ? ', davon ' + m.unscored + ' ohne Wertung' : '')));
+      const right = ctx.el('div', null, P + 'col ' + P + 'right'), rh = ctx.el('div', pre || none ? 'Alle Ideen' : 'Weitere Ideen', P + 'h');
+      rh.append(ctx.el('span', '· ' + mos.length + (none ? ', noch ohne Wertung' : !pre && m.unscored ? ', davon ' + m.unscored + ' ohne Wertung' : '')));
       const area = ctx.el('div', null, P + 'tiles'), inner = ctx.el('div', null, P + 'inner');
-      mos.forEach(x => { const t = tile(x, ctx, !pre); tiles.set(x.id, t); inner.append(t); });
+      mos.forEach(x => { const t = tile(x, ctx, !pre && !none); tiles.set(x.id, t); inner.append(t); });
       area.append(inner); right.append(rh, area); wrap.append(right);
       const setR = f => { right.style.fontSize = f + 'px'; }, fitsR = () => inner.offsetHeight <= area.clientHeight + 1;
-      const hiR = Math.max(10, Math.min(22, fL * .8));
+      const hiR = none ? 22 : Math.max(10, Math.min(22, fL * .8));
       fR = fit(setR, fitsR, 9, hiR);
       if (fR === null && pre) fR = fit(setR, fitsR, 4, 9) || 4;
       if (fR !== null) setR(fR);
@@ -164,7 +180,7 @@
 
   function focusView(box, ctx, m, k) {
     box.textContent = '';
-    const x = m.best[k], card = ctx.el('div', null, P + 'focus ' + colorCls(x) + (x.rank === 1 ? ' ' + P + 'first' : ''));
+    const x = m.best[k], card = ctx.el('div', null, P + 'focus ' + colorCls(x) + (isFirst(x, m) ? ' ' + P + 'first' : ''));
     card.dataset.id = x.id;
     const top = ctx.el('div', null, P + 'top'), back = ctx.el('button', '← Alle'); back.onclick = () => ctx.go(null);
     const same = m.best.filter(y => y.rank === x.rank).length;
@@ -188,12 +204,14 @@
   document.head.append(Object.assign(document.createElement('style'), { textContent: `
   .${U}wrap { position: absolute; inset: 0; display: flex; gap: 28px; }
   .${U}list { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: .32em; overflow: hidden; padding: 3px; }
-  .${U}row { flex: 1 0 auto; display: grid; grid-template-columns: 1.7em minmax(0, 1fr) 5.5em 1.7em; align-items: center; gap: .7em; cursor: pointer;
+  .${U}row { flex: 1 0 auto; display: grid; grid-template-columns: 1.7em minmax(0, 1fr) 5.5em minmax(1.7em, max-content); align-items: center; gap: .7em; cursor: pointer;
              padding: .3em .8em .3em .5em; border-radius: .3em; background: #fff; box-shadow: 0 0 0 1px #E6E3D9, 0 1px 2px rgba(0,0,0,.06);
              border-left: .3em solid var(--uink, #D6D3C8); line-height: 1.25; }
   .${U}row:hover { box-shadow: 0 0 0 1px #CFCBBE, 0 2px 8px rgba(0,0,0,.12); }
   .${U}rank { width: 1.6em; height: 1.6em; border-radius: 50%; display: grid; place-items: center; background: #EAF9F9; color: #409E9F; font-weight: 800; font-variant-numeric: tabular-nums; }
   .${U}txt { overflow-wrap: anywhere; }
+  .${U}clamp .${U}txt { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+  .${U}dense { gap: .12em; } .${U}dense .${U}row { padding-top: .04em; padding-bottom: .04em; } .${U}dense .${U}rank { width: 1.25em; height: 1.25em; } .${U}dense .${U}txt { -webkit-line-clamp: 1; }
   .${U}vbar { height: .55em; background: #EEECE5; border-radius: 1em; overflow: hidden; }
   .${U}vbar i { display: block; height: 100%; width: calc(var(--f) * 100%); background: #40BFC0; border-radius: 1em; transform-origin: 0 50%; }
   .${U}n { font-weight: 800; text-align: right; font-variant-numeric: tabular-nums; }
@@ -215,10 +233,10 @@
   ` }));
 
   function modelU(ctx) {
-    const d = ctx.data || {}, top = d.top || 8;
-    const byId = new Map((d.items || []).map(it => [String(it.id), it]));
-    const theme = new Map(); (d.themes || []).forEach(t => (t.ids || []).forEach(id => { if (!theme.has(String(id))) theme.set(String(id), t); }));
-    const all = ctx.rows.map((r, i) => { const id = String(r.id), it = byId.get(id) || {}, v = Array.isArray(it.votes) ? it.votes.length : +it.votes || 0;
+    const d = ctx.data || {}, top = num(d.top) >= 1 ? Math.round(d.top) : 8;
+    const byId = new Map(arr(d.items).filter(it => it && it.id != null).map(it => [String(it.id), it]));
+    const theme = new Map(); arr(d.themes).forEach(t => t && arr(t.ids).forEach(id => { if (!theme.has(String(id))) theme.set(String(id), t); }));
+    const all = ctx.rows.map((r, i) => { const id = String(r.id), it = byId.get(id) || {}, v = Array.isArray(it.votes) ? it.votes.length : Math.max(0, Math.round(num(it.votes) || 0));
       const t = theme.get(id); return { id, i, body: r.body, votes: v, asked: !!it.asked, ink: t ? (INK[t.color] || null) : null, theme: t ? t.label : null }; });
     const sorted = all.slice().sort((a, b) => b.votes - a.votes || a.i - b.i);
     sorted.forEach((x, i) => { x.rank = i && x.votes === sorted[i - 1].votes ? sorted[i - 1].rank : i + 1; });
@@ -236,9 +254,9 @@
     e.title = x.body; e.onclick = () => ctx.go(k);
     return e;
   }
-  function lineU(x, ctx, pre) {
+  function lineU(x, ctx, pre, count) {
     const e = ink(ctx.el('div', null, U + 'line' + (pre ? ' ' + U + 'one' : '')), x); e.dataset.id = x.id; e.title = x.body;
-    e.append(ctx.el('span', x.body)); if (!pre) e.append(ctx.el('b', String(x.votes)));
+    e.append(ctx.el('span', x.body)); if (count) e.append(ctx.el('b', String(x.votes)));
     return e;
   }
 
@@ -246,26 +264,31 @@
   function overviewU(box, ctx, m, pre, frac) {
     box.textContent = '';
     const wrap = ctx.el('div', null, U + 'wrap'); box.append(wrap);
-    const side = pre ? m.all : m.rest, two = side.length && frac < 1, W = box.clientWidth;
-    const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(two ? frac * W - 14 : W)}px`;
+    const side = pre ? m.all : m.rest, none = !m.best.length, two = side.length && (frac < 1 || none), W = box.clientWidth;   // none: noch keine Stimmen
+    const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(two ? frac * W - 14 : W)}px`; if (none) left.style.display = 'none';
     const h = ctx.el('div', 'Meistgewünscht', P + 'h');
     h.append(ctx.el('span', '· ' + (m.best.length === m.all.length ? 'alle ' + m.all.length + ' Fragen nach Stimmen'
       : 'die ' + m.best.length + ' Fragen mit den meisten Stimmen' + (m.best.length > m.top ? ' (Gleichstand)' : ''))));
     const list = ctx.el('div', null, U + 'list');
     const rows = m.best.map((x, k) => { const r = rowU(x, m, ctx, k); if (pre) r.style.visibility = 'hidden'; else r.dataset.id = x.id; list.append(r); return r; });
     left.append(h, list); wrap.append(left);
-    const setL = f => { left.style.fontSize = f + 'px'; }, fitsL = () => list.scrollHeight <= list.clientHeight + 1;
-    const fL = fit(setL, fitsL, 12, Math.min(40, Math.max(16, list.clientHeight / Math.max(m.best.length, 4) / 1.6))) || (setL(12), 12);
+    const txt0 = list.querySelector('.' + U + 'txt'), wide = () => !txt0 || txt0.clientWidth >= 10 * parseFloat(left.style.fontSize);   // Frage mind. 10em breit
+    const setL = f => { left.style.fontSize = f + 'px'; }, fitsL = () => list.scrollHeight <= list.clientHeight + 1 && wide();
+    const hiL = Math.min(40, Math.max(16, list.clientHeight / Math.max(m.best.length, 4) / 1.6));
+    let fL = fit(setL, fitsL, 12, hiL);
+    if (fL === null) { list.classList.add(U + 'clamp'); fL = fit(setL, fitsL, 9, hiL); }   // kleine Flaeche: Fragen auf 2 Zeilen kuerzen statt Zeilen unten abzuschneiden
+    if (fL === null) { list.classList.add(U + 'dense'); fL = fit(setL, fitsL, 9, hiL); }   // sehr viele Fragen gleichauf: einzeilig und enger
+    if (fL === null) fL = 9; setL(fL);
     let pages = 1, fR = null; const lines = new Map();
     if (two) {
-      const right = ctx.el('div', null, U + 'side'), rh = ctx.el('div', pre ? 'Alle Fragen' : 'Weitere Fragen', P + 'h');
-      rh.append(ctx.el('span', '· ' + side.length + (pre ? '' : ', nach Stimmen')));
-      const area = ctx.el('div', null, U + 'area'), inner = ctx.el('div', null, U + 'rest');
-      side.forEach(x => { const l = lineU(x, ctx, pre); lines.set(x.id, l); inner.append(l); });
-      if (pre) inner.style.cssText = 'display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 8px';   // Durchgangsliste zweispaltig, damit sie lesbar bleibt
+      const right = ctx.el('div', null, U + 'side'), rh = ctx.el('div', pre || none ? 'Alle Fragen' : 'Weitere Fragen', P + 'h');
+      rh.append(ctx.el('span', '· ' + side.length + (none ? ', noch ohne Stimmen' : pre ? '' : ', nach Stimmen')));
+      const area = ctx.el('div', null, U + 'area'), inner = ctx.el('div', null, U + 'rest'), cols = pre || none ? 2 : 1;
+      side.forEach(x => { const l = lineU(x, ctx, pre, !pre && !none); lines.set(x.id, l); inner.append(l); });
+      if (cols > 1) inner.style.cssText = 'display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 8px';   // Durchgangsliste zweispaltig, damit sie lesbar bleibt
       area.append(inner); right.append(rh, area); wrap.append(right);
       const setR = f => { right.style.fontSize = f + 'px'; }, fitsR = () => inner.offsetHeight <= area.clientHeight + 1;
-      const hiR = Math.max(14, Math.min(22, fL * .85));
+      const hiR = none ? 22 : Math.max(14, Math.min(22, fL * .85));
       fR = fit(setR, fitsR, pre ? 6 : 14, hiR);
       if (fR === null && !pre) {   // passt zweizeilig nicht: einzeilig (gleiche Hoehe, Volltext im Tooltip und im Fokus)
         inner.querySelectorAll('.' + U + 'line').forEach(l => l.classList.add(U + 'one')); fR = fit(setR, fitsR, 14, hiR); }
@@ -273,7 +296,7 @@
       else if (fR === null) {   // viele Fragen: die Liste blaettert in ganzen Zeilen, Schrift bleibt lesbar
         setR(14);
         const gap = 3, rowH = inner.firstElementChild.getBoundingClientRect().height + gap, per = Math.max(1, Math.floor((area.clientHeight + gap) / rowH));
-        pages = Math.ceil(side.length / per); const pg = Math.min(ctx.page, pages - 1);
+        pages = Math.ceil(side.length / (per * cols)); const pg = Math.min(ctx.page, pages - 1);
         area.style.flex = 'none'; area.style.height = (per * rowH - gap) + 'px'; inner.style.transform = `translateY(${-pg * per * rowH}px)`;
         if (ctx.dir) area.animate([{ transform: `translateX(${ctx.dir * 60}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
       }
@@ -314,6 +337,7 @@
     const m = modelU(ctx), frac = fracU(box, ctx, m), { rows, lines } = overviewU(box, ctx, m, true, frac < 1 ? frac : .62);
     ctx.flip(box, ctx.from);
     await ctx.sleep(1700);
+    const step = Math.min(420, 4200 / Math.max(1, m.best.length));
     for (let k = m.best.length - 1; k >= 0; k--) {
       const x = m.best[k], r = rows[k], t = lines.get(x.id), a = t ? t.getBoundingClientRect() : null;
       if (t) { t.style.visibility = 'hidden'; delete t.dataset.id; }
@@ -324,7 +348,7 @@
       r.querySelector('.' + U + 'vbar i').animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 500, delay: dur * .6, easing: 'ease-out', fill: 'backwards' });
       const n = r.querySelector('.' + U + 'n'), steps = 12; n.textContent = '0';
       for (let s = 1; s <= steps; s++) setTimeout(() => { n.textContent = String(Math.round(x.votes * s / steps)); }, dur * .6 + s * 45);
-      await ctx.sleep(k <= 2 ? 650 : 420);
+      await ctx.sleep(k <= 2 ? 650 : step);
     }
     await ctx.sleep(700);
     const before = new Map([...box.querySelectorAll('[data-id]')].filter(e => e.style.visibility !== 'hidden').map(e => [e.dataset.id, e.getBoundingClientRect()]));
@@ -339,6 +363,7 @@
   // Aendert sich dabei die Seitenzahl, erfaehrt die Wand das ueber ctx.go (gleicher Fokus: zeichnet neu und zaehlt die Seiten).
   const ro = new ResizeObserver(() => { if (!last || revealing) return; const { box, ctx, w, h, pages } = last;
     if (!box.clientWidth || (Math.abs(box.clientWidth - w) <= 2 && Math.abs(box.clientHeight - h) <= 2)) return;
+    const cur = box.firstElementChild; if (!cur || !String(cur.className).startsWith(P)) return;   // anderer Baustein in #custom: nicht hineinzeichnen
     const r = VIZ.ranking.draw(box, ctx); if (r.pages !== pages) ctx.go(ctx.focus); });
 
   function drawAny(box, ctx) {
@@ -367,10 +392,10 @@
       const m = model(ctx), frac = bestFrac(box, ctx, m), { rows, tiles } = overview(box, ctx, m, true, frac < 1 ? frac : .62);
       ctx.flip(box, ctx.from);
       await ctx.sleep(1700);
-      const n = m.best.length;
+      const n = m.best.length, step = Math.min(380, 4200 / n);   // viele Plaetze (Gleichstand, top 30): schneller nacheinander
       for (let k = n - 1; k >= 0; k--) {
-        const x = m.best[k], r = rows[k], t = tiles.get(x.id), first = x.rank === 1;
-        if (first) await ctx.sleep(900);   // kurze Pause vor Platz 1
+        const x = m.best[k], r = rows[k], t = tiles.get(x.id), first = isFirst(x, m), ones = m.best.filter(y => isFirst(y, m)).length;
+        if (first && k === ones - 1) await ctx.sleep(900);   // kurze Pause vor Platz 1 (bei geteiltem Platz 1 nur einmal)
         const a = t ? t.getBoundingClientRect() : null;
         if (t) { t.style.visibility = 'hidden'; delete t.dataset.id; }
         r.style.visibility = 'visible'; r.dataset.id = x.id;
@@ -384,7 +409,7 @@
         for (let s = 1; s <= steps; s++) setTimeout(() => { sc.textContent = String(Math.round(x.score * s / steps)); }, dur * .6 + s * 48);
         if (first) r.animate([{ boxShadow: `0 0 0 3px ${AMBER}, 0 0 0 0 rgba(251,191,36,.7)` }, { boxShadow: `0 0 0 3px ${AMBER}, 0 0 0 26px rgba(251,191,36,0)` }],
           { duration: 900, delay: dur + 500, iterations: 2 });
-        await ctx.sleep(first ? 2600 : k <= 2 ? 750 : 380);
+        await ctx.sleep(first && k === 0 ? 2600 : k <= 2 ? 750 : step);
       }
       const before = new Map([...box.querySelectorAll('[data-id]')].filter(e => e.style.visibility !== 'hidden').map(e => [e.dataset.id, e.getBoundingClientRect()]));
       overview(box, ctx, m, false, frac);

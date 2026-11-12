@@ -1,0 +1,90 @@
+{
+ "step": {
+  "label": "Min Specs · alle",
+  "lsDef": {
+   "name": "Min Specs",
+   "icon": "min-specs",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Nur strong, ohne flow-Angabe, unbekannte emphasis",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 4,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "X 1: Abstimmung und Kunde besser mit Zeitplan verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "X 2: Budget und Werkzeug besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "X 3: Budget und Team besser mit Feedback verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "X 4: Wissen und Kunde besser mit Schnittstelle verbinden"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "lanes": [
+   {
+    "label": "A",
+    "emphasis": "strong",
+    "ids": [
+     1,
+     2
+    ]
+   },
+   {
+    "label": "B",
+    "emphasis": "laut",
+    "ids": [
+     3,
+     4
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "x",
+  "convergence": [
+   {
+    "label": "A",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "A",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

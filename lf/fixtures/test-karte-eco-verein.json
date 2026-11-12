@@ -1,0 +1,337 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede Aktivität unseres Vereins?",
+  "how": "Legt jede Aktivität auf die Schleife.",
+  "show": [
+   2
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Laufgruppe für Eltern während des Kindertrainings"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "E-Sport-Ecke im Vereinsheim"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Inklusives Fußballteam"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Yoga am Sonntag im Park"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Jugendfußball mit 14 Mannschaften"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Kinderturnen am Dienstag"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Sommerfest"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Seniorengymnastik"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Tennisabteilung mit eigener Halle"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Vereinszeitung digital"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Jahreshauptversammlung mit drei Stunden Berichten"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Papierformulare für Mitgliedsanträge"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Herrenmannschaft 3, kaum noch Spieler"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Vorstand seit 22 Jahren unverändert"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kegelbahn im Keller, die keiner nutzt"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Weihnachtsfeier im alten Format abschaffen"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Clubhaus-Gastro verpachten statt selbst führen"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Abteilungen zusammenlegen: Turnen und Leichtathletik"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Ehrenamt in kleinen Aufgaben statt Ämtern"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Beitragsmodell für Familien neu"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Mädchenfußball: Idee seit 3 Jahren, keine Trainerin"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Kooperation mit der Grundschule"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Website-Relaunch, angefangen 2024"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "summary": "Neues entsteht aus den Eltern und Jugendlichen selbst. Schützen, nicht gleich organisieren.",
+    "phase": "birth"
+   },
+   {
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "summary": "Der stabile Kern: Jugend und Breitensport.",
+    "phase": "maturity"
+   },
+   {
+    "ids": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "summary": "Gewohnheiten binden Ehrenamtliche: Versammlung, Papier, alte Teams.",
+    "phase": "rigidity"
+   },
+   {
+    "ids": [
+     16,
+     17
+    ],
+    "summary": "Zwei mutige Schritte zum Loslassen.",
+    "phase": "destruction"
+   },
+   {
+    "ids": [
+     18,
+     19,
+     20
+    ],
+    "summary": "Neue Formen für Ehrenamt und Beiträge.",
+    "phase": "renewal"
+   },
+   {
+    "ids": [
+     21,
+     22,
+     23
+    ],
+    "summary": "Gute Ideen ohne Menschen, die sie tragen.",
+    "phase": "poverty"
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.2,
+    "short": "Eltern-Laufgruppe"
+   },
+   {
+    "id": 2,
+    "t": 0.4,
+    "short": "E-Sport-Ecke"
+   },
+   {
+    "id": 3,
+    "t": 0.6,
+    "short": "Inklusionsteam"
+   },
+   {
+    "id": 4,
+    "t": 0.8,
+    "short": "Park-Yoga"
+   },
+   {
+    "id": 5,
+    "t": 0.14,
+    "short": "Jugendfußball"
+   },
+   {
+    "id": 6,
+    "t": 0.29,
+    "short": "Kinderturnen"
+   },
+   {
+    "id": 7,
+    "t": 0.43,
+    "short": "Sommerfest"
+   },
+   {
+    "id": 8,
+    "t": 0.57,
+    "short": "Seniorengymnastik"
+   },
+   {
+    "id": 9,
+    "t": 0.71,
+    "short": "Tennishalle"
+   },
+   {
+    "id": 10,
+    "t": 0.86,
+    "short": "Vereinszeitung"
+   },
+   {
+    "id": 11,
+    "t": 0.17,
+    "short": "JHV 3 Stunden"
+   },
+   {
+    "id": 12,
+    "t": 0.33,
+    "short": "Papieranträge"
+   },
+   {
+    "id": 13,
+    "t": 0.5,
+    "short": "Herren 3"
+   },
+   {
+    "id": 14,
+    "t": 0.67,
+    "short": "Vorstand seit 22 J."
+   },
+   {
+    "id": 15,
+    "t": 0.83,
+    "short": "Kegelbahn"
+   },
+   {
+    "id": 16,
+    "t": 0.33,
+    "short": "Weihnachtsfeier alt"
+   },
+   {
+    "id": 17,
+    "t": 0.67,
+    "short": "Gastro verpachten"
+   },
+   {
+    "id": 18,
+    "t": 0.25,
+    "short": "Turnen + LA zusammen"
+   },
+   {
+    "id": 19,
+    "t": 0.5,
+    "short": "Mini-Ehrenamt"
+   },
+   {
+    "id": 20,
+    "t": 0.75,
+    "short": "Familienbeitrag"
+   },
+   {
+    "id": 21,
+    "t": 0.25,
+    "short": "Mädchenfußball"
+   },
+   {
+    "id": 22,
+    "t": 0.5,
+    "short": "Grundschule"
+   },
+   {
+    "id": 23,
+    "t": 0.75,
+    "short": "Website-Relaunch"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet die Ehrenamtlichen, die den neuen Ideen fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [
+     11,
+     12,
+     13
+    ],
+    "quote": "Laufgruppe für Elter"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

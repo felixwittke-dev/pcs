@@ -1,0 +1,164 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten?",
+  "how": "Legt jede Aktivität auf die Schleife.",
+  "show": [
+   2
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "🚀 Rakete <script>alert(1)</script>"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "中文活动"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "نشاط عربي طويل جدا"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "ÜberlangeswortohneleerzeichendasniemalsaufhörenwillundweitergehtÜberlangeswortohneleerzeichendasniemalsaufhörenwillundweitergeht"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Zeile\nUmbruch"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "😀😀😀😀😀😀"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "x"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "ids": [
+     1,
+     2
+    ],
+    "summary": "",
+    "phase": "birth",
+    "label": "Birth 🐣"
+   },
+   {
+    "ids": [
+     3
+    ],
+    "summary": "",
+    "phase": "maturity",
+    "label": "Maturity mit einem extrem langen Namen, der nicht in eine Karte passt und weiterläuft"
+   },
+   {
+    "ids": [
+     4
+    ],
+    "summary": "",
+    "phase": "rigidity",
+    "label": "<b>Rigidity</b>"
+   },
+   {
+    "ids": [
+     5
+    ],
+    "summary": "",
+    "phase": "destruction",
+    "label": "Destruction"
+   },
+   {
+    "ids": [
+     6
+    ],
+    "summary": "",
+    "phase": "renewal",
+    "label": "Renewal"
+   },
+   {
+    "ids": [
+     7
+    ],
+    "summary": "",
+    "phase": "poverty",
+    "label": "Poverty"
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.33,
+    "short": "🚀 <script>"
+   },
+   {
+    "id": 2,
+    "t": 0.67,
+    "short": "中文活动"
+   },
+   {
+    "id": 3,
+    "t": 0.5,
+    "short": "نشاط عربي"
+   },
+   {
+    "id": 4,
+    "t": 0.5
+   },
+   {
+    "id": 5,
+    "t": 0.5,
+    "short": "a&b<c>"
+   },
+   {
+    "id": 6,
+    "t": 0.5,
+    "short": "😀😀😀"
+   },
+   {
+    "id": 7,
+    "t": 0.5,
+    "short": "x"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet die Ehrenamtlichen, die den neuen Ideen fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [
+     4
+    ],
+    "quote": "🚀 Rakete <script>ale"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

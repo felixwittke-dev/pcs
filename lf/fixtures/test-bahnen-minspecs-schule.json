@@ -1,0 +1,218 @@
+{
+ "step": {
+  "label": "Min Specs · alle",
+  "lsDef": {
+   "name": "Min Specs",
+   "icon": "min-specs",
+   "panel": [
+    "Was übrig bleibt",
+    "Worum noch gerungen wird",
+    "Was beim Aussieben verloren geht"
+   ],
+   "noun": "Regeln"
+  },
+  "phase": "alle",
+  "q": "Was müssen wir unbedingt tun und lassen, damit Elternabende allen etwas bringen?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 18,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Einladung mindestens 2 Wochen vorher"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Tagesordnung vorher schicken"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Dolmetschen für alle Sprachen anbieten"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Kinderbetreuung während des Abends"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Max. 90 Minuten"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Getränke stellen"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Protokoll innerhalb von 3 Tagen"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Elternvertretung moderiert mit"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Kein Einzelkind-Fall im Plenum"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Handys aus"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Online-Teilnahme ermöglichen"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Start nicht vor 19 Uhr"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Namensschilder"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Lehrkraft stellt sich persönlich vor"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Fragen vorab sammeln"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Keine Werbung von Vereinen"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Rollstuhlgerechter Raum"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Feste Redezeit pro Person"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Am Ende: Was nehmen wir mit?"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Jedes Halbjahr mind. einmal"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Klassenchat nicht für Konflikte nutzen"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Tische im Kreis"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": false,
+  "lanes": [
+   {
+    "label": "Max Specs",
+    "hint": "Alle Regeln, die uns einfallen",
+    "color": "blau",
+    "emphasis": "muted",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ]
+   },
+   {
+    "label": "Min Specs",
+    "hint": "Ohne diese geht es nicht",
+    "color": "grün",
+    "emphasis": "strong",
+    "ids": [
+     3,
+     9,
+     5,
+     19,
+     11
+    ],
+    "summary": "Fünf Regeln: verstehen, schützen, kurz halten, abschließen, alle erreichen."
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Fünf Regeln tragen.",
+  "convergence": [
+   {
+    "label": "Max Specs",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Min Specs",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Min Specs",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

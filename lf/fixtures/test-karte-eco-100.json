@@ -1,0 +1,1184 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten?",
+  "how": "Legt jede Aktivität auf die Schleife.",
+  "show": [
+   2
+  ]
+ },
+ "people": 100,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Fest A1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Turnier A2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Projekt A3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Turnier A4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Fest A5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Gruppe A6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Fest A7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Kooperation A8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Kooperation A9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Fest A10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Gruppe A11 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Training A12 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Gruppe A13 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Projekt A14 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Treffen A15 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Fest A16 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Gruppe A17 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Kooperation A18 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Angebot A19 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Gruppe A20 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Kurs B1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Kooperation B2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Aktion B3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Training B4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Kooperation B5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Angebot B6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Fest B7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Fest B8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Kurs B9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Turnier B10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Turnier B11 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Training B12 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Kurs B13 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Aktion B14 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Gruppe B15 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Gruppe B16 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Kooperation B17 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Turnier B18 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Gruppe B19 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Aktion B20 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Kooperation B21 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Fest B22 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Training B23 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Treffen B24 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Angebot B25 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Projekt C1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Angebot C2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Fest C3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Fest C4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Kooperation C5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Training C6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Fest C7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Kooperation C8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Gruppe C9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Kooperation C10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Fest C11 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Training C12 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Kooperation C13 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Kooperation C14 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Training C15 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "Treffen D1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Fest D2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Fest D3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Fest D4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "Angebot D5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Gruppe D6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "Turnier D7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Angebot D8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Kurs D9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "Angebot D10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 71,
+   "step": 2,
+   "body": "Training E1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 72,
+   "step": 2,
+   "body": "Kurs E2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 73,
+   "step": 2,
+   "body": "Training E3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 74,
+   "step": 2,
+   "body": "Training E4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 75,
+   "step": 2,
+   "body": "Kurs E5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 76,
+   "step": 2,
+   "body": "Training E6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 77,
+   "step": 2,
+   "body": "Kurs E7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 78,
+   "step": 2,
+   "body": "Angebot E8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 79,
+   "step": 2,
+   "body": "Turnier E9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 80,
+   "step": 2,
+   "body": "Kurs E10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 81,
+   "step": 2,
+   "body": "Fest E11 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 82,
+   "step": 2,
+   "body": "Treffen E12 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 83,
+   "step": 2,
+   "body": "Training E13 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 84,
+   "step": 2,
+   "body": "Kooperation E14 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 85,
+   "step": 2,
+   "body": "Projekt E15 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 86,
+   "step": 2,
+   "body": "Kurs F1 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 87,
+   "step": 2,
+   "body": "Training F2 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 88,
+   "step": 2,
+   "body": "Gruppe F3 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 89,
+   "step": 2,
+   "body": "Projekt F4 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 90,
+   "step": 2,
+   "body": "Turnier F5 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 91,
+   "step": 2,
+   "body": "Fest F6 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 92,
+   "step": 2,
+   "body": "Projekt F7 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 93,
+   "step": 2,
+   "body": "Kooperation F8 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 94,
+   "step": 2,
+   "body": "Training F9 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 95,
+   "step": 2,
+   "body": "Fest F10 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 96,
+   "step": 2,
+   "body": "Treffen F11 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 97,
+   "step": 2,
+   "body": "Fest F12 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 98,
+   "step": 2,
+   "body": "Projekt F13 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 99,
+   "step": 2,
+   "body": "Training F14 mit etwas mehr Beschreibungstext"
+  },
+  {
+   "id": 100,
+   "step": 2,
+   "body": "Fest F15 mit etwas mehr Beschreibungstext"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "summary": "Viel Neues.",
+    "phase": "birth"
+   },
+   {
+    "ids": [
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45
+    ],
+    "summary": "Viel Neues.",
+    "phase": "maturity"
+   },
+   {
+    "ids": [
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ],
+    "summary": "Viel Neues.",
+    "phase": "rigidity"
+   },
+   {
+    "ids": [
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70
+    ],
+    "summary": "Viel Neues.",
+    "phase": "destruction"
+   },
+   {
+    "ids": [
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85
+    ],
+    "summary": "Viel Neues.",
+    "phase": "renewal"
+   },
+   {
+    "ids": [
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100
+    ],
+    "summary": "Viel Neues.",
+    "phase": "poverty"
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.05,
+    "short": "Fest A1"
+   },
+   {
+    "id": 2,
+    "t": 0.1,
+    "short": "Kurs A2"
+   },
+   {
+    "id": 3,
+    "t": 0.14,
+    "short": "Treffen A3"
+   },
+   {
+    "id": 4,
+    "t": 0.19,
+    "short": "Projekt A4"
+   },
+   {
+    "id": 5,
+    "t": 0.24,
+    "short": "Projekt A5"
+   },
+   {
+    "id": 6,
+    "t": 0.29,
+    "short": "Aktion A6"
+   },
+   {
+    "id": 7,
+    "t": 0.33,
+    "short": "Training A7"
+   },
+   {
+    "id": 8,
+    "t": 0.38,
+    "short": "Kooperation A8"
+   },
+   {
+    "id": 9,
+    "t": 0.43,
+    "short": "Treffen A9"
+   },
+   {
+    "id": 10,
+    "t": 0.48,
+    "short": "Kooperation A10"
+   },
+   {
+    "id": 11,
+    "t": 0.52,
+    "short": "Projekt A11"
+   },
+   {
+    "id": 12,
+    "t": 0.57,
+    "short": "Angebot A12"
+   },
+   {
+    "id": 13,
+    "t": 0.62,
+    "short": "Aktion A13"
+   },
+   {
+    "id": 14,
+    "t": 0.67,
+    "short": "Kurs A14"
+   },
+   {
+    "id": 15,
+    "t": 0.71,
+    "short": "Treffen A15"
+   },
+   {
+    "id": 16,
+    "t": 0.76,
+    "short": "Turnier A16"
+   },
+   {
+    "id": 17,
+    "t": 0.81,
+    "short": "Fest A17"
+   },
+   {
+    "id": 18,
+    "t": 0.86,
+    "short": "Kooperation A18"
+   },
+   {
+    "id": 19,
+    "t": 0.9,
+    "short": "Kooperation A19"
+   },
+   {
+    "id": 20,
+    "t": 0.95,
+    "short": "Training A20"
+   },
+   {
+    "id": 21,
+    "t": 0.04,
+    "short": "Training B1"
+   },
+   {
+    "id": 22,
+    "t": 0.08,
+    "short": "Angebot B2"
+   },
+   {
+    "id": 23,
+    "t": 0.12,
+    "short": "Angebot B3"
+   },
+   {
+    "id": 24,
+    "t": 0.15,
+    "short": "Turnier B4"
+   },
+   {
+    "id": 25,
+    "t": 0.19,
+    "short": "Treffen B5"
+   },
+   {
+    "id": 26,
+    "t": 0.23,
+    "short": "Angebot B6"
+   },
+   {
+    "id": 27,
+    "t": 0.27,
+    "short": "Turnier B7"
+   },
+   {
+    "id": 28,
+    "t": 0.31,
+    "short": "Kurs B8"
+   },
+   {
+    "id": 29,
+    "t": 0.35,
+    "short": "Treffen B9"
+   },
+   {
+    "id": 30,
+    "t": 0.38,
+    "short": "Angebot B10"
+   },
+   {
+    "id": 31,
+    "t": 0.42,
+    "short": "Treffen B11"
+   },
+   {
+    "id": 32,
+    "t": 0.46,
+    "short": "Training B12"
+   },
+   {
+    "id": 33,
+    "t": 0.5,
+    "short": "Fest B13"
+   },
+   {
+    "id": 34,
+    "t": 0.54,
+    "short": "Training B14"
+   },
+   {
+    "id": 35,
+    "t": 0.58,
+    "short": "Kurs B15"
+   },
+   {
+    "id": 36,
+    "t": 0.62,
+    "short": "Treffen B16"
+   },
+   {
+    "id": 37,
+    "t": 0.65,
+    "short": "Turnier B17"
+   },
+   {
+    "id": 38,
+    "t": 0.69,
+    "short": "Turnier B18"
+   },
+   {
+    "id": 39,
+    "t": 0.73,
+    "short": "Treffen B19"
+   },
+   {
+    "id": 40,
+    "t": 0.77,
+    "short": "Fest B20"
+   },
+   {
+    "id": 41,
+    "t": 0.81,
+    "short": "Gruppe B21"
+   },
+   {
+    "id": 42,
+    "t": 0.85,
+    "short": "Aktion B22"
+   },
+   {
+    "id": 43,
+    "t": 0.88,
+    "short": "Training B23"
+   },
+   {
+    "id": 44,
+    "t": 0.92,
+    "short": "Gruppe B24"
+   },
+   {
+    "id": 45,
+    "t": 0.96,
+    "short": "Gruppe B25"
+   },
+   {
+    "id": 46,
+    "t": 0.06,
+    "short": "Fest C1"
+   },
+   {
+    "id": 47,
+    "t": 0.12,
+    "short": "Treffen C2"
+   },
+   {
+    "id": 48,
+    "t": 0.19,
+    "short": "Treffen C3"
+   },
+   {
+    "id": 49,
+    "t": 0.25,
+    "short": "Training C4"
+   },
+   {
+    "id": 50,
+    "t": 0.31,
+    "short": "Gruppe C5"
+   },
+   {
+    "id": 51,
+    "t": 0.38,
+    "short": "Training C6"
+   },
+   {
+    "id": 52,
+    "t": 0.44,
+    "short": "Angebot C7"
+   },
+   {
+    "id": 53,
+    "t": 0.5,
+    "short": "Turnier C8"
+   },
+   {
+    "id": 54,
+    "t": 0.56,
+    "short": "Fest C9"
+   },
+   {
+    "id": 55,
+    "t": 0.62,
+    "short": "Projekt C10"
+   },
+   {
+    "id": 56,
+    "t": 0.69,
+    "short": "Angebot C11"
+   },
+   {
+    "id": 57,
+    "t": 0.75,
+    "short": "Projekt C12"
+   },
+   {
+    "id": 58,
+    "t": 0.81,
+    "short": "Projekt C13"
+   },
+   {
+    "id": 59,
+    "t": 0.88,
+    "short": "Fest C14"
+   },
+   {
+    "id": 60,
+    "t": 0.94,
+    "short": "Gruppe C15"
+   },
+   {
+    "id": 61,
+    "t": 0.09,
+    "short": "Turnier D1"
+   },
+   {
+    "id": 62,
+    "t": 0.18,
+    "short": "Angebot D2"
+   },
+   {
+    "id": 63,
+    "t": 0.27,
+    "short": "Gruppe D3"
+   },
+   {
+    "id": 64,
+    "t": 0.36,
+    "short": "Fest D4"
+   },
+   {
+    "id": 65,
+    "t": 0.45,
+    "short": "Fest D5"
+   },
+   {
+    "id": 66,
+    "t": 0.55,
+    "short": "Gruppe D6"
+   },
+   {
+    "id": 67,
+    "t": 0.64,
+    "short": "Aktion D7"
+   },
+   {
+    "id": 68,
+    "t": 0.73,
+    "short": "Aktion D8"
+   },
+   {
+    "id": 69,
+    "t": 0.82,
+    "short": "Fest D9"
+   },
+   {
+    "id": 70,
+    "t": 0.91,
+    "short": "Kooperation D10"
+   },
+   {
+    "id": 71,
+    "t": 0.06,
+    "short": "Aktion E1"
+   },
+   {
+    "id": 72,
+    "t": 0.12,
+    "short": "Kooperation E2"
+   },
+   {
+    "id": 73,
+    "t": 0.19,
+    "short": "Fest E3"
+   },
+   {
+    "id": 74,
+    "t": 0.25,
+    "short": "Aktion E4"
+   },
+   {
+    "id": 75,
+    "t": 0.31,
+    "short": "Kooperation E5"
+   },
+   {
+    "id": 76,
+    "t": 0.38,
+    "short": "Training E6"
+   },
+   {
+    "id": 77,
+    "t": 0.44,
+    "short": "Kooperation E7"
+   },
+   {
+    "id": 78,
+    "t": 0.5,
+    "short": "Projekt E8"
+   },
+   {
+    "id": 79,
+    "t": 0.56,
+    "short": "Turnier E9"
+   },
+   {
+    "id": 80,
+    "t": 0.62,
+    "short": "Projekt E10"
+   },
+   {
+    "id": 81,
+    "t": 0.69,
+    "short": "Kurs E11"
+   },
+   {
+    "id": 82,
+    "t": 0.75,
+    "short": "Angebot E12"
+   },
+   {
+    "id": 83,
+    "t": 0.81,
+    "short": "Gruppe E13"
+   },
+   {
+    "id": 84,
+    "t": 0.88,
+    "short": "Projekt E14"
+   },
+   {
+    "id": 85,
+    "t": 0.94,
+    "short": "Angebot E15"
+   },
+   {
+    "id": 86,
+    "t": 0.06,
+    "short": "Turnier F1"
+   },
+   {
+    "id": 87,
+    "t": 0.12,
+    "short": "Turnier F2"
+   },
+   {
+    "id": 88,
+    "t": 0.19,
+    "short": "Turnier F3"
+   },
+   {
+    "id": 89,
+    "t": 0.25,
+    "short": "Kooperation F4"
+   },
+   {
+    "id": 90,
+    "t": 0.31,
+    "short": "Treffen F5"
+   },
+   {
+    "id": 91,
+    "t": 0.38,
+    "short": "Kooperation F6"
+   },
+   {
+    "id": 92,
+    "t": 0.44,
+    "short": "Gruppe F7"
+   },
+   {
+    "id": 93,
+    "t": 0.5,
+    "short": "Turnier F8"
+   },
+   {
+    "id": 94,
+    "t": 0.56,
+    "short": "Angebot F9"
+   },
+   {
+    "id": 95,
+    "t": 0.62,
+    "short": "Projekt F10"
+   },
+   {
+    "id": 96,
+    "t": 0.69,
+    "short": "Angebot F11"
+   },
+   {
+    "id": 97,
+    "t": 0.75,
+    "short": "Projekt F12"
+   },
+   {
+    "id": 98,
+    "t": 0.81,
+    "short": "Angebot F13"
+   },
+   {
+    "id": 99,
+    "t": 0.88,
+    "short": "Kooperation F14"
+   },
+   {
+    "id": 100,
+    "t": 0.94,
+    "short": "Kooperation F15"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet die Ehrenamtlichen, die den neuen Ideen fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [
+     46,
+     47,
+     48
+    ],
+    "quote": "Fest A1 mit etwas me"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

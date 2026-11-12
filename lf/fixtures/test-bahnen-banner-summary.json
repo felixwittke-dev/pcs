@@ -1,0 +1,141 @@
+{
+ "step": {
+  "label": "Purpose-to-Practice · alle",
+  "lsDef": {
+   "name": "Purpose-to-Practice",
+   "icon": "purpose-to-practice",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Banner nur mit summary",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 10,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "P 1: Team und Rolle besser mit Schnittstelle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "P 2: Zeitplan und Team besser mit Kunde verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "P 3: Budget und Abstimmung besser mit Wissen verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "P 4: Kunde und Ritual besser mit Budget verbinden"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "P 5: Werkzeug und Freigabe besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "P 6: Schnittstelle und Freigabe besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "P 7: Feedback und Kunde besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "P 8: Team und Rolle besser mit Wissen verbinden"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "P 9: Team und Kunde besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "P 10: Werkzeug und Abstimmung besser mit Team verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "banner": {
+   "label": "Purpose",
+   "ids": [
+    1,
+    2,
+    3,
+    3,
+    404
+   ],
+   "summary": "Nur eine Zusammenfassung, kein Satz."
+  },
+  "lanes": [
+   {
+    "label": "Principles",
+    "ids": [
+     3,
+     4,
+     5
+    ]
+   },
+   {
+    "label": "Practices",
+    "ids": [
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "x",
+  "convergence": [
+   {
+    "label": "Purpose",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Principles",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Principles",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

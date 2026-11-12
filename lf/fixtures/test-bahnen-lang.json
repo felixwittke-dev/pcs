@@ -1,0 +1,181 @@
+{
+ "step": {
+  "label": "What, So What, Now What? · alle",
+  "lsDef": {
+   "name": "What, So What, Now What?",
+   "icon": "what-so-what-now-what",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Schwierige Zeichen und lange Texte",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 12,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "🚀🔥 Mehr Mut! 💡🎉👏 🚀🔥 Mehr Mut! 💡🎉👏 🚀🔥 Mehr Mut! 💡🎉👏 "
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenabzeichenherstellungsverordnungsentwurfsüberarbeitung"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Siehe https://intranet.example-firma.de/wiki/projekte/2026/q4/abstimmungsprozesse-und-freigaben?id=8823&view=full"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "<script>alert(1)</script> und <b>fett</b> &amp; <img src=x onerror=alert(2)>"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "نحتاج إلى وقت أطول للتفكير قبل أن نقرر"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "我们需要更多时间来思考，然后再做决定。"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Wir sollten uns ehrlich fragen, ob die vielen Meetings überhaupt etwas bringen, denn am Ende des Tages sitzen wir oft da und haben nichts entschieden. Wir sollten uns ehrlich fragen, ob die vielen Meetings überhaupt etwas bringen, denn am Ende des Tages sitzen wir oft da und haben nichts entschieden. Wir sollten uns ehrlich fragen, ob die vielen Meetings überhaupt etwas bringen, denn am Ende des T"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "ok"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": ""
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "   "
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\nZeile drei\nZeile vier\nZeile fünf"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "lanes": [
+   {
+    "label": "Was wir beobachtet haben, als wir im vergangenen Quartal die neue Zusammenarbeit zwischen allen Standorten ausprobiert haben",
+    "hint": "Was wir beobachtet haben, als wir im vergangenen Quartal die neue Zusammenarbeit zwischen allen Standorten ausprobiert haben",
+    "color": "unbekannt",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     4,
+     4,
+     5,
+     6
+    ],
+    "summary": "Die KI sieht hier einen sehr langen Zusammenhang: Mehrere Beiträge sprechen von Zeitdruck, andere von fehlender Klarheit, und wieder andere davon, dass Entscheidungen zwar fallen, aber niemand sie erfährt. Mehrere Beiträge sprechen von Zeitdruck, andere von fehlender Klarheit, und wieder andere davon, dass Entscheidungen zwar fallen, aber niemand sie erfährt. ",
+    "themes": [
+     {
+      "label": "Was wir beobachtet haben, als wir im vergangenen Quartal die neue Zusammenarbeit zwischen allen Standorten ausprobiert haben",
+      "ids": [
+       1,
+       2
+      ]
+     },
+     {
+      "label": "Leeres Thema",
+      "ids": [
+       99
+      ]
+     },
+     {
+      "label": "Doppelt",
+      "ids": [
+       1,
+       3
+      ]
+     }
+    ]
+   },
+   {
+    "label": "<i>So</i> What? 🤔",
+    "ids": [
+     7,
+     8,
+     9,
+     10,
+     11,
+     1,
+     2
+    ],
+    "summary": "<script>alert(3)</script>"
+   },
+   {
+    "label": "Now What?",
+    "ids": [
+     "12",
+     3,
+     777
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "<script>alert(4)</script>",
+  "convergence": [
+   {
+    "label": "Was wir beobachtet haben, als wir im vergangenen Quartal die neue Zusammenarbeit zwischen allen Standorten ausprobiert haben",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "<i>So</i> What? 🤔",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "<i>So</i> What? 🤔",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

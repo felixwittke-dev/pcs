@@ -1,0 +1,171 @@
+{
+ "step": {
+  "label": "Plus / Delta · alle",
+  "lsDef": {
+   "name": "Plus / Delta",
+   "icon": "what-so-what-now-what",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Was lief gut, was ändern wir?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 9,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Plus 1: Budget und Werkzeug besser mit Team verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Plus 2: Freigabe und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Plus 3: Schnittstelle und Feedback besser mit Budget verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Plus 4: Ritual und Abstimmung besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Plus 5: Zeitplan und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Plus 6: Team und Rolle besser mit Feedback verbinden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Plus 7: Zeitplan und Feedback besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Plus 8: Team und Abstimmung besser mit Ritual verbinden"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Plus 9: Feedback und Zeitplan besser mit Ritual verbinden"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Delta 1: Abstimmung und Ritual besser mit Freigabe verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Delta 2: Team und Abstimmung besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Delta 3: Abstimmung und Schnittstelle besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Delta 4: Kunde und Team besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Delta 5: Schnittstelle und Feedback besser mit Ritual verbinden"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Delta 6: Kunde und Schnittstelle besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Delta 7: Feedback und Ritual besser mit Freigabe verbinden"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": false,
+  "lanes": [
+   {
+    "label": "Plus",
+    "color": "grün",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "label": "Delta",
+    "color": "koralle",
+    "ids": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Gut.",
+  "convergence": [
+   {
+    "label": "Plus",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Delta",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Delta",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

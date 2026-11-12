@@ -1,0 +1,243 @@
+{
+ "step": {
+  "label": "TRIZ · alle",
+  "lsDef": {
+   "name": "TRIZ",
+   "icon": "destructive-creativity",
+   "panel": [
+    "Wo wir uns wiedererkennen",
+    "Wo es sich reibt",
+    "Was noch niemand anspricht"
+   ]
+  },
+  "phase": "alle",
+  "q": "Wie sorgen wir dafür, dass im Paketzentrum niemand länger als drei Monate bleibt?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 31,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Schichtplan erst am Freitag für Montag"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Scanner, die jeden zweiten Tag abstürzen"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Neue ohne Einweisung ans Band"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Pausenraum ohne Heizung"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Prämie nur für Tempo, nie für Sorgfalt"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Teamleiter, die nur per Funk reden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Fehler öffentlich am Board anprangern"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Leiharbeit und Stamm getrennt in die Pause"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Rückenschmerzen ignorieren"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Keine Toilette in der Nähe der Rampe"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Sprachbarrieren einfach laufen lassen"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Überstunden kurzfristig per WhatsApp"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Der Schichtplan kommt oft erst Donnerstag"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Scanner-Ausfälle melden wir schon gar nicht mehr"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Einweisung macht, wer gerade Zeit hat"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Die Prämie zählt Pakete pro Stunde"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Wir trennen Stamm und Leih in Gesprächen"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Funk ist der Hauptkanal"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Fehler werden im Morgenmeeting genannt, mit Namen"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Schichtplan 14 Tage vorher, verbindlich"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Scanner-Tausch-Kiste an jeder Rampe"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Einweisung durch feste Patinnen"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Prämie: Tempo und Fehlerquote"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Gemeinsame Pause für alle"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Fehler im Team besprechen, ohne Namen am Board"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Bildkarten in 5 Sprachen an den Stationen"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": true,
+  "lanes": [
+   {
+    "label": "Worst Result",
+    "hint": "Was garantiert das schlechteste Ergebnis?",
+    "color": "koralle",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "summary": "Planung, Technik und Ton: alles, was Menschen das Gefühl gibt, austauschbar zu sein."
+   },
+   {
+    "label": "We are doing it",
+    "hint": "Was davon tun wir schon?",
+    "color": "orange",
+    "ids": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "summary": "Unangenehm ehrlich: sieben von zwölf Punkten passieren schon."
+   },
+   {
+    "label": "Stop doing",
+    "hint": "Was hören wir auf?",
+    "color": "grün",
+    "ids": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "summary": "Planbarkeit zuerst, dann Ton, dann Technik."
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Planbarkeit ist der Hebel.",
+  "convergence": [
+   {
+    "label": "Worst Result",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "We are doing it",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Stop doing",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

@@ -1,0 +1,273 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten?",
+  "how": "Legt jede Aktivität auf die Schleife.",
+  "show": [
+   2
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 1"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 2"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 3"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 4"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 5"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 6"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 7"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 8"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 9"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 10"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 11"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 12"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 13"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 14"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 15"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 16"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 17"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Reife Aktivität Nummer 18"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "birth"
+   },
+   {
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "summary": "Alles ist reif.",
+    "phase": "maturity"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "rigidity"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "destruction"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "renewal"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "poverty"
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.05,
+    "short": "Reif 1"
+   },
+   {
+    "id": 2,
+    "t": 0.11,
+    "short": "Reif 2"
+   },
+   {
+    "id": 3,
+    "t": 0.16,
+    "short": "Reif 3"
+   },
+   {
+    "id": 4,
+    "t": 0.21,
+    "short": "Reif 4"
+   },
+   {
+    "id": 5,
+    "t": 0.26,
+    "short": "Reif 5"
+   },
+   {
+    "id": 6,
+    "t": 0.32,
+    "short": "Reif 6"
+   },
+   {
+    "id": 7,
+    "t": 0.37,
+    "short": "Reif 7"
+   },
+   {
+    "id": 8,
+    "t": 0.42,
+    "short": "Reif 8"
+   },
+   {
+    "id": 9,
+    "t": 0.47,
+    "short": "Reif 9"
+   },
+   {
+    "id": 10,
+    "t": 0.53,
+    "short": "Reif 10"
+   },
+   {
+    "id": 11,
+    "t": 0.58,
+    "short": "Reif 11"
+   },
+   {
+    "id": 12,
+    "t": 0.63,
+    "short": "Reif 12"
+   },
+   {
+    "id": 13,
+    "t": 0.68,
+    "short": "Reif 13"
+   },
+   {
+    "id": 14,
+    "t": 0.74,
+    "short": "Reif 14"
+   },
+   {
+    "id": 15,
+    "t": 0.79,
+    "short": "Reif 15"
+   },
+   {
+    "id": 16,
+    "t": 0.84,
+    "short": "Reif 16"
+   },
+   {
+    "id": 17,
+    "t": 0.89,
+    "short": "Reif 17"
+   },
+   {
+    "id": 18,
+    "t": 0.95,
+    "short": "Reif 18"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet die Ehrenamtlichen, die den neuen Ideen fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [],
+    "quote": "Reife Aktivität Numm"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

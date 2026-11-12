@@ -1,0 +1,1013 @@
+{
+ "step": {
+  "label": "TRIZ · alle",
+  "lsDef": {
+   "name": "TRIZ",
+   "icon": "destructive-creativity",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Vier Bahnen, ungleich voll",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 80,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Idee 1: Freigabe und Zeitplan besser mit Budget verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Idee 2: Feedback und Schnittstelle besser mit Rolle verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Idee 3: Ritual und Abstimmung besser mit Rolle verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Idee 4: Zeitplan und Wissen besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Idee 5: Team und Budget besser mit Wissen verbinden"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Idee 6: Ritual und Wissen besser mit Budget verbinden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Idee 7: Kunde und Zeitplan besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Idee 8: Rolle und Zeitplan besser mit Feedback verbinden"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Idee 9: Ritual und Kunde besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Idee 10: Wissen und Budget besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Idee 11: Kunde und Ritual besser mit Feedback verbinden"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Idee 12: Feedback und Schnittstelle besser mit Team verbinden"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Idee 13: Werkzeug und Budget besser mit Rolle verbinden"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Idee 14: Wissen und Team besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Idee 15: Freigabe und Feedback besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Idee 16: Ritual und Budget besser mit Freigabe verbinden"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Idee 17: Rolle und Budget besser mit Ritual verbinden"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Idee 18: Wissen und Ritual besser mit Rolle verbinden"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Idee 19: Feedback und Rolle besser mit Kunde verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Idee 20: Wissen und Freigabe besser mit Feedback verbinden"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Idee 21: Abstimmung und Kunde besser mit Ritual verbinden"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Idee 22: Freigabe und Wissen besser mit Kunde verbinden"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Idee 23: Rolle und Team besser mit Budget verbinden"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Idee 24: Abstimmung und Wissen besser mit Budget verbinden"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Idee 25: Werkzeug und Ritual besser mit Feedback verbinden"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Idee 26: Wissen und Abstimmung besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Idee 27: Kunde und Werkzeug besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Idee 28: Team und Rolle besser mit Wissen verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Idee 29: Feedback und Werkzeug besser mit Wissen verbinden"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Idee 30: Team und Schnittstelle besser mit Kunde verbinden"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Idee 31: Werkzeug und Team besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Idee 32: Kunde und Team besser mit Budget verbinden"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Idee 33: Freigabe und Team besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Idee 34: Werkzeug und Feedback besser mit Rolle verbinden"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Idee 35: Werkzeug und Zeitplan besser mit Freigabe verbinden"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Idee 36: Abstimmung und Wissen besser mit Ritual verbinden"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Idee 37: Werkzeug und Kunde besser mit Freigabe verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Idee 38: Abstimmung und Werkzeug besser mit Team verbinden"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Idee 39: Schnittstelle und Budget besser mit Ritual verbinden"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Idee 40: Ritual und Budget besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Idee 41: Rolle und Schnittstelle besser mit Ritual verbinden"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Idee 42: Freigabe und Rolle besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Idee 43: Wissen und Freigabe besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Idee 44: Team und Rolle besser mit Freigabe verbinden"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Idee 45: Team und Feedback besser mit Wissen verbinden"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Idee 46: Freigabe und Team besser mit Abstimmung verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Idee 47: Zeitplan und Feedback besser mit Rolle verbinden"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Idee 48: Wissen und Werkzeug besser mit Feedback verbinden"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Idee 49: Budget und Ritual besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Idee 50: Feedback und Abstimmung besser mit Ritual verbinden"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Idee 51: Werkzeug und Schnittstelle besser mit Feedback verbinden"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Idee 52: Budget und Ritual besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Idee 53: Feedback und Zeitplan besser mit Ritual verbinden"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Idee 54: Team und Werkzeug besser mit Kunde verbinden"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Idee 55: Budget und Ritual besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Idee 56: Wissen und Feedback besser mit Freigabe verbinden"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Idee 57: Wissen und Rolle besser mit Freigabe verbinden"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Idee 58: Wissen und Kunde besser mit Feedback verbinden"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Idee 59: Werkzeug und Feedback besser mit Budget verbinden"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Idee 60: Rolle und Kunde besser mit Wissen verbinden"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "Idee 61: Rolle und Werkzeug besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Idee 62: Abstimmung und Zeitplan besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Idee 63: Budget und Werkzeug besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Idee 64: Abstimmung und Schnittstelle besser mit Kunde verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "Idee 65: Freigabe und Feedback besser mit Kunde verbinden"
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Idee 66: Schnittstelle und Budget besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "Idee 67: Budget und Zeitplan besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Idee 68: Schnittstelle und Rolle besser mit Budget verbinden"
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Idee 69: Freigabe und Zeitplan besser mit Ritual verbinden"
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "Idee 70: Zeitplan und Rolle besser mit Team verbinden"
+  },
+  {
+   "id": 71,
+   "step": 2,
+   "body": "Idee 71: Rolle und Zeitplan besser mit Freigabe verbinden"
+  },
+  {
+   "id": 72,
+   "step": 2,
+   "body": "Idee 72: Schnittstelle und Wissen besser mit Budget verbinden"
+  },
+  {
+   "id": 73,
+   "step": 2,
+   "body": "Idee 73: Rolle und Abstimmung besser mit Freigabe verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 74,
+   "step": 2,
+   "body": "Idee 74: Kunde und Wissen besser mit Rolle verbinden"
+  },
+  {
+   "id": 75,
+   "step": 2,
+   "body": "Idee 75: Zeitplan und Ritual besser mit Budget verbinden"
+  },
+  {
+   "id": 76,
+   "step": 2,
+   "body": "Idee 76: Wissen und Budget besser mit Freigabe verbinden"
+  },
+  {
+   "id": 77,
+   "step": 2,
+   "body": "Idee 77: Feedback und Zeitplan besser mit Rolle verbinden"
+  },
+  {
+   "id": 78,
+   "step": 2,
+   "body": "Idee 78: Zeitplan und Wissen besser mit Rolle verbinden"
+  },
+  {
+   "id": 79,
+   "step": 2,
+   "body": "Idee 79: Budget und Zeitplan besser mit Wissen verbinden"
+  },
+  {
+   "id": 80,
+   "step": 2,
+   "body": "Idee 80: Ritual und Rolle besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 81,
+   "step": 2,
+   "body": "Idee 81: Wissen und Freigabe besser mit Budget verbinden"
+  },
+  {
+   "id": 82,
+   "step": 2,
+   "body": "Idee 82: Freigabe und Feedback besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 83,
+   "step": 2,
+   "body": "Idee 83: Team und Zeitplan besser mit Wissen verbinden"
+  },
+  {
+   "id": 84,
+   "step": 2,
+   "body": "Idee 84: Werkzeug und Team besser mit Budget verbinden"
+  },
+  {
+   "id": 85,
+   "step": 2,
+   "body": "Idee 85: Feedback und Team besser mit Wissen verbinden"
+  },
+  {
+   "id": 86,
+   "step": 2,
+   "body": "Idee 86: Team und Feedback besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 87,
+   "step": 2,
+   "body": "Idee 87: Werkzeug und Rolle besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 88,
+   "step": 2,
+   "body": "Idee 88: Werkzeug und Ritual besser mit Wissen verbinden"
+  },
+  {
+   "id": 89,
+   "step": 2,
+   "body": "Idee 89: Freigabe und Werkzeug besser mit Ritual verbinden"
+  },
+  {
+   "id": 90,
+   "step": 2,
+   "body": "Idee 90: Ritual und Wissen besser mit Budget verbinden"
+  },
+  {
+   "id": 91,
+   "step": 2,
+   "body": "Idee 91: Werkzeug und Schnittstelle besser mit Freigabe verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 92,
+   "step": 2,
+   "body": "Idee 92: Werkzeug und Abstimmung besser mit Freigabe verbinden"
+  },
+  {
+   "id": 93,
+   "step": 2,
+   "body": "Idee 93: Rolle und Freigabe besser mit Feedback verbinden"
+  },
+  {
+   "id": 94,
+   "step": 2,
+   "body": "Idee 94: Schnittstelle und Werkzeug besser mit Team verbinden"
+  },
+  {
+   "id": 95,
+   "step": 2,
+   "body": "Idee 95: Zeitplan und Rolle besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 96,
+   "step": 2,
+   "body": "Idee 96: Kunde und Zeitplan besser mit Rolle verbinden"
+  },
+  {
+   "id": 97,
+   "step": 2,
+   "body": "Idee 97: Schnittstelle und Zeitplan besser mit Ritual verbinden"
+  },
+  {
+   "id": 98,
+   "step": 2,
+   "body": "Idee 98: Budget und Kunde besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 99,
+   "step": 2,
+   "body": "Idee 99: Team und Werkzeug besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 100,
+   "step": 2,
+   "body": "Idee 100: Rolle und Budget besser mit Wissen verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 101,
+   "step": 2,
+   "body": "Idee 101: Freigabe und Ritual besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 102,
+   "step": 2,
+   "body": "Idee 102: Team und Schnittstelle besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 103,
+   "step": 2,
+   "body": "Idee 103: Schnittstelle und Werkzeug besser mit Rolle verbinden"
+  },
+  {
+   "id": 104,
+   "step": 2,
+   "body": "Idee 104: Schnittstelle und Abstimmung besser mit Wissen verbinden"
+  },
+  {
+   "id": 105,
+   "step": 2,
+   "body": "Idee 105: Werkzeug und Ritual besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 106,
+   "step": 2,
+   "body": "Idee 106: Werkzeug und Rolle besser mit Freigabe verbinden"
+  },
+  {
+   "id": 107,
+   "step": 2,
+   "body": "Idee 107: Wissen und Ritual besser mit Feedback verbinden"
+  },
+  {
+   "id": 108,
+   "step": 2,
+   "body": "Idee 108: Schnittstelle und Abstimmung besser mit Budget verbinden"
+  },
+  {
+   "id": 109,
+   "step": 2,
+   "body": "Idee 109: Freigabe und Schnittstelle besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 110,
+   "step": 2,
+   "body": "Idee 110: Schnittstelle und Wissen besser mit Feedback verbinden"
+  },
+  {
+   "id": 111,
+   "step": 2,
+   "body": "Idee 111: Schnittstelle und Abstimmung besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 112,
+   "step": 2,
+   "body": "Idee 112: Zeitplan und Kunde besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 113,
+   "step": 2,
+   "body": "Idee 113: Feedback und Schnittstelle besser mit Wissen verbinden"
+  },
+  {
+   "id": 114,
+   "step": 2,
+   "body": "Idee 114: Schnittstelle und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 115,
+   "step": 2,
+   "body": "Idee 115: Wissen und Budget besser mit Ritual verbinden"
+  },
+  {
+   "id": 116,
+   "step": 2,
+   "body": "Idee 116: Schnittstelle und Ritual besser mit Rolle verbinden"
+  },
+  {
+   "id": 117,
+   "step": 2,
+   "body": "Idee 117: Zeitplan und Kunde besser mit Wissen verbinden"
+  },
+  {
+   "id": 118,
+   "step": 2,
+   "body": "Idee 118: Schnittstelle und Rolle besser mit Wissen verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 119,
+   "step": 2,
+   "body": "Idee 119: Schnittstelle und Zeitplan besser mit Rolle verbinden"
+  },
+  {
+   "id": 120,
+   "step": 2,
+   "body": "Idee 120: Kunde und Schnittstelle besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 121,
+   "step": 2,
+   "body": "Idee 121: Wissen und Werkzeug besser mit Team verbinden"
+  },
+  {
+   "id": 122,
+   "step": 2,
+   "body": "Idee 122: Feedback und Team besser mit Wissen verbinden"
+  },
+  {
+   "id": 123,
+   "step": 2,
+   "body": "Idee 123: Budget und Feedback besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 124,
+   "step": 2,
+   "body": "Idee 124: Team und Feedback besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 125,
+   "step": 2,
+   "body": "Idee 125: Freigabe und Kunde besser mit Feedback verbinden"
+  },
+  {
+   "id": 126,
+   "step": 2,
+   "body": "Idee 126: Werkzeug und Freigabe besser mit Budget verbinden"
+  },
+  {
+   "id": 127,
+   "step": 2,
+   "body": "Idee 127: Werkzeug und Kunde besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 128,
+   "step": 2,
+   "body": "Idee 128: Wissen und Zeitplan besser mit Feedback verbinden"
+  },
+  {
+   "id": 129,
+   "step": 2,
+   "body": "Idee 129: Team und Wissen besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 130,
+   "step": 2,
+   "body": "Idee 130: Freigabe und Zeitplan besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 131,
+   "step": 2,
+   "body": "Idee 131: Rolle und Team besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 132,
+   "step": 2,
+   "body": "Idee 132: Team und Budget besser mit Rolle verbinden"
+  },
+  {
+   "id": 133,
+   "step": 2,
+   "body": "Idee 133: Zeitplan und Budget besser mit Freigabe verbinden"
+  },
+  {
+   "id": 134,
+   "step": 2,
+   "body": "Idee 134: Feedback und Budget besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 135,
+   "step": 2,
+   "body": "Idee 135: Budget und Schnittstelle besser mit Wissen verbinden"
+  },
+  {
+   "id": 136,
+   "step": 2,
+   "body": "Idee 136: Wissen und Abstimmung besser mit Team verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 137,
+   "step": 2,
+   "body": "Idee 137: Budget und Schnittstelle besser mit Ritual verbinden"
+  },
+  {
+   "id": 138,
+   "step": 2,
+   "body": "Idee 138: Kunde und Schnittstelle besser mit Feedback verbinden"
+  },
+  {
+   "id": 139,
+   "step": 2,
+   "body": "Idee 139: Feedback und Zeitplan besser mit Rolle verbinden"
+  },
+  {
+   "id": 140,
+   "step": 2,
+   "body": "Idee 140: Feedback und Kunde besser mit Freigabe verbinden"
+  },
+  {
+   "id": 141,
+   "step": 2,
+   "body": "Idee 141: Abstimmung und Werkzeug besser mit Kunde verbinden"
+  },
+  {
+   "id": 142,
+   "step": 2,
+   "body": "Idee 142: Werkzeug und Team besser mit Kunde verbinden"
+  },
+  {
+   "id": 143,
+   "step": 2,
+   "body": "Idee 143: Team und Werkzeug besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 144,
+   "step": 2,
+   "body": "Idee 144: Schnittstelle und Ritual besser mit Wissen verbinden"
+  },
+  {
+   "id": 145,
+   "step": 2,
+   "body": "Idee 145: Rolle und Budget besser mit Feedback verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 146,
+   "step": 2,
+   "body": "Idee 146: Kunde und Abstimmung besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 147,
+   "step": 2,
+   "body": "Idee 147: Team und Feedback besser mit Kunde verbinden"
+  },
+  {
+   "id": 148,
+   "step": 2,
+   "body": "Idee 148: Abstimmung und Freigabe besser mit Feedback verbinden"
+  },
+  {
+   "id": 149,
+   "step": 2,
+   "body": "Idee 149: Kunde und Feedback besser mit Ritual verbinden"
+  },
+  {
+   "id": 150,
+   "step": 2,
+   "body": "Idee 150: Zeitplan und Feedback besser mit Kunde verbinden"
+  },
+  {
+   "id": 151,
+   "step": 2,
+   "body": "Kurz"
+  },
+  {
+   "id": 152,
+   "step": 2,
+   "body": "Auch kurz"
+  },
+  {
+   "id": 153,
+   "step": 2,
+   "body": "Fünfte Bahn, Post-it"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "lanes": [
+   {
+    "label": "Riesig",
+    "hint": "150 Post-its",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123,
+     124,
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132,
+     133,
+     134,
+     135,
+     136,
+     137,
+     138,
+     139,
+     140,
+     141,
+     142,
+     143,
+     144,
+     145,
+     146,
+     147,
+     148,
+     149,
+     150
+    ],
+    "summary": "Sehr viel."
+   },
+   {
+    "label": "Winzig",
+    "hint": "zwei",
+    "ids": [
+     151,
+     152
+    ],
+    "summary": "Zwei."
+   },
+   {
+    "label": "Leer",
+    "hint": "nichts zugeordnet",
+    "ids": [],
+    "summary": "Hier ist nichts."
+   },
+   {
+    "label": "Unbekannt",
+    "ids": [
+     9999,
+     "x",
+     null
+    ]
+   },
+   {
+    "label": "Fünfte",
+    "ids": [
+     153
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Ungleich.",
+  "convergence": [
+   {
+    "label": "Riesig",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Winzig",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Leer",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

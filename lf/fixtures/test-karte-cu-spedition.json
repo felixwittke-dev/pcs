@@ -1,0 +1,289 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft für unsere Spedition eintritt?",
+  "how": "Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 36,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "Ladezonen-Automatisierung mit Hersteller testen"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "Fahrerassistenz für weniger erfahrene Fahrer"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "Ladeinfrastruktur am Hof mit Nachbarn teilen"
+  },
+  {
+   "id": 4,
+   "step": 5,
+   "body": "Disposition per Software statt Bauchgefühl"
+  },
+  {
+   "id": 5,
+   "step": 5,
+   "body": "Fahrer zu Flottenmanagern weiterbilden"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "Strecken für Platooning prüfen"
+  },
+  {
+   "id": 7,
+   "step": 5,
+   "body": "Kooperation mit Bahn für lange Strecken"
+  },
+  {
+   "id": 8,
+   "step": 5,
+   "body": "Werkstatt auf E-Antrieb umschulen"
+  },
+  {
+   "id": 9,
+   "step": 5,
+   "body": "Fahrer-Bindung: feste Touren, Heimschläfer"
+  },
+  {
+   "id": 10,
+   "step": 5,
+   "body": "Gemeinsamer E-LKW-Pool mit drei Speditionen"
+  },
+  {
+   "id": 11,
+   "step": 5,
+   "body": "Förderanträge zentral stellen"
+  },
+  {
+   "id": 12,
+   "step": 5,
+   "body": "Fahrer aus Osteuropa fest anstellen statt Subunternehmer"
+  },
+  {
+   "id": 13,
+   "step": 5,
+   "body": "Schichtmodell für Ladezeiten"
+  },
+  {
+   "id": 14,
+   "step": 5,
+   "body": "Kunden mit grünem Transport werben"
+  },
+  {
+   "id": 15,
+   "step": 5,
+   "body": "Fahrschule im eigenen Haus"
+  },
+  {
+   "id": 16,
+   "step": 5,
+   "body": "Depot in Leipzig als Ladehub"
+  },
+  {
+   "id": 17,
+   "step": 5,
+   "body": "Fahrer bei Routenplanung beteiligen"
+  },
+  {
+   "id": 18,
+   "step": 5,
+   "body": "Touren dichter planen, Leerfahrten halbieren"
+  },
+  {
+   "id": 19,
+   "step": 5,
+   "body": "Kunden bündeln, kleine Kunden abgeben"
+  },
+  {
+   "id": 20,
+   "step": 5,
+   "body": "Alte LKW länger fahren, Wartung hochfahren"
+  },
+  {
+   "id": 21,
+   "step": 5,
+   "body": "Fahrer-Bindung: feste Touren, Heimschläfer (2)"
+  },
+  {
+   "id": 22,
+   "step": 5,
+   "body": "Pensionierte Fahrer für Spitzen zurückholen"
+  },
+  {
+   "id": 23,
+   "step": 5,
+   "body": "Nachtfahrverbot umgehen durch Umschlagpunkte"
+  },
+  {
+   "id": 24,
+   "step": 5,
+   "body": "HVO-Diesel als Brücke"
+  },
+  {
+   "id": 25,
+   "step": 5,
+   "body": "Preise mit Dieselgleitklausel"
+  },
+  {
+   "id": 26,
+   "step": 5,
+   "body": "Kosten je Tour transparent machen"
+  },
+  {
+   "id": 27,
+   "step": 5,
+   "body": "Subunternehmer-Netz ausbauen"
+  },
+  {
+   "id": 28,
+   "step": 5,
+   "body": "Kleine Kunden über Plattform abwickeln"
+  },
+  {
+   "id": 29,
+   "step": 5,
+   "body": "Mautkosten weitergeben"
+  },
+  {
+   "id": 30,
+   "step": 5,
+   "body": "Fuhrpark leasen statt kaufen"
+  },
+  {
+   "id": 31,
+   "step": 5,
+   "body": "Fahrer-Prämie für spritsparendes Fahren"
+  },
+  {
+   "id": 32,
+   "step": 5,
+   "body": "Kunden bündeln, kleine Kunden abgeben (2)"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "Fahrerinnen und Fahrer",
+   "lo": "knapp",
+   "hi": "verfügbar"
+  },
+  "y": {
+   "label": "Antrieb der Flotte",
+   "lo": "Diesel erlaubt",
+   "hi": "Elektro-Pflicht"
+  },
+  "zones": [
+   {
+    "label": "Autonom und allein",
+    "hint": "Fahrer knapp · Elektro-Pflicht",
+    "summary": "Wer wenig Fahrer hat und elektrisch fahren muss, braucht Automatisierung und Partner.",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9
+    ]
+   },
+   {
+    "label": "Grüne Allianz",
+    "hint": "Fahrer verfügbar · Elektro-Pflicht",
+    "summary": "Genug Leute, teure Flotte: zusammen mit anderen Speditionen investieren.",
+    "ids": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   },
+   {
+    "label": "Diesel bis zum Ende",
+    "hint": "Fahrer knapp · Diesel erlaubt",
+    "summary": "Alte Flotte, wenig Leute: Kunden bündeln und Touren dichter planen.",
+    "ids": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ]
+   },
+   {
+    "label": "Wer billig fährt, gewinnt",
+    "hint": "Fahrer verfügbar · Diesel erlaubt",
+    "summary": "Preiskampf: wer seine Kosten kennt, überlebt.",
+    "ids": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32
+    ]
+   }
+  ],
+  "marks": {
+   "1": "robust",
+   "4": "robust",
+   "9": "robust",
+   "11": "hedge",
+   "13": "robust",
+   "18": "robust",
+   "19": "robust",
+   "21": "hedge",
+   "26": "robust",
+   "31": "robust",
+   "29": "hedge"
+  }
+ },
+ "ai": {
+  "headline": "Kunden bündeln und Fahrer halten trägt in jeder Zukunft.",
+  "convergence": [
+   {
+    "label": "Autonom und allein",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "Ladezonen-Automatisierung mit "
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

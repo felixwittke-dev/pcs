@@ -8,7 +8,7 @@
 //              a: { label: 'Pol A (2–4 Wörter)', ids: [Post-it-IDs] },
 //              b: { label: 'Pol B (2–4 Wörter)', ids: [Post-it-IDs] },
 //              color: 'grün' | 'blau' | 'rosa' | 'orange' | 'lila' | 'türkis' | 'koralle' | 'gelb' } ],   // color optional, sonst reihum
-//   rest: [IDs ohne Paar] }   // optional; fehlt es, gelten alle gezeigten Post-its ohne Paar als Einzelstimmen
+//   rest: [IDs ohne Paar] }   // optional (gibt die Reihenfolge vor); Post-its ohne Paar kommen immer zu den Einzelstimmen, auch wenn rest sie nicht nennt. IDs als Zahl oder Text.
 // Empfohlen: 3 bis 6 Paare. Beide Pole werden gleichwertig gezeigt (gleiche Farbe, gespiegelt), kein Gut/Schlecht.
 //
 // Übersicht: je Paar eine Karte, oben die Frage, darunter Pol A ↔ Pol B; „Einzelstimmen“ klein darunter.
@@ -29,14 +29,14 @@
               border-top: .32em solid var(--acc); justify-content: center; box-shadow: 0 1px 4px rgba(0,0,0,.10); overflow: hidden;
               transition: background-color .5s, box-shadow .5s, border-color .5s; }
   .${P}top { flex: none; display: flex; align-items: flex-start; gap: .6em; margin: 0 0 .4em; }
-  .${P}q { flex: 1; min-width: 0; margin: 0; font-weight: 800; line-height: 1.18; text-align: center; color: #1C1917; cursor: pointer;
+  .${P}q { flex: 1; min-width: 0; margin: 0; font-weight: 800; line-height: 1.18; text-align: center; color: #1C1917; cursor: pointer; overflow-wrap: anywhere;
            transition: opacity .8s ease-out, transform .8s cubic-bezier(.2,.8,.2,1); }
   .${P}one .${P}q { cursor: default; }
   .${P}back { flex: none; border: 1px solid #C9C9C2; background: none; cursor: pointer; font: inherit; font-size: 15px; color: #5F5F5F; padding: 3px 12px; border-radius: 999px; margin-top: .3em; }
   .${P}body { flex: 0 1 auto; min-height: 0; display: grid; grid-template-columns: minmax(0,1fr) 2.4em minmax(0,1fr); }
   .${P}pole { min-width: 0; min-height: 0; display: flex; flex-direction: column; }
   .${P}pole.a { align-items: flex-end; } .${P}pole.b { align-items: flex-start; }
-  .${P}lab { flex: none; max-width: 100%; font-weight: 700; padding: .05em .7em; border-radius: 999px; margin: 0 0 .3em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  .${P}lab { flex: none; max-width: 100%; font-weight: 700; padding: .05em .7em; border-radius: .75em; margin: 0 0 .3em; overflow-wrap: anywhere;
              transition: opacity .5s; }
   .${P}lab span { font-weight: 400; color: #5F5F5F; }
   .${P}tiles { flex: 1; min-height: 0; width: 100%; overflow: hidden; }
@@ -52,11 +52,14 @@
   .${P}unclamp .tile span { display: block; -webkit-line-clamp: unset; overflow: visible; }
   .${P}rest { grid-column: 1 / -1; min-height: 0; display: flex; flex-direction: column; font-size: .9em; }
   .${P}rest .${P}lab { align-self: flex-start; }
+  .${P}nt, .${P}nt * { transition: none !important; }
   .${P}hid { background: transparent; box-shadow: none; border-top-color: transparent; }
   .${P}hid .${P}lab, .${P}hid .${P}mid { opacity: 0; }
   .${P}qhid { opacity: 0; transform: scale(.82); }
-  .${P}ghosts { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
-  .${P}ghosts .tile { position: absolute; --lines: 3; transition: background-color .3s; }
+  .${P}ghosts { position: absolute; inset: 0; pointer-events: none; }   /* ohne z-index: die Geister ordnen sich einzeln unter/ueber den Karten ein */
+  .${P}ghosts .tile { position: absolute; --lines: 3; z-index: 0; transition: background-color .3s, opacity .6s; }
+  .${P}ghosts.${P}wait .tile { opacity: .45; }
+  .${P}ghosts .tile.${P}up { z-index: 2; opacity: 1; }
   .${P}pulse { animation: ${P}pulse .9s ease-out; }
   @keyframes ${P}pulse { 35% { transform: translate(-50%,-50%) scale(1.45); } }
   `;
@@ -66,11 +69,11 @@
 
   // Payload auflösen: Paare mit echten Post-its, Einzelstimmen
   function model(ctx) {
-    const d = ctx.data || {}, byId = new Map(ctx.rows.map(r => [r.id, r])), used = new Set();
-    const pick = ids => (ids || []).map(i => byId.get(i)).filter(r => r && !used.has(r.id) && used.add(r.id));
+    const d = ctx.data || {}, byId = new Map(ctx.rows.map(r => [String(r.id), r])), used = new Set();   // IDs als Text: '5' und 5 sind dasselbe Post-it
+    const pick = ids => (Array.isArray(ids) ? ids : []).map(i => byId.get(String(i))).filter(r => r && !used.has(r.id) && used.add(r.id));
     const pairs = (d.pairs || []).map((p, k) => ({ k, question: p.question || '', color: COLORS.includes(p.color) ? p.color : COLORS[k % COLORS.length],
       a: { label: (p.a || {}).label || 'Pol A', rows: pick((p.a || {}).ids) }, b: { label: (p.b || {}).label || 'Pol B', rows: pick((p.b || {}).ids) } }));
-    const rest = d.rest ? pick(d.rest) : ctx.rows.filter(r => !used.has(r.id));
+    const rest = pick(d.rest).concat(ctx.rows.filter(r => !used.has(r.id)));   // kein Post-it verschwindet: nicht zugeordnete kommen ans Ende der Einzelstimmen
     return { pairs, rest };
   }
 
@@ -112,9 +115,9 @@
     c.append(top, body);
     return c;
   }
-  function restBlock(rows, lines, cap) {
+  function restBlock(rows, lines, cap, title) {
     const b = ctx_el('div', null, P + 'rest'), t = ctx_el('div', null, P + 'tiles'), inner = ctx_el('div', null, P + 'inner');
-    b.append(label('Einzelstimmen', rows.length, 'c-none')); rows.forEach(r => inner.append(tile(r, 'c-none', lines, cap))); t.append(inner); b.append(t);
+    b.append(label(title || 'Einzelstimmen', rows.length, 'c-none')); rows.forEach(r => inner.append(tile(r, 'c-none', lines, cap))); t.append(inner); b.append(t);
     return b;
   }
 
@@ -140,7 +143,7 @@
     list.forEach((p, i) => { const c = card(p, p.a.rows, p.b.rows, ctx, false, lines, cap);
       if (cols > 1 && i === list.length - 1 && list.length % cols) c.style.gridColumn = '1 / -1';   // letztes Paar allein in der Zeile: volle Breite
       wrap.append(c); });
-    if (rest.length) wrap.append(restBlock(rest, lines, cap));
+    if (rest.length) wrap.append(restBlock(rest, lines, cap, list.length ? '' : 'Noch ohne Paar'));
     box.textContent = ''; box.append(wrap); if (lines) widen(wrap);
     return wrap;
   }
@@ -188,7 +191,13 @@
   function draw(box, ctx) {
     if (ctx.el) ctx_el = ctx.el;
     const m = model(ctx);
-    if (!m.pairs.length) { box.textContent = ''; return { count: 0, pages: 1 }; }
+    if (!m.pairs.length) {   // keine Paare (KI-Antwort leer): die Post-its trotzdem zeigen statt einer leeren Wand
+      box.textContent = ''; if (!m.rest.length) return { count: 0, pages: 1 };
+      let f = null, lines = 3;
+      for (lines of [3, 2]) { f = fit(buildAll(box, ctx, [], m.rest, 1, lines), FLOOR.all, HI.all); if (f !== null) break; }
+      if (f === null) box.firstChild.style.fontSize = FLOOR.all + 'px';
+      return { count: 0, pages: 1 };
+    }
     const k = ctx.focus != null && ctx.focus < m.pairs.length ? ctx.focus : null;
     const r = k === null ? overview(box, ctx, m) : focusView(box, ctx, m, k);
     if (ctx.dir) r.wrap.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
@@ -207,15 +216,17 @@
       const g = ctx_el('div', null, 'tile'); g.append(ctx_el('span', row.body));
       g.style.cssText = `left:${r.left - bb.left}px;top:${r.top - bb.top}px;width:${r.width}px;height:${r.height}px;font-size:${r.height / 4.45}px;margin:0`;
       layer.append(g); ghosts.set(id, g); });
-    box.append(layer);
+    box.append(layer); wrap.style.zIndex = 1;   // Karten liegen ueber den wartenden Post-its
     const cards = [...wrap.querySelectorAll('.' + P + 'card')], restEl = wrap.querySelector('.' + P + 'rest');
     cards.forEach(c => { c.classList.add(P + 'hid'); c.querySelector('.' + P + 'q').classList.add(P + 'qhid'); });
     if (restEl) restEl.querySelector('.' + P + 'lab').style.opacity = 0;
     wrap.querySelectorAll('[data-id]').forEach(e => e.style.visibility = 'hidden');
+    wrap.classList.add(P + 'nt'); void wrap.offsetWidth; wrap.classList.remove(P + 'nt');   // Ausgangslage sofort, ohne die fertigen Karten kurz aufblitzen zu lassen
     await sleep(500);
+    layer.classList.add(P + 'wait');
     // Paar für Paar: Post-its färben sich, fliegen zu ihren Polen; erst stehen sich die Pole gegenüber, dann erscheint die Frage
     const land = (host, cls) => { const ids = [...host.querySelectorAll('[data-id]')].map(e => e.dataset.id), first = new Map();
-      ids.forEach(id => { const g = ghosts.get(id); if (g) { g.className = 'tile ' + cls; first.set(id, g.getBoundingClientRect()); } });
+      ids.forEach(id => { const g = ghosts.get(id); if (g) { g.className = 'tile ' + cls + ' ' + P + 'up'; first.set(id, g.getBoundingClientRect()); } });
       return { ids, first }; };
     const fly = (host, { ids, first }) => { ids.forEach(id => { const g = ghosts.get(id); if (g) g.remove(); ghosts.delete(id); });
       host.querySelectorAll('[data-id]').forEach(e => e.style.visibility = ''); flipFn(host, first); };
@@ -231,10 +242,10 @@
     }
     if (restEl) { const got = land(restEl, 'c-none'); await sleep(300); restEl.querySelector('.' + P + 'lab').style.opacity = ''; fly(restEl, got); }
     // Post-its von Paaren auf späteren Seiten verblassen
-    ghosts.forEach(g => g.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, fill: 'forwards' }));
+    ghosts.forEach(g => g.animate([{ opacity: 0 }], { duration: 600, fill: 'forwards' }));
     await Promise.all(pending);
     await sleep(1400);
-    layer.remove();
+    layer.remove(); wrap.style.zIndex = '';
   }
 
   VIZ.pairs = { draw, reveal };

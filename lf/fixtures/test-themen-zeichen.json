@@ -1,0 +1,220 @@
+{
+ "step": {
+  "label": "cafe · Start-up 🌍 <u>Remote</u>",
+  "phase": "Start-up 🌍 <u>Remote</u>",
+  "q": "Was <i>bremst</i> uns, und was 🚀 beflügelt uns? „Ehrlich“ & direkt",
+  "how": "<b>Hinweis</b>: alles ist erlaubt",
+  "show": [
+   2
+  ],
+  "ls": "cafe"
+ },
+ "people": 25,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Mehr Kaffee ☕☕☕ und weniger Meetings 🙃🔥"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Überstunden äöüÄÖÜß – „Grüße aus Köln“"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenhalterungsbefestigungsschraubenzieher"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "https://intranet.example.com/wiki/projekte/2026/q4/retrospektive?tab=ergebnisse&filter=alle#abschnitt-3"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\n\nZeile vier nach Leerzeile"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "\"doppelte\" und 'einfache' Anführungszeichen, «Guillemets» und ‚deutsche‘"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "<script>alert(1)</script>"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "<b>fett</b> soll nicht fett sein"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "<img src=x onerror=alert(2)>"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "مرحبا بالفريق، نحتاج إلى وقت أطول للتخطيط"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "العمل عن بعد يوم الجمعة"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "我们需要更清楚的优先级"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "每周一次团队早餐"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Mischung: Team مرحبا 团队 🎉 OK"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "&amp; &lt;b&gt; &#x3C;script&#x3E; HTML-Entitäten"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "    führende und folgende Leerzeichen    "
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "…"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "🎉"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "x"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Emoji-Familie 👨‍👩‍👧‍👦 und Flaggen 🇩🇪🇨🇾 und Hautfarben 👍🏽"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Tab\tgetrennt\tWerte"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Zahl: 1.234,56 € / 100 % / §5 Abs. 2"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "ÆØÅ ñ ç ł ő ş — Sonderbuchstaben Europas"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "${alert(3)} {{constructor}} __proto__"
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "<script>alert(\"Thema\")</script>",
+    "color": "rosa",
+    "ids": [
+     7,
+     8,
+     9,
+     15,
+     25
+    ]
+   },
+   {
+    "label": "Sprachen 🌐 مرحبا 团队",
+    "color": "blau",
+    "ids": [
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   },
+   {
+    "label": "Donaudampfschifffahrtsgesellschaftskapitänsmützenhalterungsbefestigung",
+    "color": "grün",
+    "ids": [
+     3,
+     4,
+     20
+    ]
+   },
+   {
+    "label": "Emojis & „Zeichen“",
+    "color": "gelb",
+    "ids": [
+     1,
+     2,
+     6,
+     18,
+     21
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "<img src=x onerror=alert(4)> Die Gruppe schreibt in drei Sprachen 🌍 – „das ist Stärke“",
+  "convergence": [
+   {
+    "label": "<script>alert(\"Thema\")</script>",
+    "ids": [
+     7,
+     8
+    ],
+    "quote": "<b>fett</b> soll nicht fett sein"
+   },
+   {
+    "label": "Sprachen 🌐 مرحبا 团队",
+    "ids": [
+     10,
+     11
+    ],
+    "quote": "我们需要更清楚的优先级"
+   }
+  ],
+  "tension": [
+   {
+    "label": "<i>kursiv?</i>",
+    "a": "<script>alert(5)</script>",
+    "b": "مرحبا"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Donaudampfschifffahrtsgesellschaftskapitänsmützenhalterungsbefestigungsschraube",
+    "why": "https://intranet.example.com/wiki/projekte/2026/q4/retrospektive?tab=ergebnisse&filter=alle"
+   }
+  ]
+ }
+}

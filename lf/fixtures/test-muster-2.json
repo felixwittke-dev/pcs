@@ -1,0 +1,74 @@
+{
+ "step": {
+  "label": "Appreciative Interviews · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Appreciative Interviews",
+   "icon": "appreciative-interviews",
+   "noun": "Geschichten",
+   "panel": [
+    "Was Erfolg möglich gemacht hat",
+    "Wo Geschichten sich widersprechen",
+    "Was in keiner Geschichte vorkommt"
+   ]
+  },
+  "q": "Erzählt von einem Moment, in dem Zusammenarbeit wirklich gelungen ist.",
+  "how": "Paare erzählen sich Erfolgsgeschichten.",
+  "show": [
+   2
+  ]
+ },
+ "people": 2,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Bei der Projektwoche Klimaschule hat Frau Demir einfach gesagt: macht ihr das, ich halte euch den Rücken frei. Wir Referendare haben zum ersten Mal selbst geplant und es lief."
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Als der Server vor den Abschlussprüfungen ausgefallen ist, hat der Hausmeister mit zwei Schülern aus der 10b die ganze Nacht durchgearbeitet. Morgens lief alles."
+  }
+ ],
+ "data": {
+  "viz": "patterns",
+  "patterns": [
+   {
+    "label": "Verantwortung abgeben",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "ich halte euch den Rücken frei",
+    "quoteId": 1
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusammenarbeit gelingt, wenn jemand den Raum hält.",
+  "convergence": [
+   {
+    "label": "Verantwortung abgeben",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "ich halte euch den Rücken frei"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Verantwortung abgeben",
+    "a": "Struktur",
+    "b": "Freiheit"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Konflikte",
+    "why": "Keine Geschichte erzählt von einem gelösten Streit."
+   }
+  ]
+ }
+}

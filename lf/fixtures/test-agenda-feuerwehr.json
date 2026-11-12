@@ -1,0 +1,337 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Was brauchen unsere Freiwilligen Feuerwehren bis 2030?",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 38,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Nachwuchs: wie halten wir die 16-Jährigen? – Lena"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Jugendfeuerwehr nach Corona wieder aufbauen (Kai)"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Tagesalarmsicherheit – wer kann tagsüber? Jens"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Arbeitgeber freistellen lassen, wie? – Petra"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Digitale Alarmierung: Erfahrungen mit Apps · Tim"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Atemschutz-Lehrgänge: Wartezeiten 1 Jahr!! – Murat"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Frauen in der Wehr – was hält sie ab? (Anja)"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Einsatznachsorge / PSNV für Kameraden – Rolf"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Fahrzeugbeschaffung im Verbund – Bürgermeister Ortmann"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Ehrenamt und Familie, geht das? – Sabine"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Funkdisziplin bei Großlagen – Holger"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Social Media für Wehren · Jonas"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Gerätehaus zu klein – Ideen? Uwe"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Hitzesommer & Waldbrand: Vorbereitung – Kerstin"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kameradschaftspflege ohne Alkohol? – Ben"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Übungsdienst langweilig? Neue Formate – Lena"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Ausbildung online ergänzen – Tim"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Zusammenarbeit mit THW – Dirk"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Migranten als Mitglieder gewinnen – Aylin"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "9:30–10:20"
+   },
+   {
+    "label": "10:30–11:20"
+   },
+   {
+    "label": "11:30–12:15",
+    "kind": "break",
+    "title": "Mittag im Gerätehaus"
+   },
+   {
+    "label": "12:15–13:05"
+   },
+   {
+    "label": "13:15–14:05"
+   },
+   {
+    "label": "14:15",
+    "kind": "plenum",
+    "title": "Abschlusskreis"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Schulungsraum"
+   },
+   {
+    "label": "Fahrzeughalle"
+   },
+   {
+    "label": "Küche"
+   },
+   {
+    "label": "Hof"
+   }
+  ],
+  "themes": [
+   {
+    "label": "Menschen gewinnen",
+    "color": "grün"
+   },
+   {
+    "label": "Einsatz",
+    "color": "koralle"
+   },
+   {
+    "label": "Technik & Ausstattung",
+    "color": "blau"
+   },
+   {
+    "label": "Miteinander",
+    "color": "orange"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1,
+     2,
+     16
+    ],
+    "title": "Nachwuchs halten: Jugendfeuerwehr und neue Übungsformate",
+    "host": "Lena, Kai",
+    "slot": 0,
+    "space": 0,
+    "theme": 0,
+    "interest": 23
+   },
+   {
+    "ids": [
+     3,
+     4
+    ],
+    "title": "Tagesalarmsicherheit und Arbeitgeber",
+    "host": "Jens, Petra",
+    "slot": 0,
+    "space": 1,
+    "theme": 1,
+    "interest": 17
+   },
+   {
+    "ids": [
+     5,
+     17
+    ],
+    "title": "Digital: Alarmierung und Online-Ausbildung",
+    "host": "Tim",
+    "slot": 0,
+    "space": 2,
+    "theme": 2,
+    "interest": 12
+   },
+   {
+    "ids": [
+     8
+    ],
+    "title": "Einsatznachsorge für Kameradinnen und Kameraden",
+    "host": "Rolf",
+    "slot": 1,
+    "space": 0,
+    "theme": 3,
+    "interest": 15
+   },
+   {
+    "ids": [
+     6
+    ],
+    "title": "Atemschutz-Lehrgänge: Wartezeiten verkürzen",
+    "host": "Murat",
+    "slot": 1,
+    "space": 1,
+    "theme": 1,
+    "interest": 21
+   },
+   {
+    "ids": [
+     7,
+     19
+    ],
+    "title": "Wer fehlt bei uns? Frauen und Menschen mit Migrationsgeschichte",
+    "host": "Anja, Aylin",
+    "slot": 1,
+    "space": 2,
+    "theme": 0,
+    "interest": 14
+   },
+   {
+    "ids": [
+     14
+    ],
+    "title": "Hitzesommer und Waldbrand",
+    "host": "Kerstin",
+    "slot": 3,
+    "space": 0,
+    "theme": 1,
+    "interest": 19
+   },
+   {
+    "ids": [
+     9,
+     13
+    ],
+    "title": "Fahrzeuge und Gerätehäuser im Verbund",
+    "host": "Ortmann, Uwe",
+    "slot": 3,
+    "space": 1,
+    "theme": 2,
+    "interest": 11
+   },
+   {
+    "ids": [
+     10,
+     15
+    ],
+    "title": "Ehrenamt, Familie, Kameradschaft",
+    "host": "Sabine, Ben",
+    "slot": 3,
+    "space": 3,
+    "theme": 3,
+    "interest": 16
+   },
+   {
+    "ids": [
+     11,
+     18
+    ],
+    "title": "Großlagen: Funk und THW",
+    "host": "Holger, Dirk",
+    "slot": 4,
+    "space": 0,
+    "theme": 1,
+    "interest": 9
+   },
+   {
+    "ids": [
+     12
+    ],
+    "title": "Social Media für Wehren",
+    "host": "Jonas",
+    "slot": 4,
+    "space": 2,
+    "theme": 2,
+    "interest": 13
+   }
+  ],
+  "open": []
+ },
+ "ai": {
+  "headline": "Nachwuchs und Tagesverfügbarkeit bewegen am meisten.",
+  "convergence": [
+   {
+    "label": "Nachwuchs halten",
+    "ids": [
+     1,
+     2,
+     16
+    ],
+    "quote": "wie halten wir die 16-Jährigen?"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Zeit",
+    "a": "Ehrenamt",
+    "b": "Beruf"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Finanzierung",
+    "why": "Kam nicht vor."
+   }
+  ]
+ }
+}

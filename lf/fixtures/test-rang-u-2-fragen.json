@@ -1,0 +1,76 @@
+{
+ "step": {
+  "label": "Celebrity Interview",
+  "lsDef": {
+   "name": "Celebrity Interview",
+   "icon": "celebrity-interview",
+   "panel": [
+    "Was viele wissen wollen",
+    "Wo die Fragen auseinandergehen",
+    "Was noch niemand gefragt hat"
+   ],
+   "noun": "Fragen"
+  },
+  "phase": "Test",
+  "q": "Was möchtest du Dr. Aylin Demir fragen? Sie hat in einem Dorf ohne Arzt eine Gemeinschaftspraxis aufgebaut.",
+  "how": "Schreib deine Frage und stimm für die Fragen anderer.",
+  "show": [
+   2
+  ]
+ },
+ "people": 60,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Wie haben Sie die Gemeinde überzeugt, das Gebäude zu stellen?"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Was war der Moment, in dem Sie fast aufgegeben hätten?"
+  }
+ ],
+ "data": {
+  "viz": "ranking",
+  "mode": "upvotes",
+  "items": [
+   {
+    "id": 1,
+    "votes": 4
+   },
+   {
+    "id": 2,
+    "votes": 5,
+    "asked": true
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten wollen wissen, wie man so etwas anfängt und wer das Risiko trägt.",
+  "convergence": [
+   {
+    "label": "Der Anfang",
+    "ids": [
+     1,
+     4,
+     12
+    ],
+    "quote": "Wer hat das Risiko getragen"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Beruf und Leben",
+    "a": "Wie viele Stunden",
+    "b": "Was sagt Ihre Familie"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patientensicht",
+    "why": "Kaum eine Frage aus Sicht der Kranken."
+   }
+  ]
+ }
+}

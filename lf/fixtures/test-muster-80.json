@@ -1,0 +1,649 @@
+{
+ "step": {
+  "label": "Appreciative Interviews · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Appreciative Interviews",
+   "icon": "appreciative-interviews",
+   "noun": "Geschichten",
+   "panel": [
+    "Was Erfolg möglich gemacht hat",
+    "Wo Geschichten sich widersprechen",
+    "Was in keiner Geschichte vorkommt"
+   ]
+  },
+  "q": "Erzählt von einem Moment, in dem Zusammenarbeit wirklich gelungen ist.",
+  "how": "Paare erzählen sich Erfolgsgeschichten.",
+  "show": [
+   2
+  ]
+ },
+ "people": 80,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Geschichte 1: Ein Kollege hat zugehört."
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Geschichte 2: Wir hat zugehört. Die Leitung hat entschieden. Wir hat gewartet. Die Leitung hat gefragt."
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Geschichte 3: Die Leitung hat gewartet. Wir hat gefragt. Die Leitung hat gefragt."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Geschichte 4: Wir hat gelacht. Die Kundin hat gelacht. Wir hat zugehört."
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Geschichte 5: Wir hat geholfen. Ein Kollege hat geholfen."
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Geschichte 6: Ein Kollege hat geholfen. Das Team hat geholfen. Das Team hat zugehört."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Geschichte 7: Die Leitung hat gelacht. Das Team hat gewartet. Das Team hat gefragt. Die Leitung hat geholfen. Die Leitung hat gewartet. Wir hat gewartet."
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Geschichte 8: Ein Kollege hat entschieden. Das Team hat geholfen."
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Geschichte 9: Wir hat geholfen."
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Geschichte 10: Die Kundin hat gefragt. Das Team hat geholfen. Wir hat zugehört. Die Leitung hat gewartet. Wir hat entschieden."
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Geschichte 11: Ein Kollege hat geholfen."
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Geschichte 12: Ein Kollege hat entschieden. Das Team hat entschieden. Ein Kollege hat geholfen. Die Kundin hat gelacht. Das Team hat gelacht. Die Kundin hat gelacht."
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Geschichte 13: Die Leitung hat gefragt."
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Geschichte 14: Die Kundin hat gefragt. Die Leitung hat gefragt. Die Leitung hat entschieden."
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Geschichte 15: Das Team hat entschieden. Das Team hat entschieden. Das Team hat gefragt. Die Kundin hat entschieden."
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Geschichte 16: Wir hat geholfen. Die Leitung hat entschieden. Die Kundin hat gewartet."
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Geschichte 17: Wir hat gelacht. Ein Kollege hat zugehört."
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Geschichte 18: Wir hat geholfen."
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Geschichte 19: Ein Kollege hat gefragt. Wir hat gefragt."
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Geschichte 20: Wir hat zugehört. Das Team hat gewartet."
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Geschichte 21: Das Team hat zugehört. Die Leitung hat gewartet. Das Team hat geholfen. Die Kundin hat gefragt. Wir hat zugehört."
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Geschichte 22: Die Kundin hat gelacht. Die Kundin hat gefragt. Das Team hat zugehört. Die Leitung hat gefragt. Das Team hat zugehört. Das Team hat gefragt."
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Geschichte 23: Die Kundin hat gelacht."
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Geschichte 24: Das Team hat zugehört. Die Leitung hat geholfen. Die Leitung hat entschieden. Die Kundin hat gefragt. Wir hat entschieden. Wir hat geholfen."
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Geschichte 25: Ein Kollege hat zugehört. Ein Kollege hat zugehört. Ein Kollege hat gelacht. Die Kundin hat entschieden. Die Kundin hat zugehört."
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Geschichte 26: Das Team hat geholfen. Die Leitung hat geholfen. Die Leitung hat gelacht. Die Leitung hat geholfen. Wir hat gefragt. Die Kundin hat gefragt."
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Geschichte 27: Ein Kollege hat zugehört. Die Leitung hat gelacht. Das Team hat geholfen. Ein Kollege hat entschieden."
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Geschichte 28: Ein Kollege hat entschieden."
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Geschichte 29: Wir hat zugehört. Ein Kollege hat gewartet. Die Leitung hat geholfen. Das Team hat entschieden."
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Geschichte 30: Wir hat gewartet."
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Geschichte 31: Ein Kollege hat zugehört. Die Kundin hat gewartet."
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Geschichte 32: Die Kundin hat entschieden. Das Team hat gefragt. Die Leitung hat entschieden."
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Geschichte 33: Das Team hat zugehört. Wir hat geholfen. Ein Kollege hat entschieden. Die Leitung hat entschieden. Wir hat geholfen."
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Geschichte 34: Wir hat gewartet. Ein Kollege hat zugehört. Die Kundin hat gelacht."
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Geschichte 35: Das Team hat gewartet. Ein Kollege hat gewartet."
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Geschichte 36: Ein Kollege hat entschieden. Die Kundin hat entschieden."
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Geschichte 37: Ein Kollege hat gewartet."
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Geschichte 38: Ein Kollege hat gefragt. Wir hat entschieden."
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Geschichte 39: Das Team hat zugehört. Die Kundin hat gelacht."
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Geschichte 40: Die Leitung hat zugehört."
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Geschichte 41: Die Kundin hat geholfen. Die Kundin hat gelacht. Die Leitung hat gelacht. Ein Kollege hat gefragt."
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Geschichte 42: Das Team hat geholfen. Ein Kollege hat gelacht. Die Leitung hat geholfen. Die Kundin hat geholfen. Das Team hat zugehört."
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Geschichte 43: Die Kundin hat geholfen."
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Geschichte 44: Das Team hat geholfen. Die Kundin hat geholfen. Das Team hat geholfen. Ein Kollege hat zugehört."
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Geschichte 45: Das Team hat gefragt."
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Geschichte 46: Die Leitung hat zugehört. Ein Kollege hat gewartet. Die Kundin hat gelacht. Wir hat zugehört."
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Geschichte 47: Das Team hat zugehört. Die Leitung hat gelacht. Die Kundin hat zugehört. Wir hat gewartet. Ein Kollege hat gelacht. Das Team hat zugehört."
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Geschichte 48: Die Kundin hat gelacht."
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Geschichte 49: Wir hat entschieden. Das Team hat geholfen. Die Leitung hat entschieden. Das Team hat zugehört. Die Leitung hat gewartet. Die Leitung hat entschieden."
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Geschichte 50: Die Kundin hat gefragt. Ein Kollege hat entschieden. Die Leitung hat gewartet."
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Geschichte 51: Das Team hat gewartet. Die Leitung hat gewartet. Die Kundin hat entschieden. Die Leitung hat gefragt."
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Geschichte 52: Das Team hat entschieden."
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Geschichte 53: Das Team hat gelacht. Die Leitung hat gelacht. Die Leitung hat geholfen. Das Team hat gefragt."
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Geschichte 54: Die Kundin hat zugehört."
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Geschichte 55: Die Leitung hat geholfen. Die Kundin hat gewartet. Die Kundin hat gelacht. Wir hat gefragt. Die Kundin hat gelacht. Ein Kollege hat gelacht."
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Geschichte 56: Die Leitung hat geholfen. Die Leitung hat gewartet. Das Team hat gefragt."
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Geschichte 57: Wir hat geholfen. Das Team hat entschieden. Die Kundin hat gelacht."
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Geschichte 58: Die Leitung hat gewartet."
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Geschichte 59: Die Leitung hat gelacht. Die Kundin hat gelacht. Die Leitung hat gelacht."
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Geschichte 60: Wir hat entschieden."
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "Geschichte 61: Die Leitung hat gewartet. Ein Kollege hat geholfen."
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Geschichte 62: Die Leitung hat zugehört. Das Team hat geholfen. Das Team hat gewartet. Wir hat zugehört. Wir hat zugehört."
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Geschichte 63: Die Leitung hat gefragt. Wir hat gewartet. Die Leitung hat gewartet. Das Team hat geholfen. Die Kundin hat gefragt."
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Geschichte 64: Das Team hat entschieden. Die Leitung hat gewartet. Ein Kollege hat entschieden. Das Team hat zugehört. Das Team hat gelacht."
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "Geschichte 65: Ein Kollege hat zugehört. Wir hat gelacht."
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Geschichte 66: Die Leitung hat geholfen. Die Leitung hat zugehört."
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "Geschichte 67: Die Kundin hat gefragt."
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Geschichte 68: Die Kundin hat geholfen. Die Kundin hat gewartet. Ein Kollege hat entschieden. Das Team hat zugehört. Wir hat zugehört."
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Geschichte 69: Wir hat geholfen. Das Team hat entschieden. Das Team hat zugehört. Wir hat zugehört. Die Kundin hat gewartet."
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "Geschichte 70: Das Team hat entschieden. Ein Kollege hat entschieden. Die Kundin hat gewartet. Die Kundin hat gelacht. Ein Kollege hat gewartet. Das Team hat gewartet."
+  },
+  {
+   "id": 71,
+   "step": 2,
+   "body": "Geschichte 71: Wir hat gefragt. Wir hat gelacht. Ein Kollege hat gelacht."
+  },
+  {
+   "id": 72,
+   "step": 2,
+   "body": "Geschichte 72: Wir hat geholfen. Ein Kollege hat gelacht. Ein Kollege hat zugehört. Ein Kollege hat entschieden. Das Team hat zugehört."
+  },
+  {
+   "id": 73,
+   "step": 2,
+   "body": "Geschichte 73: Das Team hat gelacht. Wir hat zugehört. Die Leitung hat gelacht."
+  },
+  {
+   "id": 74,
+   "step": 2,
+   "body": "Geschichte 74: Die Leitung hat gelacht. Wir hat gefragt. Die Kundin hat gelacht. Ein Kollege hat gelacht. Die Kundin hat gefragt. Die Leitung hat gelacht."
+  },
+  {
+   "id": 75,
+   "step": 2,
+   "body": "Geschichte 75: Wir hat gewartet. Wir hat entschieden."
+  },
+  {
+   "id": 76,
+   "step": 2,
+   "body": "Geschichte 76: Das Team hat gelacht. Das Team hat entschieden. Die Leitung hat entschieden."
+  },
+  {
+   "id": 77,
+   "step": 2,
+   "body": "Geschichte 77: Die Leitung hat gewartet. Das Team hat geholfen. Die Kundin hat geholfen. Ein Kollege hat gewartet."
+  },
+  {
+   "id": 78,
+   "step": 2,
+   "body": "Geschichte 78: Wir hat zugehört. Ein Kollege hat gelacht. Das Team hat gewartet. Die Leitung hat entschieden. Ein Kollege hat gewartet. Die Kundin hat zugehört."
+  },
+  {
+   "id": 79,
+   "step": 2,
+   "body": "Geschichte 79: Das Team hat entschieden. Wir hat zugehört. Wir hat zugehört. Die Kundin hat entschieden. Die Leitung hat entschieden."
+  },
+  {
+   "id": 80,
+   "step": 2,
+   "body": "Geschichte 80: Wir hat zugehört. Wir hat entschieden. Wir hat gelacht. Wir hat gelacht. Wir hat zugehört. Die Kundin hat gefragt."
+  }
+ ],
+ "data": {
+  "viz": "patterns",
+  "patterns": [
+   {
+    "label": "Bedingung 1: Zuhören",
+    "ids": [
+     10,
+     15,
+     28,
+     33,
+     51,
+     70,
+     75,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 15,
+    "color": "blau"
+   },
+   {
+    "label": "Bedingung 2: Vertrauen",
+    "ids": [
+     6,
+     13,
+     14,
+     38,
+     63,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 13,
+    "color": "grün"
+   },
+   {
+    "label": "Bedingung 3: Klare Ziele",
+    "ids": [
+     14,
+     28,
+     39,
+     42,
+     45,
+     56,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 28,
+    "color": "orange"
+   },
+   {
+    "label": "Bedingung 4: Kurze Wege",
+    "ids": [
+     4,
+     8,
+     34,
+     38,
+     43,
+     46,
+     49,
+     66,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 8,
+    "color": "rosa"
+   },
+   {
+    "label": "Bedingung 5: Routinen",
+    "ids": [
+     5,
+     8,
+     14,
+     38,
+     46,
+     54,
+     57,
+     62,
+     68,
+     70,
+     79,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 8,
+    "color": "lila"
+   },
+   {
+    "label": "Bedingung 6: Humor",
+    "ids": [
+     2,
+     8,
+     13,
+     23,
+     27,
+     29,
+     38,
+     46,
+     57,
+     69,
+     74,
+     75,
+     77,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 8,
+    "color": "türkis"
+   },
+   {
+    "label": "Bedingung 7: Geduld",
+    "ids": [
+     14,
+     22,
+     25,
+     29,
+     31,
+     35,
+     38,
+     46,
+     64,
+     65,
+     67,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 22,
+    "color": "koralle"
+   },
+   {
+    "label": "Bedingung 8: Fehlerkultur",
+    "ids": [
+     12,
+     14,
+     15,
+     16,
+     23,
+     43,
+     47,
+     52,
+     53,
+     64,
+     73,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 14,
+    "color": "gelb"
+   },
+   {
+    "label": "Bedingung 9: Feiern",
+    "ids": [
+     5,
+     6,
+     13,
+     18,
+     23,
+     24,
+     28,
+     31,
+     35,
+     39,
+     40,
+     49,
+     50,
+     56,
+     60,
+     66,
+     71,
+     79,
+     1
+    ],
+    "quote": "hat zugehört",
+    "quoteId": 6
+   },
+   {
+    "label": "Bedingung ohne Geschichten",
+    "ids": [],
+    "quote": "niemand"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusammenarbeit gelingt, wenn jemand den Raum hält.",
+  "convergence": [
+   {
+    "label": "Bedingung 1: Zuhören",
+    "ids": [
+     10,
+     15,
+     28
+    ],
+    "quote": "hat zugehört"
+   },
+   {
+    "label": "Bedingung 2: Vertrauen",
+    "ids": [
+     6,
+     13,
+     14
+    ],
+    "quote": "hat zugehört"
+   },
+   {
+    "label": "Bedingung 3: Klare Ziele",
+    "ids": [
+     14,
+     28,
+     39
+    ],
+    "quote": "hat zugehört"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Bedingung 1: Zuhören",
+    "a": "Struktur",
+    "b": "Freiheit"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Konflikte",
+    "why": "Keine Geschichte erzählt von einem gelösten Streit."
+   }
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft eintritt?",
+  "how": "Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 36,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "Kunden bündeln"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "Gemeinsamer E-LKW-Pool"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "Kosten je Tour kennen"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "Fahrerinnen und Fahrer",
+   "lo": "knapp",
+   "hi": "verfügbar"
+  },
+  "y": {
+   "label": "Antrieb der Flotte",
+   "lo": "Diesel erlaubt",
+   "hi": "Elektro-Pflicht"
+  },
+  "zones": [
+   {
+    "label": "Autonom und allein",
+    "hint": "Fahrer knapp · Elektro-Pflicht",
+    "summary": "",
+    "ids": [
+     1
+    ]
+   },
+   {
+    "label": "Grüne Allianz",
+    "hint": "Fahrer verfügbar · Elektro-Pflicht",
+    "summary": "Kurz.",
+    "ids": [
+     2
+    ]
+   },
+   {
+    "label": "Diesel bis zum Ende",
+    "hint": "Fahrer knapp · Diesel erlaubt",
+    "summary": "",
+    "ids": []
+   },
+   {
+    "label": "Wer billig fährt, gewinnt",
+    "hint": "Fahrer verfügbar · Diesel erlaubt",
+    "summary": "",
+    "ids": [
+     3
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Kunden bündeln und Fahrer halten trägt in jeder Zukunft.",
+  "convergence": [
+   {
+    "label": "Autonom und allein",
+    "ids": [
+     1
+    ],
+    "quote": "Kunden bündeln"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

@@ -1,0 +1,465 @@
+{
+ "step": {
+  "label": "Celebrity Interview",
+  "lsDef": {
+   "name": "Celebrity Interview",
+   "icon": "celebrity-interview",
+   "panel": [
+    "Was viele wissen wollen",
+    "Wo die Fragen auseinandergehen",
+    "Was noch niemand gefragt hat"
+   ],
+   "noun": "Fragen"
+  },
+  "phase": "Test",
+  "q": "Was möchtest du Dr. Aylin Demir fragen? Sie hat in einem Dorf ohne Arzt eine Gemeinschaftspraxis aufgebaut.",
+  "how": "Schreib deine Frage und stimm für die Fragen anderer.",
+  "show": [
+   2
+  ]
+ },
+ "people": 60,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Wie haben Sie die Gemeinde überzeugt, das Gebäude zu stellen?"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Was war der Moment, in dem Sie fast aufgegeben hätten?"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Wie finden Sie Ärztinnen, die aufs Land wollen?"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Wer hat das Risiko getragen, Sie oder die Gemeinde?"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Wie viele Stunden arbeiten Sie wirklich pro Woche?"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Was machen Sie anders als die Praxis, die vorher geschlossen hat?"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Wie gehen Sie mit Patienten um, die Sie privat kennen?"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Welche Rolle spielen Pflegekräfte mit mehr Verantwortung?"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Was hat Ihnen die Kassenärztliche Vereinigung schwer gemacht?"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Würden Sie es noch einmal tun?"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Wie funktioniert Telemedizin bei älteren Menschen ohne Internet?"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Was kostet so eine Praxis am Anfang?"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Wie verhindern Sie, dass Sie selbst ausbrennen?"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Was können andere Dörfer von Ihnen übernehmen, ohne Geld?"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Wie sieht ein normaler Montag bei Ihnen aus?"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Welche Fehler würden Sie heute vermeiden?"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Wie reden Sie mit dem Bürgermeister, wenn Sie uneins sind?"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Was sagt Ihre Familie dazu?"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Wer vertritt Sie im Urlaub?"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Gibt es Wartelisten, und wie entscheiden Sie, wer zuerst kommt?"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Wie bezahlen Sie Ihre Angestellten fair?"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Was hat die Pandemie verändert?"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Wie bleiben Sie fachlich auf dem Stand?"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Was wünschen Sie sich von der Politik?"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Wie haben Sie Vertrauen bei Skeptikern aufgebaut?"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Arbeiten Sie mit Apotheken und Physiotherapie zusammen?"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Was machen Sie bei Notfällen nachts?"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Haben Sie Kinderärzte im Team?"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Was war Ihr schönster Moment in der Praxis?"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Was würde passieren, wenn Sie morgen ausfallen?"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Wie viel Bürokratie ist es pro Tag?"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Welche Ausbildung brauchen die Medizinischen Fachangestellten bei Ihnen?"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Wie ist der Kontakt zum Krankenhaus in der Stadt?"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Was raten Sie jungen Ärztinnen, die zögern?"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Wie organisieren Sie Hausbesuche?"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Was ist mit Menschen, die kein Deutsch sprechen?"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Wie messen Sie, ob die Praxis gut ist?"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Welche Technik hat sich nicht bewährt?"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Wie oft sagen Sie Nein?"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Was bedeutet Ihnen das Dorf?"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Haben Sie Konkurrenz bekommen?"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Was machen Sie mit Ihrer Freizeit?"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Wie lange wollen Sie das noch machen?"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Wer übernimmt einmal?"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Was ist Ihr Rat an Bürgermeister?"
+  }
+ ],
+ "data": {
+  "viz": "ranking",
+  "mode": "upvotes",
+  "items": [
+   {
+    "id": 1,
+    "votes": 4
+   },
+   {
+    "id": 2,
+    "votes": 5,
+    "asked": true
+   },
+   {
+    "id": 3,
+    "votes": 18
+   },
+   {
+    "id": 4,
+    "votes": 4,
+    "asked": true
+   },
+   {
+    "id": 5,
+    "votes": 4
+   },
+   {
+    "id": 6,
+    "votes": 9999
+   },
+   {
+    "id": 7,
+    "votes": 1
+   },
+   {
+    "id": 8,
+    "votes": 5
+   },
+   {
+    "id": 9,
+    "votes": 6
+   },
+   {
+    "id": 10,
+    "votes": 11
+   },
+   {
+    "id": 11,
+    "votes": 0
+   },
+   {
+    "id": 12,
+    "votes": 2,
+    "asked": true
+   },
+   {
+    "id": 13,
+    "votes": 0
+   },
+   {
+    "id": 14,
+    "votes": 11
+   },
+   {
+    "id": 15,
+    "votes": 8
+   },
+   {
+    "id": 16,
+    "votes": 0
+   },
+   {
+    "id": 17,
+    "votes": 28
+   },
+   {
+    "id": 18,
+    "votes": 23
+   },
+   {
+    "id": 19,
+    "votes": 7
+   },
+   {
+    "id": 20,
+    "votes": 6
+   },
+   {
+    "id": 21,
+    "votes": 1
+   },
+   {
+    "id": 22,
+    "votes": 0
+   },
+   {
+    "id": 23,
+    "votes": 5
+   },
+   {
+    "id": 24,
+    "votes": 0
+   },
+   {
+    "id": 25,
+    "votes": 1
+   },
+   {
+    "id": 26,
+    "votes": 1
+   },
+   {
+    "id": 27,
+    "votes": 0
+   },
+   {
+    "id": 28,
+    "votes": 4
+   },
+   {
+    "id": 29,
+    "votes": 4
+   },
+   {
+    "id": 30,
+    "votes": 12
+   },
+   {
+    "id": 31,
+    "votes": 5
+   },
+   {
+    "id": 32,
+    "votes": 7
+   },
+   {
+    "id": 33,
+    "votes": 4
+   },
+   {
+    "id": 34,
+    "votes": 7
+   },
+   {
+    "id": 35,
+    "votes": 4
+   },
+   {
+    "id": 36,
+    "votes": 2
+   },
+   {
+    "id": 37,
+    "votes": 42
+   },
+   {
+    "id": 38,
+    "votes": 38
+   },
+   {
+    "id": 39,
+    "votes": 12
+   },
+   {
+    "id": 40,
+    "votes": 8
+   },
+   {
+    "id": 41,
+    "votes": 2
+   },
+   {
+    "id": 42,
+    "votes": 1
+   },
+   {
+    "id": 43,
+    "votes": 2
+   },
+   {
+    "id": 44,
+    "votes": 0
+   },
+   {
+    "id": 45,
+    "votes": 10
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten wollen wissen, wie man so etwas anfängt und wer das Risiko trägt.",
+  "convergence": [
+   {
+    "label": "Der Anfang",
+    "ids": [
+     1,
+     4,
+     12
+    ],
+    "quote": "Wer hat das Risiko getragen"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Beruf und Leben",
+    "a": "Wie viele Stunden",
+    "b": "Was sagt Ihre Familie"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patientensicht",
+    "why": "Kaum eine Frage aus Sicht der Kranken."
+   }
+  ]
+ }
+}

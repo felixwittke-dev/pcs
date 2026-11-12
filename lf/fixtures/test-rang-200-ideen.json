@@ -1,0 +1,3283 @@
+{
+ "step": {
+  "label": "25/10 Crowd Sourcing",
+  "lsDef": {
+   "name": "25/10 Crowd Sourcing",
+   "icon": "25-10-crowdsourcing",
+   "panel": [
+    "Was ganz oben steht",
+    "Wo die Wertungen auseinandergehen",
+    "Mutige Ideen weiter unten"
+   ],
+   "noun": "Ideen"
+  },
+  "phase": "Test",
+  "q": "Wenn du zehnmal mutiger wärst: Was würdest du tun, damit Übergaben auf unserer Station sicherer werden?",
+  "how": "Fünf Runden, je 1 bis 5 Punkte.",
+  "show": [
+   2
+  ]
+ },
+ "people": 200,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen?"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Digitales Übergabeblatt direkt aus der Akte gedruckt"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Wir üben SBAR mit allen, auch mit Ärzten"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Kaffee erst nach der Übergabe, aber dann für alle bezahlt"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Bei Personalmangel kürzen wir zuerst Dokumentation, nicht Übergabe"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei (Variante 1)"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme (Variante 1)"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett (Variante 1)"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen (Variante 1)"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit (Variante 1)"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an. (Variante 1)"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr (Variante 1)"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld (Variante 1)"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde (Variante 1)"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen (Variante 1)"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen (Variante 1)"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche (Variante 1)"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen (Variante 1)"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit (Variante 1)"
+  },
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team (Variante 1)"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz (Variante 1)"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen (Variante 1)"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station (Variante 1)"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen? (Variante 1)"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht (Variante 1)"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte (Variante 1)"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial (Variante 1)"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde (Variante 1)"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen (Variante 1)"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal (Variante 1)"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt (Variante 1)"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer (Variante 1)"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht (Variante 1)"
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben (Variante 1)"
+  },
+  {
+   "id": 64,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne (Variante 1)"
+  },
+  {
+   "id": 65,
+   "step": 2,
+   "body": "Digitales Übergabeblatt direkt aus der Akte gedruckt (Variante 1)"
+  },
+  {
+   "id": 66,
+   "step": 2,
+   "body": "Wir üben SBAR mit allen, auch mit Ärzten (Variante 1)"
+  },
+  {
+   "id": 67,
+   "step": 2,
+   "body": "Kaffee erst nach der Übergabe, aber dann für alle bezahlt (Variante 1)"
+  },
+  {
+   "id": 68,
+   "step": 2,
+   "body": "Bei Personalmangel kürzen wir zuerst Dokumentation, nicht Übergabe (Variante 1)"
+  },
+  {
+   "id": 69,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei (Variante 2)"
+  },
+  {
+   "id": 70,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme (Variante 2)"
+  },
+  {
+   "id": 71,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett (Variante 2)"
+  },
+  {
+   "id": 72,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen (Variante 2)"
+  },
+  {
+   "id": 73,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit (Variante 2)"
+  },
+  {
+   "id": 74,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an. (Variante 2)"
+  },
+  {
+   "id": 75,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr (Variante 2)"
+  },
+  {
+   "id": 76,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld (Variante 2)"
+  },
+  {
+   "id": 77,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde (Variante 2)"
+  },
+  {
+   "id": 78,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen (Variante 2)"
+  },
+  {
+   "id": 79,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen (Variante 2)"
+  },
+  {
+   "id": 80,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche (Variante 2)"
+  },
+  {
+   "id": 81,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen (Variante 2)"
+  },
+  {
+   "id": 82,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit (Variante 2)"
+  },
+  {
+   "id": 83,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team (Variante 2)"
+  },
+  {
+   "id": 84,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz (Variante 2)"
+  },
+  {
+   "id": 85,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen (Variante 2)"
+  },
+  {
+   "id": 86,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station (Variante 2)"
+  },
+  {
+   "id": 87,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen? (Variante 2)"
+  },
+  {
+   "id": 88,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht (Variante 2)"
+  },
+  {
+   "id": 89,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte (Variante 2)"
+  },
+  {
+   "id": 90,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial (Variante 2)"
+  },
+  {
+   "id": 91,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde (Variante 2)"
+  },
+  {
+   "id": 92,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen (Variante 2)"
+  },
+  {
+   "id": 93,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal (Variante 2)"
+  },
+  {
+   "id": 94,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt (Variante 2)"
+  },
+  {
+   "id": 95,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer (Variante 2)"
+  },
+  {
+   "id": 96,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht (Variante 2)"
+  },
+  {
+   "id": 97,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben (Variante 2)"
+  },
+  {
+   "id": 98,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne (Variante 2)"
+  },
+  {
+   "id": 99,
+   "step": 2,
+   "body": "Digitales Übergabeblatt direkt aus der Akte gedruckt (Variante 2)"
+  },
+  {
+   "id": 100,
+   "step": 2,
+   "body": "Wir üben SBAR mit allen, auch mit Ärzten (Variante 2)"
+  },
+  {
+   "id": 101,
+   "step": 2,
+   "body": "Kaffee erst nach der Übergabe, aber dann für alle bezahlt (Variante 2)"
+  },
+  {
+   "id": 102,
+   "step": 2,
+   "body": "Bei Personalmangel kürzen wir zuerst Dokumentation, nicht Übergabe (Variante 2)"
+  },
+  {
+   "id": 103,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei (Variante 3)"
+  },
+  {
+   "id": 104,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme (Variante 3)"
+  },
+  {
+   "id": 105,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett (Variante 3)"
+  },
+  {
+   "id": 106,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen (Variante 3)"
+  },
+  {
+   "id": 107,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit (Variante 3)"
+  },
+  {
+   "id": 108,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an. (Variante 3)"
+  },
+  {
+   "id": 109,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr (Variante 3)"
+  },
+  {
+   "id": 110,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld (Variante 3)"
+  },
+  {
+   "id": 111,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde (Variante 3)"
+  },
+  {
+   "id": 112,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen (Variante 3)"
+  },
+  {
+   "id": 113,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen (Variante 3)"
+  },
+  {
+   "id": 114,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche (Variante 3)"
+  },
+  {
+   "id": 115,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen (Variante 3)"
+  },
+  {
+   "id": 116,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit (Variante 3)"
+  },
+  {
+   "id": 117,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team (Variante 3)"
+  },
+  {
+   "id": 118,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz (Variante 3)"
+  },
+  {
+   "id": 119,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen (Variante 3)"
+  },
+  {
+   "id": 120,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station (Variante 3)"
+  },
+  {
+   "id": 121,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen? (Variante 3)"
+  },
+  {
+   "id": 122,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht (Variante 3)"
+  },
+  {
+   "id": 123,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte (Variante 3)"
+  },
+  {
+   "id": 124,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial (Variante 3)"
+  },
+  {
+   "id": 125,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde (Variante 3)"
+  },
+  {
+   "id": 126,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen (Variante 3)"
+  },
+  {
+   "id": 127,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal (Variante 3)"
+  },
+  {
+   "id": 128,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt (Variante 3)"
+  },
+  {
+   "id": 129,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer (Variante 3)"
+  },
+  {
+   "id": 130,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht (Variante 3)"
+  },
+  {
+   "id": 131,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben (Variante 3)"
+  },
+  {
+   "id": 132,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne (Variante 3)"
+  },
+  {
+   "id": 133,
+   "step": 2,
+   "body": "Digitales Übergabeblatt direkt aus der Akte gedruckt (Variante 3)"
+  },
+  {
+   "id": 134,
+   "step": 2,
+   "body": "Wir üben SBAR mit allen, auch mit Ärzten (Variante 3)"
+  },
+  {
+   "id": 135,
+   "step": 2,
+   "body": "Kaffee erst nach der Übergabe, aber dann für alle bezahlt (Variante 3)"
+  },
+  {
+   "id": 136,
+   "step": 2,
+   "body": "Bei Personalmangel kürzen wir zuerst Dokumentation, nicht Übergabe (Variante 3)"
+  },
+  {
+   "id": 137,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei (Variante 4)"
+  },
+  {
+   "id": 138,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme (Variante 4)"
+  },
+  {
+   "id": 139,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett (Variante 4)"
+  },
+  {
+   "id": 140,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen (Variante 4)"
+  },
+  {
+   "id": 141,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit (Variante 4)"
+  },
+  {
+   "id": 142,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an. (Variante 4)"
+  },
+  {
+   "id": 143,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr (Variante 4)"
+  },
+  {
+   "id": 144,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld (Variante 4)"
+  },
+  {
+   "id": 145,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde (Variante 4)"
+  },
+  {
+   "id": 146,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen (Variante 4)"
+  },
+  {
+   "id": 147,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen (Variante 4)"
+  },
+  {
+   "id": 148,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche (Variante 4)"
+  },
+  {
+   "id": 149,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen (Variante 4)"
+  },
+  {
+   "id": 150,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit (Variante 4)"
+  },
+  {
+   "id": 151,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team (Variante 4)"
+  },
+  {
+   "id": 152,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz (Variante 4)"
+  },
+  {
+   "id": 153,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen (Variante 4)"
+  },
+  {
+   "id": 154,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station (Variante 4)"
+  },
+  {
+   "id": 155,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen? (Variante 4)"
+  },
+  {
+   "id": 156,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht (Variante 4)"
+  },
+  {
+   "id": 157,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte (Variante 4)"
+  },
+  {
+   "id": 158,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial (Variante 4)"
+  },
+  {
+   "id": 159,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde (Variante 4)"
+  },
+  {
+   "id": 160,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen (Variante 4)"
+  },
+  {
+   "id": 161,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal (Variante 4)"
+  },
+  {
+   "id": 162,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt (Variante 4)"
+  },
+  {
+   "id": 163,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer (Variante 4)"
+  },
+  {
+   "id": 164,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht (Variante 4)"
+  },
+  {
+   "id": 165,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben (Variante 4)"
+  },
+  {
+   "id": 166,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne (Variante 4)"
+  },
+  {
+   "id": 167,
+   "step": 2,
+   "body": "Digitales Übergabeblatt direkt aus der Akte gedruckt (Variante 4)"
+  },
+  {
+   "id": 168,
+   "step": 2,
+   "body": "Wir üben SBAR mit allen, auch mit Ärzten (Variante 4)"
+  },
+  {
+   "id": 169,
+   "step": 2,
+   "body": "Kaffee erst nach der Übergabe, aber dann für alle bezahlt (Variante 4)"
+  },
+  {
+   "id": 170,
+   "step": 2,
+   "body": "Bei Personalmangel kürzen wir zuerst Dokumentation, nicht Übergabe (Variante 4)"
+  },
+  {
+   "id": 171,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei (Variante 5)"
+  },
+  {
+   "id": 172,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme (Variante 5)"
+  },
+  {
+   "id": 173,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett (Variante 5)"
+  },
+  {
+   "id": 174,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen (Variante 5)"
+  },
+  {
+   "id": 175,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit (Variante 5)"
+  },
+  {
+   "id": 176,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an. (Variante 5)"
+  },
+  {
+   "id": 177,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr (Variante 5)"
+  },
+  {
+   "id": 178,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld (Variante 5)"
+  },
+  {
+   "id": 179,
+   "step": 2,
+   "body": "Übergabezeit wird bezahlte Arbeitszeit, nicht Überstunde (Variante 5)"
+  },
+  {
+   "id": 180,
+   "step": 2,
+   "body": "Angehörige dürfen bei der Übergabe eine Frage stellen (Variante 5)"
+  },
+  {
+   "id": 181,
+   "step": 2,
+   "body": "Wir hören auf, Dinge zu übergeben, die eh in der Akte stehen (Variante 5)"
+  },
+  {
+   "id": 182,
+   "step": 2,
+   "body": "Pflegeschüler moderieren die Übergabe einmal pro Woche (Variante 5)"
+  },
+  {
+   "id": 183,
+   "step": 2,
+   "body": "Ein Ampelsystem am Whiteboard: rot heißt sofort ansehen (Variante 5)"
+  },
+  {
+   "id": 184,
+   "step": 2,
+   "body": "Stationsleitung macht jede Woche eine Übergabe selbst mit (Variante 5)"
+  },
+  {
+   "id": 185,
+   "step": 2,
+   "body": "Fehlerbericht anonym per Handy, Auswertung am Freitag offen im Team (Variante 5)"
+  },
+  {
+   "id": 186,
+   "step": 2,
+   "body": "Zimmer in feste Gruppen, jede Pflegekraft kennt ihre Gruppe ganz (Variante 5)"
+  },
+  {
+   "id": 187,
+   "step": 2,
+   "body": "Medikamentenänderungen werden laut vorgelesen und gegengelesen (Variante 5)"
+  },
+  {
+   "id": 188,
+   "step": 2,
+   "body": "Übergabe im Stehen, maximal 20 Minuten für die ganze Station (Variante 5)"
+  },
+  {
+   "id": 189,
+   "step": 2,
+   "body": "Wir fragen am Ende immer: Was macht dir Sorgen? (Variante 5)"
+  },
+  {
+   "id": 190,
+   "step": 2,
+   "body": "Keine Abkürzungen mehr, die nur die Hälfte versteht (Variante 5)"
+  },
+  {
+   "id": 191,
+   "step": 2,
+   "body": "Springer bekommen eine Kurzübergabe auf einer Karteikarte (Variante 5)"
+  },
+  {
+   "id": 192,
+   "step": 2,
+   "body": "Videoaufnahme einer guten Übergabe als Lernmaterial (Variante 5)"
+  },
+  {
+   "id": 193,
+   "step": 2,
+   "body": "Die Patientin bestätigt, was übergeben wurde (Variante 5)"
+  },
+  {
+   "id": 194,
+   "step": 2,
+   "body": "Ein Tag im Quartal tauschen Früh- und Spätdienst die Rollen (Variante 5)"
+  },
+  {
+   "id": 195,
+   "step": 2,
+   "body": "Wer etwas vergessen hat, ruft an statt zu warten, und das ist normal (Variante 5)"
+  },
+  {
+   "id": 196,
+   "step": 2,
+   "body": "Übergabe startet pünktlich, auch wenn jemand fehlt (Variante 5)"
+  },
+  {
+   "id": 197,
+   "step": 2,
+   "body": "Hygienestatus kommt als erster Punkt, immer (Variante 5)"
+  },
+  {
+   "id": 198,
+   "step": 2,
+   "body": "Wir messen ein halbes Jahr lang, was bei Übergaben verloren geht (Variante 5)"
+  },
+  {
+   "id": 199,
+   "step": 2,
+   "body": "Die Station bekommt einen ruhigen Raum nur für Übergaben (Variante 5)"
+  },
+  {
+   "id": 200,
+   "step": 2,
+   "body": "Leitung bedankt sich für jede gemeldete Beinahe-Panne (Variante 5)"
+  }
+ ],
+ "data": {
+  "viz": "ranking",
+  "top": 10,
+  "items": [
+   {
+    "id": 1,
+    "votes": [
+     1,
+     1,
+     1,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 2,
+    "votes": [
+     3,
+     3,
+     5,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 3,
+    "votes": [
+     1,
+     5,
+     2,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 4,
+    "votes": [
+     5,
+     3,
+     5,
+     4,
+     5
+    ]
+   },
+   {
+    "id": 5,
+    "votes": [
+     3,
+     1,
+     1,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 6,
+    "votes": [
+     3,
+     4,
+     4,
+     5,
+     2
+    ]
+   },
+   {
+    "id": 7,
+    "votes": [
+     5,
+     2,
+     2,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 8,
+    "votes": [
+     2,
+     3,
+     2,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 9,
+    "votes": [
+     5,
+     3,
+     5,
+     5,
+     2
+    ]
+   },
+   {
+    "id": 10,
+    "votes": [
+     4,
+     4,
+     5,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 11,
+    "votes": [
+     3,
+     3,
+     4,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 12,
+    "votes": [
+     4,
+     5,
+     2,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 13,
+    "votes": [
+     4,
+     5,
+     5,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 14,
+    "votes": [
+     4,
+     3,
+     5,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 15,
+    "votes": [
+     4,
+     2,
+     3,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 16,
+    "votes": [
+     3,
+     4,
+     3,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 17,
+    "votes": [
+     5,
+     5,
+     5,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 18,
+    "votes": [
+     4,
+     3,
+     2,
+     4,
+     5
+    ]
+   },
+   {
+    "id": 19,
+    "votes": [
+     3,
+     5,
+     1,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 20,
+    "votes": [
+     2,
+     1,
+     1,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 21,
+    "votes": [
+     3,
+     5,
+     2,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 22,
+    "votes": [
+     2,
+     3,
+     2,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 23,
+    "votes": [
+     4,
+     1,
+     1,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 24,
+    "votes": [
+     2,
+     2,
+     1,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 25,
+    "votes": [
+     1,
+     1,
+     1,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 26,
+    "votes": [
+     3,
+     2,
+     2,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 27,
+    "votes": [
+     1,
+     4,
+     5,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 28,
+    "votes": [
+     2,
+     1,
+     1,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 29,
+    "votes": [
+     1,
+     3,
+     3,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 30,
+    "votes": [
+     3,
+     4,
+     5,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 31,
+    "votes": [
+     3,
+     4,
+     5,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 32,
+    "votes": [
+     2,
+     1,
+     3,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 33,
+    "votes": [
+     4,
+     2,
+     5,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 34,
+    "votes": [
+     4,
+     5,
+     3,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 35,
+    "votes": [
+     3,
+     3,
+     5,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 36,
+    "votes": [
+     5,
+     2,
+     1,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 37,
+    "votes": [
+     2,
+     2,
+     2,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 38,
+    "votes": [
+     2,
+     5,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 39,
+    "votes": [
+     4,
+     1,
+     3,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 40,
+    "votes": [
+     2,
+     5,
+     5,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 41,
+    "votes": [
+     4,
+     3,
+     5,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 42,
+    "votes": [
+     1,
+     4,
+     4,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 43,
+    "votes": [
+     5,
+     1,
+     2,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 44,
+    "votes": [
+     1,
+     2,
+     2,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 45,
+    "votes": [
+     1,
+     5,
+     4,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 46,
+    "votes": [
+     5,
+     4,
+     2,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 47,
+    "votes": [
+     4,
+     5,
+     1,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 48,
+    "votes": [
+     1,
+     4,
+     5,
+     5,
+     2
+    ]
+   },
+   {
+    "id": 49,
+    "votes": [
+     1,
+     4,
+     3,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 50,
+    "votes": [
+     1,
+     5,
+     3,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 51,
+    "votes": [
+     3,
+     1,
+     4,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 52,
+    "votes": [
+     3,
+     2,
+     1,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 53,
+    "votes": [
+     4,
+     4,
+     4,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 54,
+    "votes": [
+     5,
+     1,
+     1,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 55,
+    "votes": [
+     3,
+     3,
+     1,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 56,
+    "votes": [
+     2,
+     1,
+     5,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 57,
+    "votes": [
+     4,
+     2,
+     3,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 58,
+    "votes": [
+     3,
+     1,
+     1,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 59,
+    "votes": [
+     3,
+     4,
+     2,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 60,
+    "votes": [
+     5,
+     4,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 61,
+    "votes": [
+     3,
+     4,
+     2,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 62,
+    "votes": [
+     4,
+     5,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 63,
+    "votes": [
+     3,
+     4,
+     2,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 64,
+    "votes": [
+     5,
+     3,
+     5,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 65,
+    "votes": [
+     5,
+     5,
+     1,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 66,
+    "votes": [
+     2,
+     5,
+     2,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 67,
+    "votes": [
+     1,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 68,
+    "votes": [
+     2,
+     3,
+     4,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 69,
+    "votes": [
+     3,
+     1,
+     2,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 70,
+    "votes": [
+     1,
+     3,
+     5,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 71,
+    "votes": [
+     3,
+     2,
+     2,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 72,
+    "votes": [
+     4,
+     3,
+     5,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 73,
+    "votes": [
+     4,
+     1,
+     5,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 74,
+    "votes": [
+     4,
+     5,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 75,
+    "votes": [
+     4,
+     3,
+     4,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 76,
+    "votes": [
+     5,
+     3,
+     1,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 77,
+    "votes": [
+     5,
+     2,
+     4,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 78,
+    "votes": [
+     3,
+     4,
+     5,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 79,
+    "votes": [
+     1,
+     1,
+     4,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 80,
+    "votes": [
+     5,
+     4,
+     2,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 81,
+    "votes": [
+     5,
+     2,
+     3,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 82,
+    "votes": [
+     2,
+     4,
+     5,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 83,
+    "votes": [
+     5,
+     4,
+     4,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 84,
+    "votes": [
+     5,
+     2,
+     4,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 85,
+    "votes": [
+     3,
+     1,
+     4,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 86,
+    "votes": [
+     5,
+     4,
+     3,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 87,
+    "votes": [
+     5,
+     4,
+     1,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 88,
+    "votes": [
+     3,
+     2,
+     4,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 89,
+    "votes": [
+     1,
+     2,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 90,
+    "votes": [
+     3,
+     2,
+     1,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 91,
+    "votes": [
+     4,
+     1,
+     3,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 92,
+    "votes": [
+     4,
+     5,
+     4,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 93,
+    "votes": [
+     4,
+     2,
+     4,
+     5,
+     3
+    ]
+   },
+   {
+    "id": 94,
+    "votes": [
+     1,
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 95,
+    "votes": [
+     3,
+     4,
+     5,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 96,
+    "votes": [
+     2,
+     4,
+     5,
+     5,
+     2
+    ]
+   },
+   {
+    "id": 97,
+    "votes": [
+     5,
+     1,
+     3,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 98,
+    "votes": [
+     4,
+     5,
+     2,
+     5,
+     3
+    ]
+   },
+   {
+    "id": 99,
+    "votes": [
+     1,
+     1,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 100,
+    "votes": [
+     2,
+     3,
+     3,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 101,
+    "votes": [
+     4,
+     3,
+     2,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 102,
+    "votes": [
+     3,
+     4,
+     2,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 103,
+    "votes": [
+     3,
+     3,
+     2,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 104,
+    "votes": [
+     4,
+     2,
+     3,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 105,
+    "votes": [
+     2,
+     2,
+     2,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 106,
+    "votes": [
+     4,
+     4,
+     3,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 107,
+    "votes": [
+     5,
+     5,
+     3,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 108,
+    "votes": [
+     5,
+     5,
+     1,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 109,
+    "votes": [
+     4,
+     4,
+     2,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 110,
+    "votes": [
+     4,
+     4,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 111,
+    "votes": [
+     4,
+     2,
+     1,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 112,
+    "votes": [
+     2,
+     3,
+     1,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 113,
+    "votes": [
+     5,
+     3,
+     2,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 114,
+    "votes": [
+     5,
+     3,
+     4,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 115,
+    "votes": [
+     3,
+     2,
+     4,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 116,
+    "votes": [
+     2,
+     3,
+     3,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 117,
+    "votes": [
+     3,
+     3,
+     1,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 118,
+    "votes": [
+     2,
+     2,
+     5,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 119,
+    "votes": [
+     3,
+     5,
+     1,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 120,
+    "votes": [
+     1,
+     4,
+     4,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 121,
+    "votes": [
+     3,
+     5,
+     5,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 122,
+    "votes": [
+     5,
+     4,
+     2,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 123,
+    "votes": [
+     4,
+     4,
+     5,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 124,
+    "votes": [
+     5,
+     5,
+     1,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 125,
+    "votes": [
+     5,
+     4,
+     4,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 126,
+    "votes": [
+     4,
+     4,
+     5,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 127,
+    "votes": [
+     1,
+     4,
+     5,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 128,
+    "votes": [
+     5,
+     2,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 129,
+    "votes": [
+     4,
+     1,
+     3,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 130,
+    "votes": [
+     2,
+     2,
+     1,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 131,
+    "votes": [
+     1,
+     3,
+     4,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 132,
+    "votes": [
+     2,
+     1,
+     4,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 133,
+    "votes": [
+     1,
+     2,
+     5,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 134,
+    "votes": [
+     1,
+     2,
+     5,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 135,
+    "votes": [
+     3,
+     5,
+     2,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 136,
+    "votes": [
+     4,
+     1,
+     2,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 137,
+    "votes": [
+     2,
+     1,
+     4,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 138,
+    "votes": [
+     5,
+     2,
+     4,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 139,
+    "votes": [
+     4,
+     5,
+     5,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 140,
+    "votes": [
+     1,
+     2,
+     2,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 141,
+    "votes": [
+     2,
+     3,
+     3,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 142,
+    "votes": [
+     4,
+     2,
+     4,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 143,
+    "votes": [
+     1,
+     5,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 144,
+    "votes": [
+     3,
+     5,
+     4,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 145,
+    "votes": [
+     4,
+     2,
+     5,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 146,
+    "votes": [
+     5,
+     5,
+     2,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 147,
+    "votes": [
+     4,
+     5,
+     1,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 148,
+    "votes": [
+     3,
+     4,
+     5,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 149,
+    "votes": [
+     2,
+     5,
+     3,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 150,
+    "votes": [
+     1,
+     2,
+     5,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 151,
+    "votes": [
+     4,
+     3,
+     2,
+     2,
+     3
+    ]
+   },
+   {
+    "id": 152,
+    "votes": [
+     3,
+     5,
+     5,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 153,
+    "votes": [
+     4,
+     1,
+     4,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 154,
+    "votes": [
+     3,
+     1,
+     2,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 155,
+    "votes": [
+     3,
+     5,
+     4,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 156,
+    "votes": [
+     2,
+     4,
+     2,
+     2,
+     4
+    ]
+   },
+   {
+    "id": 157,
+    "votes": [
+     4,
+     3,
+     4,
+     4,
+     5
+    ]
+   },
+   {
+    "id": 158,
+    "votes": [
+     3,
+     5,
+     2,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 159,
+    "votes": [
+     4,
+     2,
+     4,
+     5,
+     3
+    ]
+   },
+   {
+    "id": 160,
+    "votes": [
+     3,
+     1,
+     2,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 161,
+    "votes": [
+     4,
+     2,
+     5,
+     5,
+     2
+    ]
+   },
+   {
+    "id": 162,
+    "votes": [
+     3,
+     2,
+     5,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 163,
+    "votes": [
+     1,
+     1,
+     2,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 164,
+    "votes": [
+     3,
+     5,
+     3,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 165,
+    "votes": [
+     1,
+     4,
+     4,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 166,
+    "votes": [
+     5,
+     5,
+     2,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 167,
+    "votes": [
+     2,
+     5,
+     4,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 168,
+    "votes": [
+     4,
+     3,
+     1,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 169,
+    "votes": [
+     2,
+     2,
+     5,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 170,
+    "votes": [
+     2,
+     5,
+     3,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 171,
+    "votes": [
+     4,
+     5,
+     4,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 172,
+    "votes": [
+     5,
+     1,
+     3,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 173,
+    "votes": [
+     5,
+     4,
+     4,
+     1,
+     4
+    ]
+   },
+   {
+    "id": 174,
+    "votes": [
+     4,
+     4,
+     4,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 175,
+    "votes": [
+     2,
+     2,
+     2,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 176,
+    "votes": [
+     5,
+     1,
+     5,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 177,
+    "votes": [
+     1,
+     4,
+     4,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 178,
+    "votes": [
+     5,
+     3,
+     1,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 179,
+    "votes": [
+     3,
+     5,
+     4,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 180,
+    "votes": [
+     4,
+     2,
+     3,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 181,
+    "votes": [
+     4,
+     1,
+     2,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 182,
+    "votes": [
+     3,
+     2,
+     5,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 183,
+    "votes": [
+     2,
+     3,
+     1,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 184,
+    "votes": [
+     1,
+     2,
+     4,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 185,
+    "votes": [
+     3,
+     5,
+     3,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 186,
+    "votes": [
+     5,
+     3,
+     3,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 187,
+    "votes": [
+     3,
+     1,
+     5,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 188,
+    "votes": [
+     3,
+     4,
+     3,
+     5,
+     5
+    ]
+   },
+   {
+    "id": 189,
+    "votes": [
+     2,
+     1,
+     1,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 190,
+    "votes": [
+     1,
+     3,
+     5,
+     1,
+     1
+    ]
+   },
+   {
+    "id": 191,
+    "votes": [
+     5,
+     5,
+     5,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 192,
+    "votes": [
+     4,
+     2,
+     2,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 193,
+    "votes": [
+     1,
+     1,
+     5,
+     3,
+     2
+    ]
+   },
+   {
+    "id": 194,
+    "votes": [
+     3,
+     1,
+     1,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 195,
+    "votes": [
+     2,
+     4,
+     1,
+     3,
+     1
+    ]
+   },
+   {
+    "id": 196,
+    "votes": [
+     5,
+     1,
+     2,
+     2,
+     5
+    ]
+   },
+   {
+    "id": 197,
+    "votes": [
+     2,
+     1,
+     1,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 198,
+    "votes": [
+     5,
+     3,
+     5,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 199,
+    "votes": [
+     5,
+     5,
+     5,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 200,
+    "votes": [
+     2,
+     2,
+     4,
+     2,
+     4
+    ]
+   }
+  ],
+  "themes": [
+   {
+    "label": "Ablauf",
+    "color": "blau",
+    "ids": [
+     1,
+     5,
+     9,
+     13,
+     17,
+     21,
+     25,
+     29,
+     33,
+     37,
+     41,
+     45,
+     49,
+     53,
+     57,
+     61,
+     65,
+     69,
+     73,
+     77,
+     81,
+     85,
+     89,
+     93,
+     97,
+     101,
+     105,
+     109,
+     113,
+     117,
+     121,
+     125,
+     129,
+     133,
+     137,
+     141,
+     145,
+     149,
+     153,
+     157,
+     161,
+     165,
+     169,
+     173,
+     177,
+     181,
+     185,
+     189,
+     193,
+     197
+    ]
+   },
+   {
+    "label": "Haltung",
+    "color": "rosa",
+    "ids": [
+     2,
+     6,
+     10,
+     14,
+     18,
+     22,
+     26,
+     30,
+     34,
+     38,
+     42,
+     46,
+     50,
+     54,
+     58,
+     62,
+     66,
+     70,
+     74,
+     78,
+     82,
+     86,
+     90,
+     94,
+     98,
+     102,
+     106,
+     110,
+     114,
+     118,
+     122,
+     126,
+     130,
+     134,
+     138,
+     142,
+     146,
+     150,
+     154,
+     158,
+     162,
+     166,
+     170,
+     174,
+     178,
+     182,
+     186,
+     190,
+     194,
+     198
+    ]
+   },
+   {
+    "label": "Werkzeuge",
+    "color": "grün",
+    "ids": [
+     3,
+     7,
+     11,
+     15,
+     19,
+     23,
+     27,
+     31,
+     35,
+     39,
+     43,
+     47,
+     51,
+     55,
+     59,
+     63,
+     67,
+     71,
+     75,
+     79,
+     83,
+     87,
+     91,
+     95,
+     99,
+     103,
+     107,
+     111,
+     115,
+     119,
+     123,
+     127,
+     131,
+     135,
+     139,
+     143,
+     147,
+     151,
+     155,
+     159,
+     163,
+     167,
+     171,
+     175,
+     179,
+     183,
+     187,
+     191,
+     195,
+     199
+    ]
+   },
+   {
+    "label": "Lernen",
+    "color": "orange",
+    "ids": [
+     4,
+     8,
+     12,
+     16,
+     20,
+     24,
+     28,
+     32,
+     36,
+     40,
+     44,
+     48,
+     52,
+     56,
+     60,
+     64,
+     68,
+     72,
+     76,
+     80,
+     84,
+     88,
+     92,
+     96,
+     100,
+     104,
+     108,
+     112,
+     116,
+     120,
+     124,
+     128,
+     132,
+     136,
+     140,
+     144,
+     148,
+     152,
+     156,
+     160,
+     164,
+     168,
+     172,
+     176,
+     180,
+     184,
+     188,
+     192,
+     196,
+     200
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Oben stehen Ideen, die Ruhe in die Übergabe bringen und die Patientin einbeziehen.",
+  "convergence": [
+   {
+    "label": "Ruhe schaffen",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabe"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Tempo gegen Gründlichkeit",
+    "a": "kurz und im Stehen",
+    "b": "jede Änderung laut gegenlesen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Nachtdienst",
+    "why": "Kaum eine Idee denkt an die Übergabe um 6 Uhr."
+   }
+  ]
+ }
+}

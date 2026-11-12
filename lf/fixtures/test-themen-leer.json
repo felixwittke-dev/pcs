@@ -1,0 +1,23 @@
+{
+ "step": {
+  "label": "1-2-4-all · Abschluss",
+  "phase": "Abschluss",
+  "q": "Was hat dich heute überrascht?",
+  "how": "",
+  "show": [
+   2
+  ],
+  "ls": "1-2-4-all"
+ },
+ "people": 0,
+ "rows": [],
+ "data": {
+  "themes": []
+ },
+ "ai": {
+  "headline": "Noch keine Beiträge.",
+  "convergence": [],
+  "tension": [],
+  "blind_spots": []
+ }
+}

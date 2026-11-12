@@ -1,0 +1,493 @@
+{
+ "step": {
+  "label": "Agreement & Certainty Matrix · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Agreement & Certainty Matrix",
+   "icon": "agreement-certainty-matrix",
+   "noun": "Herausforderungen",
+   "panel": [
+    "Wo sich Herausforderungen ballen",
+    "Wo die Einschätzungen auseinandergehen",
+    "Was auf keiner Karte steht"
+   ]
+  },
+  "q": "Was macht euch auf Station 4B gerade am meisten zu schaffen?",
+  "how": "Ordnet jede Herausforderung ein: Wie einig, wie sicher?",
+  "show": [
+   3
+  ]
+ },
+ "people": 28,
+ "rows": [
+  {
+   "id": 1,
+   "step": 3,
+   "body": "Dienstplan wird erst 5 Tage vorher fertig"
+  },
+  {
+   "id": 2,
+   "step": 3,
+   "body": "Übergabe dauert 45 statt 20 Minuten"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Pieper vom Oberarzt ist nachts oft nicht erreichbar"
+  },
+  {
+   "id": 4,
+   "step": 3,
+   "body": "Medikamentenschrank wird falsch bestückt"
+  },
+  {
+   "id": 5,
+   "step": 3,
+   "body": "Neue Software für die Pflegedoku, keiner weiß wie"
+  },
+  {
+   "id": 6,
+   "step": 3,
+   "body": "Wie viele Betten wir im Winter offen halten"
+  },
+  {
+   "id": 7,
+   "step": 3,
+   "body": "Leasingkräfte kennen die Abläufe nicht"
+  },
+  {
+   "id": 8,
+   "step": 3,
+   "body": "Sturzprophylaxe wird unterschiedlich gemacht"
+  },
+  {
+   "id": 9,
+   "step": 3,
+   "body": "Entlassmanagement: Sozialdienst kommt zu spät dazu"
+  },
+  {
+   "id": 10,
+   "step": 3,
+   "body": "Hygieneschulung nur online, keiner schaut sie an"
+  },
+  {
+   "id": 11,
+   "step": 3,
+   "body": "Wer darf Schmerzmittel nach Plan selbst geben?"
+  },
+  {
+   "id": 12,
+   "step": 3,
+   "body": "Pausen werden nicht genommen, weil keiner ablöst"
+  },
+  {
+   "id": 13,
+   "step": 3,
+   "body": "Angehörige rufen ständig an, wer gibt Auskunft?"
+  },
+  {
+   "id": 14,
+   "step": 3,
+   "body": "Die Jungen gehen nach zwei Jahren in die Leasingfirma"
+  },
+  {
+   "id": 15,
+   "step": 3,
+   "body": "Ob wir Primary Nursing einführen sollen"
+  },
+  {
+   "id": 16,
+   "step": 3,
+   "body": "Ärzte und Pflege reden aneinander vorbei bei der Visite"
+  },
+  {
+   "id": 17,
+   "step": 3,
+   "body": "Was Pflege eigentlich dokumentieren muss und was nicht"
+  },
+  {
+   "id": 18,
+   "step": 3,
+   "body": "Station soll 2027 mit der 4C zusammengelegt werden"
+  },
+  {
+   "id": 19,
+   "step": 3,
+   "body": "Ältere Kolleginnen wollen keine Nachtdienste mehr"
+  },
+  {
+   "id": 20,
+   "step": 3,
+   "body": "Gewalt von Patienten in der Nacht nimmt zu"
+  },
+  {
+   "id": 21,
+   "step": 3,
+   "body": "KI-Spracherkennung für die Doku testen?"
+  },
+  {
+   "id": 22,
+   "step": 3,
+   "body": "Teamleitung ist seit Monaten nur kommissarisch"
+  },
+  {
+   "id": 23,
+   "step": 3,
+   "body": "Niemand weiß, ob die Station in drei Jahren noch existiert"
+  },
+  {
+   "id": 24,
+   "step": 3,
+   "body": "Pflegekammer-Beitrag: austreten oder nicht?"
+  },
+  {
+   "id": 25,
+   "step": 3,
+   "body": "Streik im März: wer arbeitet, wer nicht?"
+  },
+  {
+   "id": 26,
+   "step": 3,
+   "body": "Bettenmangel auf Intensiv, wir bekommen die Verlegungen"
+  },
+  {
+   "id": 27,
+   "step": 3,
+   "body": "Azubis fühlen sich als Lückenfüller"
+  },
+  {
+   "id": 28,
+   "step": 3,
+   "body": "Handys im Dienst: erlaubt oder nicht?"
+  },
+  {
+   "id": 29,
+   "step": 3,
+   "body": "Kaffeemaschine kaputt seit August"
+  },
+  {
+   "id": 30,
+   "step": 3,
+   "body": "Zimmer 12 zieht, Fenster schließt nicht"
+  },
+  {
+   "id": 31,
+   "step": 3,
+   "body": "Dokumentation doppelt auf Papier und digital"
+  },
+  {
+   "id": 32,
+   "step": 3,
+   "body": "Notfallkoffer: wer prüft wann?"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "bands",
+  "bands": [
+   0.38,
+   0.75,
+   1.1
+  ],
+  "x": {
+   "label": "Wie sicher wissen wir, was wirkt?",
+   "lo": "sicher",
+   "hi": "unklar"
+  },
+  "y": {
+   "label": "Wie einig sind wir uns?",
+   "lo": "einig",
+   "hi": "uneinig"
+  },
+  "zones": [
+   {
+    "label": "Simple",
+    "hint": "Einfach",
+    "color": "grün",
+    "ids": [
+     1,
+     2,
+     4,
+     29,
+     30,
+     31,
+     32
+    ],
+    "summary": "Kleinkram mit klarer Lösung: diese Woche entscheiden und abhaken."
+   },
+   {
+    "label": "Complicated",
+    "hint": "Kompliziert",
+    "color": "blau",
+    "ids": [
+     3,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     13
+    ],
+    "summary": "Mit Fachwissen lösbar: Doku, Einarbeitung und Entlassung brauchen jemanden, der es einmal sauber regelt."
+   },
+   {
+    "label": "Complex",
+    "hint": "Komplex",
+    "color": "lila",
+    "ids": [
+     12,
+     14,
+     15,
+     16,
+     17,
+     19,
+     20,
+     26,
+     27,
+     28
+    ],
+    "summary": "Hier hilft kein Expertenwissen: Rollen, Nachwuchs und Zusammenarbeit mit den Ärzten müsst ihr gemeinsam ausprobieren."
+   },
+   {
+    "label": "Chaotic",
+    "hint": "Chaotisch",
+    "color": "koralle",
+    "ids": [
+     18,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "summary": "Zukunft der Station und Gewalt in der Nacht: zuerst handeln und Sicherheit schaffen, dann verstehen."
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "x": 0.12,
+    "y": 0.2,
+    "short": "Dienstplan zu spät"
+   },
+   {
+    "id": 2,
+    "x": 0.3,
+    "y": 0.18,
+    "short": "Übergabe zu lang"
+   },
+   {
+    "id": 3,
+    "x": 0.15,
+    "y": 0.35,
+    "short": "OA nachts nicht erreichbar"
+   },
+   {
+    "id": 4,
+    "x": 0.08,
+    "y": 0.1,
+    "short": "Schrank falsch bestückt"
+   },
+   {
+    "id": 5,
+    "x": 0.55,
+    "y": 0.25,
+    "short": "Doku-Software unklar"
+   },
+   {
+    "id": 6,
+    "x": 0.5,
+    "y": 0.45,
+    "short": "Betten im Winter"
+   },
+   {
+    "id": 7,
+    "x": 0.4,
+    "y": 0.3,
+    "short": "Leasingkräfte einarbeiten"
+   },
+   {
+    "id": 8,
+    "x": 0.35,
+    "y": 0.5,
+    "short": "Sturzprophylaxe uneinheitlich"
+   },
+   {
+    "id": 9,
+    "x": 0.45,
+    "y": 0.2,
+    "short": "Sozialdienst zu spät"
+   },
+   {
+    "id": 10,
+    "x": 0.2,
+    "y": 0.55,
+    "short": "Hygieneschulung online"
+   },
+   {
+    "id": 11,
+    "x": 0.3,
+    "y": 0.62,
+    "short": "Schmerzmittel nach Plan"
+   },
+   {
+    "id": 12,
+    "x": 0.55,
+    "y": 0.55,
+    "short": "Keine Pausen"
+   },
+   {
+    "id": 13,
+    "x": 0.62,
+    "y": 0.4,
+    "short": "Auskunft an Angehörige"
+   },
+   {
+    "id": 14,
+    "x": 0.78,
+    "y": 0.72,
+    "short": "Junge gehen zur Leasing"
+   },
+   {
+    "id": 15,
+    "x": 0.7,
+    "y": 0.8,
+    "short": "Primary Nursing?"
+   },
+   {
+    "id": 16,
+    "x": 0.6,
+    "y": 0.7,
+    "short": "Visite aneinander vorbei"
+   },
+   {
+    "id": 17,
+    "x": 0.72,
+    "y": 0.5,
+    "short": "Was muss in die Doku?"
+   },
+   {
+    "id": 18,
+    "x": 0.85,
+    "y": 0.85,
+    "short": "Zusammenlegung mit 4C"
+   },
+   {
+    "id": 19,
+    "x": 0.5,
+    "y": 0.82,
+    "short": "Ältere ohne Nacht"
+   },
+   {
+    "id": 20,
+    "x": 0.9,
+    "y": 0.6,
+    "short": "Gewalt nachts"
+   },
+   {
+    "id": 21,
+    "x": 0.92,
+    "y": 0.9,
+    "short": "KI-Diktat testen?"
+   },
+   {
+    "id": 22,
+    "x": 0.65,
+    "y": 0.95,
+    "short": "Leitung kommissarisch"
+   },
+   {
+    "id": 23,
+    "x": 0.97,
+    "y": 0.97,
+    "short": "Zukunft der Station"
+   },
+   {
+    "id": 24,
+    "x": 0.8,
+    "y": 0.95,
+    "short": "Pflegekammer"
+   },
+   {
+    "id": 25,
+    "x": 0.95,
+    "y": 0.75,
+    "short": "Streik im März"
+   },
+   {
+    "id": 26,
+    "x": 0.88,
+    "y": 0.4,
+    "short": "Verlegungen von Intensiv"
+   },
+   {
+    "id": 27,
+    "x": 0.42,
+    "y": 0.66,
+    "short": "Azubis als Lückenfüller"
+   },
+   {
+    "id": 28,
+    "x": 0.25,
+    "y": 0.85,
+    "short": "Handys im Dienst"
+   },
+   {
+    "id": 29,
+    "x": 0.05,
+    "y": 0.05,
+    "short": "Kaffeemaschine"
+   },
+   {
+    "id": 30,
+    "x": 0.1,
+    "y": 0.04,
+    "short": "Fenster Zimmer 12"
+   },
+   {
+    "id": 31,
+    "x": 0.33,
+    "y": 0.08,
+    "short": "Doku doppelt"
+   },
+   {
+    "id": 32,
+    "x": 0.18,
+    "y": 0.13,
+    "short": "Notfallkoffer prüfen"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten Herausforderungen hängen an Einigkeit, nicht an Wissen.",
+  "convergence": [
+   {
+    "label": "Complex",
+    "ids": [
+     12,
+     14,
+     15,
+     16,
+     17,
+     19
+    ],
+    "quote": "Dienstplan zu spät"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Complicated",
+    "a": "Das ist eine Fachfrage",
+    "b": "Das ist eine Haltungsfrage"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patient*innen",
+    "why": "Niemand fragt die Betroffenen."
+   }
+  ]
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft eintritt?",
+  "how": "Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 36,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "🚚 Elektro-LKW 🔋⚡ sofort"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "<script>alert(1)</script>"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "<b>fett</b> &amp; &lt;i&gt;"
+  },
+  {
+   "id": 4,
+   "step": 5,
+   "body": "Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz-Umsetzung"
+  },
+  {
+   "id": 5,
+   "step": 5,
+   "body": "تعاون مع شركات الشحن الأخرى"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "与其他物流公司合作建立共享车队"
+  },
+  {
+   "id": 7,
+   "step": 5,
+   "body": "שיתוף פעולה עם חברות אחרות"
+  },
+  {
+   "id": 8,
+   "step": 5,
+   "body": "‮umgedreht‬ Text mit Steuerzeichen"
+  },
+  {
+   "id": 9,
+   "step": 5,
+   "body": "Zeile 1\nZeile 2\nZeile 3"
+  },
+  {
+   "id": 10,
+   "step": 5,
+   "body": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+  },
+  {
+   "id": 11,
+   "step": 5,
+   "body": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "<i>x</i>",
+   "lo": "😀",
+   "hi": "🔥"
+  },
+  "y": {
+   "label": "Ach­se mit wei­chem Trenn­strich",
+   "lo": "",
+   "hi": ""
+  },
+  "zones": [
+   {
+    "label": "<img src=x onerror=alert(2)> Autonom",
+    "hint": "",
+    "summary": "<script>alert(3)</script>",
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "label": "绿色联盟 🌱",
+    "hint": "",
+    "summary": "中文的总结句子，比较长，看看换行是否正常工作，没有空格的长句子需要能够断开。",
+    "ids": [
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "label": "مستقبل الديزل",
+    "hint": "",
+    "summary": "",
+    "ids": [
+     8,
+     9
+    ]
+   },
+   {
+    "label": "Wer billig fährt",
+    "hint": "",
+    "summary": "🙂",
+    "ids": [
+     10,
+     11
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Kunden bündeln und Fahrer halten trägt in jeder Zukunft.",
+  "convergence": [
+   {
+    "label": "<img src=x onerror=alert(2)> Autonom",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "🚚 Elektro-LKW 🔋⚡ sofort"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

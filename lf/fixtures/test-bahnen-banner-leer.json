@@ -1,0 +1,115 @@
+{
+ "step": {
+  "label": "Purpose-to-Practice · alle",
+  "lsDef": {
+   "name": "Purpose-to-Practice",
+   "icon": "purpose-to-practice",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ]
+  },
+  "phase": "alle",
+  "q": "Banner ohne Satz und ohne Beiträge",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 8,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Beitrag 1: Freigabe und Zeitplan besser mit Rolle verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Beitrag 2: Schnittstelle und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Beitrag 3: Kunde und Feedback besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Beitrag 4: Team und Ritual besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Beitrag 5: Team und Abstimmung besser mit Kunde verbinden"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Beitrag 6: Kunde und Freigabe besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Beitrag 7: Feedback und Ritual besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Beitrag 8: Werkzeug und Freigabe besser mit Ritual verbinden"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "banner": {
+   "ids": []
+  },
+  "lanes": [
+   {
+    "label": "Principles",
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "label": "Practices",
+    "ids": [
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "x",
+  "convergence": [
+   {
+    "label": "Principles",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Principles",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

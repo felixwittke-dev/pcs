@@ -1,0 +1,316 @@
+{
+ "step": {
+  "label": "Min Specs · alle",
+  "lsDef": {
+   "name": "Min Specs",
+   "icon": "min-specs",
+   "panel": [
+    "A",
+    "B",
+    "C"
+   ],
+   "noun": "Regeln"
+  },
+  "phase": "alle",
+  "q": "Alle emphasis-Kombinationen",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 20,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Regel 1: Feedback und Wissen besser mit Abstimmung verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Regel 2: Budget und Schnittstelle besser mit Team verbinden"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Regel 3: Kunde und Ritual besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Regel 4: Abstimmung und Schnittstelle besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Regel 5: Feedback und Werkzeug besser mit Kunde verbinden"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Regel 6: Abstimmung und Werkzeug besser mit Zeitplan verbinden"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Regel 7: Kunde und Freigabe besser mit Rolle verbinden"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Regel 8: Schnittstelle und Zeitplan besser mit Kunde verbinden"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Regel 9: Wissen und Schnittstelle besser mit Werkzeug verbinden"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Regel 10: Kunde und Budget besser mit Abstimmung verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Regel 11: Kunde und Abstimmung besser mit Freigabe verbinden"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Regel 12: Abstimmung und Schnittstelle besser mit Freigabe verbinden"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Regel 13: Zeitplan und Schnittstelle besser mit Wissen verbinden"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Regel 14: Zeitplan und Wissen besser mit Feedback verbinden"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Regel 15: Freigabe und Rolle besser mit Team verbinden"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Regel 16: Freigabe und Wissen besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Regel 17: Team und Schnittstelle besser mit Kunde verbinden"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Regel 18: Rolle und Zeitplan besser mit Freigabe verbinden"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Regel 19: Budget und Zeitplan besser mit Werkzeug verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Regel 20: Team und Budget besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Regel 21: Werkzeug und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Regel 22: Freigabe und Kunde besser mit Team verbinden"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Regel 23: Werkzeug und Abstimmung besser mit Feedback verbinden"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Regel 24: Freigabe und Team besser mit Schnittstelle verbinden"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Regel 25: Freigabe und Kunde besser mit Ritual verbinden"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Regel 26: Zeitplan und Kunde besser mit Abstimmung verbinden"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Regel 27: Wissen und Werkzeug besser mit Freigabe verbinden"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Regel 28: Kunde und Wissen besser mit Abstimmung verbinden, weil wir sonst jedes Mal von vorn anfangen und niemand mehr weiß, was beim letzten Mal beschlossen wurde"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Regel 29: Kunde und Budget besser mit Freigabe verbinden"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Regel 30: Schnittstelle und Budget besser mit Zeitplan verbinden"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": false,
+  "badges": {
+   "1": "Yes",
+   "2": "Whatever",
+   "3": "Supercalifragilisticexpialigetisch-langes-Abzeichen ohne Leerzeichen",
+   "5": "",
+   "6": "No"
+  },
+  "lanes": [
+   {
+    "label": "Alles (muted)",
+    "emphasis": "muted",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "themes": [
+     {
+      "label": "Erste Hälfte",
+      "ids": [
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10,
+       11,
+       12,
+       13,
+       14,
+       15
+      ]
+     }
+    ]
+   },
+   {
+    "label": "Auch muted",
+    "emphasis": "muted",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ]
+   },
+   {
+    "label": "Strong A",
+    "emphasis": "strong",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "summary": "Die drei wichtigsten."
+   },
+   {
+    "label": "Strong B",
+    "emphasis": "strong",
+    "color": "rosa",
+    "ids": [
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "x",
+  "convergence": [
+   {
+    "label": "Strong A",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "Strong A",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

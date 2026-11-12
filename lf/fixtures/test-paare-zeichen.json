@@ -1,0 +1,140 @@
+{
+ "step": {
+  "label": "Wicked Questions",
+  "lsDef": {
+   "name": "Wicked Questions",
+   "icon": "wicked-questions",
+   "panel": [
+    "Spannungen, die viele spüren",
+    "Die Pole Seite an Seite",
+    "Was noch keiner fragt"
+   ]
+  },
+  "phase": "Test",
+  "q": "Unsere Schule im Wandel: Was ist beides wahr und beißt sich?",
+  "how": "Schreib auf, was du erlebst.",
+  "show": [
+   2
+  ]
+ },
+ "people": 50,
+ "rows": [
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\nZeile drei"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "<script>alert(1)</script> soll als Text erscheinen"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Siehe https://example.org/sehr/langer/pfad/zur/dokumentation?id=12345&ansicht=vollständig#abschnitt-7"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenaufbewahrungsschrankschlüsselanhänger"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "我们需要更多的跨部门合作和透明的沟通"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "مرحبا بالجميع، نحتاج إلى وقت أكثر"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "\"Anführungszeichen\" und 'Apostrophe' & Ampersand"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "   Leerzeichen am Anfang und Ende   "
+  },
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Mehr 🚀 und weniger 🐌 bitte! 🎉🎉"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "שיתוף פעולה בין צוותים חשוב לנו"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "<b>fett?</b> &amp; <img src=x onerror=alert(2)>"
+  }
+ ],
+ "data": {
+  "viz": "pairs",
+  "pairs": [
+   {
+    "question": "<script>alert(1)</script> Wie können wir zugleich 🚀 schnell und 我们 gründlich sein?",
+    "a": {
+     "label": "<b>Pol</b> 🐌",
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    "b": {
+     "label": "שיתוף פעולה",
+     "ids": [
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   },
+   {
+    "question": "Donaudampfschifffahrtsgesellschaftskapitänsmützenaufbewahrungsschrankschlüsselanhängerfrage?",
+    "a": {
+     "label": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "ids": [
+      11
+     ]
+    },
+    "b": {
+     "label": "x",
+     "ids": [
+      12
+     ]
+    }
+   }
+  ]
+ },
+ "ai": {
+  "headline": "<img src=x onerror=alert(5)>",
+  "convergence": [
+   {
+    "label": "<script>alert(1)</script> Wie können wir zugleich 🚀 schnell und 我们 gründlich sein?",
+    "ids": [
+     1
+    ],
+    "quote": "<b>q</b>"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

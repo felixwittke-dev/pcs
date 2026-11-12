@@ -1,0 +1,579 @@
+{
+ "step": {
+  "label": "Agreement & Certainty Matrix · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Agreement & Certainty Matrix",
+   "icon": "agreement-certainty-matrix",
+   "noun": "Herausforderungen",
+   "panel": [
+    "Wo sich Herausforderungen ballen",
+    "Wo die Einschätzungen auseinandergehen",
+    "Was auf keiner Karte steht"
+   ]
+  },
+  "q": "Wo stehen unsere Herausforderungen auf der Matrix?",
+  "how": "Ordnet jede Herausforderung ein: Wie einig, wie sicher?",
+  "show": [
+   3
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 1, alle sind sich halb einig"
+  },
+  {
+   "id": 2,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 2, alle sind sich halb einig"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 3, alle sind sich halb einig"
+  },
+  {
+   "id": 4,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 4, alle sind sich halb einig"
+  },
+  {
+   "id": 5,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 5, alle sind sich halb einig"
+  },
+  {
+   "id": 6,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 6, alle sind sich halb einig"
+  },
+  {
+   "id": 7,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 7, alle sind sich halb einig"
+  },
+  {
+   "id": 8,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 8, alle sind sich halb einig"
+  },
+  {
+   "id": 9,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 9, alle sind sich halb einig"
+  },
+  {
+   "id": 10,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 10, alle sind sich halb einig"
+  },
+  {
+   "id": 11,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 11, alle sind sich halb einig"
+  },
+  {
+   "id": 12,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 12, alle sind sich halb einig"
+  },
+  {
+   "id": 13,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 13, alle sind sich halb einig"
+  },
+  {
+   "id": 14,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 14, alle sind sich halb einig"
+  },
+  {
+   "id": 15,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 15, alle sind sich halb einig"
+  },
+  {
+   "id": 16,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 16, alle sind sich halb einig"
+  },
+  {
+   "id": 17,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 17, alle sind sich halb einig"
+  },
+  {
+   "id": 18,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 18, alle sind sich halb einig"
+  },
+  {
+   "id": 19,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 19, alle sind sich halb einig"
+  },
+  {
+   "id": 20,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 20, alle sind sich halb einig"
+  },
+  {
+   "id": 21,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 21, alle sind sich halb einig"
+  },
+  {
+   "id": 22,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 22, alle sind sich halb einig"
+  },
+  {
+   "id": 23,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 23, alle sind sich halb einig"
+  },
+  {
+   "id": 24,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 24, alle sind sich halb einig"
+  },
+  {
+   "id": 25,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 25, alle sind sich halb einig"
+  },
+  {
+   "id": 26,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 26, alle sind sich halb einig"
+  },
+  {
+   "id": 27,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 27, alle sind sich halb einig"
+  },
+  {
+   "id": 28,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 28, alle sind sich halb einig"
+  },
+  {
+   "id": 29,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 29, alle sind sich halb einig"
+  },
+  {
+   "id": 30,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 30, alle sind sich halb einig"
+  },
+  {
+   "id": 31,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 31, alle sind sich halb einig"
+  },
+  {
+   "id": 32,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 32, alle sind sich halb einig"
+  },
+  {
+   "id": 33,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 33, alle sind sich halb einig"
+  },
+  {
+   "id": 34,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 34, alle sind sich halb einig"
+  },
+  {
+   "id": 35,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 35, alle sind sich halb einig"
+  },
+  {
+   "id": 36,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 36, alle sind sich halb einig"
+  },
+  {
+   "id": 37,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 37, alle sind sich halb einig"
+  },
+  {
+   "id": 38,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 38, alle sind sich halb einig"
+  },
+  {
+   "id": 39,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 39, alle sind sich halb einig"
+  },
+  {
+   "id": 40,
+   "step": 3,
+   "body": "Gleiche Stelle Nummer 40, alle sind sich halb einig"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "bands",
+  "bands": [
+   0.38,
+   0.75,
+   1.1
+  ],
+  "x": {
+   "label": "Wie sicher wissen wir, was wirkt?",
+   "lo": "sicher",
+   "hi": "unklar"
+  },
+  "y": {
+   "label": "Wie einig sind wir uns?",
+   "lo": "einig",
+   "hi": "uneinig"
+  },
+  "zones": [
+   {
+    "label": "Simple",
+    "hint": "Einfach",
+    "color": "grün",
+    "ids": [],
+    "summary": ""
+   },
+   {
+    "label": "Complicated",
+    "hint": "Kompliziert",
+    "color": "blau",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "summary": "Alles liegt auf einem Fleck."
+   },
+   {
+    "label": "Complex",
+    "hint": "Komplex",
+    "color": "lila",
+    "ids": [],
+    "summary": ""
+   },
+   {
+    "label": "Chaotic",
+    "hint": "Chaotisch",
+    "color": "koralle",
+    "ids": [],
+    "summary": ""
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 1"
+   },
+   {
+    "id": 2,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 2"
+   },
+   {
+    "id": 3,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 3"
+   },
+   {
+    "id": 4,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 4"
+   },
+   {
+    "id": 5,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 5"
+   },
+   {
+    "id": 6,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 6"
+   },
+   {
+    "id": 7,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 7"
+   },
+   {
+    "id": 8,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 8"
+   },
+   {
+    "id": 9,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 9"
+   },
+   {
+    "id": 10,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 10"
+   },
+   {
+    "id": 11,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 11"
+   },
+   {
+    "id": 12,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 12"
+   },
+   {
+    "id": 13,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 13"
+   },
+   {
+    "id": 14,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 14"
+   },
+   {
+    "id": 15,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 15"
+   },
+   {
+    "id": 16,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 16"
+   },
+   {
+    "id": 17,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 17"
+   },
+   {
+    "id": 18,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 18"
+   },
+   {
+    "id": 19,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 19"
+   },
+   {
+    "id": 20,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 20"
+   },
+   {
+    "id": 21,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 21"
+   },
+   {
+    "id": 22,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 22"
+   },
+   {
+    "id": 23,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 23"
+   },
+   {
+    "id": 24,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 24"
+   },
+   {
+    "id": 25,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 25"
+   },
+   {
+    "id": 26,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 26"
+   },
+   {
+    "id": 27,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 27"
+   },
+   {
+    "id": 28,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 28"
+   },
+   {
+    "id": 29,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 29"
+   },
+   {
+    "id": 30,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 30"
+   },
+   {
+    "id": 31,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 31"
+   },
+   {
+    "id": 32,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 32"
+   },
+   {
+    "id": 33,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 33"
+   },
+   {
+    "id": 34,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 34"
+   },
+   {
+    "id": 35,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 35"
+   },
+   {
+    "id": 36,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 36"
+   },
+   {
+    "id": 37,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 37"
+   },
+   {
+    "id": 38,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 38"
+   },
+   {
+    "id": 39,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 39"
+   },
+   {
+    "id": 40,
+    "x": 0.5,
+    "y": 0.5,
+    "short": "Fleck 40"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten Herausforderungen hängen an Einigkeit, nicht an Wissen.",
+  "convergence": [
+   {
+    "label": "Complex",
+    "ids": [],
+    "quote": "Fleck 1"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Complicated",
+    "a": "Das ist eine Fachfrage",
+    "b": "Das ist eine Haltungsfrage"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Patient*innen",
+    "why": "Niemand fragt die Betroffenen."
+   }
+  ]
+ }
+}

@@ -1,0 +1,354 @@
+{
+ "step": {
+  "label": "25/10 Crowd Sourcing",
+  "lsDef": {
+   "name": "25/10 Crowd Sourcing",
+   "icon": "25-10-crowdsourcing",
+   "panel": [
+    "Was ganz oben steht",
+    "Wo die Wertungen auseinandergehen",
+    "Mutige Ideen weiter unten"
+   ],
+   "noun": "Ideen"
+  },
+  "phase": "Test",
+  "q": "Wenn du zehnmal mutiger wärst: Was würdest du tun, damit Übergaben auf unserer Station sicherer werden?",
+  "how": "Fünf Runden, je 1 bis 5 Punkte.",
+  "show": [
+   2
+  ]
+ },
+ "people": 20,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Mehr 🚀 und weniger 🐌 bitte! 🎉🎉"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenaufbewahrungsschrankschlüsselanhänger"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Siehe https://example.org/sehr/langer/pfad/zur/dokumentation?id=12345&ansicht=vollständig#abschnitt-7"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "<script>alert(1)</script> soll als Text erscheinen"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "<b>fett?</b> &amp; <img src=x onerror=alert(2)>"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "שיתוף פעולה בין צוותים חשוב לנו"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "我们需要更多的跨部门合作和透明的沟通"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "مرحبا بالجميع، نحتاج إلى وقت أكثر"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "\"Anführungszeichen\" und 'Apostrophe' & Ampersand"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Zeile eins\nZeile zwei\nZeile drei"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "   Leerzeichen am Anfang und Ende   "
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Übergabe am Bett statt im Stationszimmer, mit Patientin dabei"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Handys während der Übergabe in eine Kiste, ohne Ausnahme"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Eine feste Checkliste mit fünf Punkten, laminiert an jedem Bett"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Ärztinnen kommen zur Pflegeübergabe dazu, zehn Minuten reichen"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Neue Kolleginnen übergeben in der ersten Woche immer zu zweit"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Wer übergibt, darf nicht unterbrochen werden. Rote Weste an."
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Die Nachtschicht schreibt drei Sätze pro Patient, nicht mehr"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Einmal im Monat eine missglückte Übergabe nachspielen, ohne Schuld"
+  }
+ ],
+ "data": {
+  "viz": "ranking",
+  "items": [
+   {
+    "id": 1,
+    "votes": [
+     5,
+     3,
+     3,
+     5,
+     1
+    ]
+   },
+   {
+    "id": 2,
+    "votes": [
+     4,
+     2,
+     1,
+     2,
+     1
+    ]
+   },
+   {
+    "id": 3,
+    "votes": [
+     3,
+     4,
+     2,
+     4,
+     5
+    ]
+   },
+   {
+    "id": 4,
+    "votes": [
+     1,
+     5,
+     2,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 5,
+    "votes": [
+     4,
+     3,
+     2,
+     4,
+     2
+    ]
+   },
+   {
+    "id": 6,
+    "votes": [
+     1,
+     2,
+     5,
+     5,
+     4
+    ]
+   },
+   {
+    "id": 7,
+    "votes": [
+     2,
+     2,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 8,
+    "votes": [
+     2,
+     2,
+     2,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 9,
+    "votes": [
+     2,
+     5,
+     2,
+     2,
+     2
+    ]
+   },
+   {
+    "id": 10,
+    "votes": [
+     4,
+     3,
+     1,
+     3,
+     4
+    ]
+   },
+   {
+    "id": 11,
+    "votes": [
+     2,
+     2,
+     3,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 12,
+    "votes": [
+     3,
+     5,
+     5,
+     1,
+     5
+    ]
+   },
+   {
+    "id": 13,
+    "votes": [
+     3,
+     1,
+     3,
+     3,
+     3
+    ]
+   },
+   {
+    "id": 14,
+    "votes": [
+     4,
+     3,
+     2,
+     4,
+     4
+    ]
+   },
+   {
+    "id": 15,
+    "votes": [
+     2,
+     1,
+     3,
+     1,
+     3
+    ]
+   },
+   {
+    "id": 16,
+    "votes": [
+     4,
+     1,
+     5,
+     4,
+     3
+    ]
+   },
+   {
+    "id": 17,
+    "votes": [
+     4,
+     5,
+     1,
+     4,
+     1
+    ]
+   },
+   {
+    "id": 18,
+    "votes": [
+     2,
+     5,
+     2,
+     1,
+     2
+    ]
+   },
+   {
+    "id": 19,
+    "votes": [
+     4,
+     3,
+     5,
+     3,
+     5
+    ]
+   },
+   {
+    "id": 20,
+    "votes": [
+     3,
+     4,
+     1,
+     5,
+     3
+    ]
+   }
+  ],
+  "themes": [
+   {
+    "label": "<i>Thema</i> 🚀",
+    "color": "blau",
+    "ids": [
+     1,
+     4,
+     5
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "<script>alert(3)</script> Überschrift",
+  "convergence": [
+   {
+    "label": "<b>x</b>",
+    "ids": [
+     4
+    ],
+    "quote": "<img src=x onerror=alert(4)>"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

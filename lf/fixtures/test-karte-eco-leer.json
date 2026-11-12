@@ -1,0 +1,243 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten?",
+  "how": "Legt jede Aktivität auf die Schleife.",
+  "show": [
+   2
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Laufgruppe für Eltern während des Kindertrainings"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "E-Sport-Ecke im Vereinsheim"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Inklusives Fußballteam"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Yoga am Sonntag im Park"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Jugendfußball mit 14 Mannschaften"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Kinderturnen am Dienstag"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Sommerfest"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Seniorengymnastik"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Tennisabteilung mit eigener Halle"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Vereinszeitung digital"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Weihnachtsfeier im alten Format abschaffen"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Clubhaus-Gastro verpachten statt selbst führen"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Abteilungen zusammenlegen: Turnen und Leichtathletik"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Ehrenamt in kleinen Aufgaben statt Ämtern"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Beitragsmodell für Familien neu"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "summary": "",
+    "phase": "birth"
+   },
+   {
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "summary": "",
+    "phase": "maturity"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "rigidity"
+   },
+   {
+    "ids": [
+     11,
+     12
+    ],
+    "summary": "",
+    "phase": "destruction"
+   },
+   {
+    "ids": [
+     13,
+     14,
+     15
+    ],
+    "summary": "",
+    "phase": "renewal"
+   },
+   {
+    "ids": [],
+    "summary": "",
+    "phase": "poverty"
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.2,
+    "short": "Eltern-Laufgruppe"
+   },
+   {
+    "id": 2,
+    "t": 0.4,
+    "short": "E-Sport-Ecke"
+   },
+   {
+    "id": 3,
+    "t": 0.6,
+    "short": "Inklusionsteam"
+   },
+   {
+    "id": 4,
+    "t": 0.8,
+    "short": "Park-Yoga"
+   },
+   {
+    "id": 5,
+    "t": 0.14,
+    "short": "Jugendfußball"
+   },
+   {
+    "id": 6,
+    "t": 0.29,
+    "short": "Kinderturnen"
+   },
+   {
+    "id": 7,
+    "t": 0.43,
+    "short": "Sommerfest"
+   },
+   {
+    "id": 8,
+    "t": 0.57,
+    "short": "Seniorengymnastik"
+   },
+   {
+    "id": 9,
+    "t": 0.71,
+    "short": "Tennishalle"
+   },
+   {
+    "id": 10,
+    "t": 0.86,
+    "short": "Vereinszeitung"
+   },
+   {
+    "id": 11,
+    "t": 0.33,
+    "short": "Weihnachtsfeier alt"
+   },
+   {
+    "id": 12,
+    "t": 0.67,
+    "short": "Gastro verpachten"
+   },
+   {
+    "id": 13,
+    "t": 0.25,
+    "short": "Turnen + LA zusammen"
+   },
+   {
+    "id": 14,
+    "t": 0.5,
+    "short": "Mini-Ehrenamt"
+   },
+   {
+    "id": 15,
+    "t": 0.75,
+    "short": "Familienbeitrag"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet die Ehrenamtlichen, die den neuen Ideen fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [],
+    "quote": "Laufgruppe für Elter"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

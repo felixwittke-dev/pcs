@@ -1,0 +1,366 @@
+{
+ "step": {
+  "label": "nine-whys · Bibliothek Süd",
+  "phase": "Bibliothek Süd",
+  "q": "Warum gibt es unsere Stadtteilbibliothek wirklich, und für wen wollen wir in fünf Jahren da sein? Erzählt aus eurem Alltag an der Theke, in der Kinderecke und bei den Veranstaltungen.",
+  "how": "Lasst euch Zeit, erzählt ausführlich, mit Beispielen.",
+  "show": [
+   2
+  ],
+  "ls": "nine-whys"
+ },
+ "people": 18,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse."
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss."
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat."
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss."
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet."
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind."
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss. Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann."
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat. Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann."
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt."
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse."
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann. Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen."
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind. Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen."
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen."
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse."
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss."
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen."
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt."
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen."
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen."
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag haben wir nur vier Stunden geöffnet. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss."
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss. Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt."
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen."
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse."
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen."
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen."
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen."
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat."
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind."
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind. Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen. Viele kommen gar nicht wegen der Bücher, sondern weil es der einzige warme und ruhige Ort im Viertel ist, an dem man nichts kaufen muss."
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat."
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind."
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat."
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich arbeite seit vielen Jahren an der Ausleihtheke und erlebe jeden Tag, wie Menschen mit ganz unterschiedlichen Anliegen zu uns kommen."
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns treffen, statt in Hinterzimmern von Kneipen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Online-Formularen der Stadt zu helfen, weil das Bürgeramt keine Termine hat. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Am Nachmittag sitzen Schülerinnen und Schüler an den Tischen, machen Hausaufgaben und fragen uns, wie man eine Quelle richtig angibt. Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Mehr als ein Ort zum Ausleihen",
+    "color": "türkis",
+    "ids": [
+     25,
+     9,
+     38,
+     2,
+     37,
+     19,
+     40,
+     7,
+     1,
+     39,
+     3,
+     31,
+     30,
+     33
+    ]
+   },
+   {
+    "label": "Öffnungszeiten für Familien",
+    "color": "orange",
+    "ids": [
+     29,
+     8,
+     16,
+     6,
+     34,
+     10,
+     5,
+     24
+    ]
+   },
+   {
+    "label": "Ehrenamt und Überlastung",
+    "color": "koralle",
+    "ids": [
+     14,
+     23,
+     11,
+     17,
+     26,
+     13,
+     22,
+     21,
+     35
+    ]
+   },
+   {
+    "label": "Gemeinsam mit dem Viertel planen",
+    "color": "grün",
+    "ids": [
+     36,
+     32,
+     28,
+     12,
+     4,
+     18,
+     20
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die Bibliothek ist längst das Wohnzimmer des Viertels, ein warmer Ort ohne Konsumzwang, an dem Hausaufgaben, Behördenformulare und Nachbarschaft zusammenkommen; das Team leistet dabei Sozialarbeit, für die es weder ausgebildet noch ausgestattet ist, und die Öffnungszeiten schließen genau die Familien aus, die den Ort am meisten bräuchten.",
+  "convergence": [
+   {
+    "label": "Mehr als ein Ort zum Ausleihen",
+    "ids": [
+     25,
+     9,
+     38,
+     2,
+     37,
+     19,
+     40,
+     7,
+     1,
+     39,
+     3,
+     31,
+     30,
+     33
+    ],
+    "quote": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Unsere Öffnungszeiten passen nicht zu Familien, die bis 18 Uhr arbeiten, und am Samstag h"
+   },
+   {
+    "label": "Öffnungszeiten für Familien",
+    "ids": [
+     29,
+     8,
+     16,
+     6,
+     34,
+     10,
+     5,
+     24
+    ],
+    "quote": "Wir sollten mit dem Stadtteilzentrum und der Grundschule enger planen, damit Angebote nicht doppelt laufen oder sich gegenseitig das Publikum wegnehmen. Ältere Menschen bringen ihr Handy mit und bitten uns, ihnen bei Onl"
+   },
+   {
+    "label": "Ehrenamt und Überlastung",
+    "ids": [
+     14,
+     23,
+     11,
+     17,
+     26,
+     13,
+     22,
+     21,
+     35
+    ],
+    "quote": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden. Wenn wir mehr Platz für Gruppen hätten, könnten Initiativen aus dem Viertel sich bei uns "
+   },
+   {
+    "label": "Gemeinsam mit dem Viertel planen",
+    "ids": [
+     36,
+     32,
+     28,
+     12,
+     4,
+     18,
+     20
+    ],
+    "quote": "Für mich wäre ein Erfolg, wenn in fünf Jahren jedes Kind aus dem Stadtteil mindestens einmal bei uns war, nicht nur mit der Schulklasse. Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbe"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Ehrenamt und Überlastung",
+    "a": "Die Veranstaltungen mit Lesepaten laufen gut, aber sie hängen an zwei Ehrenamtlichen, die beide über siebzig sind.",
+    "b": "Ich sehe auch, dass manche Kolleginnen sich überfordert fühlen, weil sie Sozialarbeit leisten, für die sie nie ausgebildet wurden."
+   },
+   {
+    "label": "Mehr als ein Ort zum Ausleihen",
+    "a": "Ich wünsche mir, dass wir diese Rolle offen benennen, statt so zu tun, als wären wir nur ein Ort zum Ausleihen.",
+    "b": "Die Digitalisierung hat uns E-Medien gebracht, aber kaum jemand im Viertel weiß, dass man mit dem Ausweis auch Zeitungen online lesen kann."
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Jugendliche ab 14",
+    "why": "In keiner einzigen Geschichte kommen Jugendliche ab 14 vor, obwohl sie laut Statistik die größte Gruppe der Nichtnutzenden im Viertel sind und am Nachmittag draußen vor der Tür stehen."
+   }
+  ]
+ }
+}

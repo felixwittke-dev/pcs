@@ -1,0 +1,160 @@
+{
+ "step": {
+  "label": "Appreciative Interviews · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Appreciative Interviews",
+   "icon": "appreciative-interviews",
+   "noun": "Geschichten",
+   "panel": [
+    "Was Erfolg möglich gemacht hat",
+    "Wo Geschichten sich widersprechen",
+    "Was in keiner Geschichte vorkommt"
+   ]
+  },
+  "q": "Erzählt von einem Moment, in dem Zusammenarbeit wirklich gelungen ist.",
+  "how": "Paare erzählen sich Erfolgsgeschichten.",
+  "show": [
+   2
+  ]
+ },
+ "people": 8,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Frühjahr, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehe"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Hat einfach geklappt."
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Wir haben uns jeden Morgen getroffen und kurz besprochen, was ansteht."
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach ges So war das."
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Die Chefin hat zugehört."
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Drei Wörter nur."
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehen sollte. Es war im Herbst, als wir mit dem neuen Kunden anfingen, und niemand wusste so genau, wie das gehe"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Gemeinsam gefeiert, als es fertig war."
+  }
+ ],
+ "data": {
+  "viz": "patterns",
+  "patterns": [
+   {
+    "label": "Eine Erfolgsbedingung mit einem außergewöhnlich langen Namen, den die KI nicht kürzen konnte, weil sie alles sagen wollte",
+    "ids": [
+     1,
+     2,
+     3,
+     7,
+     8
+    ],
+    "quote": "Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach ges",
+    "quoteId": 4
+   },
+   {
+    "label": "Ohne Zitat",
+    "ids": [
+     2,
+     5,
+     6
+    ]
+   },
+   {
+    "label": "Zitat mit unbekannter Quelle",
+    "ids": [
+     3,
+     5,
+     77
+    ],
+    "quote": "kurz besprochen",
+    "quoteId": 77
+   },
+   {
+    "label": "Zitat steht nicht in der Geschichte",
+    "ids": [
+     8,
+     1
+    ],
+    "quote": "das steht nirgends",
+    "quoteId": 8
+   },
+   {
+    "label": "",
+    "ids": [
+     6
+    ],
+    "color": "neonpink"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusammenarbeit gelingt, wenn jemand den Raum hält.",
+  "convergence": [
+   {
+    "label": "Eine Erfolgsbedingung mit einem außergewöhnlich langen Namen, den die KI nicht kürzen konnte, weil sie alles sagen wollte",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach gesagt, dass wir das gemeinsam schaffen, egal wie lange es dauert, und dass niemand allein bleibt, Und dann hat sie einfach ges"
+   },
+   {
+    "label": "Ohne Zitat",
+    "ids": [
+     2,
+     5,
+     6
+    ],
+    "quote": ""
+   },
+   {
+    "label": "Zitat mit unbekannter Quelle",
+    "ids": [
+     3,
+     5,
+     77
+    ],
+    "quote": "kurz besprochen"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Eine Erfolgsbedingung mit einem außergewöhnlich langen Namen, den die KI nicht kürzen konnte, weil sie alles sagen wollte",
+    "a": "Struktur",
+    "b": "Freiheit"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Konflikte",
+    "why": "Keine Geschichte erzählt von einem gelösten Streit."
+   }
+  ]
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "step": {
+  "label": "What I Need From You · alle",
+  "lsDef": {
+   "name": "What I Need From You",
+   "icon": "what-i-need",
+   "panel": [
+    "Wo Zusagen tragen",
+    "Wo es hakt",
+    "Was niemand erbittet"
+   ],
+   "noun": "Bitten"
+  },
+  "phase": "alle",
+  "q": "Was braucht ihr von den anderen Bereichen, damit der Winter ohne Chaos läuft?",
+  "how": "Schreib einen Gedanken pro Post-it.",
+  "show": [
+   2
+  ]
+ },
+ "people": 16,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Störmeldungen bitte mit Straße und Hausnummer"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Freigaben für Baustellen innerhalb von 48 h"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Ein fester Ansprechpartner im Kundenservice"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Keine Zählerwechsel ohne Ankündigung"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Vorab-Info bei geplanten Abschaltungen"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Verständliche Texte für Rechnungen"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Rückruf bei Beschwerden innerhalb eines Tages"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Zugriff auf den Baustellenkalender"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Tarifänderungen 4 Wochen vorher"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Ehrliche Zahlen zu Ausfällen"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Weniger Fachsprache in Mails"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Ein Kanal statt drei"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Passwort-Resets nicht per Telefon"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Projekte früh anmelden"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Testdaten statt Echtdaten"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Feedback zum neuen Portal"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": false,
+  "badges": {
+   "1": "Whatever",
+   "2": "Ja, aber erst nach der Umstellung des Abrechnungssystems im zweiten Quartal 2027",
+   "3": "I will try",
+   "4": "Vielleicht",
+   "5": "No",
+   "6": "Ja",
+   "7": "Yes",
+   "8": "Whatever",
+   "9": "Ja, aber erst nach der Umstellung des Abrechnungssystems im zweiten Quartal 2027",
+   "10": "I will try",
+   "11": "Vielleicht",
+   "12": "No",
+   "13": "Ja",
+   "14": "Yes",
+   "15": "Whatever",
+   "16": "Ja, aber erst nach der Umstellung des Abrechnungssystems im zweiten Quartal 2027",
+   "999": "Yes"
+  },
+  "lanes": [
+   {
+    "label": "Netzbetrieb",
+    "color": "blau",
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "label": "Kundenservice",
+    "color": "lila",
+    "ids": [
+     5,
+     6,
+     7,
+     8
+    ]
+   },
+   {
+    "label": "Vertrieb",
+    "color": "orange",
+    "ids": [
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "label": "IT",
+    "color": "türkis",
+    "ids": [
+     13,
+     14,
+     15,
+     16
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zusagen tragen dort, wo es konkret ist.",
+  "convergence": [
+   {
+    "label": "Netzbetrieb",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   },
+   {
+    "label": "Kundenservice",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Das kam mehrfach."
+   }
+  ],
+  "tension": [
+   {
+    "label": "IT",
+    "a": "schnell entscheiden",
+    "b": "alle mitnehmen"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer fehlt im Raum",
+    "why": "Die Nachtschicht war nicht dabei."
+   }
+  ]
+ }
+}

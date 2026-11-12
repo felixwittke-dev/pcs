@@ -1,0 +1,546 @@
+{
+ "step": {
+  "label": "Wicked Questions",
+  "lsDef": {
+   "name": "Wicked Questions",
+   "icon": "wicked-questions",
+   "panel": [
+    "Spannungen, die viele spüren",
+    "Die Pole Seite an Seite",
+    "Was noch keiner fragt"
+   ]
+  },
+  "phase": "Test",
+  "q": "Unsere Schule im Wandel: Was ist beides wahr und beißt sich?",
+  "how": "Schreib auf, was du erlebst.",
+  "show": [
+   2
+  ]
+ },
+ "people": 50,
+ "rows": [
+  {
+   "id": 49,
+   "step": 2,
+   "body": "Wir sind schon jetzt zwei Kapitel hinten"
+  },
+  {
+   "id": 40,
+   "step": 2,
+   "body": "Wer zu spät kommt, wartet draußen"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Eltern wissen viel über ihr Kind"
+  },
+  {
+   "id": 42,
+   "step": 2,
+   "body": "Ein Gespräch wirkt mehr als ein Eintrag"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Förderplan ernst nehmen, nicht abheften"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Vergleichsarbeiten messen den Plan"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Kinder kommen schon übermüdet vom Handy"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Differenzieren kostet Kraft, lohnt sich aber"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Elternabende sind zu selten"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Mehr Hospitation durch Eltern"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "Inklusion ohne Doppelbesetzung ist Show"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Gemeinsame Klassenarbeiten sparen Zeit"
+  },
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Lena braucht dreimal so lange, und sie lernt"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Die Welt draußen ist digital"
+  },
+  {
+   "id": 37,
+   "step": 2,
+   "body": "Krankenstand ist hoch"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Handschrift lernt man nur mit der Hand"
+  },
+  {
+   "id": 41,
+   "step": 2,
+   "body": "Ohne Beziehung keine Erziehung"
+  },
+  {
+   "id": 53,
+   "step": 2,
+   "body": "Kinder kommen schon übermüdet vom Handy"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Lernapps geben sofort Rückmeldung"
+  },
+  {
+   "id": 62,
+   "step": 2,
+   "body": "Schulleitung sollte öfter in die Klassen kommen"
+  },
+  {
+   "id": 63,
+   "step": 2,
+   "body": "Hausaufgaben abschaffen?"
+  },
+  {
+   "id": 38,
+   "step": 2,
+   "body": "Konsequenz gibt Sicherheit"
+  },
+  {
+   "id": 61,
+   "step": 2,
+   "body": "Die Mensa ist zu laut"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Wir sollten Material teilen statt horten"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "Lernbüros testen"
+  },
+  {
+   "id": 36,
+   "step": 2,
+   "body": "Erst was weglassen, dann was Neues"
+  },
+  {
+   "id": 50,
+   "step": 2,
+   "body": "Tablets machen Gruppenarbeit leichter"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Mails um 23 Uhr beantworte ich nicht"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Eltern wollen weniger Bildschirm"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Wir sind schon jetzt zwei Kapitel hinten"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Kreativität braucht Spielraum"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Ich will nicht jede Stunde absprechen"
+  },
+  {
+   "id": 52,
+   "step": 2,
+   "body": "Lernapps geben sofort Rückmeldung"
+  },
+  {
+   "id": 43,
+   "step": 2,
+   "body": "Manche Regeln verstehen die Kinder nicht"
+  },
+  {
+   "id": 39,
+   "step": 2,
+   "body": "Handyverbot muss für alle gelten"
+  },
+  {
+   "id": 51,
+   "step": 2,
+   "body": "Die Welt draußen ist digital"
+  },
+  {
+   "id": 57,
+   "step": 2,
+   "body": "Wer entscheidet eigentlich über das Budget?"
+  },
+  {
+   "id": 58,
+   "step": 2,
+   "body": "Mehr Grün auf dem Schulhof"
+  },
+  {
+   "id": 44,
+   "step": 2,
+   "body": "Lena braucht dreimal so lange, und sie lernt"
+  },
+  {
+   "id": 46,
+   "step": 2,
+   "body": "Förderplan ernst nehmen, nicht abheften"
+  },
+  {
+   "id": 35,
+   "step": 2,
+   "body": "Jedes neue Projekt kommt oben drauf"
+  },
+  {
+   "id": 56,
+   "step": 2,
+   "body": "Die Kopierer sind immer kaputt"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Vertrauen statt Kontrolle"
+  },
+  {
+   "id": 47,
+   "step": 2,
+   "body": "Im Mai ist Prüfung, Punkt"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Ohne WLAN in jedem Raum geht nichts"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Ich will Zeit für die Leisen haben"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Schülerinnen wollen mitgestalten"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Tablets machen Gruppenarbeit leichter"
+  },
+  {
+   "id": 45,
+   "step": 2,
+   "body": "Ich will Zeit für die Leisen haben"
+  },
+  {
+   "id": 59,
+   "step": 2,
+   "body": "Fortbildungen sind zu weit weg"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "Pausen ohne Display, bitte"
+  },
+  {
+   "id": 54,
+   "step": 2,
+   "body": "Handschrift lernt man nur mit der Hand"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Mein Unterricht ist meine Handschrift"
+  },
+  {
+   "id": 48,
+   "step": 2,
+   "body": "Die Eltern fragen nach dem Stoff, nicht nach Gefühlen"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Die Eltern fragen nach dem Stoff, nicht nach Gefühlen"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Fachkonferenz will einheitliche Tests"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Im Mai ist Prüfung, Punkt"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "Teamteaching hat mich gerettet"
+  },
+  {
+   "id": 60,
+   "step": 2,
+   "body": "Ich fühle mich oft allein"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Manche Eltern erwarten Sofort-Antwort"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Sprechzeiten müssen reichen"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Projektwoche war das Beste im Jahr"
+  },
+  {
+   "id": 55,
+   "step": 2,
+   "body": "Pausen ohne Display, bitte"
+  }
+ ],
+ "data": {
+  "viz": "pairs",
+  "pairs": [
+   {
+    "question": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "a": {
+     "label": "Jedem Kind gerecht",
+     "ids": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "b": {
+     "label": "Lehrplan schaffen",
+     "ids": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich digital unterrichten und Kinder vor dem Bildschirm schützen?",
+    "a": {
+     "label": "Digital unterrichten",
+     "ids": [
+      11,
+      12,
+      13,
+      14
+     ]
+    },
+    "b": {
+     "label": "Bildschirmzeit schützen",
+     "ids": [
+      15,
+      16,
+      17,
+      18
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich als Kollegium eng zusammenarbeiten und jeder Lehrkraft Freiheit lassen?",
+    "a": {
+     "label": "Eng zusammenarbeiten",
+     "ids": [
+      19,
+      20,
+      21
+     ]
+    },
+    "b": {
+     "label": "Freiheit im Unterricht",
+     "ids": [
+      22,
+      23,
+      24,
+      25
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich Eltern einbeziehen und uns vor Dauer-Mails schützen?",
+    "a": {
+     "label": "Eltern einbeziehen",
+     "ids": [
+      26,
+      27,
+      28
+     ]
+    },
+    "b": {
+     "label": "Grenzen ziehen",
+     "ids": [
+      29,
+      30,
+      31
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich Neues ausprobieren und die Belastung senken?",
+    "a": {
+     "label": "Neues ausprobieren",
+     "ids": [
+      32,
+      33,
+      34
+     ]
+    },
+    "b": {
+     "label": "Belastung senken",
+     "ids": [
+      35,
+      36,
+      37
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich klare Regeln durchsetzen und Beziehung zu den Jugendlichen halten?",
+    "a": {
+     "label": "Klare Regeln",
+     "ids": [
+      38,
+      39,
+      40
+     ]
+    },
+    "b": {
+     "label": "Beziehung halten",
+     "ids": [
+      41,
+      42,
+      43
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen im zweiten Halbjahr?",
+    "a": {
+     "label": "Jedem Kind gerecht II",
+     "ids": [
+      44,
+      45,
+      46
+     ]
+    },
+    "b": {
+     "label": "Lehrplan schaffen II",
+     "ids": [
+      47,
+      48,
+      49
+     ]
+    }
+   },
+   {
+    "question": "Wie können wir zugleich digital unterrichten und Kinder vor dem Bildschirm schützen im zweiten Halbjahr?",
+    "a": {
+     "label": "Digital unterrichten II",
+     "ids": [
+      50,
+      51,
+      52
+     ]
+    },
+    "b": {
+     "label": "Bildschirmzeit schützen II",
+     "ids": [
+      53,
+      54,
+      55
+     ]
+    }
+   }
+  ],
+  "rest": [
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63
+  ]
+ },
+ "ai": {
+  "headline": "Fast jede Belastung hat eine Kehrseite, die genauso ernst gemeint ist.",
+  "convergence": [
+   {
+    "label": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Beides stimmt"
+   },
+   {
+    "label": "Wie können wir zugleich digital unterrichten und Kinder vor dem Bildschirm schützen?",
+    "ids": [
+     11,
+     12
+    ],
+    "quote": "Beides stimmt"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Wie können wir zugleich jedem Kind gerecht werden und den Lehrplan schaffen?",
+    "a": "A",
+    "b": "B"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Schülersicht",
+    "why": "Die Kinder selbst kommen kaum vor."
+   }
+  ]
+ }
+}

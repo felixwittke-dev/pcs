@@ -1,0 +1,59 @@
+{
+ "step": {
+  "label": "1-2-4-all · Bio-Bäckerei Korn",
+  "phase": "Bio-Bäckerei Korn",
+  "q": "Was macht unsere Backstube morgens um vier zu einem guten Ort?",
+  "how": "Ein Gedanke pro Post-it.",
+  "show": [
+   2
+  ],
+  "ls": "1-2-4-all"
+ },
+ "people": 3,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Radio an, Ofen warm"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "wenn der Sauerteig gut gekommen ist"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Kaffee vom Meister"
+  }
+ ],
+ "data": {
+  "themes": [
+   {
+    "label": "Kleine Rituale",
+    "color": "orange",
+    "ids": [
+     1,
+     2,
+     3
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Drei Stimmen, ein Muster: Rituale tragen den frühen Morgen.",
+  "convergence": [
+   {
+    "label": "Kleine Rituale",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "Radio an, Ofen warm"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

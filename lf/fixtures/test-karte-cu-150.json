@@ -1,0 +1,1035 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft eintritt?",
+  "how": "Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 150,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "Strategie A1: Fahrer halten testweise"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "Strategie A2: Kunden bündeln ab 2027"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "Strategie A3: Fahrer halten mit Förderung"
+  },
+  {
+   "id": 4,
+   "step": 5,
+   "body": "Strategie A4: Partner suchen mit Förderung"
+  },
+  {
+   "id": 5,
+   "step": 5,
+   "body": "Strategie A5: Partner suchen jetzt"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "Strategie A6: Partner suchen"
+  },
+  {
+   "id": 7,
+   "step": 5,
+   "body": "Strategie A7: Kunden bündeln ab 2027"
+  },
+  {
+   "id": 8,
+   "step": 5,
+   "body": "Strategie A8: Kunden bündeln testweise"
+  },
+  {
+   "id": 9,
+   "step": 5,
+   "body": "Strategie A9: Kosten senken testweise"
+  },
+  {
+   "id": 10,
+   "step": 5,
+   "body": "Strategie A10: Partner suchen testweise"
+  },
+  {
+   "id": 11,
+   "step": 5,
+   "body": "Strategie A11: Flotte erneuern testweise"
+  },
+  {
+   "id": 12,
+   "step": 5,
+   "body": "Strategie A12: Kunden bündeln testweise"
+  },
+  {
+   "id": 13,
+   "step": 5,
+   "body": "Strategie A13: Kunden bündeln mit Förderung"
+  },
+  {
+   "id": 14,
+   "step": 5,
+   "body": "Strategie A14: Flotte erneuern ab 2027"
+  },
+  {
+   "id": 15,
+   "step": 5,
+   "body": "Strategie A15: Kosten senken mit Förderung"
+  },
+  {
+   "id": 16,
+   "step": 5,
+   "body": "Strategie A16: Kosten senken ab 2027"
+  },
+  {
+   "id": 17,
+   "step": 5,
+   "body": "Strategie A17: digital disponieren mit Förderung"
+  },
+  {
+   "id": 18,
+   "step": 5,
+   "body": "Strategie A18: Partner suchen ab 2027"
+  },
+  {
+   "id": 19,
+   "step": 5,
+   "body": "Strategie A19: Partner suchen jetzt"
+  },
+  {
+   "id": 20,
+   "step": 5,
+   "body": "Strategie A20: Flotte erneuern mit Förderung"
+  },
+  {
+   "id": 21,
+   "step": 5,
+   "body": "Strategie A21: digital disponieren ab 2027"
+  },
+  {
+   "id": 22,
+   "step": 5,
+   "body": "Strategie A22: Partner suchen jetzt"
+  },
+  {
+   "id": 23,
+   "step": 5,
+   "body": "Strategie A23: Flotte erneuern testweise"
+  },
+  {
+   "id": 24,
+   "step": 5,
+   "body": "Strategie A24: Kunden bündeln mit Förderung"
+  },
+  {
+   "id": 25,
+   "step": 5,
+   "body": "Strategie A25: Kunden bündeln ab 2027"
+  },
+  {
+   "id": 26,
+   "step": 5,
+   "body": "Strategie A26: Flotte erneuern mit Förderung"
+  },
+  {
+   "id": 27,
+   "step": 5,
+   "body": "Strategie A27: Partner suchen testweise"
+  },
+  {
+   "id": 28,
+   "step": 5,
+   "body": "Strategie A28: Kosten senken ab 2027"
+  },
+  {
+   "id": 29,
+   "step": 5,
+   "body": "Strategie A29: Fahrer halten testweise"
+  },
+  {
+   "id": 30,
+   "step": 5,
+   "body": "Strategie A30: Partner suchen mit Förderung"
+  },
+  {
+   "id": 31,
+   "step": 5,
+   "body": "Strategie A31: Fahrer halten mit Förderung"
+  },
+  {
+   "id": 32,
+   "step": 5,
+   "body": "Strategie A32: Kunden bündeln mit Förderung"
+  },
+  {
+   "id": 33,
+   "step": 5,
+   "body": "Strategie A33: Kosten senken jetzt"
+  },
+  {
+   "id": 34,
+   "step": 5,
+   "body": "Strategie A34: Fahrer halten ab 2027"
+  },
+  {
+   "id": 35,
+   "step": 5,
+   "body": "Strategie A35: Fahrer halten ab 2027"
+  },
+  {
+   "id": 36,
+   "step": 5,
+   "body": "Strategie A36: Partner suchen mit Förderung"
+  },
+  {
+   "id": 37,
+   "step": 5,
+   "body": "Strategie A37: digital disponieren jetzt"
+  },
+  {
+   "id": 38,
+   "step": 5,
+   "body": "Strategie A38: digital disponieren mit Förderung"
+  },
+  {
+   "id": 39,
+   "step": 5,
+   "body": "Strategie A39: Kunden bündeln ab 2027"
+  },
+  {
+   "id": 40,
+   "step": 5,
+   "body": "Strategie A40: Kosten senken"
+  },
+  {
+   "id": 41,
+   "step": 5,
+   "body": "Strategie A41: Partner suchen jetzt"
+  },
+  {
+   "id": 42,
+   "step": 5,
+   "body": "Strategie A42: Fahrer halten jetzt"
+  },
+  {
+   "id": 43,
+   "step": 5,
+   "body": "Strategie A43: Kosten senken testweise"
+  },
+  {
+   "id": 44,
+   "step": 5,
+   "body": "Strategie A44: Kunden bündeln jetzt"
+  },
+  {
+   "id": 45,
+   "step": 5,
+   "body": "Strategie A45: digital disponieren jetzt"
+  },
+  {
+   "id": 46,
+   "step": 5,
+   "body": "Strategie A46: Fahrer halten mit Förderung"
+  },
+  {
+   "id": 47,
+   "step": 5,
+   "body": "Strategie A47: Flotte erneuern ab 2027"
+  },
+  {
+   "id": 48,
+   "step": 5,
+   "body": "Strategie A48: Partner suchen"
+  },
+  {
+   "id": 49,
+   "step": 5,
+   "body": "Strategie A49: Kunden bündeln ab 2027"
+  },
+  {
+   "id": 50,
+   "step": 5,
+   "body": "Strategie A50: Flotte erneuern"
+  },
+  {
+   "id": 51,
+   "step": 5,
+   "body": "Strategie A51: digital disponieren mit Förderung"
+  },
+  {
+   "id": 52,
+   "step": 5,
+   "body": "Strategie A52: Flotte erneuern testweise"
+  },
+  {
+   "id": 53,
+   "step": 5,
+   "body": "Strategie A53: Kosten senken mit Förderung"
+  },
+  {
+   "id": 54,
+   "step": 5,
+   "body": "Strategie A54: Flotte erneuern"
+  },
+  {
+   "id": 55,
+   "step": 5,
+   "body": "Strategie A55: Flotte erneuern ab 2027"
+  },
+  {
+   "id": 56,
+   "step": 5,
+   "body": "Strategie A56: Partner suchen"
+  },
+  {
+   "id": 57,
+   "step": 5,
+   "body": "Strategie A57: Flotte erneuern testweise"
+  },
+  {
+   "id": 58,
+   "step": 5,
+   "body": "Strategie A58: Flotte erneuern"
+  },
+  {
+   "id": 59,
+   "step": 5,
+   "body": "Strategie A59: Kosten senken"
+  },
+  {
+   "id": 60,
+   "step": 5,
+   "body": "Strategie A60: Kunden bündeln"
+  },
+  {
+   "id": 61,
+   "step": 5,
+   "body": "Strategie B1: Allianz"
+  },
+  {
+   "id": 62,
+   "step": 5,
+   "body": "Strategie B2: Ladehub"
+  },
+  {
+   "id": 63,
+   "step": 5,
+   "body": "Strategie B3: Allianz"
+  },
+  {
+   "id": 64,
+   "step": 5,
+   "body": "Strategie B4: Allianz"
+  },
+  {
+   "id": 65,
+   "step": 5,
+   "body": "Strategie B5: Allianz"
+  },
+  {
+   "id": 66,
+   "step": 5,
+   "body": "Strategie B6: Ladehub"
+  },
+  {
+   "id": 67,
+   "step": 5,
+   "body": "Strategie B7: Fahrschule"
+  },
+  {
+   "id": 68,
+   "step": 5,
+   "body": "Strategie B8: Allianz"
+  },
+  {
+   "id": 69,
+   "step": 5,
+   "body": "Strategie B9: Werbung"
+  },
+  {
+   "id": 70,
+   "step": 5,
+   "body": "Strategie B10: Werbung"
+  },
+  {
+   "id": 71,
+   "step": 5,
+   "body": "Strategie B11: Allianz"
+  },
+  {
+   "id": 72,
+   "step": 5,
+   "body": "Strategie B12: Allianz"
+  },
+  {
+   "id": 73,
+   "step": 5,
+   "body": "Strategie B13: Ladehub"
+  },
+  {
+   "id": 74,
+   "step": 5,
+   "body": "Strategie B14: Werbung"
+  },
+  {
+   "id": 75,
+   "step": 5,
+   "body": "Strategie B15: Fahrschule"
+  },
+  {
+   "id": 76,
+   "step": 5,
+   "body": "Strategie B16: Allianz"
+  },
+  {
+   "id": 77,
+   "step": 5,
+   "body": "Strategie B17: Werbung"
+  },
+  {
+   "id": 78,
+   "step": 5,
+   "body": "Strategie B18: Allianz"
+  },
+  {
+   "id": 79,
+   "step": 5,
+   "body": "Strategie B19: Allianz"
+  },
+  {
+   "id": 80,
+   "step": 5,
+   "body": "Strategie B20: Allianz"
+  },
+  {
+   "id": 81,
+   "step": 5,
+   "body": "Strategie B21: Werbung"
+  },
+  {
+   "id": 82,
+   "step": 5,
+   "body": "Strategie B22: Fahrschule"
+  },
+  {
+   "id": 83,
+   "step": 5,
+   "body": "Strategie B23: Allianz"
+  },
+  {
+   "id": 84,
+   "step": 5,
+   "body": "Strategie B24: Fahrschule"
+  },
+  {
+   "id": 85,
+   "step": 5,
+   "body": "Strategie B25: Ladehub"
+  },
+  {
+   "id": 86,
+   "step": 5,
+   "body": "Strategie B26: Ladehub"
+  },
+  {
+   "id": 87,
+   "step": 5,
+   "body": "Strategie B27: Ladehub"
+  },
+  {
+   "id": 88,
+   "step": 5,
+   "body": "Strategie B28: Werbung"
+  },
+  {
+   "id": 89,
+   "step": 5,
+   "body": "Strategie B29: Werbung"
+  },
+  {
+   "id": 90,
+   "step": 5,
+   "body": "Strategie B30: Werbung"
+  },
+  {
+   "id": 91,
+   "step": 5,
+   "body": "Strategie B31: Allianz"
+  },
+  {
+   "id": 92,
+   "step": 5,
+   "body": "Strategie B32: Werbung"
+  },
+  {
+   "id": 93,
+   "step": 5,
+   "body": "Strategie B33: Fahrschule"
+  },
+  {
+   "id": 94,
+   "step": 5,
+   "body": "Strategie B34: Allianz"
+  },
+  {
+   "id": 95,
+   "step": 5,
+   "body": "Strategie B35: Ladehub"
+  },
+  {
+   "id": 96,
+   "step": 5,
+   "body": "Strategie B36: Allianz"
+  },
+  {
+   "id": 97,
+   "step": 5,
+   "body": "Strategie B37: Ladehub"
+  },
+  {
+   "id": 98,
+   "step": 5,
+   "body": "Strategie B38: Fahrschule"
+  },
+  {
+   "id": 99,
+   "step": 5,
+   "body": "Strategie B39: Fahrschule"
+  },
+  {
+   "id": 100,
+   "step": 5,
+   "body": "Strategie B40: Fahrschule"
+  },
+  {
+   "id": 101,
+   "step": 5,
+   "body": "Strategie B41: Ladehub"
+  },
+  {
+   "id": 102,
+   "step": 5,
+   "body": "Strategie B42: Allianz"
+  },
+  {
+   "id": 103,
+   "step": 5,
+   "body": "Strategie B43: Werbung"
+  },
+  {
+   "id": 104,
+   "step": 5,
+   "body": "Strategie B44: Allianz"
+  },
+  {
+   "id": 105,
+   "step": 5,
+   "body": "Strategie B45: Werbung"
+  },
+  {
+   "id": 106,
+   "step": 5,
+   "body": "Strategie B46: Fahrschule"
+  },
+  {
+   "id": 107,
+   "step": 5,
+   "body": "Strategie B47: Allianz"
+  },
+  {
+   "id": 108,
+   "step": 5,
+   "body": "Strategie B48: Ladehub"
+  },
+  {
+   "id": 109,
+   "step": 5,
+   "body": "Strategie B49: Werbung"
+  },
+  {
+   "id": 110,
+   "step": 5,
+   "body": "Strategie B50: Fahrschule"
+  },
+  {
+   "id": 111,
+   "step": 5,
+   "body": "Strategie D1: Plattform verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 112,
+   "step": 5,
+   "body": "Strategie D2: Maut verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 113,
+   "step": 5,
+   "body": "Strategie D3: Preise prüfen"
+  },
+  {
+   "id": 114,
+   "step": 5,
+   "body": "Strategie D4: Plattform anpassen"
+  },
+  {
+   "id": 115,
+   "step": 5,
+   "body": "Strategie D5: Maut anpassen"
+  },
+  {
+   "id": 116,
+   "step": 5,
+   "body": "Strategie D6: Plattform verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 117,
+   "step": 5,
+   "body": "Strategie D7: Preise verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 118,
+   "step": 5,
+   "body": "Strategie D8: Plattform verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 119,
+   "step": 5,
+   "body": "Strategie D9: Leasing prüfen"
+  },
+  {
+   "id": 120,
+   "step": 5,
+   "body": "Strategie D10: Preise anpassen"
+  },
+  {
+   "id": 121,
+   "step": 5,
+   "body": "Strategie D11: Leasing abschaffen"
+  },
+  {
+   "id": 122,
+   "step": 5,
+   "body": "Strategie D12: Plattform prüfen"
+  },
+  {
+   "id": 123,
+   "step": 5,
+   "body": "Strategie D13: Plattform anpassen"
+  },
+  {
+   "id": 124,
+   "step": 5,
+   "body": "Strategie D14: Plattform prüfen"
+  },
+  {
+   "id": 125,
+   "step": 5,
+   "body": "Strategie D15: Maut verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 126,
+   "step": 5,
+   "body": "Strategie D16: Maut anpassen"
+  },
+  {
+   "id": 127,
+   "step": 5,
+   "body": "Strategie D17: Leasing anpassen"
+  },
+  {
+   "id": 128,
+   "step": 5,
+   "body": "Strategie D18: Maut verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 129,
+   "step": 5,
+   "body": "Strategie D19: Maut abschaffen"
+  },
+  {
+   "id": 130,
+   "step": 5,
+   "body": "Strategie D20: Leasing verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 131,
+   "step": 5,
+   "body": "Strategie D21: Plattform verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 132,
+   "step": 5,
+   "body": "Strategie D22: Plattform anpassen"
+  },
+  {
+   "id": 133,
+   "step": 5,
+   "body": "Strategie D23: Plattform anpassen"
+  },
+  {
+   "id": 134,
+   "step": 5,
+   "body": "Strategie D24: Plattform abschaffen"
+  },
+  {
+   "id": 135,
+   "step": 5,
+   "body": "Strategie D25: Maut anpassen"
+  },
+  {
+   "id": 136,
+   "step": 5,
+   "body": "Strategie D26: Leasing anpassen"
+  },
+  {
+   "id": 137,
+   "step": 5,
+   "body": "Strategie D27: Plattform abschaffen"
+  },
+  {
+   "id": 138,
+   "step": 5,
+   "body": "Strategie D28: Plattform anpassen"
+  },
+  {
+   "id": 139,
+   "step": 5,
+   "body": "Strategie D29: Maut verhandeln mit allen Großkunden einzeln"
+  },
+  {
+   "id": 140,
+   "step": 5,
+   "body": "Strategie D30: Preise abschaffen"
+  },
+  {
+   "id": 141,
+   "step": 5,
+   "body": "Strategie D31: Maut abschaffen"
+  },
+  {
+   "id": 142,
+   "step": 5,
+   "body": "Strategie D32: Preise abschaffen"
+  },
+  {
+   "id": 143,
+   "step": 5,
+   "body": "Strategie D33: Preise anpassen"
+  },
+  {
+   "id": 144,
+   "step": 5,
+   "body": "Strategie D34: Plattform prüfen"
+  },
+  {
+   "id": 145,
+   "step": 5,
+   "body": "Strategie D35: Leasing abschaffen"
+  },
+  {
+   "id": 146,
+   "step": 5,
+   "body": "Strategie D36: Maut abschaffen"
+  },
+  {
+   "id": 147,
+   "step": 5,
+   "body": "Strategie D37: Leasing abschaffen"
+  },
+  {
+   "id": 148,
+   "step": 5,
+   "body": "Strategie D38: Maut anpassen"
+  },
+  {
+   "id": 149,
+   "step": 5,
+   "body": "Strategie D39: Maut prüfen"
+  },
+  {
+   "id": 150,
+   "step": 5,
+   "body": "Strategie D40: Preise anpassen"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "Fahrerinnen und Fahrer",
+   "lo": "knapp",
+   "hi": "verfügbar"
+  },
+  "y": {
+   "label": "Antrieb der Flotte",
+   "lo": "Diesel erlaubt",
+   "hi": "Elektro-Pflicht"
+  },
+  "zones": [
+   {
+    "label": "Autonom und allein",
+    "hint": "Fahrer knapp · Elektro-Pflicht",
+    "summary": "Wer wenig Fahrer hat und elektrisch fahren muss, braucht Automatisierung und Partner.",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60
+    ]
+   },
+   {
+    "label": "Grüne Allianz",
+    "hint": "Fahrer verfügbar · Elektro-Pflicht",
+    "summary": "Genug Leute, teure Flotte: zusammen mit anderen Speditionen investieren.",
+    "ids": [
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110
+    ]
+   },
+   {
+    "label": "Diesel bis zum Ende",
+    "hint": "Fahrer knapp · Diesel erlaubt",
+    "summary": "Alte Flotte, wenig Leute: Kunden bündeln und Touren dichter planen.",
+    "ids": []
+   },
+   {
+    "label": "Wer billig fährt, gewinnt",
+    "hint": "Fahrer verfügbar · Diesel erlaubt",
+    "summary": "Preiskampf: wer seine Kosten kennt, überlebt.",
+    "ids": [
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123,
+     124,
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132,
+     133,
+     134,
+     135,
+     136,
+     137,
+     138,
+     139,
+     140,
+     141,
+     142,
+     143,
+     144,
+     145,
+     146,
+     147,
+     148,
+     149,
+     150
+    ]
+   }
+  ],
+  "marks": {
+   "1": "",
+   "4": "ROBUST",
+   "7": "ROBUST",
+   "10": "vielleicht",
+   "13": "wichtig",
+   "16": "hedge",
+   "19": "",
+   "22": "wichtig",
+   "25": "Absicherung",
+   "28": "ROBUST",
+   "31": "robust",
+   "34": "vielleicht",
+   "37": "hedge",
+   "40": "hedge",
+   "43": "ROBUST",
+   "46": "ROBUST",
+   "49": "Absicherung",
+   "52": "Absicherung",
+   "55": "Absicherung",
+   "58": "Absicherung",
+   "61": "",
+   "64": "",
+   "67": "",
+   "70": "Absicherung",
+   "73": "ROBUST",
+   "76": "",
+   "79": "hedge",
+   "82": "Absicherung",
+   "85": "ROBUST",
+   "88": "vielleicht",
+   "91": "",
+   "94": "ROBUST",
+   "97": "robust",
+   "100": "hedge",
+   "103": "",
+   "106": "hedge",
+   "109": "robust",
+   "112": "hedge",
+   "115": "vielleicht",
+   "118": "wichtig",
+   "121": "ROBUST",
+   "124": "vielleicht",
+   "127": "hedge",
+   "130": "ROBUST",
+   "133": "Absicherung",
+   "136": "wichtig",
+   "139": "ROBUST",
+   "142": "ROBUST",
+   "145": "hedge",
+   "148": "vielleicht"
+  }
+ },
+ "ai": {
+  "headline": "Kunden bündeln und Fahrer halten trägt in jeder Zukunft.",
+  "convergence": [
+   {
+    "label": "Autonom und allein",
+    "ids": [
+     1,
+     2,
+     3
+    ],
+    "quote": "Strategie A1: Fahrer halten te"
+   }
+  ],
+  "tension": [],
+  "blind_spots": []
+ }
+}

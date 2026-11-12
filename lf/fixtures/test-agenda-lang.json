@@ -1,0 +1,177 @@
+{
+ "step": {
+  "label": "Open Space · alle",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "alle",
+  "q": "Lange Titel, fehlende Felder",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 9,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Wie wir als Organisation lernen können, Entscheidungen so zu treffen, dass sie von allen Betroffenen verstanden, getragen und auch nach einem halben Jahr noch erinnert werden"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Kurz"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Donaudampfschifffahrtsgesellschaftskapitänsmützenabzeichen"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "<script>alert(1)</script> Session"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "我们需要更多时间"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Ungültig 1"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Ungültig 2"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Ungültig 3"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "🚀 Raketen-Session 🚀"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "Vormittag, erste Runde nach dem Kaffee (ca. 10:15 bis irgendwann 11:30)"
+   },
+   {},
+   {
+    "label": "14:00"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Großer Saal im Erdgeschoss neben dem Haupteingang (barrierefrei)"
+   },
+   {},
+   {
+    "label": "B"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     1
+    ],
+    "host": "Dr. Maria-Theresia von Hohenzollern-Sigmaringen, Prof. Dr. Karl-Heinz Müller-Lüdenscheidt und das gesamte Team Organisationsentwicklung",
+    "slot": 0,
+    "space": 0,
+    "interest": "viele"
+   },
+   {
+    "ids": [
+     2
+    ],
+    "slot": 0,
+    "space": 1
+   },
+   {
+    "ids": [
+     3
+    ],
+    "slot": 1,
+    "space": 2,
+    "theme": 5,
+    "interest": 0
+   },
+   {
+    "ids": [
+     4
+    ],
+    "title": "<img src=x onerror=alert(5)>",
+    "slot": "14:00",
+    "space": "B",
+    "theme": "gibt es nicht"
+   },
+   {
+    "ids": [
+     6
+    ],
+    "slot": 9,
+    "space": 0
+   },
+   {
+    "ids": [
+     7
+    ],
+    "slot": 0,
+    "space": -1
+   },
+   {
+    "ids": [
+     8
+    ],
+    "slot": "nie",
+    "space": "nirgends"
+   },
+   {
+    "ids": [
+     5,
+     5,
+     404
+    ],
+    "slot": 2,
+    "space": 0,
+    "interest": 1
+   },
+   {
+    "ids": [],
+    "title": "Session ohne Vorschlag",
+    "slot": 1,
+    "space": 0
+   },
+   {
+    "ids": [
+     9
+    ],
+    "slot": 1,
+    "space": 1,
+    "host": ""
+   }
+  ]
+ },
+ "ai": {
+  "headline": "<b>x</b>",
+  "convergence": [],
+  "tension": [],
+  "blind_spots": []
+ }
+}
