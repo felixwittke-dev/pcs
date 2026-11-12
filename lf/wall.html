@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Workshop · Wand</title>
 <style>
-  :root { --brand: #40BFC0; --teal: #368484; --ink: #1C1917; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #EAF9F9; --aiink: #2E6C6D;
+  :root { --brand: #40BFC0; --teal: #40BFC0; --ink: #1C1917; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #EAF9F9; --aiink: #409E9F;
           --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand);
@@ -32,6 +32,7 @@
   #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
   /* Mosaik: alle Post-its passen immer auf den Bildschirm. Schriftgroesse und Kachelbreite ergeben sich aus Anzahl, Textlaenge und Flaeche. */
   #mosaic { position: absolute; inset: 0; --lines: 3; }
+  #custom { position: absolute; inset: 0; overflow: hidden; }
   .block { position: absolute; display: flex; flex-direction: column; padding: 3px; }
   .bhead { flex: none; display: flex; align-items: center; gap: 12px; margin: 0 0 6px; }
   .bhead .btitle { font-size: clamp(20px, 2vw, 32px); padding: 3px 18px; margin: 0; cursor: default; }
@@ -88,6 +89,7 @@
   <div id="stage">
     <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
     <div id="mosaic"></div>
+    <div id="custom" hidden></div>
     <div id="say" hidden></div>
     <section id="panel" hidden></section>
   </div>
@@ -96,6 +98,10 @@
 <footer id="foot"></footer>
 
 <script src="steps.js"></script>
+<script src="viz-lanes.js"></script>
+<script src="viz-ranking.js"></script>
+<script src="viz-pairs.js"></script>
+<script src="viz-patterns.js"></script>
 <script>
 // Mit #k=<Schluessel> (wie die Steuerseite) kann die Moderation die KI-Auswertung direkt auf der Wand freigeben.
 const K = decodeURIComponent((location.hash.match(/k=([^&]+)/) || [])[1] || '');
@@ -103,6 +109,7 @@ $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.
 let polling = false, busy = false, lastRev = null, prevReleased = null;
 let view = null, counter = false, wasThemed = false, forceFlat = false;
 let focus = null;   // null = alle Post-its, Zahl = ein Thema, 'ai' = KI-Auswertung
+let navCount = 0;    // Zahl der Dinge, die ein Baustein einzeln in Szene setzen kann (Pfeiltasten)
 let page = 0, pages = 1;   // wenn nicht alles lesbar auf einen Bildschirm passt: Seiten, die von rechts nachruecken
 let ai = null;      // { step, released, data }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -201,14 +208,19 @@ function layoutMosaic(animate, dir) {
   $('pager').hidden = pages < 2; $('pnum').textContent = (page + 1) + ' / ' + pages;
   if (dir) { m.animate([{ transform: `translateX(${dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' }); return; }   // Seite rueckt von der Seite nach
   if (!animate) return;
-  let i = 0;
   m.querySelectorAll('.btitle').forEach(t => t.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 700, fill: 'backwards' }));
-  m.querySelectorAll('.tile').forEach(e => { const a = first.get(e.dataset.id), b = e.getBoundingClientRect();
+  flip(m, first);
+}
+// Gemeinsamer Flug: jedes Element mit data-id fliegt von seinem alten Platz (first: Map id -> DOMRect) an den neuen. Neue blenden ein.
+function flip(box, first) {
+  let i = 0;
+  box.querySelectorAll('[data-id]').forEach(e => { const a = first && first.get(e.dataset.id), b = e.getBoundingClientRect();
     if (!a || !a.width) { e.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); return; }
     if (Math.abs(a.left - b.left) < 1 && Math.abs(a.top - b.top) < 1 && Math.abs(a.width - b.width) < 1) return;
-    e.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})` }, { transform: 'none' }],
+    e.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})`, transformOrigin: '0 0' }, { transform: 'none', transformOrigin: '0 0' }],
               { duration: 1200, delay: Math.min(i++ * 4, 450), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
 }
+const rectsOf = box => new Map([...box.querySelectorAll('[data-id]')].map(e => [e.dataset.id, e.getBoundingClientRect()]));
 
 // ---------- Navigation: Themen stehen nur als Ueberschrift ueber ihren Post-its (Felix, 12.11.). Klick oder Pfeiltasten setzen eins in Szene.
 function aiButton() {
@@ -228,14 +240,15 @@ async function go(key) {
 function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
   if (busy || !view) return;
   if (page + d >= 0 && page + d < pages && focus !== 'ai') { page += d; draw(false, d); return; }
-  if (!view.themes.length) return;
-  const order = [null, ...view.themes.map((t, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
+  const n = custom() ? navCount : view.themes.length;
+  if (!n) return;
+  const order = [null, ...Array.from({ length: n }, (x, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
   go(order[(i + d + order.length) % order.length]);
 }
 $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 
 function renderPanel() {
-  const box = $('panel'), r = ai.data || {}, titles = (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
+  const box = $('panel'), r = ai.data || {}, titles = ai.titles || (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
   const rv = e => { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; return e; };
   box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' Post-its' : 'euren Post-its'))));
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
@@ -254,8 +267,23 @@ function draw(animate, dir) {
   const showAi = focus === 'ai' && ai && ai.released;
   $('counter').hidden = !counter || showAi;
   $('panel').hidden = !showAi; if (showAi) renderPanel();
-  $('mosaic').hidden = counter || showAi || !view;
-  if (!$('mosaic').hidden) layoutMosaic(animate, dir); else { $('pager').hidden = true; if (!view) $('mosaic').textContent = ''; }
+  const viz = !forceFlat && custom(), off = counter || showAi || !view;
+  $('mosaic').hidden = off || !!viz; $('custom').hidden = off || !viz;
+  if (off) { $('pager').hidden = true; if (!view) $('mosaic').textContent = ''; }
+  else if (viz) { const r = viz.draw($('custom'), ctx(dir)) || {}; navCount = r.count || 0; pages = r.pages || 1; page = Math.min(page, pages - 1);
+    $('pager').hidden = pages < 2; $('pnum').textContent = (page + 1) + ' / ' + pages; }
+  else layoutMosaic(animate, dir);
+}
+// Eigener Baustein der aktuellen Struktur (viz-*.js), sonst null = Themen-Mosaik
+function custom() { return view && view.data && VIZ[view.data.viz] || null; }
+function ctx(dir, from) { return { rows: view.rows, data: view.data, s: view.s, focus: typeof focus === 'number' ? focus : null, page, dir: dir || 0, from: from || null, go, el, sleep, flip }; }
+// Uebergang vom ungeordneten Mosaik zur Darstellung der Struktur
+async function reveal() {
+  const viz = custom(); if (!viz) return showThemes();
+  busy = true; page = 0;
+  const from = rectsOf($('mosaic'));
+  if (viz.reveal) { $('mosaic').hidden = true; $('custom').hidden = false; await viz.reveal($('custom'), ctx(0, from)); }
+  busy = false; draw(false);
 }
 
 // Show-Effekt (reine Browser-Animation, keine KI): Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle,
@@ -280,8 +308,8 @@ addEventListener('keydown', async e => {
   if (e.key === 'ArrowRight') turn(1);
   else if (e.key === 'ArrowLeft') turn(-1);
   else if (e.key === 'Escape') go(null);
-  else if (e.key.toLowerCase() === 'r' && view.themes.length) {   // Uebergang nochmal zeigen
-    focus = null; page = 0; forceFlat = true; draw(false); forceFlat = false; busy = true; await sleep(1200); await showThemes(); }
+  else if (e.key.toLowerCase() === 'r' && (view.themes.length || custom())) {   // Uebergang nochmal zeigen
+    focus = null; page = 0; forceFlat = true; draw(false); forceFlat = false; busy = true; await sleep(1200); busy = false; await reveal(); }
 });
 let wheelAt = 0;   // Mausrad oder Wischen blaettert, wenn es mehrere Seiten gibt
 addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
@@ -289,14 +317,18 @@ addEventListener('wheel', e => { const d = Math.abs(e.deltaX) > Math.abs(e.delta
   const n = page + Math.sign(d); if (n >= 0 && n < pages) turn(Math.sign(d)); }, { passive: true });
 let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (!busy) draw(false); }, 150); });
 
+// Kopf: Icon + Name der Struktur, darunter die Frage (kursiv, Teal)
+function header(s, people) {
+  const ls = s.lsDef || LS[s.ls], head = $('step'); head.textContent = '';
+  if (ls) { const im = el('img'); im.src = 'icons/' + ls.icon + '.svg'; im.alt = ''; head.append(im, el('span', ls.name), el('small', s.phase ? '· ' + s.phase : '')); } else head.append(el('span', s.label));
+  $('q').textContent = s.q; $('how').textContent = s.how || '';
+  $('foot').textContent = people + (people === 1 ? ' Handy hat' : ' Handys haben') + ' schon beigetragen';
+}
+
 // ---------- Zustand holen ----------
 async function refresh(st) {
   const s = stepById(st.step);
-  const ls = LS[s.ls], head = $('step'); head.textContent = '';   // Kopf: Icon + Name der Struktur, darunter die Frage
-  if (ls) { const im = el('img'); im.src = 'icons/' + ls.icon + '.svg'; im.alt = ''; head.append(im, el('span', ls.name), el('small', '· ' + s.phase)); } else head.append(el('span', s.label));
-  $('q').textContent = s.q; $('how').textContent = s.how || '';
-  $('join').className = 'join' + (st.step === 0 ? ' big' : '');
-  $('foot').textContent = st.people + (st.people === 1 ? ' Handy hat' : ' Handys haben') + ' schon beigetragen';
+  header(s, st.people); $('join').className = 'join' + (st.step === 0 ? ' big' : '');
   counter = s.solo && st.wall === 'counter';
   $('n').textContent = st.count; $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
   let themes = [];
@@ -304,10 +336,13 @@ async function refresh(st) {
     const rows = await rpc('lf_wall', { p_steps: s.show });
     // Themen: sobald die KI zugeordnet hat, erscheinen sie ohne Freigabe (Felix, 12.11.).
     const themed = s.show.filter(x => st.released.includes(String(THEMES + x)));
-    themes = (await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })))).flatMap(t => (t && t.themes) || []);
-    view = { rows, themes, themed, s };
+    const payloads = await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })));
+    const data = payloads.find(t => t && t.viz && VIZ[t.viz]) || null;   // Struktur mit eigenem Baustein
+    themes = data ? [] : payloads.flatMap(t => (t && t.themes) || []);
+    view = { rows, themes, themed, s, data };
   } else view = null;
-  if (typeof focus === 'number' && focus >= themes.length) focus = null;
+  const has = themes.length > 0 || !!(view && view.data);
+  if (typeof focus === 'number' && !custom() && focus >= themes.length) focus = null;
   // KI-Auswertung: mit Schluessel sieht die Wand auch Entwuerfe (Knopf gibt frei), sonst nur Freigegebenes.
   const rel = st.released.map(Number).filter(x => x < THEMES);
   const drafts = K ? await rpc('lf_drafts', { p_key: K }).catch(() => ({})) : {};
@@ -321,9 +356,9 @@ async function refresh(st) {
     ai = { step: pick, released, data: released ? await rpc('lf_result', { p_step: pick }) : (drafts[pick] || {}).data }; }
   if (fresh.length) focus = 'ai';                       // frisch freigegeben: sofort zeigen, egal in welchem Schritt
   if (focus === 'ai' && !(ai && ai.released)) focus = null;
-  if (themes.length && !wasThemed && focus === null && $('mosaic').querySelector('.tile')) await showThemes();   // Post-its hingen schon: Uebergang zeigen
+  if (has && !wasThemed && focus === null && !$('mosaic').hidden && $('mosaic').querySelector('.tile')) await reveal();   // Post-its hingen schon: Uebergang zeigen
   else draw(false);
-  wasThemed = themes.length > 0;
+  wasThemed = has;
 }
 
 async function poll() {
@@ -334,7 +369,21 @@ async function poll() {
   catch (e) { lastRev = null; }
   polling = false;
 }
-setInterval(poll, 2500); poll();
+// Testmodus ohne Datenbank: wall.html?demo=fixtures/<datei>.json&show=flat|reveal|focus:N|page:N|ai (kombinierbar mit Komma)
+const QS = new URLSearchParams(location.search), DEMO = QS.get('demo');
+async function demo() {
+  const fx = await (await fetch(DEMO)).json(), show = (QS.get('show') || '').split(',');
+  header(fx.step, fx.people || 0);
+  view = { rows: fx.rows, themes: [], themed: fx.step.show, s: fx.step, data: null };
+  ai = fx.ai ? { step: null, released: true, data: fx.ai, titles: (fx.step.lsDef || {}).panel } : null;
+  const apply = () => { const d = fx.data; if (d && d.viz && VIZ[d.viz]) view.data = d; else if (d) view.themes = d.themes || []; };
+  if (show.includes('flat')) return draw(false);
+  if (show.includes('reveal')) { draw(false); await sleep(800); apply(); return reveal(); }
+  apply();
+  show.forEach(x => { const m = x.match(/^(focus|page):(\d+)$/); if (m && m[1] === 'focus') focus = +m[2]; if (m && m[1] === 'page') page = +m[2]; if (x === 'ai') focus = 'ai'; });
+  draw(false);
+}
+if (DEMO) demo(); else { setInterval(poll, 2500); poll(); }
 </script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+// Platzhalter: Baustein 'patterns' folgt.

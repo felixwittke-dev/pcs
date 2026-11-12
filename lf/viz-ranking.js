@@ -1,0 +1,1 @@
+// Platzhalter: Baustein 'ranking' folgt.

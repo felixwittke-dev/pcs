@@ -13,6 +13,9 @@ const LS = {
   '15-solutions': { name: '15% Solutions', icon: '15-percent-solution', panel: ['Was viele selbst anpacken', 'Wo es auseinandergeht', 'Was noch niemand anpackt'] },
 };
 
+// Darstellungs-Bausteine der Wand (viz-*.js tragen sich hier ein). Ohne Baustein gilt das Themen-Mosaik.
+const VIZ = {};
+
 const STEPS = [
   { id: 0, mode: 'wait', label: 'Ankommen', q: 'Gleich geht es los.', show: [] },
   { id: 1, mode: 'one', label: 'Ankommen', q: 'Womit kommst du heute hier an?',
