@@ -23,6 +23,7 @@ const LS = {
   'troika':       { name: 'Troika Consulting', icon: 'troika-consulting', noun: 'Ratschläge', panel: ['Rat, der oft fiel', 'Wo Ratschläge sich widersprechen', 'Worüber niemand Rat suchte'] },
   'cafe':         { name: 'Conversation Café', icon: 'conversation-cafe', panel: ['Was uns klar geworden ist', 'Wo wir verschieden sehen', 'Worüber wir noch schweigen'] },
   'ecocycle':     { name: 'Ecocycle Planning', icon: 'ecocycle-planning', viz: 'map', noun: 'Aktivitäten' },
+  'open-space':   { name: 'Open Space', icon: 'open-space-technology', viz: 'agenda', noun: 'Vorschläge', panel: ['Was viele bewegt', 'Was sich überschneidet', 'Was niemand eingebracht hat'] },
   'celebrity':    { name: 'Celebrity Interview', icon: 'celebrity-interview', viz: 'ranking', noun: 'Fragen', panel: ['Was viele wissen wollen', 'Wo die Fragen in verschiedene Richtungen gehen', 'Was noch niemand gefragt hat'] },
   'p2p':          { name: 'Purpose-to-Practice', icon: 'purpose-to-practice', viz: 'lanes', noun: 'Beiträge', panel: ['Was das Programm trägt', 'Wo es sich reibt', 'Was noch fehlt'] },
   'acm':          { name: 'Agreement & Certainty Matrix', icon: 'agreement-certainty-matrix', viz: 'map', noun: 'Herausforderungen' },

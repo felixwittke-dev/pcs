@@ -1,0 +1,178 @@
+{
+ "step": {
+  "label": "Open Space · Marktplatz",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "Marktplatz",
+  "q": "Was wollen wir im Team als Nächstes anpacken?",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 7,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Mehr Homeoffice für Eltern? – Jana"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "KI im Team ausprobieren, wer traut sich – Murat"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "Meetings kürzer!! (Lea)"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Wie geben wir uns Feedback · Tom"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "ChatGPT – was ist erlaubt? Sina"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Neue Leute besser einarbeiten – Elif"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Kaffeeküche als Treffpunkt retten – Bernd"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "14:00–14:45"
+   },
+   {
+    "label": "15:00–15:45"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Raum 1"
+   },
+   {
+    "label": "Raum 2"
+   },
+   {
+    "label": "Garten"
+   }
+  ],
+  "themes": [
+   {
+    "label": "Arbeit",
+    "color": "blau"
+   },
+   {
+    "label": "Miteinander",
+    "color": "orange"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     2,
+     5
+    ],
+    "title": "KI im Team ausprobieren: Wer traut sich, was ist erlaubt?",
+    "host": "Murat, Sina",
+    "slot": 0,
+    "space": 0,
+    "theme": 0,
+    "interest": 9
+   },
+   {
+    "ids": [
+     1
+    ],
+    "title": "Mehr Homeoffice für Eltern?",
+    "host": "Jana",
+    "slot": 0,
+    "space": 1,
+    "theme": 0,
+    "interest": 6
+   },
+   {
+    "ids": [
+     4
+    ],
+    "title": "Wie geben wir uns Feedback?",
+    "host": "Tom",
+    "slot": 0,
+    "space": 2,
+    "theme": 1,
+    "interest": 5
+   },
+   {
+    "ids": [
+     3
+    ],
+    "title": "Meetings kürzer!",
+    "host": "Lea",
+    "slot": 1,
+    "space": 0,
+    "theme": 0,
+    "interest": 7
+   },
+   {
+    "ids": [
+     6
+    ],
+    "title": "Neue Leute besser einarbeiten",
+    "host": "Elif",
+    "slot": 1,
+    "space": 1,
+    "theme": 1,
+    "interest": 4
+   }
+  ],
+  "open": [
+   7
+  ]
+ },
+ "ai": {
+  "headline": "Zwei Vorschläge zu KI wurden eine Session; sonst steht jedes Thema für sich.",
+  "convergence": [
+   {
+    "label": "KI ausprobieren",
+    "ids": [
+     2,
+     5
+    ],
+    "quote": "wer traut sich"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Weniger Meetings oder mehr Treffpunkt?",
+    "a": "„Meetings kürzer!!“",
+    "b": "„Kaffeeküche als Treffpunkt retten“"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kundensicht",
+    "why": "Kein Vorschlag schaut nach außen."
+   }
+  ]
+ }
+}

@@ -1,0 +1,559 @@
+{
+ "step": {
+  "label": "Open Space · Marktplatz",
+  "lsDef": {
+   "name": "Open Space",
+   "icon": "open-space-technology",
+   "panel": [
+    "Was viele bewegt",
+    "Was sich überschneidet",
+    "Was niemand eingebracht hat"
+   ],
+   "noun": "Vorschläge"
+  },
+  "phase": "Marktplatz",
+  "q": "Wie wollen wir 2027 zusammenarbeiten?",
+  "how": "Schlag ein Thema vor, zu dem du eine Session einlädst: Titel und dein Name.",
+  "show": [
+   2
+  ]
+ },
+ "people": 41,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Büro-Tage: Pflicht oder Einladung? – Sanne"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "Hybrid-Meetings die nicht nerven (Tobi)"
+  },
+  {
+   "id": 3,
+   "step": 2,
+   "body": "4-Tage-Woche testen?? wer hat Lust auf nen Pilot · Yusuf"
+  },
+  {
+   "id": 4,
+   "step": 2,
+   "body": "Kernarbeitszeit abschaffen – Lukas"
+  },
+  {
+   "id": 5,
+   "step": 2,
+   "body": "immer sitzen 3 Leute vor einem Laptop und die online hören nix. Wie machen wir hybride Meetings besser? Ines"
+  },
+  {
+   "id": 6,
+   "step": 2,
+   "body": "Desk sharing ab März – was heißt das für uns? Petra"
+  },
+  {
+   "id": 7,
+   "step": 2,
+   "body": "Erreichbarkeit nach 18 Uhr, brauchen wir Regeln? (Mo)"
+  },
+  {
+   "id": 8,
+   "step": 2,
+   "body": "Workation – mal 4 Wochen aus Spanien arbeiten? Jule"
+  },
+  {
+   "id": 9,
+   "step": 2,
+   "body": "Wer entscheidet eigentlich was? Entscheidungswege sichtbar machen – Kai"
+  },
+  {
+   "id": 10,
+   "step": 2,
+   "body": "Führung in Teilzeit / im Tandem – Birgit"
+  },
+  {
+   "id": 11,
+   "step": 2,
+   "body": "Zu viele Abstimmungsschleifen!!! – Dennis"
+  },
+  {
+   "id": 12,
+   "step": 2,
+   "body": "Ziele 2027: wie kommen die von oben nach unten und wieder zurück · Ana"
+  },
+  {
+   "id": 13,
+   "step": 2,
+   "body": "Feedback an Führungskräfte – trauen wir uns? Rafa"
+  },
+  {
+   "id": 14,
+   "step": 2,
+   "body": "Entscheidungen schneller treffen ohne dass jemand übergangen wird – Selin"
+  },
+  {
+   "id": 15,
+   "step": 2,
+   "body": "Budget-Verantwortung in die Teams? Frank"
+  },
+  {
+   "id": 16,
+   "step": 2,
+   "body": "Mitarbeitergespräch neu denken, einmal im Jahr reicht nicht – Mira"
+  },
+  {
+   "id": 17,
+   "step": 2,
+   "body": "KI-Tools im Alltag: was dürfen wir, was nicht – Tobi"
+  },
+  {
+   "id": 18,
+   "step": 2,
+   "body": "Wissen geht in Rente: Übergaben wenn Leute gehen · Gerd"
+  },
+  {
+   "id": 19,
+   "step": 2,
+   "body": "Lernzeit im Kalender – 10 % für alle? Nadja"
+  },
+  {
+   "id": 20,
+   "step": 2,
+   "body": "ChatGPT & Co – wer nutzt was heimlich? Lasst uns offen reden (Jonas)"
+  },
+  {
+   "id": 21,
+   "step": 2,
+   "body": "Onboarding neue Kolleg*innen, die ersten 100 Tage – Pat"
+  },
+  {
+   "id": 22,
+   "step": 2,
+   "body": "Fehlerkultur / Fuckup-Night – Lena"
+  },
+  {
+   "id": 23,
+   "step": 2,
+   "body": "Doku die jemand liest, Wiki aufräumen · Henrik"
+  },
+  {
+   "id": 24,
+   "step": 2,
+   "body": "Mentoring quer über Abteilungen – Ayşe"
+  },
+  {
+   "id": 25,
+   "step": 2,
+   "body": "Überlastung ansprechen ohne als schwach zu gelten – Kathrin"
+  },
+  {
+   "id": 26,
+   "step": 2,
+   "body": "Teamevents die alle mögen (nicht nur Bowling 🙃) – Ole"
+  },
+  {
+   "id": 27,
+   "step": 2,
+   "body": "Konflikte zwischen Teams, wie gehen wir damit um · Sven"
+  },
+  {
+   "id": 28,
+   "step": 2,
+   "body": "Mental Health – offen drüber reden. Steffi"
+  },
+  {
+   "id": 29,
+   "step": 2,
+   "body": "Copilot ist da, aber keiner zeigt uns wie – Marek"
+  },
+  {
+   "id": 30,
+   "step": 2,
+   "body": "Wir online gehen in Meetings unter, bitte mal drüber reden – Dariusz"
+  },
+  {
+   "id": 31,
+   "step": 2,
+   "body": "Pausenkultur – Mittag am Schreibtisch? Uwe"
+  },
+  {
+   "id": 32,
+   "step": 2,
+   "body": "Datenschutz bei KI, was darf da rein und was nicht – Olena"
+  },
+  {
+   "id": 33,
+   "step": 2,
+   "body": "wer darf was freigeben? Freigabe-Wahnsinn bei Bestellungen (Holger)"
+  },
+  {
+   "id": 34,
+   "step": 2,
+   "body": "Parkplätze + Jobrad 2027 – Uwe"
+  }
+ ],
+ "data": {
+  "viz": "agenda",
+  "slots": [
+   {
+    "label": "10:00–10:50"
+   },
+   {
+    "label": "11:00–11:50"
+   },
+   {
+    "label": "12:00–13:00",
+    "kind": "break",
+    "title": "Mittagspause"
+   },
+   {
+    "label": "13:00–13:50"
+   },
+   {
+    "label": "14:00–14:50"
+   }
+  ],
+  "spaces": [
+   {
+    "label": "Raum Birke"
+   },
+   {
+    "label": "Raum Eiche"
+   },
+   {
+    "label": "Raum Linde"
+   },
+   {
+    "label": "Terrasse"
+   },
+   {
+    "label": "Café-Ecke"
+   }
+  ],
+  "themes": [
+   {
+    "label": "Arbeitsorte und Zeit",
+    "color": "blau"
+   },
+   {
+    "label": "Führung und Entscheidungen",
+    "color": "lila"
+   },
+   {
+    "label": "Lernen und Wissen",
+    "color": "grün"
+   },
+   {
+    "label": "Miteinander und Gesundheit",
+    "color": "orange"
+   }
+  ],
+  "sessions": [
+   {
+    "ids": [
+     20,
+     17,
+     29,
+     32
+    ],
+    "title": "ChatGPT & Co: Wer nutzt was, was ist erlaubt?",
+    "host": "Jonas, Tobi, Marek, Olena",
+    "slot": 0,
+    "space": 0,
+    "theme": 2,
+    "interest": 19
+   },
+   {
+    "ids": [
+     1
+    ],
+    "title": "Büro-Tage: Pflicht oder Einladung?",
+    "host": "Sanne",
+    "slot": 0,
+    "space": 1,
+    "theme": 0,
+    "interest": 14
+   },
+   {
+    "ids": [
+     10
+    ],
+    "title": "Führung in Teilzeit und im Tandem",
+    "host": "Birgit",
+    "slot": 0,
+    "space": 2,
+    "theme": 1,
+    "interest": 6
+   },
+   {
+    "ids": [
+     26
+    ],
+    "title": "Teamevents, die alle mögen (nicht nur Bowling)",
+    "host": "Ole",
+    "slot": 0,
+    "space": 3,
+    "theme": 3,
+    "interest": 8
+   },
+   {
+    "ids": [
+     24
+    ],
+    "title": "Mentoring quer über Abteilungen",
+    "host": "Ayşe",
+    "slot": 0,
+    "space": 4,
+    "theme": 2,
+    "interest": 5
+   },
+   {
+    "ids": [
+     9,
+     14,
+     11,
+     33
+    ],
+    "title": "Wer entscheidet eigentlich was? Entscheidungswege sichtbar und schneller",
+    "host": "Kai, Selin, Dennis, Holger",
+    "slot": 1,
+    "space": 0,
+    "theme": 1,
+    "interest": 17
+   },
+   {
+    "ids": [
+     5,
+     2,
+     30
+    ],
+    "title": "Hybride Meetings, in denen online alle dabei sind",
+    "host": "Ines, Tobi, Dariusz",
+    "slot": 1,
+    "space": 1,
+    "theme": 0,
+    "interest": 15
+   },
+   {
+    "ids": [
+     22
+    ],
+    "title": "Fehlerkultur und Fuckup-Night",
+    "host": "Lena",
+    "slot": 1,
+    "space": 2,
+    "theme": 2,
+    "interest": 9
+   },
+   {
+    "ids": [
+     3
+    ],
+    "title": "4-Tage-Woche: Wer macht beim Pilot mit?",
+    "host": "Yusuf",
+    "slot": 1,
+    "space": 3,
+    "theme": 0,
+    "interest": 16
+   },
+   {
+    "ids": [
+     27
+    ],
+    "title": "Konflikte zwischen Teams: Wie gehen wir damit um?",
+    "host": "Sven",
+    "slot": 1,
+    "space": 4,
+    "theme": 3,
+    "interest": 7
+   },
+   {
+    "ids": [
+     28,
+     25,
+     31
+    ],
+    "title": "Mental Health und Überlastung offen ansprechen",
+    "host": "Steffi, Kathrin, Uwe",
+    "slot": 3,
+    "space": 0,
+    "theme": 3,
+    "interest": 18
+   },
+   {
+    "ids": [
+     4
+    ],
+    "title": "Kernarbeitszeit abschaffen?",
+    "host": "Lukas",
+    "slot": 3,
+    "space": 1,
+    "theme": 0,
+    "interest": 11
+   },
+   {
+    "ids": [
+     18,
+     23
+    ],
+    "title": "Wissen geht in Rente: Übergaben und eine Doku, die jemand liest",
+    "host": "Gerd, Henrik",
+    "slot": 3,
+    "space": 2,
+    "theme": 2,
+    "interest": 10
+   },
+   {
+    "ids": [
+     12
+    ],
+    "title": "Ziele 2027: von oben nach unten und wieder zurück",
+    "host": "Ana",
+    "slot": 3,
+    "space": 3,
+    "theme": 1,
+    "interest": 9
+   },
+   {
+    "ids": [
+     8
+    ],
+    "title": "Workation: vier Wochen aus Spanien arbeiten?",
+    "host": "Jule",
+    "slot": 3,
+    "space": 4,
+    "theme": 0,
+    "interest": 6
+   },
+   {
+    "ids": [
+     16,
+     13
+    ],
+    "title": "Feedback in beide Richtungen: Mitarbeitergespräch neu denken",
+    "host": "Mira, Rafa",
+    "slot": 4,
+    "space": 0,
+    "theme": 1,
+    "interest": 13
+   },
+   {
+    "ids": [
+     7
+    ],
+    "title": "Erreichbarkeit nach 18 Uhr: Brauchen wir Regeln?",
+    "host": "Mo",
+    "slot": 4,
+    "space": 1,
+    "theme": 0,
+    "interest": 12
+   },
+   {
+    "ids": [
+     19
+    ],
+    "title": "Lernzeit im Kalender: 10 % für alle?",
+    "host": "Nadja",
+    "slot": 4,
+    "space": 2,
+    "theme": 2,
+    "interest": 8
+   },
+   {
+    "ids": [
+     6
+    ],
+    "title": "Desk-Sharing ab März: Was heißt das für uns?",
+    "host": "Petra",
+    "slot": 4,
+    "space": 3,
+    "theme": 0,
+    "interest": 10
+   },
+   {
+    "ids": [
+     21
+    ],
+    "title": "Onboarding: die ersten 100 Tage",
+    "host": "Pat",
+    "slot": 4,
+    "space": 4,
+    "theme": 2,
+    "interest": 7
+   }
+  ],
+  "open": [
+   15,
+   34
+  ]
+ },
+ "ai": {
+  "headline": "Am meisten bewegt euch, wer entscheidet und wie offen ihr über KI und Belastung reden könnt. Vier Mal kam derselbe Wunsch in anderen Worten: weniger Schleifen, klarere Wege.",
+  "convergence": [
+   {
+    "label": "Entscheidungswege klären",
+    "ids": [
+     9,
+     14,
+     11,
+     33
+    ],
+    "quote": "Zu viele Abstimmungsschleifen!!!"
+   },
+   {
+    "label": "Offen über KI reden",
+    "ids": [
+     20,
+     17,
+     29,
+     32
+    ],
+    "quote": "wer nutzt was heimlich? Lasst uns offen reden"
+   },
+   {
+    "label": "Belastung ansprechen dürfen",
+    "ids": [
+     28,
+     25,
+     31,
+     7
+    ],
+    "quote": "ohne als schwach zu gelten"
+   },
+   {
+    "label": "Hybrid ohne Zweiklassen-Meetings",
+    "ids": [
+     5,
+     2,
+     30
+    ],
+    "quote": "Wir online gehen in Meetings unter"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Mehr Freiheit oder mehr Regeln bei der Zeit?",
+    "a": "„Kernarbeitszeit abschaffen“ und „4-Tage-Woche testen“",
+    "b": "„Erreichbarkeit nach 18 Uhr, brauchen wir Regeln?“ Die Sessions liegen in verschiedenen Runden, damit beide Seiten in beiden sein können."
+   },
+   {
+    "label": "Büro als Pflicht oder als Einladung?",
+    "a": "„Büro-Tage: Pflicht oder Einladung?“",
+    "b": "„Desk-Sharing ab März“ macht Plätze knapp. Bewusst getrennt: Runde 1 und Runde 4."
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kundinnen und Kunden",
+    "why": "Kein Vorschlag fragt, wie die Zusammenarbeit 2027 bei denen ankommt, für die ihr arbeitet."
+   },
+   {
+    "label": "Geld und Gehalt",
+    "why": "Budget kam nur einmal vor (noch ohne Platz), Bezahlung gar nicht."
+   },
+   {
+    "label": "Wer heute nicht da ist",
+    "why": "Schicht, Außendienst, Elternzeit: Niemand lädt ein, ihre Sicht hereinzuholen."
+   }
+  ]
+ }
+}
