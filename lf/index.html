@@ -153,7 +153,7 @@ function onState(st) {
   if (shown > 0 && ['one', 'many', 'scribe'].includes(cur.mode) && text.length >= 2 && !editing) {   // niemandem den Text wegziehen
     carry = { step: shown, body: text }; $('carrytext').textContent = text; $('carry').hidden = false; $('t').value = '';
   }
-  show(st.step);
+  show(st.step); scrollTo(0, 0);   // neue Frage und ggf. der gerettete Entwurf stehen oben
 }
 let carry = null;
 $('carrysend').onclick = () => { if (carry) { items.push({ cid: uuid(), step: carry.step, body: carry.body, state: 'pending' }); save(); flush(); }
@@ -162,11 +162,13 @@ $('carrydrop').onclick = () => { carry = null; $('carry').hidden = true; };
 
 function submit() {
   const body = $('t').value.trim(), s = stepById(shown);
-  if (body.length < 2) { $('msg').textContent = ERR.bad_length; return; }
+  if (body.length < 2) { if (body || Date.now() - lastSend > 2000) $('msg').textContent = ERR.bad_length; return; }   // Doppeltipp nach dem Ablegen: keine Fehlermeldung
+  lastSend = Date.now();
   if (editing) { const it = items.find(i => i.cid === editing); if (it) { it.body = body; it.state = 'pending'; } editing = null; }
   else items.push({ cid: uuid(), step: s.id, body, state: 'pending' });
   $('t').value = ''; drafts[shown] = ''; $('msg').textContent = ''; save(); render(); flush();
 }
+let lastSend = 0;
 $('send').addEventListener('click', submit);
 $('cancel').addEventListener('click', () => { editing = null; $('t').value = ''; render(); });
 $('t').addEventListener('focus', () => setTimeout(() => $('how').scrollIntoView({ block: 'start', behavior: 'smooth' }), 350));

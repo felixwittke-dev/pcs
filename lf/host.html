@@ -48,7 +48,7 @@
   <h2>Ablauf</h2>
   <ol id="steps"></ol>
 
-  <h2>Beiträge im aktuellen Schritt</h2>
+  <h2>Beiträge, die die Wand gerade zeigt</h2>
   <div id="items"></div>
 
   <h2>KI-Auswertung</h2>
@@ -91,7 +91,8 @@ async function refresh() {
     apply(await rpc('lf_get_state'));
     const [rows, drafts] = await Promise.all([call('lf_read'), call('lf_drafts')]);
     const box = $('items'); box.textContent = '';
-    const mine = rows.filter(r => r.step === st.step);
+    const on = stepById(st.step).show.length ? stepById(st.step).show : [st.step];   // was die Wand gerade zeigt (Schritt 3/5/7: fruehere Schritte)
+    const mine = rows.filter(r => on.includes(r.step));
     if (!mine.length) box.append(el('p', 'Noch keine Beiträge.', 'muted'));
     mine.forEach(r => { const d = el('div', null, 'item' + (r.hidden ? ' hid' : '')); d.append(el('span', '#' + r.id, 'muted'), el('div', r.body, 'b'));
       const b = el('button', r.hidden ? 'Wieder zeigen' : 'Ausblenden', 'small'); b.onclick = () => call('lf_hide', { p_id: r.id, p_hidden: !r.hidden }).then(refresh, fail);

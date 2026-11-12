@@ -38,7 +38,7 @@ const css = `
 .${N}room { align-self: end; font-weight: 800; color: #1C1917; padding: 0 .15em .25em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
             border-bottom: 2px solid #D9D9D2; }
 .${N}time { display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding-right: .55em; line-height: 1.15; cursor: pointer;
-            white-space: nowrap; border-right: 2px solid #D9D9D2; transition: color .3s; }
+            text-align: right; overflow-wrap: anywhere; min-width: 0; border-right: 2px solid #D9D9D2; transition: color .3s; }
 .${N}time b { font-size: 1.12em; font-weight: 800; }
 .${N}time small { color: #5F5F5F; font-size: .82em; }
 .${N}time.${N}brkt { cursor: default; flex-direction: row; gap: .2em; align-items: center; justify-content: flex-end; color: #5F5F5F; font-size: .85em; }
@@ -59,9 +59,10 @@ const css = `
 .${N}brk.${N}plenum { background: #EAF9F9; color: #409E9F; }
 .${N}strip { flex: none; display: flex; align-items: center; gap: .5em; min-width: 0; }
 .${N}slabel { flex: none; font-weight: 800; color: #5F5F5F; font-size: .9em; }
-.${N}open { flex: 0 1 auto; min-width: 5em; max-width: 26em; background: #FFF4C7; padding: .28em .6em; border-radius: .25em; box-shadow: 0 1px 2px rgba(0,0,0,.16);
+.${N}open { flex: none; min-width: 0; max-width: 26em; background: #FFF4C7; padding: .28em .6em; border-radius: .25em; box-shadow: 0 1px 2px rgba(0,0,0,.16);
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: .9em; }
 .${N}more { flex: none; color: #5F5F5F; font-size: .85em; font-weight: 700; }
+.${N}cmore { flex: none; color: #5F5F5F; font-size: .82em; font-weight: 700; text-align: center; cursor: pointer; border-radius: .45em; background: #F1F1EC; padding: .15em .4em; white-space: nowrap; }
 .${N}ghost { position: absolute; inset: 0; z-index: 3; pointer-events: none; transition: opacity .6s; }
 .${N}ghost .tile { position: absolute; }
 /* Fokus */
@@ -138,12 +139,12 @@ function overview(box, ctx, m) {
   const W = box.clientWidth, H = box.clientHeight, R = Math.max(1, m.spaces.length);
   const wrap = el('div', null, N + 'all'), grid = el('div', null, N + 'grid'); wrap.append(grid); box.append(wrap);
   const gap = Math.max(6, Math.round(Math.min(W / 160, H / 80)));
-  grid.style.gridTemplateColumns = `max-content repeat(${R}, minmax(0, 1fr))`;
+  grid.style.gridTemplateColumns = `fit-content(22%) repeat(${R}, minmax(0, 1fr))`;   // sehr lange Zeit-Labels brechen um, statt die Raeume zu quetschen
   grid.style.gridTemplateRows = 'auto ' + m.slots.map(s => s.kind ? 'auto' : 'minmax(0, 1fr)').join(' ');
   grid.style.gap = `${gap}px ${gap}px`;
   grid.append(el('div'));
   const rooms = m.spaces.map(sp => { const r = el('div', sp.label, N + 'room'); grid.append(r); return r; });
-  const times = [], bands = [], cells = [], cards = [];
+  const times = [], bands = [], cells = [], cards = [], mores = [];
   m.slots.forEach(sl => {
     if (sl.kind) { const t = el('div', null, N + 'time ' + N + 'brkt'); t.append(el('span', sl.label)); grid.append(t); times.push(t);
       const b = el('div', sl.title, N + 'brk' + (sl.kind === 'plenum' ? ' ' + N + 'plenum' : '')); grid.append(b); bands.push(b); return; }
@@ -151,7 +152,12 @@ function overview(box, ctx, m) {
     t.onclick = () => ctx.go(m.rounds.indexOf(sl)); t._slot = sl.i; grid.append(t); times.push(t);
     m.spaces.forEach(sp => { const list = m.at.get(sl.i + ',' + sp.i) || [], c = el('div', null, N + 'cell');
       if (!list.length) { c.classList.add(N + 'empty'); c.append(el('span', 'frei')); }
-      list.forEach(s => { const k = cardEl(s, m, ctx); c.append(k); cards.push(k); });
+      // mehr als drei Sessions in einer Zelle: zwei Karten, der Rest als „+ n weitere“ (alle stehen in der Runden-Ansicht)
+      const shown = list.length > 3 ? list.slice(0, 2) : list;
+      shown.forEach(s => { const k = cardEl(s, m, ctx); c.append(k); cards.push(k); });
+      if (shown.length < list.length) { const x = el('div', '+ ' + (list.length - shown.length) + ' weitere', N + 'cmore'); x._slot = sl.i;
+        x._ids = list.slice(shown.length).flatMap(s => s.ids); x.title = list.slice(shown.length).map(s => s.title).join('\n');
+        x.onclick = () => ctx.go(m.rounds.indexOf(sl)); c.append(x); mores.push(x); }
       c._slot = sl.i; grid.append(c); cells.push(c); });
   });
   // Noch ohne Platz
@@ -177,7 +183,7 @@ function overview(box, ctx, m) {
     while (over() && n < opens.length - 1) { opens[opens.length - 1 - n].hidden = true; n++; more.textContent = '+ ' + n + ' weitere'; }
     if (!n) more.remove(); }
   if (ctx.dir) wrap.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
-  return { wrap, grid, rooms, times, bands, cells, cards, strip, opens };
+  return { wrap, grid, rooms, times, bands, cells, cards, mores, strip, opens };
 }
 
 // ---------- Fokus: eine Runde gross
@@ -222,13 +228,14 @@ function focusView(box, ctx, m, k) {
   const make = (list, f) => { cols.textContent = ''; cols.style.fontSize = f + 'px'; // Spalten nach Textmenge gewichtet: eine Session mit vier Vorschlaegen bekommt mehr Breite als eine mit einem
     cols.style.gridTemplateColumns = list.map(x => `minmax(0, ${weight(x).toFixed(2)}fr)`).join(' ');
     list.forEach(x => cols.append(focusCard(x.s, x.sp, m))); return [...cols.children]; };
-  const fits = (list, f) => make(list, f).every(c => c.scrollHeight <= c.clientHeight + 1);
+  const fits = (list, f) => make(list, f).every(c => c.scrollHeight <= c.clientHeight + 1 && c.scrollWidth <= c.clientWidth + 1);
   const chars = x => x.s ? x.s.title.length * 1.6 + x.s.ids.reduce((a, i) => a + m.byId.get(i).body.length + 25, 0) : 40;
   const avg = here.reduce((a, x) => a + chars(x), 0) / here.length, weight = x => Math.max(.6, Math.min(1.8, Math.sqrt(chars(x) / avg)));
   const LO = 15, HI = 28;
-  let parts = [here];
-  for (let p = 2; !fits(parts[0], LO) && p <= here.length; p++) { const per = Math.ceil(here.length / p); parts = [];
-    for (let i = 0; i < here.length; i += per) parts.push(here.slice(i, i + per)); }
+  // Seiten: hoechstens so viele Spalten, wie mit ~15 Zeichen Breite nebeneinander passen (sonst Wortbrei), dann nach Hoehe
+  const split = p => { const per = Math.ceil(here.length / p), out = []; for (let i = 0; i < here.length; i += per) out.push(here.slice(i, i + per)); return out; };
+  let p = Math.max(1, Math.ceil(here.length / Math.max(1, Math.floor(W / 230)))), parts = split(p);
+  while (!parts.every(x => fits(x, LO)) && p < here.length) parts = split(++p);
   const page = Math.min(ctx.page || 0, parts.length - 1), list = parts[page];
   let lo = LO, hi = HI;
   if (fits(list, hi)) lo = hi; else for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (fits(list, mid)) lo = mid; else hi = mid; }
@@ -263,7 +270,7 @@ async function reveal(box, ctx) {
   const fade = (e, ms, delay = 0, dy = 0) => e.animate([{ opacity: 0, transform: `translateY(${dy}px)` }, { opacity: 1, transform: 'none' }], { duration: ms, delay, easing: 'ease-out', fill: 'backwards' });
   const frame = [...v.rooms, ...v.times, ...v.bands, ...v.cells];
   frame.forEach(e => e.style.opacity = 0);
-  v.cards.forEach(c => { c.style.visibility = 'hidden'; c.style.zIndex = 4; });
+  v.cards.forEach(c => { c.style.visibility = 'hidden'; c.style.zIndex = 4; }); v.mores.forEach(x => x.style.visibility = 'hidden');
   v.opens.forEach(o => o.style.visibility = 'hidden'); if (v.strip) v.strip.firstChild.style.visibility = 'hidden';
   // Geister-Mosaik an den alten Plaetzen
   const B = box.getBoundingClientRect(), ghost = el('div', null, N + 'ghost'), ghosts = new Map();
@@ -280,6 +287,13 @@ async function reveal(box, ctx) {
   [...v.cells, ...v.bands].forEach((e, i) => { e.style.opacity = ''; fade(e, 500, 350 + i * 18); });
   await sleep(1100);
   ghost.style.opacity = 1; ghosts.forEach(g => g.style.opacity = .3);
+  // Geister fliegen auf ein Ziel (Karte, „+ n weitere“) und gehen darin auf
+  const into = (b, ids, color) => ids.forEach((id, j) => { j = Math.min(j, 10); const g = ghosts.get(id); if (!g) return; ghosts.delete(id);
+    const a = g.getBoundingClientRect(); g.style.opacity = 1; g.style.zIndex = 5; g.classList.add('c-' + (color || 'none'));
+    const T = `translate(${b.left - a.left}px,${b.top - a.top}px) scale(${b.width / a.width},${b.height / a.height})`;
+    g.animate([{ transform: 'none', transformOrigin: '0 0' }, { transform: T, transformOrigin: '0 0' }], { duration: 1200, delay: 60 + j * 70, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+    g.animate([{ opacity: 1 }, { opacity: 1, offset: .78 }, { opacity: 0 }], { duration: 1200, delay: 60 + j * 70, fill: 'forwards' });
+    setTimeout(() => g.remove(), 1400 + j * 70); });
   // 2. Runde fuer Runde fliegen die Vorschlaege in ihre Zellen; zusammengelegte fliegen in eine Karte
   const per = Math.max(900, Math.min(1500, 5600 / Math.max(1, m.rounds.length)));
   for (const sl of m.rounds) {
@@ -292,13 +306,9 @@ async function reveal(box, ctx) {
       const g = ghosts.get(c._s.ids[0]); if (g) { g.remove(); ghosts.delete(c._s.ids[0]); } });
     ctx.flip(box, from);
     mine.forEach(c => delete c.dataset.id);
-    // weitere Vorschlaege derselben Session: Geist fliegt auf die Karte und geht in ihr auf
-    mine.forEach(c => { const b = targets.get(c); c._s.ids.slice(1).forEach((id, j) => { const g = ghosts.get(id); if (!g) return; ghosts.delete(id);
-      const a = g.getBoundingClientRect(); g.style.opacity = 1; g.style.zIndex = 5; g.classList.add('c-' + (c._s.theme.color || 'none'));
-      const T = `translate(${b.left - a.left}px,${b.top - a.top}px) scale(${b.width / a.width},${b.height / a.height})`;
-      g.animate([{ transform: 'none', transformOrigin: '0 0' }, { transform: T, transformOrigin: '0 0' }], { duration: 1200, delay: 60 + j * 70, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
-      g.animate([{ opacity: 1 }, { opacity: 1, offset: .78 }, { opacity: 0 }], { duration: 1200, delay: 60 + j * 70, fill: 'forwards' });
-      setTimeout(() => g.remove(), 1400 + j * 70); }); });
+    mine.forEach(c => into(targets.get(c), c._s.ids.slice(1), c._s.theme.color));   // weitere Vorschlaege derselben Session gehen in der Karte auf
+    // Zelle mit „+ n weitere“: deren Vorschlaege fliegen in diesen Hinweis
+    v.mores.filter(x => x._slot === sl.i).forEach(x => { x.style.visibility = ''; fade(x, 400, 300); into(x.getBoundingClientRect(), x._ids, null); });
     await sleep(Math.min(1250, per));
     merged.forEach(c => { const h = c._foot.querySelector('.' + N + 'merged'); h.style.visibility = ''; fade(h, 400);
       c.animate([{ boxShadow: '0 0 0 3px #40BFC0, 0 1px 3px rgba(0,0,0,.11)' }, { boxShadow: '0 1px 3px rgba(0,0,0,.11)' }], { duration: 900, easing: 'ease-out' }); });
@@ -307,10 +317,12 @@ async function reveal(box, ctx) {
   }
   // 3. Vorschlaege ohne Platz
   if (v.strip) { const lab = v.strip.firstChild; lab.style.visibility = ''; fade(lab, 400);
-    v.opens.forEach(o => { o.style.visibility = ''; o.style.position = 'relative'; o.style.zIndex = 4; o.dataset.id = o.dataset.mid;
+    const shown = v.opens.filter(o => !o.hidden), more = v.strip.querySelector('.' + N + 'more');
+    shown.forEach(o => { o.style.visibility = ''; o.style.position = 'relative'; o.style.zIndex = 4; o.dataset.id = o.dataset.mid;
       const g = ghosts.get(o.dataset.mid); if (g) { g.remove(); ghosts.delete(o.dataset.mid); } });
-    ctx.flip(box, from); v.opens.forEach(o => delete o.dataset.id);
-    await sleep(1200); }
+    if (more) into(more.getBoundingClientRect(), v.opens.filter(o => o.hidden).map(o => o.dataset.mid), 'gelb');   // was nicht in die Leiste passt, geht in „+ n weitere“ auf
+    ctx.flip(box, from); shown.forEach(o => delete o.dataset.id);
+    await sleep(more ? 1700 : 1200); }
   ghost.style.opacity = 0; await sleep(500); ghost.remove();
   await sleep(300);
 }
