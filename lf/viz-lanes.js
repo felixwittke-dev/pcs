@@ -22,6 +22,12 @@
 //                  Steht ein Post-it schon in einer frueheren Bahn, fliegt es im Show-Effekt von dort herueber.
 //   badges: { '<id>': 'Yes' }   // kleines Text-Abzeichen unten im Post-it (z. B. WINFY-Antworten „Yes“, „No“, „I will try“, „Whatever“).
 //       Bekannte Antworten bekommen eine dezente Toenung, jeder andere Text ein neutrales Abzeichen.
+//   banner: { label: 'Purpose', hint: 'Warum ist diese Arbeit wichtig?', color: 'türkis', ids: [..], summary: '…', statement: '…' }
+//       (12.11., fuer Purpose-to-Practice; optional) Dach-Karte ueber allen Bahnen: links der von der KI verdichtete Satz (statement) gross,
+//       rechts die einzelnen Beitraege klein. Zaehlt als Ding 0 (count = Bahnen + 1, Bahn k ist dann Ding k + 1).
+//       Fokus 0: Satz gross, KI-Satz (summary), alle Beitraege im Volltext; die Bahnen als Streifen daneben.
+//       Fokus auf eine Bahn: die Dach-Karte bleibt als schmale Zeile oben stehen. Show-Effekt: erst das Dach, dann Bahn fuer Bahn.
+//       Hinweis: Die Verweise der KI-Auswertung im Rahmen (Label = Bahn-Label) zielen auf Ding k; mit banner muesste der Rahmen k + 1 rufen.
 // Post-its, die in keiner Bahn stehen, zeigt der Baustein nicht. Ein Post-it erscheint hoechstens einmal je Bahn.
 // count = Zahl der Bahnen (Fokus k = Bahn k gross, die anderen bleiben als schmale Streifen sichtbar).
 (() => {
@@ -84,6 +90,30 @@
   .${P}b-no { color: #6B6B66; border-color: #C9C9C2; background: #FAFAF7; }
   .${P}b-try { color: #8A6400; border-color: #F3D27A; background: #FFF8E2; }
   .${P}b-whatever { color: #6B6B66; border-color: #DADAD2; background: transparent; font-weight: 400; font-style: italic; }
+  /* Dach-Karte (banner) */
+  .${P}ban { position: absolute; left: 0; right: 0; top: 0; display: flex; gap: 20px; background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.09);
+             border-left: 6px solid var(--acc); padding: 10px 14px 10px 16px; }
+  .${P}bleft { flex: 1.2 1 0; min-width: 0; display: flex; flex-direction: column; }
+  .${P}bright { flex: 1 1 0; min-width: 0; position: relative; }
+  .${P}bright > .${P}body { position: absolute; inset: 0; margin: 0; }
+  .${P}stmt { font-weight: 700; line-height: 1.25; color: #1C1917; margin: 8px 0 0; font-size: clamp(19px, 1.6vw, 32px); }
+  .${P}stmt b, .${P}bslim b { color: #409E9F; font-size: .62em; vertical-align: .2em; margin-right: .45em; letter-spacing: .03em; }
+  .${P}ban .${P}more { position: absolute; left: 0; right: 0; bottom: 0; padding: 0; }
+  .${P}bslim { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; gap: .45em; background: #fff; border-radius: 10px;
+               box-shadow: 0 1px 3px rgba(0,0,0,.09); border-left: 6px solid var(--acc); padding: 7px 14px; cursor: pointer; white-space: nowrap;
+               font-size: clamp(15px, 1.05vw, 21px); }
+  .${P}bslim:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .${P}bslim .${P}label { font-weight: 800; flex: none; }
+  .${P}bslim .${P}stmt { margin: 0; font-size: 1em; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .${P}bbig { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; background: #fff; border-radius: 10px;
+              box-shadow: 0 1px 3px rgba(0,0,0,.09); border-top: 6px solid var(--acc); padding: 10px 14px; }
+  .${P}bbig .${P}head { font-size: clamp(22px, 2.2vw, 40px); cursor: default; }
+  .${P}bbig .${P}hint { font-size: clamp(14px, 1.1vw, 20px); }
+  .${P}bbig .${P}stmt { font-size: clamp(24px, 2.4vw, 46px); margin: 10px 0 2px; }
+  .${P}bbig .${P}sum { font-size: clamp(15px, 1.2vw, 22px); }
+  .${P}bbig .${P}tiles { --lines: 4; }
+  .${P}bbig .tile { height: auto; min-height: calc(2 * 1.25em + .7em); }
+  .${P}bbig .tile span:first-child { display: block; }   /* Fokus auf das Dach: alle Beitraege im Volltext */
   .${P}ghost { position: absolute; inset: 0; z-index: 2; pointer-events: none; --lines: 3; }
   .${P}ghost .tile { position: absolute; }
   `;
@@ -148,7 +178,7 @@
     const head = el('div', null, P + 'head');
     if (one) { const b = el('button', '← Alle', P + 'back'); b.onclick = () => ctx.go(null); head.append(b); }
     else head.onclick = () => ctx.go(lane.k);
-    head.append(el('span', String(lane.k + 1), P + 'num'), el('span', lane.label, P + 'label'), el('span', '· ' + lane.rows.length, P + 'n'));
+    head.append(el('span', String(lane.k + 1 + (ctx.off || 0)), P + 'num'), el('span', lane.label, P + 'label'), el('span', '· ' + lane.rows.length, P + 'n'));
     L.append(head);
     if (lane.hint) L.append(el('div', lane.hint, P + 'hint'));
     if (lane.summary) { const s = el('div', null, P + 'sum'); s.append(el('b', 'KI'), document.createTextNode(lane.summary)); L.append(s); }
@@ -193,9 +223,9 @@
     const row = ctx.el('div', null, P + 'row' + (one ? ' ' + P + 'one' : '') + (tight ? ' ' + P + 'tight' : '')), xs = [], kept = keptOf(lanes);
     lanes.forEach((lane, k) => {
       if (k) row.append(flow ? Object.assign(ctx.el('div', null, P + 'arrow'), { innerHTML: ARROW }) : ctx.el('div', null, P + 'gap'));
-      if (one && k !== ctx.focus) {   // andere Bahnen bleiben als schmaler Streifen sichtbar, Klick setzt sie in Szene
+      if ((one && k !== ctx.focus) || ctx.bannerFocus) {   // andere Bahnen bleiben als schmaler Streifen sichtbar, Klick setzt sie in Szene
         const s = ctx.el('div', null, P + 'strip'); s.style.setProperty('--acc', ACC[lane.color]); s.title = lane.label; s.onclick = () => ctx.go(k);
-        s.append(ctx.el('span', String(k + 1), P + 'num'), ctx.el('span', lane.label, P + 'vlabel'), ctx.el('span', '· ' + lane.rows.length, P + 'n'));
+        s.append(ctx.el('span', String(k + 1 + (ctx.off || 0)), P + 'num'), ctx.el('span', lane.label, P + 'vlabel'), ctx.el('span', '· ' + lane.rows.length, P + 'n'));
         row.append(s); return;
       }
       const x = laneEl(lane, chunk(lane, n, p), !!one, ctx, tight, kept);
@@ -204,20 +234,74 @@
       row.append(x.L); xs.push(x);
     });
     box.append(row);
+    const ban = ctx.ban ? bannerEl(box, row, ctx, one) : null;
     // Pfeile auf Hoehe der Ueberschriften
-    const h = row.querySelector('.' + P + 'head, .' + P + 'num');
+    const h = row.querySelector('.' + P + 'lane .' + P + 'head, .' + P + 'strip .' + P + 'num');
     if (h) { const top = h.offsetTop + h.offsetHeight / 2 - 12 + (h.closest('.' + P + 'lane, .' + P + 'strip') || h).offsetTop;
       row.querySelectorAll('.' + P + 'arrow svg').forEach(s => s.style.top = top + 'px'); }
-    return { row, xs, one: !!one };
+    return { row, xs, one: !!one, ban };
+  }
+
+  // Dach-Karte: 'big' (Fokus 0, links in der Zeile vor den Streifen), 'slim' (Fokus auf eine Bahn), sonst volle Karte ueber den Bahnen
+  function bannerEl(box, row, ctx, laneFocus) {
+    const { el } = ctx, b = ctx.ban, acc = ACC[b.color] ? b.color : 'türkis';
+    const stmt = (cls, big) => { const e = el('div', null, P + 'stmt'); if (b.statement) { e.append(el('b', 'KI'), document.createTextNode(b.statement)); } else e.textContent = b.summary || ''; return e; };
+    const head = big => { const h = el('div', null, P + 'head');
+      if (big) { const x = el('button', '← Alle', P + 'back'); x.onclick = () => ctx.go0(null); h.append(x); } else h.onclick = () => ctx.go0(0);
+      h.append(el('span', '1', P + 'num'), el('span', b.label, P + 'label'), el('span', '· ' + b.rows.length, P + 'n')); return h; };
+    const tiles = (lines, cap) => { const body = el('div', null, P + 'body'), inner = el('div', null, P + 'inner'), T = el('div', null, P + 'tiles');
+      b.rows.forEach(r => T.append(tile(r, 'c-' + acc, lines, cap))); inner.append(T); body.append(inner); return { body, inner }; };
+    if (laneFocus) {
+      const e = el('div', null, P + 'bslim'); e.style.setProperty('--acc', ACC[acc]); e.title = b.label; e.onclick = () => ctx.go0(0);
+      e.append(el('span', '1', P + 'num'), el('span', b.label, P + 'label'), stmt()); box.append(e);
+      row.style.top = (e.offsetHeight + 10) + 'px'; return null;
+    }
+    if (ctx.bannerFocus) {
+      const e = el('div', null, P + 'bbig'); e.style.setProperty('--acc', ACC[acc]);
+      e.append(head(true)); if (b.hint) e.append(el('div', b.hint, P + 'hint')); if (b.statement) e.append(stmt());
+      if (b.summary) { const s = el('div', null, P + 'sum'); s.append(el('b', 'KI'), document.createTextNode(b.summary)); e.append(s); }
+      const x = tiles(4, 400); e.append(x.body); row.prepend(e, ctx.el('div', null, P + 'gap'));
+      return { ...x, el: e, big: true };
+    }
+    const e = el('div', null, P + 'ban'), L = el('div', null, P + 'bleft'), R = el('div', null, P + 'bright');
+    e.style.setProperty('--acc', ACC[acc]);
+    L.append(head(false)); if (b.hint) L.append(el('div', b.hint, P + 'hint')); L.append(stmt());
+    const x = tiles(3, 150); R.append(x.body); e.append(L, R); box.append(e);
+    // Hoehe: so viel wie der Satz braucht, hoechstens ein Drittel; sonst den Satz etwas kleiner setzen (nicht unter 16 px)
+    const H = box.clientHeight, cap = H * 0.34, st = L.querySelector('.' + P + 'stmt');
+    for (let fz = parseFloat(getComputedStyle(st).fontSize); L.offsetHeight + 22 > cap && fz > 16; fz -= 1) st.style.fontSize = (fz - 1) + 'px';
+    const bh = Math.round(Math.min(Math.max(L.offsetHeight + 22, H * 0.2), cap));
+    e.style.height = bh + 'px'; row.style.top = (bh + 14) + 'px';
+    return { ...x, el: e, big: false };
+  }
+
+  function bannerOf(ctx) {
+    const b = ctx.data && ctx.data.banner; if (!b) return null;
+    const byId = new Map(ctx.rows.map(r => [String(r.id), r])), seen = new Set();
+    return { ...b, label: b.label || 'Purpose', rows: (b.ids || []).map(String).filter(i => byId.has(i) && !seen.has(i) && seen.add(i)).map(i => byId.get(i)) };
   }
 
   function draw(box, ctx) {
+    const ban = bannerOf(ctx);
+    if (!ban) return drawLanes(box, ctx);
+    // mit Dach-Karte: Ding 0 = Dach, Ding k + 1 = Bahn k
+    const f = ctx.focus, sub = { ...ctx, ban, off: 1, go0: ctx.go, go: k => ctx.go(k == null ? null : k + 1), out: {}, bannerFocus: f === 0, focus: f == null || f === 0 ? null : f - 1 };
+    const r = drawLanes(box, sub), x = sub.out.b && sub.out.b.ban;
+    if (x) {
+      const lo = x.big ? FLOOR.one : FLOOR.all, fs = fit(x, lo, x.big ? 30 : 18);
+      x.inner.style.fontSize = (fs || lo) + 'px';
+      if (x.inner.offsetHeight > x.body.clientHeight + 1) { x.body.style.overflowY = 'auto'; if (!x.big) x.body.style.bottom = '18px'; (x.big ? x.el : x.body.parentNode).append(ctx.el('div', '↓ weiter nach unten scrollen', P + 'more')); }
+    }
+    return { count: r.count + 1, pages: 1 };
+  }
+
+  function drawLanes(box, ctx) {
     const lanes = lanesOf(ctx);
     if (!lanes.length) { box.textContent = ''; return { count: 0, pages: 1 }; }
     if (ctx.focus != null && !lanes[ctx.focus]) ctx = { ...ctx, focus: null };
     const one = ctx.focus != null, lo = one ? FLOOR.one : FLOOR.all, hi = one ? CEIL.one : CEIL.all;
     // Schrift nie unter die lesbare Untergrenze: passt eine Bahn dann nicht, ist sie nach unten scrollbar (Felix, 12.11.). Kein Blaettern.
-    const b = build(box, ctx, lanes, 1, 0, false);
+    const b = build(box, ctx, lanes, 1, 0, false); if (ctx.out) ctx.out.b = b;
     // Bahnen mit emphasis 'strong' werden nur untereinander angeglichen, nicht an die anderen (die wenigen Ergebnisse duerfen gross sein)
     const fs = b.xs.map(x => fit(x, lo, hi)), isS = i => b.xs[i].lane.emphasis === 'strong';
     const low = want => Math.min(...fs.filter((f, i) => isS(i) === want).map(f => f || lo));
@@ -239,6 +323,9 @@
     laneEls.forEach(L => { L.style.opacity = 0; L.querySelectorAll('.tile').forEach(t => t.style.visibility = 'hidden');
       const s = L.querySelector('.' + P + 'sum'); if (s) s.style.opacity = 0; });
     row.querySelectorAll('.' + P + 'arrow').forEach(a => a.style.opacity = 0);
+    const ban = box.querySelector('.' + P + 'ban'), bst = ban && ban.querySelector('.' + P + 'stmt');
+    const bmore = ban && ban.querySelector('.' + P + 'more');
+    if (ban) { ban.style.opacity = 0; ban.querySelectorAll('.tile').forEach(t => t.style.visibility = 'hidden'); if (bst) bst.style.opacity = 0; if (bmore) bmore.style.opacity = 0; }
     // Geister-Mosaik an den alten Plaetzen
     const B = box.getBoundingClientRect(), ghost = ctx.el('div', null, P + 'ghost'), ghosts = new Map();
     const mb = document.querySelector('#mosaic .block'); ghost.style.fontSize = (mb && mb.style.fontSize) || '12px';
@@ -260,6 +347,24 @@
       await sleep(760);
     }
     await sleep(200);
+    if (ban) {   // erst das Dach: Beitraege fliegen zusammen, dann erscheint der verdichtete Satz
+      ban.style.opacity = 1; fade(ban, 500, 0, 0);
+      const tiles = [...ban.querySelectorAll('.tile')], vb = ban.querySelector('.' + P + 'body').getBoundingClientRect();
+      tiles.forEach((t, j) => { const g = ghosts.get(t.dataset.id); if (g) setTimeout(() => { g.className = t.className + ' pop'; }, Math.min(j * 25, 500)); });
+      await sleep(Math.min(tiles.length * 25, 500) + 650);
+      tiles.forEach((t, j) => {
+        const g = ghosts.get(t.dataset.id), b = t.getBoundingClientRect(), delay = Math.min(j * 8, 400);
+        if (!g) { t.style.visibility = ''; fade(t, 400, delay); return; }
+        if (b.top > vb.bottom || b.bottom < vb.top) { g.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, delay, fill: 'forwards' }); return; }   // weggescrollt: verblassen
+        const a = g.getBoundingClientRect(); g.style.transformOrigin = '0 0';
+        g.animate([{ transform: 'none' }, { transform: `translate(${b.left - a.left}px,${b.top - a.top}px) scale(${b.width / a.width},${b.height / a.height})` }],
+                  { duration: 1000, delay, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards' });
+      });
+      await sleep(1450);
+      tiles.forEach(t => { t.style.visibility = ''; const g = ghosts.get(t.dataset.id); if (g) { g.remove(); ghosts.delete(t.dataset.id); } });
+      if (bmore) bmore.style.opacity = 1;
+      if (bst) { bst.style.opacity = 1; bst.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }], { duration: 900, easing: 'ease-out', fill: 'backwards' }); await sleep(1300); }
+    }
     for (const lane of lanes) {
       const L = laneEls[lane.k]; if (!L) continue;
       L.style.opacity = 1; fade(L, 500, 0, -24);

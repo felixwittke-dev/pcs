@@ -255,12 +255,12 @@ function renderPanel(animate) {
   const box = $('panel'), r = ai.data || {}, titles = ai.titles || (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
   const rv = e => { if (animate) { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; } return e; };   // nur beim Oeffnen einblenden, nicht beim Neu-Einpassen
   const noun = view && ((view.s.lsDef || LS[view.s.ls] || {}).noun) || 'Post-its';
-  box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' ' + noun : 'euren Beiträgen'))));
+  box.append(rv(el('h2', 'KI-Auswertung · ' + (view ? view.rows.length + ' ' + noun : 'eure Beiträge'))));
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
   const cols = el('div', null, 'cols'); box.append(cols);
   const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
   // Eintraege, deren Name zu einem Thema / einer Bahn / einem Muster / einem Paar passt, fuehren per Klick dorthin.
-  const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes || d0.patterns || d0.pairs || d0.zones || []) : [];
+  const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes ? (d0.banner ? [d0.banner, ...d0.lanes] : d0.lanes) : d0.patterns || d0.pairs || d0.zones || []) : [];
   const find = label => things.findIndex(t => t.label === label || t.question === label);
   const link = (d, label, text) => { const k = find(label); if (k < 0) return d.append(el('b', text));
     const b = el('button', text, 'c-' + (things[k].color || 'none')); b.onclick = () => go(k); d.append(b); };

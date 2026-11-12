@@ -1,0 +1,139 @@
+{
+ "step": {
+  "label": "Purpose-to-Practice · alle",
+  "lsDef": {
+   "name": "Purpose-to-Practice",
+   "icon": "purpose-to-practice",
+   "noun": "Beiträge",
+   "panel": [
+    "Was das Programm trägt",
+    "Wo es sich reibt",
+    "Was noch fehlt"
+   ]
+  },
+  "phase": "alle",
+  "q": "Wir gründen ein Mentoring-Programm für Quereinsteigerinnen und Quereinsteiger in der Pflege.",
+  "how": "Erst das Warum, dann alles Weitere daraus ableiten.",
+  "show": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "people": 6,
+ "rows": [
+  {
+   "id": 1,
+   "step": 2,
+   "body": "Damit niemand in den ersten Wochen allein dasteht"
+  },
+  {
+   "id": 2,
+   "step": 2,
+   "body": "weil wir jede gute Kraft halten müssen"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Mentoring-Zeit ist Arbeitszeit"
+  },
+  {
+   "id": 4,
+   "step": 4,
+   "body": "Erfahrene Kolleginnen die Lust aufs Erklären haben"
+  },
+  {
+   "id": 5,
+   "step": 4,
+   "body": "Quereinsteiger selbst"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "Tandems auf derselben Station"
+  },
+  {
+   "id": 7,
+   "step": 6,
+   "body": "Die ersten 10 Schichten gemeinsam"
+  },
+  {
+   "id": 8,
+   "step": 6,
+   "body": "Glossar mit allen Abkürzungen"
+  }
+ ],
+ "data": {
+  "viz": "lanes",
+  "flow": true,
+  "banner": {
+   "label": "Purpose",
+   "hint": "Warum ist diese Arbeit wichtig?",
+   "color": "türkis",
+   "ids": [
+    1,
+    2
+   ],
+   "statement": "Wir halten gute Leute, indem niemand in den ersten Wochen allein dasteht."
+  },
+  "lanes": [
+   {
+    "label": "Principles",
+    "hint": "Welche Regeln gelten unbedingt?",
+    "color": "blau",
+    "ids": [
+     3
+    ]
+   },
+   {
+    "label": "Participants",
+    "hint": "Wer muss dabei sein?",
+    "color": "lila",
+    "ids": [
+     4,
+     5
+    ]
+   },
+   {
+    "label": "Structure",
+    "hint": "Wie organisieren wir uns?",
+    "color": "grün",
+    "ids": [
+     6
+    ]
+   },
+   {
+    "label": "Practices",
+    "hint": "Was tun wir konkret?",
+    "color": "orange",
+    "ids": [
+     7,
+     8
+    ]
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Ein schlanker Anfang: Zeit schützen, in Tandems arbeiten, die ersten Schichten gemeinsam.",
+  "convergence": [
+   {
+    "label": "Niemand allein",
+    "ids": [
+     1,
+     6,
+     7
+    ],
+    "quote": "Damit niemand in den ersten Wochen allein dasteht"
+   }
+  ],
+  "tension": [],
+  "blind_spots": [
+   {
+    "label": "Wer koordiniert",
+    "why": "Niemand sagt, wer die Tandems zusammenbringt."
+   }
+  ]
+ }
+}
