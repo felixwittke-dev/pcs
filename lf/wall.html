@@ -229,13 +229,15 @@ function aiButton() {
   b.onclick = () => go(focus === 'ai' ? null : 'ai');
 }
 
-async function go(key) {
+async function go(key, d) {
   if (busy) return;
   if (key === 'ai' && ai && !ai.released) {   // Freigabe direkt auf der Wand
     await rpc('lf_release', { p_key: K, p_step: ai.step, p_released: true });
     ai.released = true; if (prevReleased) prevReleased.push(ai.step);
   }
-  focus = key; page = 0; draw(true);
+  const was = focus; focus = key; page = 0; draw(true);
+  // eigene Bausteine: das naechste Ding rueckt von der Seite herein (von rechts beim Vorwaertsgehen)
+  if (custom() && focus !== 'ai' && was !== 'ai' && was !== key) $('custom').animate([{ transform: `translateX(${(d || (key === null ? -1 : 1)) * 120}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 420, easing: 'ease-out' });
 }
 function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
   if (busy || !view) return;
@@ -243,7 +245,7 @@ function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
   const n = custom() ? navCount : view.themes.length;
   if (!n) return;
   const order = [null, ...Array.from({ length: n }, (x, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
-  go(order[(i + d + order.length) % order.length]);
+  go(order[(i + d + order.length) % order.length], d);
 }
 $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 

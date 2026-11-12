@@ -35,7 +35,8 @@
              font-size: clamp(12px, .9vw, 18px); border-left: 3px solid #40BFC0; }
   .${P}one .${P}sum { font-size: clamp(15px, 1.3vw, 24px); padding: 7px 14px 8px; }
   .${P}sum b { color: #409E9F; font-weight: 700; margin-right: .35em; }
-  .${P}body { flex: 1; min-height: 0; overflow: hidden; margin-top: 9px; }
+  .${P}body { flex: 1; min-height: 0; overflow: hidden; margin-top: 9px; scrollbar-width: thin; scrollbar-color: var(--acc) transparent; }
+  .${P}more { flex: none; text-align: center; font-size: 13px; color: #5F5F5F; padding-top: 4px; }
   .${P}grp + .${P}grp { margin-top: .6em; }
   .${P}glabel { font-weight: 700; font-size: .95em; color: var(--acc); margin: 0 0 .25em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .${P}glabel span { font-weight: 400; color: #5F5F5F; }
@@ -64,7 +65,7 @@
 
   const ACC = { gelb: '#B98D00', 'grün': '#3E9B63', blau: '#3F73C4', rosa: '#C4507F', orange: '#D07A22', lila: '#7A5CC2', 'türkis': '#409E9F', koralle: '#D9644A', none: '#8A8A80' };
   const DEF = ['blau', 'lila', 'grün', 'orange'];
-  const FLOOR = { all: 9, one: 15 }, CEIL = { all: 32, one: 44 };
+  const FLOOR = { all: 14, one: 17 }, CEIL = { all: 32, one: 44 };
   const emW = (t, lines, cap) => Math.max(8, Math.min(t.length, cap)) / lines * 0.5 + 1.7;
   const ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#EAF9F9"/><path d="M10 7l5 5-5 5" fill="none" stroke="#409E9F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
@@ -170,17 +171,13 @@
     if (!lanes.length) { box.textContent = ''; return { count: 0, pages: 1 }; }
     if (ctx.focus != null && !lanes[ctx.focus]) ctx = { ...ctx, focus: null };
     const one = ctx.focus != null, lo = one ? FLOOR.one : FLOOR.all, hi = one ? CEIL.one : CEIL.all;
-    const most = Math.max(1, ...(one ? [lanes[ctx.focus]] : lanes).map(l => l.rows.length));
-    // So wenige Seiten wie moeglich: erst wenn die Schrift unter die Untergrenze fiele, wird geblaettert.
-    const fitsAt = (n, tight) => { for (let p = 0; p < n; p++) if (!build(box, ctx, lanes, n, p, tight).xs.every(x => fit(x, lo, lo) !== null)) return false; return true; };
-    let n = 1, tight = false;
-    for (; n < most; n++) { if (fitsAt(n, false)) break; if (fitsAt(n, true)) { tight = true; break; } }
-    if (n === most) tight = true;
-    const p = Math.min(ctx.page || 0, n - 1), b = build(box, ctx, lanes, n, p, tight);
-    const fs = b.xs.map(x => fit(x, lo, hi) || lo), least = Math.min(...fs);
-    b.xs.forEach((x, i) => x.inner.style.fontSize = Math.min(fs[i], least * 1.25) + 'px');   // Bahnen duerfen etwas groesser sein als die engste, aber nicht wild verschieden
+    // Schrift nie unter die lesbare Untergrenze: passt eine Bahn dann nicht, ist sie nach unten scrollbar (Felix, 12.11.). Kein Blaettern.
+    const b = build(box, ctx, lanes, 1, 0, false);
+    const fs = b.xs.map(x => fit(x, lo, hi)), least = Math.min(...fs.map(f => f || lo));
+    b.xs.forEach((x, i) => { x.inner.style.fontSize = (fs[i] === null ? lo : Math.min(fs[i], least * 1.25)) + 'px';
+      if (x.inner.offsetHeight > x.body.clientHeight + 1) { x.body.style.overflowY = 'auto'; x.L.append(ctx.el('div', '↓ weiter nach unten scrollen', P + 'more')); } });
     if (ctx.dir) b.row.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
-    return { count: lanes.length, pages: n };
+    return { count: lanes.length, pages: 1 };
   }
 
   // Show-Effekt: das ungeordnete Mosaik bleibt als Bild liegen; Bahn fuer Bahn erscheint die Ueberschrift,
