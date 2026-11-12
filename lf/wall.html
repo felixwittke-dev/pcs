@@ -88,7 +88,7 @@ async function refresh(st) {
     notes.textContent = '';
     rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
   } else notes.textContent = '';
-  // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt (Felix, 12.11.).
+  // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt, auch im Zaehler-Modus (Felix, 12.11.).
   // Sonst bleibt die angezeigte stehen; beim Laden: die zum Schritt passende, sonst die hoechste.
   const rel = st.released.map(Number);
   const fresh = prevReleased ? rel.filter(x => !prevReleased.includes(x)) : [];
@@ -98,7 +98,7 @@ async function refresh(st) {
     shownResult = mine.length ? mine[mine.length - 1] : (rel.length ? Math.max(...rel) : null);
   }
   prevReleased = rel;
-  renderResult(shownResult != null && !counter ? await rpc('lf_result', { p_step: shownResult }) : null);
+  renderResult(shownResult != null ? await rpc('lf_result', { p_step: shownResult }) : null);
 }
 
 let polling = false;
