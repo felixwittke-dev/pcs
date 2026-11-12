@@ -5,7 +5,8 @@
 //     top: 10,                 // Zahl der Top-Plaetze (Standard 10). Gleichstand auf dem letzten Platz: alle Gleichplatzierten kommen mit hinein.
 //     max: 25,                 // hoechste moegliche Punktzahl (Standard 25 = 5 Runden x 5 Punkte)
 //     items: [{ id, votes: [5,4,3,5,4], score? }],   // score optional, sonst Summe der votes. id = Post-it-id aus rows.
-//     themes?: [{ label, color, ids }] }             // optional: Kachelfarbe nach Thema (color = gelb|grün|blau|rosa|orange|lila|türkis|koralle)
+//     themes?: [{ label, color, ids }] }             // optional: nummerierter Farbpunkt je Thema an Zeilen und Kacheln (color = gelb|grün|blau|rosa|orange|lila|türkis|koralle),
+//                                                    // Themen-Zeile mit Punkt, Name, Anzahl ueber dem Mosaik; Mouseover hebt die Ideen eines Themas hervor
 // Post-its ohne Eintrag in items gelten als unbewertet und stehen am Ende der weiteren Ideen (Punktzahl „–“).
 // Rangfolge: Punkte absteigend, Gleichstand = gleicher Rang (1, 2, 3, 3, 5 …).
 //
@@ -14,6 +15,8 @@
 // count = Zahl der Eintraege in der Rangliste. Passt das Mosaik nicht, blaettert nur das Mosaik (pages).
 (() => {
   const P = 'vz-ranking-', AMBER = '#FBBF24';
+  const INK = { gelb: '#C99700', grün: '#2F9A5C', blau: '#3B78CF', rosa: '#CC4A7C', orange: '#DD7A1F', lila: '#8159C4', türkis: '#24999A', koralle: '#D9573F' };
+  const PALETTE = ['blau', 'grün', 'orange', 'rosa', 'lila', 'türkis', 'koralle', 'gelb'];
   const css = `
   .${P}wrap { position: absolute; inset: 0; display: flex; gap: 28px; }
   .${P}col { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
@@ -34,15 +37,33 @@
   .${P}first { box-shadow: 0 0 0 3px ${AMBER}, 0 3px 10px rgba(0,0,0,.18); }
   .${P}first .${P}rank, .${P}first .${P}bar i { background: ${AMBER}; }
   .${P}plain { background: #FFF4C7; }
+  .${P}calm { background: #FFFDF6; box-shadow: 0 0 0 1px #E8E2CF, 0 1px 2px rgba(0,0,0,.1); }
+  .${P}calm.${P}first { box-shadow: 0 0 0 3px ${AMBER}, 0 3px 10px rgba(0,0,0,.18); }
+  .${P}themed .${P}row { grid-template-columns: 1.75em 1.15em minmax(0, 1fr) auto 1.9em; }
+  .${P}dot { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.6em; height: 1.6em; border-radius: 50%;
+             color: #fff; font-weight: 800; font-size: .7em; line-height: 1; font-style: normal; }
+  .${P}row .${P}dot { font-size: .72em; }
+  .tile .${P}dot { float: left; margin: .05em .4em 0 0; font-size: .75em; }
+  .${P}legend { flex: none; display: flex; flex-wrap: wrap; gap: .5em 1.1em; margin: -2px 0 8px; font-size: clamp(12px, .95vw, 17px); color: #1C1917; min-width: 0; }
+  .${P}legend > div { flex: 0 1 auto; min-width: 0; max-width: 100%; display: flex; align-items: center; gap: .35em; cursor: default; white-space: nowrap; }
+  .${P}legend > div span { overflow: hidden; text-overflow: ellipsis; min-width: 1.5em; }
+  .${P}legend > div small { flex: none; color: #5F5F5F; }
+  .${P}legend .${P}dot { font-size: .78em; }
+  .${P}row, .tile.${P}t { transition: opacity .35s; }
+  .${P}hl .${P}row:not(.${P}on), .${P}hl .tile.${P}t:not(.${P}on) { opacity: .22; }
+  .${P}hl .${P}on { box-shadow: 0 0 0 2px var(--ink), 0 2px 8px rgba(0,0,0,.18); }
   .${P}tiles { flex: 1; min-height: 0; overflow: hidden; }
   .${P}inner { display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; --lines: 3; }
   .${P}sc { float: right; margin: 0 0 0 .35em; padding: 0 .4em; border-radius: .7em; background: rgba(255,255,255,.75); font-weight: 800; font-variant-numeric: tabular-nums; }
   .${P}focus { position: absolute; inset: 6px; display: flex; flex-direction: column; gap: 2.2vh; padding: 2.2vh 2.4vw; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
-  .${P}focus.${P}first { box-shadow: 0 0 0 5px ${AMBER}, 0 4px 18px rgba(0,0,0,.18); }
+  .${P}focus.${P}calm { box-shadow: 0 0 0 1px #E8E2CF, 0 2px 10px rgba(0,0,0,.1); }
+  .${P}focus.${P}first, .${P}focus.${P}calm.${P}first { box-shadow: 0 0 0 5px ${AMBER}, 0 4px 18px rgba(0,0,0,.18); }
   .${P}top { flex: none; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: clamp(15px, 1.3vw, 22px); }
   .${P}top button { border: 1px solid #C9C9C2; background: rgba(255,255,255,.6); cursor: pointer; font: inherit; font-size: .8em; color: #5F5F5F; padding: 3px 12px; border-radius: 999px; }
-  .${P}pill { font-weight: 800; padding: 2px 16px; border-radius: 999px; background: rgba(255,255,255,.8); }
+  .${P}pill { display: inline-flex; align-items: center; gap: .45em; font-weight: 800; padding: 2px 16px; border-radius: 999px; background: rgba(255,255,255,.8); }
   .${P}first .${P}pill.${P}place { background: ${AMBER}; }
+  .${P}calm .${P}pill { background: #F1EEE4; }
+  .${P}top .${P}dot { font-size: .8em; }
   .${P}muted { color: #5F5F5F; }
   .${P}big { flex: 1; min-height: 0; display: flex; align-items: center; overflow: hidden; }
   .${P}big p { margin: 0; font-weight: 700; line-height: 1.22; overflow-wrap: anywhere; }
@@ -59,7 +80,12 @@
   function model(ctx) {
     const d = ctx.data || {}, max = d.max || 25, top = d.top || 10;
     const byId = new Map((d.items || []).map(it => [String(it.id), it]));
-    const theme = new Map(); (d.themes || []).forEach(t => (t.ids || []).forEach(id => theme.set(String(id), t)));
+    // Themen: nummerierter Farbpunkt (kraeftige Farbe) an Zeilen und Kacheln, Nummer = Position des Themas
+    const present = new Set(ctx.rows.map(r => String(r.id))), theme = new Map();
+    const themes = (d.themes || []).map((t, k) => { const color = INK[t.color] ? t.color : PALETTE[k % PALETTE.length];
+      const ids = (t.ids || []).map(String).filter(id => present.has(id));
+      const th = { k, label: t.label || '', color, ink: INK[color], n: ids.length };
+      ids.forEach(id => { if (!theme.has(id)) theme.set(id, th); }); return th; });
     const all = ctx.rows.map(r => { const id = String(r.id), it = byId.get(id), votes = (it && it.votes) || [];
       const score = it ? (it.score != null ? it.score : votes.reduce((a, b) => a + b, 0)) : null;
       return { id, body: r.body, votes, score, theme: theme.get(id) || null }; });
@@ -67,9 +93,23 @@
     scored.forEach((x, i) => { x.rank = i && x.score === scored[i - 1].score ? scored[i - 1].rank : i + 1; });
     const best = scored.filter(x => x.rank <= top);
     const rest = scored.filter(x => x.rank > top).concat(all.filter(x => x.score == null));
-    return { max, top, all, best, rest, unscored: all.length - scored.length };
+    return { max, top, all, best, rest, unscored: all.length - scored.length, themes };
   }
-  const colorCls = x => x.theme ? 'c-' + x.theme.color : P + 'plain';
+  // mit Themen: ruhiger, einheitlicher Grund (die Punkte tragen die Farbe); ohne Themen: Post-it-Gelb wie bisher
+  const colorCls = (x, m) => m.themes.length ? P + 'calm' : P + 'plain';
+  function dot(th, ctx) { const d = ctx.el('i', String(th.k + 1), P + 'dot'); d.style.background = th.ink; return d; }
+  function mark(e, x) { if (!x.theme) return; e.dataset.k = x.theme.k; e.style.setProperty('--ink', x.theme.ink); }
+  function legend(m, ctx, wrap) {
+    const g = ctx.el('div', null, P + 'legend');
+    m.themes.filter(t => t.n).forEach(t => { const it = ctx.el('div'); it.append(dot(t, ctx), ctx.el('span', t.label), ctx.el('small', String(t.n)));
+      it.title = t.label + ' · ' + t.n + ' Ideen';
+      it.onmouseenter = () => light(wrap, t.k); it.onmouseleave = () => light(wrap, null); g.append(it); });
+    return g;
+  }
+  function light(wrap, k) {
+    wrap.classList.toggle(P + 'hl', k != null);
+    wrap.querySelectorAll('[data-k]').forEach(e => e.classList.toggle(P + 'on', k != null && +e.dataset.k === k));
+  }
 
   // groesste Schrift in [lo, hi], bei der ok() gilt; null, wenn nicht einmal lo reicht
   function fit(set, ok, lo, hi) {
@@ -85,17 +125,20 @@
     return b;
   }
   function row(x, m, ctx, k) {
-    const e = ctx.el('div', null, P + 'row ' + colorCls(x) + (x.rank === 1 ? ' ' + P + 'first' : ''));
-    const t = ctx.el('div', null, P + 'txt'); t.append(ctx.el('span', x.body));
-    e.append(ctx.el('div', String(x.rank), P + 'rank'), t, bar(x, m.max), ctx.el('div', String(x.score), P + 'score'));
+    const e = ctx.el('div', null, P + 'row ' + colorCls(x, m) + (x.rank === 1 ? ' ' + P + 'first' : ''));
+    const t = ctx.el('div', null, P + 'txt'); t.append(ctx.el('span', x.body)); mark(e, x);
+    e.append(ctx.el('div', String(x.rank), P + 'rank'));
+    if (m.themes.length) e.append(x.theme ? dot(x.theme, ctx) : ctx.el('i'));
+    e.append(t, bar(x, m.max), ctx.el('div', String(x.score), P + 'score'));
     e.title = x.body; e.onclick = () => ctx.go(k);
     return e;
   }
-  function tile(x, ctx, badge) {
-    const e = ctx.el('div', null, 'tile ' + colorCls(x)); e.dataset.id = x.id; e.title = x.body;
+  function tile(x, m, ctx, badge) {
+    const e = ctx.el('div', null, 'tile ' + P + 't ' + colorCls(x, m)); e.dataset.id = x.id; e.title = x.body; mark(e, x);
+    if (x.theme) e.append(dot(x.theme, ctx));
     if (badge) e.append(ctx.el('b', x.score == null ? '–' : String(x.score), P + 'sc'));
     e.append(ctx.el('span', x.body));
-    const w = Math.max(8, Math.min(x.body.length, 150)) / 3 * 0.5 + 1.7 + (badge ? 1.2 : 0);
+    const w = Math.max(8, Math.min(x.body.length, 150)) / 3 * 0.5 + 1.7 + (badge ? 1.2 : 0) + (x.theme ? 1.1 : 0);
     e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = w * 2.4 + 'em';
     return e;
   }
@@ -103,7 +146,7 @@
   // Uebersicht. pre = Ausgangslage des Show-Effekts: Rangliste leer (Zeilen unsichtbar), alle Ideen im Mosaik, ohne Punkte.
   function overview(box, ctx, m, pre, frac) {
     box.textContent = '';
-    const wrap = ctx.el('div', null, P + 'wrap'); box.append(wrap);
+    const wrap = ctx.el('div', null, P + 'wrap' + (m.themes.length ? ' ' + P + 'themed' : '')); box.append(wrap);
     const W = box.clientWidth, mos = pre ? m.all : m.rest;
     const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(frac * W - (frac < 1 ? 14 : 0))}px`;
     const h = ctx.el('div', m.best.length < m.all.length ? 'Top ' + m.top : 'Rangliste', P + 'h');
@@ -112,7 +155,8 @@
                          : '· ' + m.all.length + ' Ideen, höchstens ' + m.max + ' Punkte'));
     const list = ctx.el('div', null, P + 'list');
     const rows = m.best.map((x, k) => { const r = row(x, m, ctx, k); if (pre) r.style.visibility = 'hidden'; else r.dataset.id = x.id; list.append(r); return r; });
-    left.append(h, list); wrap.append(left);
+    left.append(h); if (m.themes.length && !(mos.length && frac < 1)) left.append(legend(m, ctx, wrap));   // ohne Mosaik: Themen-Zeile ueber der Rangliste
+    left.append(list); wrap.append(left);
     // Rangliste: groesste Schrift, bei der alles hineinpasst, moeglichst ohne gekuerzte Ideen
     const spans = [...list.querySelectorAll('span')], setL = f => { left.style.fontSize = f + 'px'; };
     const fitsL = () => list.scrollHeight <= list.clientHeight + 1, whole = () => fitsL() && spans.every(s => s.scrollHeight <= s.clientHeight + 1);
@@ -124,8 +168,8 @@
       const right = ctx.el('div', null, P + 'col ' + P + 'right'), rh = ctx.el('div', pre ? 'Alle Ideen' : 'Weitere Ideen', P + 'h');
       rh.append(ctx.el('span', '· ' + mos.length + (!pre && m.unscored ? ', davon ' + m.unscored + ' ohne Wertung' : '')));
       const area = ctx.el('div', null, P + 'tiles'), inner = ctx.el('div', null, P + 'inner');
-      mos.forEach(x => { const t = tile(x, ctx, !pre); tiles.set(x.id, t); inner.append(t); });
-      area.append(inner); right.append(rh, area); wrap.append(right);
+      mos.forEach(x => { const t = tile(x, m, ctx, !pre); tiles.set(x.id, t); inner.append(t); });
+      area.append(inner); right.append(rh); if (m.themes.length) right.append(legend(m, ctx, wrap)); right.append(area); wrap.append(right);
       const setR = f => { right.style.fontSize = f + 'px'; }, fitsR = () => inner.offsetHeight <= area.clientHeight + 1;
       const hiR = Math.max(10, Math.min(22, fL * .8));
       fR = fit(setR, fitsR, 9, hiR);
@@ -156,12 +200,12 @@
 
   function focusView(box, ctx, m, k) {
     box.textContent = '';
-    const x = m.best[k], card = ctx.el('div', null, P + 'focus ' + colorCls(x) + (x.rank === 1 ? ' ' + P + 'first' : ''));
+    const x = m.best[k], card = ctx.el('div', null, P + 'focus ' + colorCls(x, m) + (x.rank === 1 ? ' ' + P + 'first' : ''));
     card.dataset.id = x.id;
     const top = ctx.el('div', null, P + 'top'), back = ctx.el('button', '← Alle'); back.onclick = () => ctx.go(null);
     const same = m.best.filter(y => y.rank === x.rank).length;
     top.append(back, ctx.el('span', 'Platz ' + x.rank + (same > 1 ? ' (geteilt)' : ''), P + 'pill ' + P + 'place'));
-    if (x.theme) top.append(ctx.el('span', x.theme.label, P + 'pill'));
+    if (x.theme) { const th = ctx.el('span', null, P + 'pill'); th.append(dot(x.theme, ctx), ctx.el('span', x.theme.label)); top.append(th); }
     top.append(ctx.el('span', (k + 1) + ' von ' + m.best.length, P + 'muted'));
     const big = ctx.el('div', null, P + 'big'), p = ctx.el('p', x.body); big.append(p);
     const foot = ctx.el('div', null, P + 'foot'), tot = ctx.el('div', String(x.score), P + 'total'); tot.append(ctx.el('small', 'von ' + m.max + ' Punkten'));
@@ -174,11 +218,13 @@
     return card;
   }
 
-  // Die Wand zeichnet nur bei Fenster-Resize neu. Aendert sich die Flaeche anders (Kopfzeile bricht um, Browser passt das Fenster an),
-  // zeichnet der Baustein selbst nach, damit die gemessenen Schriftgroessen stimmen.
+  // Die Wand zeichnet bei Groessenaenderung von #stage neu, aber 150 ms verzoegert. Bis dahin (und im Headless-Bildschirmfoto,
+  // das vorher ausloest) stimmen die gemessenen Schriftgroessen nicht: der Baustein zeichnet darum sofort selbst nach.
   let last = null, revealing = false;
-  const ro = new ResizeObserver(() => { if (!last || revealing) return; const { box, ctx, w, h } = last;
-    if (Math.abs(box.clientWidth - w) > 2 || Math.abs(box.clientHeight - h) > 2) VIZ.ranking.draw(box, ctx); });
+  // Aendert sich dabei die Seitenzahl, erfaehrt die Wand das ueber ctx.go (gleicher Fokus, zeichnet neu und zaehlt die Seiten).
+  const ro = new ResizeObserver(() => { if (!last || revealing) return; const { box, ctx, w, h, pages } = last;
+    if (!box.clientWidth || (Math.abs(box.clientWidth - w) <= 2 && Math.abs(box.clientHeight - h) <= 2)) return;
+    const r = VIZ.ranking.draw(box, ctx); if (r.pages !== pages) ctx.go(ctx.focus); });
 
   VIZ.ranking = {
     draw(box, ctx) {
@@ -187,9 +233,9 @@
       const m = model(ctx);
       if (ctx.focus != null && m.best.length) {
         focusView(box, ctx, m, Math.min(ctx.focus, m.best.length - 1));
-        return { count: m.best.length, pages: 1 };
+        return { count: m.best.length, pages: last.pages = 1 };
       }
-      return { count: m.best.length, pages: overview(box, ctx, m, false, bestFrac(box, ctx, m)).pages };
+      return { count: m.best.length, pages: last.pages = overview(box, ctx, m, false, bestFrac(box, ctx, m)).pages };
     },
 
     // Show-Effekt: alle Post-its fliegen ins Mosaik rechts, dann steigen die Top-Plaetze von unten nach oben einzeln auf,
