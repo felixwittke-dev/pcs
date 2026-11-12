@@ -1,0 +1,1 @@
+// Platzhalter: Baustein 'agenda' folgt.
