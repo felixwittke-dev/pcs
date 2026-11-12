@@ -6,15 +6,17 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Workshop · Wand</title>
 <style>
-  :root { --brand: #FFC83B; --accent: #B4530A; --ink: #1B1B1B; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #E7EEF9; --aiink: #3B5B92;
+  :root { --brand: #40BFC0; --teal: #368484; --ink: #1C1917; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #EAF9F9; --aiink: #2E6C6D;
           --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand);
          height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
   header { display: flex; gap: 28px; align-items: flex-start; padding: 16px 36px 4px; flex: none; }
   .head { flex: 1; }
-  .step { font-size: 15px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 4px; }
-  h1 { font-size: clamp(24px, 2.6vw, 40px); line-height: 1.2; margin: 0 0 4px; }
+  .step { display: flex; align-items: center; gap: 12px; font-size: clamp(17px, 1.5vw, 24px); font-weight: 800; color: var(--ink); text-transform: uppercase; letter-spacing: .05em; margin: 0 0 6px; }
+  .step img { width: 1.9em; height: 1.9em; }
+  .step small { font-weight: 400; color: var(--muted); font-size: inherit; }
+  h1 { font-size: clamp(24px, 2.6vw, 40px); line-height: 1.2; margin: 0 0 4px; font-style: italic; font-weight: 700; color: var(--teal); }
   .how { color: var(--muted); margin: 0; }
   .join { text-align: center; font-size: 13px; color: var(--muted); }
   .join img { display: block; width: 92px; height: 92px; margin: 0 auto 2px; background: #fff; padding: 5px; border-radius: 8px; }
@@ -233,18 +235,18 @@ function turn(d) {   // blaettern; am Rand weiter zum naechsten Thema
 $('pprev').onclick = () => turn(-1); $('pnext').onclick = () => turn(1);
 
 function renderPanel() {
-  const box = $('panel'), r = ai.data || {}; box.textContent = ''; let n = 0;
+  const box = $('panel'), r = ai.data || {}, titles = (LS[stepById(ai.step).ls] || {}).panel || PANEL; box.textContent = ''; let n = 0;
   const rv = e => { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; return e; };
   box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' Post-its' : 'euren Post-its'))));
   if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
   const cols = el('div', null, 'cols'); box.append(cols);
   const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
-  card('Was viele ähnlich sehen', r.convergence, c => { const d = el('div', null, 'item'), k = view ? view.themes.findIndex(t => t.label === c.label) : -1;
+  card(titles[0], r.convergence, c => { const d = el('div', null, 'item'), k = view ? view.themes.findIndex(t => t.label === c.label) : -1;
     if (k >= 0) { const b = el('button', c.label + ' · ' + c.ids.length, 'c-' + view.themes[k].color); b.onclick = () => go(k); d.append(b); }   // fuehrt zu den Post-its des Themas
     else d.append(el('b', c.label + (c.ids ? ' · ' + c.ids.length : '')));
     if (c.quote) d.append(el('q', c.quote)); return d; });
-  card('Wo es auseinandergeht', r.tension, t => { const d = el('div', null, 'item'); d.append(el('b', t.label), document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
-  card('Was noch fehlt', r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
+  card(titles[1], r.tension, t => { const d = el('div', null, 'item'); d.append(el('b', t.label), document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
+  card(titles[2], r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
 }
 
 function draw(animate, dir) {
@@ -290,7 +292,9 @@ let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() 
 // ---------- Zustand holen ----------
 async function refresh(st) {
   const s = stepById(st.step);
-  $('step').textContent = s.label; $('q').textContent = s.q; $('how').textContent = s.how || '';
+  const ls = LS[s.ls], head = $('step'); head.textContent = '';   // Kopf: Icon + Name der Struktur, darunter die Frage
+  if (ls) { const im = el('img'); im.src = 'icons/' + ls.icon + '.svg'; im.alt = ''; head.append(im, el('span', ls.name), el('small', '· ' + s.phase)); } else head.append(el('span', s.label));
+  $('q').textContent = s.q; $('how').textContent = s.how || '';
   $('join').className = 'join' + (st.step === 0 ? ' big' : '');
   $('foot').textContent = st.people + (st.people === 1 ? ' Handy hat' : ' Handys haben') + ' schon beigetragen';
   counter = s.solo && st.wall === 'counter';
