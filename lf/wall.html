@@ -16,28 +16,36 @@
   h1 { font-size: clamp(26px, 3vw, 44px); line-height: 1.2; margin: 0 0 6px; }
   .how { color: var(--muted); margin: 0; }
   .join { text-align: center; font-size: 14px; color: var(--muted); }
-  .join img { display: block; width: 150px; height: 150px; margin: 0 auto 4px; background: #fff; padding: 6px; border-radius: 8px; }
+  .join img { display: block; width: 104px; height: 104px; margin: 0 auto 4px; background: #fff; padding: 6px; border-radius: 8px; }
   .join.big img { width: min(46vh, 420px); height: min(46vh, 420px); }
   .join.big { font-size: 22px; color: var(--ink); }
   main { padding: 10px 36px 60px; }
   #counter { text-align: center; padding: 8vh 0; }
   #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
   #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
-  #away { text-align: center; padding: 3vh 0 2vh; font-size: 24px; color: var(--muted); }
   #notes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
   .note { background: var(--note); border-radius: 4px; padding: 14px 16px; box-shadow: 0 2px 4px rgba(0,0,0,.14); white-space: pre-wrap;
-          overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px; }
+          overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px;
+          transform-origin: 0 0; transition: background-color .6s; }
   .note.alt { background: var(--note2); }
   #notes.grouped { display: block; }
-  .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 0 0 22px; }
-  .legend span { padding: 6px 16px; border-radius: 999px; font-weight: 700; font-size: clamp(17px, 1.6vw, 26px); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 6px 0 20px; }
+  .legend button { border: 0; cursor: pointer; font-family: inherit; color: inherit; padding: 6px 16px; border-radius: 999px; font-weight: 700;
+                   font-size: clamp(17px, 1.6vw, 26px); transition: opacity .35s, transform .35s, box-shadow .2s; }
+  .legend button:hover { box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  .legend button.off { opacity: 0; transform: scale(.7); }
+  .legend button.dim { opacity: .4; }
   .legend small { font-weight: 400; color: var(--muted); font-size: inherit; }
   .theme { margin: 0 0 22px; }
   .theme h3 { display: inline-block; font-size: clamp(17px, 1.5vw, 24px); margin: 0 0 10px; padding: 4px 14px; border-radius: 999px; }
   .theme h3 span { font-weight: 400; color: var(--muted); }
   .theme .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-  .theme .note { min-height: 0; padding: 10px 12px; font-size: clamp(14px, 1.05vw, 18px); animation: tint .8s ease-out; }
-  @keyframes tint { from { background: var(--note); } }
+  .theme .note { min-height: 0; padding: 10px 12px; font-size: clamp(14px, 1.05vw, 18px); }
+  #notes.focus .theme h3 { display: none; }
+  #notes.focus .theme .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  #notes.focus .theme .note { font-size: clamp(16px, 1.35vw, 22px); padding: 14px 16px; }
+  .note.pop { animation: pop .5s ease-out; }
+  @keyframes pop { 40% { transform: scale(1.07); } }
   .c-gelb { background: #FFF1B8; } .c-grün { background: #D3EFDD; } .c-blau { background: #D6E6FB; } .c-rosa { background: #FAD9E6; }
   .c-orange { background: #FFDDBB; } .c-lila { background: #E6DBF7; } .c-türkis { background: #CDEEEE; } .c-koralle { background: #FFD5CC; }
   .c-none { background: #ECECE6; }
@@ -63,7 +71,7 @@
 </header>
 <main>
   <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
-  <p id="away" hidden>💬 Gesprächszeit. Die Handys liegen weg.</p>
+  <div id="legend" class="legend" hidden></div>
   <div id="notes"></div>
   <section id="result" hidden></section>
 </main>
@@ -72,8 +80,77 @@
 <script src="steps.js"></script>
 <script>
 $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.html.*$/, '');
-let lastRev = null, lastStep = null, prevReleased = null, shownResult = null;
+let polling = false, lastRev = null, lastStep = null, prevReleased = null, shownResult = null;
 function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
+
+// ---- Post-its: flach, oder nach KI-Themen gruppiert. Der Uebergang ist reine Animation im Browser (keine KI, keine Kosten).
+let view = null, wasThemed = false, focus = null;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+function noteEl(r) { const e = el('div', r.body, 'note'); e.dataset.id = r.id; return e; }
+
+function renderFlat() {
+  const notes = $('notes'); notes.className = ''; notes.textContent = '';
+  view.rows.forEach(r => { const e = noteEl(r); if (r.step !== view.s.show[0]) e.classList.add('alt'); notes.append(e); });
+}
+
+function buildLegend() {
+  const legend = $('legend'), ids = new Set(view.rows.map(r => r.id)); legend.textContent = ''; legend.hidden = false;
+  const chip = (label, n, cls, k) => { const b = el('button', label + ' ', cls); b.append(el('small', '· ' + n)); b.onclick = () => setFocus(focus === k ? null : k); legend.append(b); };
+  chip('Alle', view.rows.filter(r => view.themed.includes(r.step)).length, 'c-none', null);
+  view.themes.forEach((t, k) => chip(t.label, t.ids.filter(i => ids.has(i)).length, 'c-' + t.color, k));
+}
+
+function renderGrouped(reuse) {
+  const notes = $('notes'), { rows, themes, themed, s } = view, byId = new Map(rows.map(r => [r.id, r])), used = new Set();
+  notes.className = 'grouped'; notes.textContent = '';
+  const group = (label, cls, list, key) => { if (!list.length) return; const g = el('div', null, 'theme'), h = el('h3', label + ' ', cls), grid = el('div', null, 'grid');
+    g.dataset.k = key; h.append(el('span', '· ' + list.length));
+    list.forEach(r => { const e = (reuse && reuse.get(r.id)) || noteEl(r); e.className = 'note ' + cls; grid.append(e); }); g.append(h, grid); notes.append(g); };
+  themes.forEach((t, k) => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id)); group(t.label, 'c-' + t.color, list, k); });
+  group('Einzelstimmen', 'c-none', rows.filter(r => themed.includes(r.step) && !used.has(r.id)), 'x');
+  s.show.filter(x => !themed.includes(x)).forEach(x => group(stepById(x).label, 'alt', rows.filter(r => r.step === x), 'o' + x));
+  applyFocus();
+}
+
+// Ein Thema antippen (oder Pfeiltasten): nur dessen Post-its zeigen. Nochmal tippen, "Alle" oder Esc: alles.
+function applyFocus() {
+  const notes = $('notes');
+  notes.querySelectorAll('.theme').forEach(g => g.hidden = focus !== null && g.dataset.k !== String(focus));
+  [...$('legend').children].forEach((b, i) => b.classList.toggle('dim', focus !== null && i - 1 !== focus));
+  notes.classList.toggle('focus', focus !== null);
+}
+function setFocus(k) { focus = k; applyFocus(); }
+
+// Show-Effekt: Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle, dann fliegen alle an ihren Platz.
+async function showThemes() {
+  const notes = $('notes'), { themes } = view;
+  buildLegend(); const chips = [...$('legend').children]; chips.forEach(c => c.classList.add('off'));
+  const els = new Map([...notes.querySelectorAll('.note')].map(e => [+e.dataset.id, e]));
+  scrollTo({ top: 0, behavior: 'smooth' }); await sleep(500);
+  for (const [k, t] of themes.entries()) {
+    chips[k + 1].classList.remove('off');
+    t.ids.forEach((id, j) => { const e = els.get(id); if (e) setTimeout(() => { e.classList.remove('alt'); e.classList.add('c-' + t.color, 'pop'); }, j * 25); });
+    await sleep(480);
+  }
+  chips[0].classList.remove('off'); await sleep(800);
+  const first = new Map([...els].map(([id, e]) => [id, e.getBoundingClientRect()]));
+  renderGrouped(els);
+  notes.querySelectorAll('.theme h3').forEach(h => h.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 800, fill: 'backwards' }));
+  let i = 0;
+  els.forEach((e, id) => { if (!e.isConnected) return; const a = first.get(id), b = e.getBoundingClientRect(); if (!b.width) return;
+    e.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})` }, { transform: 'none' }],
+              { duration: 1300, delay: Math.min(i++ * 5, 500), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
+  await sleep(1900);
+}
+
+addEventListener('keydown', async e => {
+  if (!view || !view.themes.length || polling) return;
+  const n = view.themes.length;
+  if (e.key === 'ArrowRight') setFocus(focus === null ? 0 : focus + 1 < n ? focus + 1 : null);
+  else if (e.key === 'ArrowLeft') setFocus(focus === null ? n - 1 : focus > 0 ? focus - 1 : null);
+  else if (e.key === 'Escape') setFocus(null);
+  else if (e.key.toLowerCase() === 'r') { polling = true; focus = null; $('legend').hidden = true; renderFlat(); await sleep(900); await showThemes(); polling = false; }  // Uebergang nochmal zeigen
+});
 
 function renderResult(r) {
   const box = $('result'); box.textContent = ''; box.hidden = !r; if (!r) return;
@@ -94,27 +171,20 @@ async function refresh(st) {
   const counter = s.solo && st.wall === 'counter';
   $('counter').hidden = !counter; $('n').textContent = st.count;
   $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
-  $('away').hidden = s.mode !== 'away';
-  const notes = $('notes'); notes.hidden = counter;
+  const notes = $('notes'), legend = $('legend'); notes.hidden = counter;
+  let themes = [];
   if (!counter && s.show.length) {
     const rows = await rpc('lf_wall', { p_steps: s.show });
     // Themen: sobald die KI zugeordnet hat, haengen die Post-its nach Themen gruppiert und eingefaerbt (ohne Freigabe).
     const themed = s.show.filter(x => st.released.includes(String(THEMES + x)));
-    const themes = (await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })))).flatMap(t => (t && t.themes) || []);
-    notes.textContent = ''; notes.className = themes.length ? 'grouped' : '';
-    if (!themes.length) rows.forEach(r => notes.append(el('div', r.body, 'note' + (r.step !== s.show[0] ? ' alt' : ''))));
-    else {
-      const byId = new Map(rows.map(r => [r.id, r])), used = new Set();
-      const group = (label, cls, list) => { if (!list.length) return; const g = el('div', null, 'theme'), h = el('h3', label + ' ', cls), grid = el('div', null, 'grid');
-        h.append(el('span', '· ' + list.length)); list.forEach(r => grid.append(el('div', r.body, 'note ' + cls))); g.append(h, grid); notes.append(g); };
-      // Uebersicht oben: alle Themen mit Anzahl auf einen Blick, auch wenn die Wand laenger ist als der Beamer.
-      const legend = el('div', null, 'legend'); notes.append(legend);
-      themes.forEach(t => { const c = el('span', t.label + ' ', 'c-' + t.color); c.append(el('small', '· ' + t.ids.filter(i => byId.has(i)).length)); legend.append(c); });
-      themes.forEach(t => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id)); group(t.label, 'c-' + t.color, list); });
-      group('Einzelstimmen', 'c-none', rows.filter(r => themed.includes(r.step) && !used.has(r.id)));
-      s.show.filter(x => !themed.includes(x)).forEach(x => group(stepById(x).label, 'alt', rows.filter(r => r.step === x)));
-    }
-  } else notes.textContent = '';
+    themes = (await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })))).flatMap(t => (t && t.themes) || []);
+    view = { rows, themes, themed, s };
+    if (focus !== null && focus >= themes.length) focus = null;
+    if (!themes.length) renderFlat();
+    else if (!wasThemed && notes.querySelector(':scope > .note')) await showThemes();   // Post-its hingen schon: Uebergang zeigen
+    else { buildLegend(); renderGrouped(); }
+  } else { notes.textContent = ''; view = null; }
+  wasThemed = themes.length > 0; legend.hidden = !themes.length;
   // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt, auch im Zaehler-Modus (Felix, 12.11.).
   // Sonst bleibt die angezeigte stehen; beim Laden: die zum Schritt passende, sonst die hoechste.
   const rel = st.released.map(Number).filter(x => x < THEMES);
@@ -128,7 +198,6 @@ async function refresh(st) {
   renderResult(shownResult != null ? await rpc('lf_result', { p_step: shownResult }) : null);
 }
 
-let polling = false;
 async function poll() {
   if (polling) return; polling = true;
   try { const st = await rpc('lf_get_state', null, 5000);
