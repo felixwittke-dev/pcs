@@ -22,6 +22,7 @@ const LS = {
   'nine-whys':    { name: 'Nine Whys', icon: 'nine-whys', noun: 'Zweck-Sätze', panel: ['Wofür wir wirklich da sind', 'Wo unser Zweck sich reibt', 'Wen unser Zweck noch nicht erreicht'] },
   'troika':       { name: 'Troika Consulting', icon: 'troika-consulting', noun: 'Ratschläge', panel: ['Rat, der oft fiel', 'Wo Ratschläge sich widersprechen', 'Worüber niemand Rat suchte'] },
   'cafe':         { name: 'Conversation Café', icon: 'conversation-cafe', panel: ['Was uns klar geworden ist', 'Wo wir verschieden sehen', 'Worüber wir noch schweigen'] },
+  'celebrity':    { name: 'Celebrity Interview', icon: 'celebrity-interview', viz: 'ranking', noun: 'Fragen', panel: ['Was viele wissen wollen', 'Wo die Fragen in verschiedene Richtungen gehen', 'Was noch niemand gefragt hat'] },
   'acm':          { name: 'Agreement & Certainty Matrix', icon: 'agreement-certainty-matrix', viz: 'map', noun: 'Herausforderungen' },
   'critical':     { name: 'Critical Uncertainties', icon: 'critical-uncertainties', viz: 'map', noun: 'Strategien' },
 };

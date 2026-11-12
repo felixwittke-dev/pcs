@@ -1,0 +1,498 @@
+{
+"step": {
+"label": "Celebrity Interview · Fragen",
+"lsDef": {
+"name": "Celebrity Interview",
+"icon": "celebrity-interview",
+"panel": [
+"Was viele wissen wollen",
+"Wo die Fragen in verschiedene Richtungen gehen",
+"Was noch niemand gefragt hat"
+],
+"noun": "Fragen"
+},
+"phase": "Fragen",
+"q": "Was möchtest du Martina Keller fragen? Sie hat ihr Familienunternehmen durch die Insolvenzgefahr geführt.",
+"how": "Schreib deine Frage und stimm für die Fragen anderer, die du auch stellen würdest.",
+"show": [
+2
+]
+},
+"people": 38,
+"rows": [
+{
+"id": 1,
+"step": 2,
+"body": "Was raten Sie Führungskräften die gerade mitten drin stecken?"
+},
+{
+"id": 2,
+"step": 2,
+"body": "Gab es einen Fehler den Sie selbst gemacht haben und den Sie dem Team auch so gesagt haben?"
+},
+{
+"id": 3,
+"step": 2,
+"body": "Was haben Sie mit der Presse gemacht"
+},
+{
+"id": 4,
+"step": 2,
+"body": "Wie haben Sie den Betriebsrat mitgenommen"
+},
+{
+"id": 5,
+"step": 2,
+"body": "Hat sich Ihr Führungsstil verändert? Und merken das Ihre Leute heute noch?"
+},
+{
+"id": 6,
+"step": 2,
+"body": "Wie lange hat es gedauert bis wieder Normalität da war"
+},
+{
+"id": 7,
+"step": 2,
+"body": "wie haben sie die bank überzeugt"
+},
+{
+"id": 8,
+"step": 2,
+"body": "wie war das mit der familie in der zeit"
+},
+{
+"id": 9,
+"step": 2,
+"body": "Hatten Sie einen Plan B? und C?"
+},
+{
+"id": 10,
+"step": 2,
+"body": "Was hat das mit Ihrem Vertrauen in Menschen gemacht"
+},
+{
+"id": 11,
+"step": 2,
+"body": "haben sie sich selbst ein gehalt gezahlt in der zeit"
+},
+{
+"id": 12,
+"step": 2,
+"body": "Haben Sie mal ans Aufhören gedacht?"
+},
+{
+"id": 13,
+"step": 2,
+"body": "Wie haben die Azubis die Zeit erlebt"
+},
+{
+"id": 14,
+"step": 2,
+"body": "Wie viel haben Sie dem Team wirklich erzählt und was haben Sie bewusst für sich behalten?"
+},
+{
+"id": 15,
+"step": 2,
+"body": "Was ist aus der Krise geblieben, was jetzt besser ist als vorher?"
+},
+{
+"id": 16,
+"step": 2,
+"body": "Wann haben Sie gemerkt, dass es wirklich ernst ist? Gab es einen konkreten Moment, an dem Sie dachten: das schaffen wir vielleicht nicht?"
+},
+{
+"id": 17,
+"step": 2,
+"body": "Wie wichtig war das Führungsteam, oder waren Sie am Ende allein?"
+},
+{
+"id": 18,
+"step": 2,
+"body": "Würden Sie das nochmal machen"
+},
+{
+"id": 19,
+"step": 2,
+"body": "Wie haben Sie Ihre eigenen Zweifel vor dem Team versteckt? oder gar nicht?"
+},
+{
+"id": 20,
+"step": 2,
+"body": "Wie haben Sie es den Mitarbeitenden gesagt, ohne dass alle sofort kündigen?"
+},
+{
+"id": 21,
+"step": 2,
+"body": "Wie viel davon war Glück?"
+},
+{
+"id": 22,
+"step": 2,
+"body": "welche Rolle hatten die Gesellschafter, haben die Druck gemacht?"
+},
+{
+"id": 23,
+"step": 2,
+"body": "Was würden Sie heute anders machen?"
+},
+{
+"id": 24,
+"step": 2,
+"body": "Wer hat Ihnen am meisten geholfen und wer gar nicht 🙂"
+},
+{
+"id": 25,
+"step": 2,
+"body": "Was war die schwierigste Entscheidung"
+},
+{
+"id": 26,
+"step": 2,
+"body": "Wie trifft man Entscheidungen wenn man fast nichts weiß"
+},
+{
+"id": 27,
+"step": 2,
+"body": "Wie sind Sie persönlich damit umgegangen, nachts schlafen usw.? Hatten Sie jemanden zum Reden?"
+},
+{
+"id": 28,
+"step": 2,
+"body": "Mussten Sie Leute entlassen und wie haben Sie entschieden wen"
+},
+{
+"id": 29,
+"step": 2,
+"body": "Wie viel Zeit hatten Sie für die wichtigen Entscheidungen, Tage oder Stunden?"
+},
+{
+"id": 30,
+"step": 2,
+"body": "Wie kommuniziert man schlechte Nachrichten ohne Panik"
+},
+{
+"id": 31,
+"step": 2,
+"body": "Gab es etwas worüber Sie in der Zeit lachen konnten?"
+},
+{
+"id": 32,
+"step": 2,
+"body": "Wie bleibt man glaubwürdig, wenn man selbst nicht weiß wie es ausgeht?"
+},
+{
+"id": 33,
+"step": 2,
+"body": "Was hat die Krise mit der Unternehmenskultur gemacht, langfristig?"
+},
+{
+"id": 34,
+"step": 2,
+"body": "Hätten Sie die Krise kommen sehen können? Gab es Warnsignale die alle ignoriert haben?"
+},
+{
+"id": 35,
+"step": 2,
+"body": "Wie haben Kunden reagiert, sind welche abgesprungen?"
+},
+{
+"id": 36,
+"step": 2,
+"body": "Welches Buch hat Ihnen geholfen"
+},
+{
+"id": 37,
+"step": 2,
+"body": "Gab es Konflikte mit Ihrem Mitgeschäftsführer?"
+},
+{
+"id": 38,
+"step": 2,
+"body": "gab es Fördermittel oder staatliche Hilfe"
+},
+{
+"id": 39,
+"step": 2,
+"body": "Welche Kennzahl haben Sie jeden Morgen zuerst angeschaut"
+},
+{
+"id": 40,
+"step": 2,
+"body": "Was würden Sie Ihrem jüngeren Ich sagen"
+}
+],
+"data": {
+"viz": "ranking",
+"mode": "upvotes",
+"top": 8,
+"items": [
+{
+"id": 1,
+"votes": 6
+},
+{
+"id": 2,
+"votes": 15
+},
+{
+"id": 3,
+"votes": 4
+},
+{
+"id": 4,
+"votes": 7
+},
+{
+"id": 5,
+"votes": 4
+},
+{
+"id": 6,
+"votes": 5
+},
+{
+"id": 7,
+"votes": 17
+},
+{
+"id": 8,
+"votes": 11
+},
+{
+"id": 9,
+"votes": 4
+},
+{
+"id": 10,
+"votes": 3
+},
+{
+"id": 11,
+"votes": 1
+},
+{
+"id": 12,
+"votes": 8
+},
+{
+"id": 14,
+"votes": 13
+},
+{
+"id": 15,
+"votes": 9
+},
+{
+"id": 16,
+"votes": 29,
+"asked": true
+},
+{
+"id": 17,
+"votes": 3
+},
+{
+"id": 19,
+"votes": 1
+},
+{
+"id": 20,
+"votes": 27,
+"asked": true
+},
+{
+"id": 21,
+"votes": 2
+},
+{
+"id": 22,
+"votes": 7
+},
+{
+"id": 23,
+"votes": 24
+},
+{
+"id": 24,
+"votes": 19,
+"asked": true
+},
+{
+"id": 25,
+"votes": 12
+},
+{
+"id": 26,
+"votes": 8
+},
+{
+"id": 27,
+"votes": 22
+},
+{
+"id": 28,
+"votes": 19
+},
+{
+"id": 29,
+"votes": 3
+},
+{
+"id": 30,
+"votes": 6
+},
+{
+"id": 31,
+"votes": 5
+},
+{
+"id": 32,
+"votes": 2
+},
+{
+"id": 34,
+"votes": 10
+},
+{
+"id": 35,
+"votes": 9
+},
+{
+"id": 36,
+"votes": 1
+},
+{
+"id": 38,
+"votes": 2
+},
+{
+"id": 39,
+"votes": 1
+},
+{
+"id": 40,
+"votes": 2
+}
+],
+"themes": [
+{
+"label": "Die Krise selbst",
+"color": "orange",
+"ids": [
+6,
+9,
+15,
+16,
+21,
+23,
+25,
+26,
+29,
+33,
+34
+]
+},
+{
+"label": "Mit den Menschen",
+"color": "blau",
+"ids": [
+2,
+4,
+5,
+13,
+14,
+17,
+20,
+28,
+30,
+32,
+37
+]
+},
+{
+"label": "Persönlich",
+"color": "rosa",
+"ids": [
+1,
+8,
+10,
+12,
+18,
+19,
+24,
+27,
+31,
+36,
+40
+]
+},
+{
+"label": "Geld und Partner",
+"color": "grün",
+"ids": [
+3,
+7,
+11,
+22,
+35,
+38,
+39
+]
+}
+]
+},
+"ai": {
+"headline": "Die meisten wollen den Moment verstehen, in dem es ernst wurde, und wie sie es ihren Leuten gesagt hat.",
+"convergence": [
+{
+"label": "Der Moment der Wahrheit",
+"ids": [
+16,
+25,
+34
+],
+"quote": "das schaffen wir vielleicht nicht?"
+},
+{
+"label": "Ehrlich zum Team",
+"ids": [
+20,
+2,
+14
+],
+"quote": "wie haben Sie es den Mitarbeitenden gesagt"
+},
+{
+"label": "Die Person hinter der Rolle",
+"ids": [
+27,
+8,
+12
+],
+"quote": "Hatten Sie jemanden zum Reden?"
+}
+],
+"tension": [
+{
+"label": "Offenheit oder Schutz",
+"a": "„alles dem Team sagen“",
+"b": "„bewusst für sich behalten“"
+},
+{
+"label": "Können oder Glück",
+"a": "„Was würden Sie anders machen?“",
+"b": "„Wie viel davon war Glück?“"
+}
+],
+"blind_spots": [
+{
+"label": "Die Langfrist-Wirkung",
+"why": "Kultur, Azubis, Führungsstil heute: kaum Stimmen. Wie wirkt die Krise nach?"
+},
+{
+"label": "Die Kundenseite",
+"why": "Nur eine Frage nach Kunden, keine nach Lieferanten."
+}
+]
+}
+}

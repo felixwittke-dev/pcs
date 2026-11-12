@@ -9,6 +9,14 @@
 // Post-its ohne Eintrag in items gelten als unbewertet und stehen am Ende der weiteren Ideen (Punktzahl „–“).
 // Rangfolge: Punkte absteigend, Gleichstand = gleicher Rang (1, 2, 3, 3, 5 …).
 //
+// Modus 'upvotes' (Celebrity Interview, Fragen mit Zustimmung):
+//   { viz: 'ranking', mode: 'upvotes', top: 8,      // Zahl der Top-Fragen (Standard 8, Gleichstand auf dem letzten Platz kommt mit hinein; nur Fragen mit Stimmen)
+//     items: [{ id, votes: 23, asked?: true }],      // votes = Zahl der Stimmen; Post-its ohne Eintrag haben 0 Stimmen; asked = schon gestellt
+//     themes?: [{ label, color, ids }] }             // optional: schmaler Farbstreifen links an der Zeile, sonst neutral
+//   Links „Meistgewuenscht“: Platz, Frage im Volltext, Balken relativ zur meistgewaehlten Frage, Zahl; gestellte Fragen mit ✓ und gedaempft.
+//   Rechts „Weitere Fragen“: ruhige Liste gleicher Zeilenhoehe (2 Zeilen), nach Stimmen; blaettert bei vielen Fragen (Schrift >= 14 px).
+//   Fokus k = Frage k gross. Show-Effekt wie bei 25/10, aber ohne Sieger-Akzent.
+//
 // Ansicht: links die Top-Plaetze als Rangliste (Platz, Idee, Balken aus den 5 Einzelwertungen, Punkte), rechts alle uebrigen Ideen
 // klein als Mosaik (absteigend nach Punkten), damit keine Idee verschwindet. Fokus k = Eintrag k der Rangliste ganz gross.
 // count = Zahl der Eintraege in der Rangliste. Passt das Mosaik nicht, blaettert nur das Mosaik (pages).
@@ -174,28 +182,184 @@
     return card;
   }
 
+  // ---------- Modus 'upvotes' (Celebrity Interview): Fragen mit Stimmen, keine Sieger-Inszenierung ----------
+  const U = P + 'u-';
+  const INK = { gelb: '#E0B000', grün: '#3FA66B', blau: '#4A86D6', rosa: '#D45C8A', orange: '#E68A2E', lila: '#8D69CC', türkis: '#2FA9AA', koralle: '#E06A52' };
+  document.head.append(Object.assign(document.createElement('style'), { textContent: `
+  .${U}wrap { position: absolute; inset: 0; display: flex; gap: 28px; }
+  .${U}list { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: .32em; overflow: hidden; padding: 3px; }
+  .${U}row { flex: 1 0 auto; display: grid; grid-template-columns: 1.7em minmax(0, 1fr) 5.5em 1.7em; align-items: center; gap: .7em; cursor: pointer;
+             padding: .3em .8em .3em .5em; border-radius: .3em; background: #fff; box-shadow: 0 0 0 1px #E6E3D9, 0 1px 2px rgba(0,0,0,.06);
+             border-left: .3em solid var(--uink, #D6D3C8); line-height: 1.25; }
+  .${U}row:hover { box-shadow: 0 0 0 1px #CFCBBE, 0 2px 8px rgba(0,0,0,.12); }
+  .${U}rank { width: 1.6em; height: 1.6em; border-radius: 50%; display: grid; place-items: center; background: #EAF9F9; color: #409E9F; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .${U}txt { overflow-wrap: anywhere; }
+  .${U}vbar { height: .55em; background: #EEECE5; border-radius: 1em; overflow: hidden; }
+  .${U}vbar i { display: block; height: 100%; width: calc(var(--f) * 100%); background: #40BFC0; border-radius: 1em; transform-origin: 0 50%; }
+  .${U}n { font-weight: 800; text-align: right; font-variant-numeric: tabular-nums; }
+  .${U}asked .${U}txt, .${U}asked .${U}n, .${U}asked .${U}vbar { opacity: .45; }
+  .${U}asked .${U}rank { background: #409E9F; color: #fff; }
+  .${U}tag { display: inline-block; margin-right: .5em; padding: 0 .55em; border-radius: 1em; background: #EAF9F9; color: #409E9F; font-size: .72em; font-weight: 700; vertical-align: .1em; opacity: 1; }
+  .${U}side { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; }
+  .${U}area { flex: 1; min-height: 0; overflow: hidden; }
+  .${U}rest { display: flex; flex-direction: column; gap: 3px; }
+  .${U}line { display: flex; align-items: center; gap: .8em; height: calc(2 * 1.25em + .6em); padding: 0 .8em 0 .6em; background: #fff; border-radius: .25em;
+              box-shadow: 0 0 0 1px #ECE9E0; border-left: .3em solid var(--uink, #DDDAD0); line-height: 1.25; }
+  .${U}line span { flex: 1; min-width: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; }
+  .${U}line.${U}one { height: calc(1.25em + .5em); } .${U}line.${U}one span { -webkit-line-clamp: 1; }
+  .${U}line b { flex: none; min-width: 1.6em; text-align: right; font-variant-numeric: tabular-nums; color: #5F5F5F; }
+  .${U}card { position: absolute; inset: 6px; display: flex; flex-direction: column; gap: 2.2vh; padding: 2.2vh 2.4vw; border-radius: 10px; background: #fff;
+              box-shadow: 0 0 0 1px #E6E3D9, 0 2px 10px rgba(0,0,0,.08); border-left: 12px solid var(--uink, #D6D3C8); }
+  .${U}card .${U}vbar { flex: 1; height: .8em; }
+  .${U}card.${U}asked p { opacity: .55; }
+  ` }));
+
+  function modelU(ctx) {
+    const d = ctx.data || {}, top = d.top || 8;
+    const byId = new Map((d.items || []).map(it => [String(it.id), it]));
+    const theme = new Map(); (d.themes || []).forEach(t => (t.ids || []).forEach(id => { if (!theme.has(String(id))) theme.set(String(id), t); }));
+    const all = ctx.rows.map((r, i) => { const id = String(r.id), it = byId.get(id) || {}, v = Array.isArray(it.votes) ? it.votes.length : +it.votes || 0;
+      const t = theme.get(id); return { id, i, body: r.body, votes: v, asked: !!it.asked, ink: t ? (INK[t.color] || null) : null, theme: t ? t.label : null }; });
+    const sorted = all.slice().sort((a, b) => b.votes - a.votes || a.i - b.i);
+    sorted.forEach((x, i) => { x.rank = i && x.votes === sorted[i - 1].votes ? sorted[i - 1].rank : i + 1; });
+    const best = sorted.filter(x => x.rank <= top && x.votes > 0);   // Gleichstand auf dem letzten Platz: alle Gleichplatzierten mit hinein
+    const rest = sorted.slice(best.length);
+    return { top, all, best, rest, max: Math.max(1, ...all.map(x => x.votes)) };
+  }
+  const ink = (e, x) => { if (x.ink) e.style.setProperty('--uink', x.ink); return e; };
+  function rowU(x, m, ctx, k) {
+    const e = ink(ctx.el('div', null, U + 'row' + (x.asked ? ' ' + U + 'asked' : '')), x), t = ctx.el('div', null, U + 'txt');
+    if (x.asked) t.append(ctx.el('span', '✓ gestellt', U + 'tag'));
+    t.append(document.createTextNode(x.body));
+    const bar = ctx.el('div', null, U + 'vbar'), i = ctx.el('i'); i.style.setProperty('--f', x.votes / m.max); bar.append(i);
+    e.append(ctx.el('div', String(x.rank), U + 'rank'), t, bar, ctx.el('div', String(x.votes), U + 'n'));
+    e.title = x.body; e.onclick = () => ctx.go(k);
+    return e;
+  }
+  function lineU(x, ctx, pre) {
+    const e = ink(ctx.el('div', null, U + 'line' + (pre ? ' ' + U + 'one' : '')), x); e.dataset.id = x.id; e.title = x.body;
+    e.append(ctx.el('span', x.body)); if (!pre) e.append(ctx.el('b', String(x.votes)));
+    return e;
+  }
+
+  // pre = Ausgangslage des Show-Effekts: Top-Zeilen unsichtbar, rechts alle Fragen einzeilig in Eingangsreihenfolge
+  function overviewU(box, ctx, m, pre, frac) {
+    box.textContent = '';
+    const wrap = ctx.el('div', null, U + 'wrap'); box.append(wrap);
+    const side = pre ? m.all : m.rest, two = side.length && frac < 1, W = box.clientWidth;
+    const left = ctx.el('div', null, P + 'col'); left.style.flex = `0 0 ${Math.round(two ? frac * W - 14 : W)}px`;
+    const h = ctx.el('div', 'Meistgewünscht', P + 'h');
+    h.append(ctx.el('span', '· ' + (m.best.length === m.all.length ? 'alle ' + m.all.length + ' Fragen nach Stimmen'
+      : 'die ' + m.best.length + ' Fragen mit den meisten Stimmen' + (m.best.length > m.top ? ' (Gleichstand)' : ''))));
+    const list = ctx.el('div', null, U + 'list');
+    const rows = m.best.map((x, k) => { const r = rowU(x, m, ctx, k); if (pre) r.style.visibility = 'hidden'; else r.dataset.id = x.id; list.append(r); return r; });
+    left.append(h, list); wrap.append(left);
+    const setL = f => { left.style.fontSize = f + 'px'; }, fitsL = () => list.scrollHeight <= list.clientHeight + 1;
+    const fL = fit(setL, fitsL, 12, Math.min(40, Math.max(16, list.clientHeight / Math.max(m.best.length, 4) / 1.6))) || (setL(12), 12);
+    let pages = 1, fR = null; const lines = new Map();
+    if (two) {
+      const right = ctx.el('div', null, U + 'side'), rh = ctx.el('div', pre ? 'Alle Fragen' : 'Weitere Fragen', P + 'h');
+      rh.append(ctx.el('span', '· ' + side.length + (pre ? '' : ', nach Stimmen')));
+      const area = ctx.el('div', null, U + 'area'), inner = ctx.el('div', null, U + 'rest');
+      side.forEach(x => { const l = lineU(x, ctx, pre); lines.set(x.id, l); inner.append(l); });
+      if (pre) inner.style.cssText = 'display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 8px';   // Durchgangsliste zweispaltig, damit sie lesbar bleibt
+      area.append(inner); right.append(rh, area); wrap.append(right);
+      const setR = f => { right.style.fontSize = f + 'px'; }, fitsR = () => inner.offsetHeight <= area.clientHeight + 1;
+      const hiR = Math.max(14, Math.min(22, fL * .85));
+      fR = fit(setR, fitsR, pre ? 6 : 14, hiR);
+      if (fR === null && !pre) {   // passt zweizeilig nicht: einzeilig (gleiche Hoehe, Volltext im Tooltip und im Fokus)
+        inner.querySelectorAll('.' + U + 'line').forEach(l => l.classList.add(U + 'one')); fR = fit(setR, fitsR, 14, hiR); }
+      if (fR === null && pre) setR(6);
+      else if (fR === null) {   // viele Fragen: die Liste blaettert in ganzen Zeilen, Schrift bleibt lesbar
+        setR(14);
+        const gap = 3, rowH = inner.firstElementChild.getBoundingClientRect().height + gap, per = Math.max(1, Math.floor((area.clientHeight + gap) / rowH));
+        pages = Math.ceil(side.length / per); const pg = Math.min(ctx.page, pages - 1);
+        area.style.flex = 'none'; area.style.height = (per * rowH - gap) + 'px'; inner.style.transform = `translateY(${-pg * per * rowH}px)`;
+        if (ctx.dir) area.animate([{ transform: `translateX(${ctx.dir * 60}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
+      }
+    }
+    return { rows, lines, pages, fL, fR };
+  }
+  function fracU(box, ctx, m) {
+    if (!m.rest.length) return 1;
+    let best = .62, score = -1e9;
+    for (const f of [.66, .62, .58, .54]) { const r = overviewU(box, ctx, m, false, f), v = r.fR === null ? -r.pages : Math.min(r.fL, r.fR / .85);
+      if (v > score + .3) { score = v; best = f; } }
+    return best;
+  }
+  function focusU(box, ctx, m, k) {
+    box.textContent = '';
+    const x = m.best[k], card = ink(ctx.el('div', null, U + 'card' + (x.asked ? ' ' + U + 'asked' : '')), x); card.dataset.id = x.id;
+    const top = ctx.el('div', null, P + 'top'), back = ctx.el('button', '← Alle'); back.onclick = () => ctx.go(null);
+    const same = m.best.filter(y => y.rank === x.rank).length;
+    top.append(back, ctx.el('span', 'Platz ' + x.rank + (same > 1 ? ' (geteilt)' : ''), P + 'pill'));
+    if (x.asked) top.append(ctx.el('span', '✓ gestellt', U + 'tag'));
+    if (x.theme) top.append(ctx.el('span', x.theme, P + 'muted'));
+    top.append(ctx.el('span', (k + 1) + ' von ' + m.best.length, P + 'muted'));
+    top.querySelectorAll('.' + P + 'pill').forEach(p => p.style.background = '#EAF9F9');
+    const big = ctx.el('div', null, P + 'big'), p = ctx.el('p', x.body); big.append(p);
+    const foot = ctx.el('div', null, P + 'foot'), bar = ctx.el('div', null, U + 'vbar'), i = ctx.el('i'); i.style.setProperty('--f', x.votes / m.max); bar.append(i);
+    const tot = ctx.el('div', String(x.votes), P + 'total'); tot.append(ctx.el('small', x.votes === 1 ? 'Stimme' : 'Stimmen'));
+    foot.append(bar, tot); card.append(top, big, foot); box.append(card);
+    fit(f => { p.style.fontSize = f + 'px'; }, () => p.offsetHeight <= big.clientHeight + 1 && p.scrollWidth <= big.clientWidth + 1, 15, 96);
+  }
+  function drawU(box, ctx) {
+    const m = modelU(ctx);
+    if (ctx.focus != null && m.best.length) { focusU(box, ctx, m, Math.min(ctx.focus, m.best.length - 1)); return { count: m.best.length, pages: 1 }; }
+    return { count: m.best.length, pages: overviewU(box, ctx, m, false, fracU(box, ctx, m)).pages };
+  }
+  // Show-Effekt: Fragen fliegen aus dem Mosaik in die Liste rechts, dann laufen die meistgewuenschten von unten nach oben
+  // in die Rangliste, Balken wachsen, Stimmen zaehlen hoch. Kein Sieger-Moment: nur eine Reihenfolge.
+  async function playU(box, ctx) {
+    const m = modelU(ctx), frac = fracU(box, ctx, m), { rows, lines } = overviewU(box, ctx, m, true, frac < 1 ? frac : .62);
+    ctx.flip(box, ctx.from);
+    await ctx.sleep(1700);
+    for (let k = m.best.length - 1; k >= 0; k--) {
+      const x = m.best[k], r = rows[k], t = lines.get(x.id), a = t ? t.getBoundingClientRect() : null;
+      if (t) { t.style.visibility = 'hidden'; delete t.dataset.id; }
+      r.style.visibility = 'visible'; r.dataset.id = x.id;
+      const b = r.getBoundingClientRect(), dur = 750;
+      if (a && a.width) r.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})`, transformOrigin: '0 0', opacity: .6 },
+                                   { transform: 'none', transformOrigin: '0 0', opacity: 1 }], { duration: dur, easing: 'cubic-bezier(.2,.8,.2,1)' });
+      r.querySelector('.' + U + 'vbar i').animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 500, delay: dur * .6, easing: 'ease-out', fill: 'backwards' });
+      const n = r.querySelector('.' + U + 'n'), steps = 12; n.textContent = '0';
+      for (let s = 1; s <= steps; s++) setTimeout(() => { n.textContent = String(Math.round(x.votes * s / steps)); }, dur * .6 + s * 45);
+      await ctx.sleep(k <= 2 ? 650 : 420);
+    }
+    await ctx.sleep(700);
+    const before = new Map([...box.querySelectorAll('[data-id]')].filter(e => e.style.visibility !== 'hidden').map(e => [e.dataset.id, e.getBoundingClientRect()]));
+    overviewU(box, ctx, m, false, frac);
+    ctx.flip(box, before);
+    await ctx.sleep(1400);
+  }
+
   // Die Wand zeichnet nur bei Fenster-Resize neu. Aendert sich die Flaeche anders (Kopfzeile bricht um, Browser passt das Fenster an),
   // zeichnet der Baustein selbst nach, damit die gemessenen Schriftgroessen stimmen.
   let last = null, revealing = false;
-  const ro = new ResizeObserver(() => { if (!last || revealing) return; const { box, ctx, w, h } = last;
-    if (Math.abs(box.clientWidth - w) > 2 || Math.abs(box.clientHeight - h) > 2) VIZ.ranking.draw(box, ctx); });
+  // Aendert sich dabei die Seitenzahl, erfaehrt die Wand das ueber ctx.go (gleicher Fokus: zeichnet neu und zaehlt die Seiten).
+  const ro = new ResizeObserver(() => { if (!last || revealing) return; const { box, ctx, w, h, pages } = last;
+    if (!box.clientWidth || (Math.abs(box.clientWidth - w) <= 2 && Math.abs(box.clientHeight - h) <= 2)) return;
+    const r = VIZ.ranking.draw(box, ctx); if (r.pages !== pages) ctx.go(ctx.focus); });
 
-  VIZ.ranking = {
-    draw(box, ctx) {
+  function drawAny(box, ctx) {
       if (!last || last.box !== box) ro.observe(box);
       last = { box, ctx: { ...ctx, dir: 0 }, w: box.clientWidth, h: box.clientHeight };
+      if ((ctx.data || {}).mode === 'upvotes') return drawU(box, ctx);
       const m = model(ctx);
       if (ctx.focus != null && m.best.length) {
         focusView(box, ctx, m, Math.min(ctx.focus, m.best.length - 1));
         return { count: m.best.length, pages: 1 };
       }
       return { count: m.best.length, pages: overview(box, ctx, m, false, bestFrac(box, ctx, m)).pages };
-    },
+  }
+
+  VIZ.ranking = {
+    draw(box, ctx) { const r = drawAny(box, ctx); last.pages = r.pages; return r; },
 
     // Show-Effekt: alle Post-its fliegen ins Mosaik rechts, dann steigen die Top-Plaetze von unten nach oben einzeln auf,
     // Balken wachsen, Punkte zaehlen hoch; Platz 1 zuletzt mit Amber-Akzent. Am Ende ruecken alle an den Platz der Endansicht.
     async reveal(box, ctx) {
-      revealing = true; try { await play(box, ctx); } finally { revealing = false; }
+      revealing = true; try { await ((ctx.data || {}).mode === 'upvotes' ? playU : play)(box, ctx); } finally { revealing = false; }
     },
   };
 

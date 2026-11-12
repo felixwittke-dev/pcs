@@ -1,0 +1,111 @@
+{
+"step": {
+"label": "Celebrity Interview · Fragen",
+"lsDef": {
+"name": "Celebrity Interview",
+"icon": "celebrity-interview",
+"panel": [
+"Was viele wissen wollen",
+"Wo die Fragen in verschiedene Richtungen gehen",
+"Was noch niemand gefragt hat"
+],
+"noun": "Fragen"
+},
+"phase": "Fragen",
+"q": "Was möchtest du Martina Keller fragen? Sie hat ihr Familienunternehmen durch die Insolvenzgefahr geführt.",
+"how": "Schreib deine Frage und stimm für die Fragen anderer, die du auch stellen würdest.",
+"show": [
+2
+]
+},
+"people": 9,
+"rows": [
+{
+"id": 1,
+"step": 2,
+"body": "Wann haben Sie gemerkt, dass es wirklich ernst ist? Gab es einen konkreten Moment, an dem Sie dachten: das schaffen wir vielleicht nicht?"
+},
+{
+"id": 2,
+"step": 2,
+"body": "Wie haben Sie es den Mitarbeitenden gesagt, ohne dass alle sofort kündigen?"
+},
+{
+"id": 3,
+"step": 2,
+"body": "Wie sind Sie persönlich damit umgegangen, nachts schlafen usw.? Hatten Sie jemanden zum Reden?"
+},
+{
+"id": 4,
+"step": 2,
+"body": "wie haben sie die bank überzeugt"
+},
+{
+"id": 5,
+"step": 2,
+"body": "Was war die schwierigste Entscheidung"
+},
+{
+"id": 6,
+"step": 2,
+"body": "Haben Sie mal ans Aufhören gedacht?"
+}
+],
+"data": {
+"viz": "ranking",
+"mode": "upvotes",
+"top": 8,
+"items": [
+{
+"id": 1,
+"votes": 7,
+"asked": true
+},
+{
+"id": 2,
+"votes": 7
+},
+{
+"id": 3,
+"votes": 6
+},
+{
+"id": 4,
+"votes": 4
+},
+{
+"id": 5,
+"votes": 3
+},
+{
+"id": 6,
+"votes": 2
+}
+]
+},
+"ai": {
+"headline": "Sechs Fragen, eine klare Spitze: der Moment, als es ernst wurde.",
+"convergence": [
+{
+"label": "Der Moment der Wahrheit",
+"ids": [
+1
+],
+"quote": "das schaffen wir vielleicht nicht?"
+}
+],
+"tension": [
+{
+"label": "Team oder Bank",
+"a": "Mitarbeitende",
+"b": "Geldgeber"
+}
+],
+"blind_spots": [
+{
+"label": "Wenige Stimmen",
+"why": "Bei sechs Fragen trennen wenige Stimmen die Plätze."
+}
+]
+}
+}
