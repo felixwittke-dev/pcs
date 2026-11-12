@@ -6,57 +6,63 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Workshop · Wand</title>
 <style>
-  :root { --brand: #FFC83B; --accent: #B4530A; --ink: #1B1B1B; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #E7EEF9;
+  :root { --brand: #FFC83B; --accent: #B4530A; --ink: #1B1B1B; --muted: #5F5F5F; --bg: #FAFAF7; --note: #FFF4C7; --note2: #D9F0E4; --ai: #E7EEF9; --aiink: #3B5B92;
           --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand); min-height: 100vh; }
-  header { display: flex; gap: 28px; align-items: flex-start; padding: 22px 36px 10px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 20px/1.4 var(--font); border-top: 12px solid var(--brand);
+         height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  header { display: flex; gap: 28px; align-items: flex-start; padding: 16px 36px 4px; flex: none; }
   .head { flex: 1; }
-  .step { font-size: 15px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
-  h1 { font-size: clamp(26px, 3vw, 44px); line-height: 1.2; margin: 0 0 6px; }
+  .step { font-size: 15px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 4px; }
+  h1 { font-size: clamp(24px, 2.6vw, 40px); line-height: 1.2; margin: 0 0 4px; }
   .how { color: var(--muted); margin: 0; }
-  .join { text-align: center; font-size: 14px; color: var(--muted); }
-  .join img { display: block; width: 104px; height: 104px; margin: 0 auto 4px; background: #fff; padding: 6px; border-radius: 8px; }
+  .join { text-align: center; font-size: 13px; color: var(--muted); }
+  .join img { display: block; width: 92px; height: 92px; margin: 0 auto 2px; background: #fff; padding: 5px; border-radius: 8px; }
   .join.big img { width: min(46vh, 420px); height: min(46vh, 420px); }
   .join.big { font-size: 22px; color: var(--ink); }
-  main { padding: 10px 36px 60px; }
-  #counter { text-align: center; padding: 8vh 0; }
-  #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
-  #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
-  #notes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
-  .note { background: var(--note); border-radius: 4px; padding: 14px 16px; box-shadow: 0 2px 4px rgba(0,0,0,.14); white-space: pre-wrap;
-          overflow-wrap: anywhere; font-size: clamp(16px, 1.35vw, 22px); min-height: 110px;
-          transform-origin: 0 0; transition: background-color .6s; }
-  .note.alt { background: var(--note2); }
-  #notes.grouped { display: block; }
-  .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin: 6px 0 20px; }
-  .legend button { border: 0; cursor: pointer; font-family: inherit; color: inherit; padding: 6px 16px; border-radius: 999px; font-weight: 700;
-                   font-size: clamp(17px, 1.6vw, 26px); transition: opacity .35s, transform .35s, box-shadow .2s; }
-  .legend button:hover { box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  main { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 6px 36px 34px; }
+  .legend { flex: none; display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 10px; }
+  .legend button { border: 0; cursor: pointer; font-family: inherit; color: inherit; padding: 4px 14px; border-radius: 999px; font-weight: 700;
+                   font-size: clamp(15px, 1.3vw, 22px); transition: opacity .35s, transform .35s, box-shadow .2s; }
+  .legend button:hover { box-shadow: 0 2px 8px rgba(0,0,0,.2); }
   .legend button.off { opacity: 0; transform: scale(.7); }
   .legend button.dim { opacity: .4; }
   .legend small { font-weight: 400; color: var(--muted); font-size: inherit; }
-  .theme { margin: 0 0 22px; }
-  .theme h3 { display: inline-block; font-size: clamp(17px, 1.5vw, 24px); margin: 0 0 10px; padding: 4px 14px; border-radius: 999px; }
-  .theme h3 span { font-weight: 400; color: var(--muted); }
-  .theme .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
-  .theme .note { min-height: 0; padding: 10px 12px; font-size: clamp(14px, 1.05vw, 18px); }
-  #notes.focus .theme h3 { display: none; }
-  #notes.focus .theme .grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
-  #notes.focus .theme .note { font-size: clamp(16px, 1.35vw, 22px); padding: 14px 16px; }
-  .note.pop { animation: pop .5s ease-out; }
-  @keyframes pop { 40% { transform: scale(1.07); } }
+  .legend .c-ai { background: var(--aiink); color: #fff; margin-left: auto; } .legend .c-ai small { color: #D5E0F5; }
+  #stage { flex: 1; min-height: 0; position: relative; }
+  #counter { text-align: center; padding: 8vh 0; }
+  #counter .n { font-size: clamp(90px, 16vw, 220px); font-weight: 800; line-height: 1; }
+  #counter p { font-size: 28px; color: var(--muted); margin: 8px 0 0; }
+  /* Mosaik: alle Post-its passen immer auf den Bildschirm. Schriftgroesse und Kachelbreite ergeben sich aus Anzahl, Textlaenge und Flaeche. */
+  #mosaic { position: absolute; inset: 0; --lines: 3; }
+  .block { position: absolute; display: flex; flex-direction: column; padding: 3px; }
+  .btitle { flex: none; align-self: flex-start; cursor: pointer; font-weight: 700; font-size: clamp(12px, 1vw, 17px); padding: 1px 10px; border-radius: 999px; margin: 0 0 3px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .btitle span { font-weight: 400; color: var(--muted); }
+  .tiles { flex: 1; min-height: 0; display: flex; flex-wrap: wrap; align-content: flex-start; gap: .28em; overflow: hidden; }
+  .tile { height: calc(var(--lines) * 1.25em + .7em); padding: .35em .55em; border-radius: .25em; background: var(--note); box-shadow: 0 1px 2px rgba(0,0,0,.16);
+          line-height: 1.25; overflow: hidden; transform-origin: 0 0; transition: background-color .6s; }
+  .tile span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: var(--lines); overflow: hidden; overflow-wrap: anywhere; }
+  .tile.alt { background: var(--note2); }
+  .tile.pop { animation: pop .5s ease-out; z-index: 1; }
+  @keyframes pop { 40% { transform: scale(1.12); } }
   .c-gelb { background: #FFF1B8; } .c-grün { background: #D3EFDD; } .c-blau { background: #D6E6FB; } .c-rosa { background: #FAD9E6; }
   .c-orange { background: #FFDDBB; } .c-lila { background: #E6DBF7; } .c-türkis { background: #CDEEEE; } .c-koralle { background: #FFD5CC; }
   .c-none { background: #ECECE6; }
-  .note:nth-child(3n) { transform: rotate(.6deg); } .note:nth-child(3n+1) { transform: rotate(-.5deg); }
-  #result { background: var(--ai); border-left: 8px solid #3B5B92; border-radius: 6px; padding: 18px 22px; margin: 26px 0 0; }
-  #result h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: #3B5B92; margin: 0 0 8px; }
-  #result .headline { font-size: 26px; font-weight: 700; margin: 0 0 12px; }
-  #result h3 { font-size: 16px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
-  #result ul { margin: 0; padding-left: 22px; } #result li { margin: 0 0 6px; }
-  #result q { color: var(--muted); }
-  footer { position: fixed; right: 16px; bottom: 10px; background: var(--bg, #fff); padding: 2px 8px; border-radius: 4px; font-size: 13px; color: var(--muted); }
+  /* KI-Auswertung: eigene Ansicht auf der Wand, per Knopf. */
+  #panel { position: absolute; inset: 0; overflow-y: auto; background: var(--ai); border-left: 10px solid var(--aiink); border-radius: 8px; padding: 22px 30px; }
+  #panel h2 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--aiink); margin: 0 0 8px; }
+  #panel .headline { font-size: clamp(24px, 2.5vw, 40px); font-weight: 800; line-height: 1.2; margin: 0 0 20px; max-width: 34em; }
+  #panel .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px; }
+  #panel .card { background: rgba(255,255,255,.75); border-radius: 8px; padding: 14px 18px; }
+  #panel h3 { font-size: 15px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 8px; }
+  #panel .item { margin: 0 0 12px; font-size: clamp(16px, 1.25vw, 21px); }
+  #panel .item b { display: block; }
+  #panel .item button { border: 0; cursor: pointer; font: inherit; font-weight: 700; padding: 2px 12px; border-radius: 999px; margin: 0 0 3px; }
+  #panel q { color: var(--muted); }
+  .rv { animation: rise .6s ease-out backwards; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+  footer { position: fixed; right: 16px; bottom: 8px; font-size: 13px; color: var(--muted); }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -70,136 +76,198 @@
   <div class="join" id="join"><img src="qr.png" alt="QR-Code zum Mitschreiben"><span id="url"></span></div>
 </header>
 <main>
-  <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
   <div id="legend" class="legend" hidden></div>
-  <div id="notes"></div>
-  <section id="result" hidden></section>
+  <div id="stage">
+    <div id="counter" hidden><div class="n" id="n">0</div><p id="nlabel">Gedanken bisher</p></div>
+    <div id="mosaic"></div>
+    <section id="panel" hidden></section>
+  </div>
 </main>
 <footer id="foot"></footer>
 
 <script src="steps.js"></script>
 <script>
+// Mit #k=<Schluessel> (wie die Steuerseite) kann die Moderation die KI-Auswertung direkt auf der Wand freigeben.
+const K = decodeURIComponent((location.hash.match(/k=([^&]+)/) || [])[1] || '');
 $('url').textContent = location.href.replace(/^https?:\/\//, '').replace(/wall\.html.*$/, '');
-let polling = false, lastRev = null, lastStep = null, prevReleased = null, shownResult = null;
+let polling = false, busy = false, lastRev = null, prevReleased = null;
+let view = null, counter = false, wasThemed = false, forceFlat = false;
+let focus = null;   // null = alle Post-its, Zahl = ein Thema, 'ai' = KI-Auswertung
+let ai = null;      // { step, released, data }
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 function el(tag, text, cls) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; }
 
-// ---- Post-its: flach, oder nach KI-Themen gruppiert. Der Uebergang ist reine Animation im Browser (keine KI, keine Kosten).
-let view = null, wasThemed = false, focus = null;
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-function noteEl(r) { const e = el('div', r.body, 'note'); e.dataset.id = r.id; return e; }
+// ---------- Mosaik ----------
+function tileEl(r) { const e = el('div', null, 'tile'); e.dataset.id = r.id; e.append(el('span', r.body)); return e; }
+const emWidth = (text, lines, cap) => Math.max(8, Math.min(text.length, cap)) / lines * 0.5 + 1.7;
 
-function renderFlat() {
-  const notes = $('notes'); notes.className = ''; notes.textContent = '';
-  view.rows.forEach(r => { const e = noteEl(r); if (r.step !== view.s.show[0]) e.classList.add('alt'); notes.append(e); });
+function blocks() {
+  const { rows, themes, themed, s } = view;
+  if (!themes.length || forceFlat) return [{ key: 'flat', rows, cls: r => r.step !== s.show[0] ? 'alt' : '' }];
+  const byId = new Map(rows.map(r => [r.id, r])), used = new Set();
+  const out = themes.map((t, k) => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id));
+    return { key: k, label: t.label, rows: list, cls: () => 'c-' + t.color }; });
+  if (typeof focus === 'number') return [out[focus]];
+  out.push({ key: 'x', label: 'Einzelstimmen', rows: rows.filter(r => themed.includes(r.step) && !used.has(r.id)), cls: () => 'c-none' });
+  s.show.filter(x => !themed.includes(x)).forEach(x => out.push({ key: 'o' + x, label: stepById(x).label, rows: rows.filter(r => r.step === x), cls: () => 'alt' }));
+  return out.filter(b => b.rows.length);
 }
 
-function buildLegend() {
-  const legend = $('legend'), ids = new Set(view.rows.map(r => r.id)); legend.textContent = ''; legend.hidden = false;
-  const chip = (label, n, cls, k) => { const b = el('button', label + ' ', cls); b.append(el('small', '· ' + n)); b.onclick = () => setFocus(focus === k ? null : k); legend.append(b); };
-  chip('Alle', view.rows.filter(r => view.themed.includes(r.step)).length, 'c-none', null);
-  view.themes.forEach((t, k) => chip(t.label, t.ids.filter(i => ids.has(i)).length, 'c-' + t.color, k));
+// Squarified Treemap: teilt die Flaeche so auf, dass jedes Thema Platz nach seiner Textmenge bekommt.
+function squarify(vals, x, y, w, h) {
+  const total = vals.reduce((a, b) => a + b, 0), areas = vals.map(v => v * w * h / total), rects = [];
+  const worst = (row, side) => { const s = row.reduce((a, b) => a + b, 0); return Math.max(side * side * Math.max(...row) / (s * s), s * s / (side * side * Math.min(...row))); };
+  let row = [], i = 0;
+  const flush = () => { const s = row.reduce((a, b) => a + b, 0);
+    if (w >= h) { const cw = s / h; let cy = y; row.forEach(a => { rects.push({ x, y: cy, w: cw, h: a / cw }); cy += a / cw; }); x += cw; w -= cw; }
+    else { const ch = s / w; let cx = x; row.forEach(a => { rects.push({ x: cx, y, w: a / ch, h: ch }); cx += a / ch; }); y += ch; h -= ch; }
+    row = []; };
+  while (i < areas.length) { const side = Math.min(w, h), next = row.concat(areas[i]);
+    if (!row.length || worst(next, side) <= worst(row, side)) { row = next; i++; } else flush(); }
+  if (row.length) flush();
+  return rects;
 }
 
-function renderGrouped(reuse) {
-  const notes = $('notes'), { rows, themes, themed, s } = view, byId = new Map(rows.map(r => [r.id, r])), used = new Set();
-  notes.className = 'grouped'; notes.textContent = '';
-  const group = (label, cls, list, key) => { if (!list.length) return; const g = el('div', null, 'theme'), h = el('h3', label + ' ', cls), grid = el('div', null, 'grid');
-    g.dataset.k = key; h.append(el('span', '· ' + list.length));
-    list.forEach(r => { const e = (reuse && reuse.get(r.id)) || noteEl(r); e.className = 'note ' + cls; grid.append(e); }); g.append(h, grid); notes.append(g); };
-  themes.forEach((t, k) => { const list = t.ids.map(i => byId.get(i)).filter(Boolean); list.forEach(r => used.add(r.id)); group(t.label, 'c-' + t.color, list, k); });
-  group('Einzelstimmen', 'c-none', rows.filter(r => themed.includes(r.step) && !used.has(r.id)), 'x');
-  s.show.filter(x => !themed.includes(x)).forEach(x => group(stepById(x).label, 'alt', rows.filter(r => r.step === x), 'o' + x));
-  applyFocus();
-}
-
-// Ein Thema antippen (oder Pfeiltasten): nur dessen Post-its zeigen. Nochmal tippen, "Alle" oder Esc: alles.
-function applyFocus() {
-  const notes = $('notes');
-  notes.querySelectorAll('.theme').forEach(g => g.hidden = focus !== null && g.dataset.k !== String(focus));
-  [...$('legend').children].forEach((b, i) => b.classList.toggle('dim', focus !== null && i - 1 !== focus));
-  notes.classList.toggle('focus', focus !== null);
-}
-function setFocus(k) { focus = k; applyFocus(); }
-
-// Show-Effekt: Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle, dann fliegen alle an ihren Platz.
-async function showThemes() {
-  const notes = $('notes'), { themes } = view;
-  buildLegend(); const chips = [...$('legend').children]; chips.forEach(c => c.classList.add('off'));
-  const els = new Map([...notes.querySelectorAll('.note')].map(e => [+e.dataset.id, e]));
-  scrollTo({ top: 0, behavior: 'smooth' }); await sleep(500);
-  for (const [k, t] of themes.entries()) {
-    chips[k + 1].classList.remove('off');
-    t.ids.forEach((id, j) => { const e = els.get(id); if (e) setTimeout(() => { e.classList.remove('alt'); e.classList.add('c-' + t.color, 'pop'); }, j * 25); });
-    await sleep(480);
-  }
-  chips[0].classList.remove('off'); await sleep(800);
-  const first = new Map([...els].map(([id, e]) => [id, e.getBoundingClientRect()]));
-  renderGrouped(els);
-  notes.querySelectorAll('.theme h3').forEach(h => h.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 800, fill: 'backwards' }));
+function layoutMosaic(animate) {
+  const m = $('mosaic'), W = m.clientWidth, H = m.clientHeight;
+  const old = new Map([...m.querySelectorAll('.tile')].map(e => [e.dataset.id, e]));
+  const first = new Map(animate ? [...old].map(([id, e]) => [id, e.getBoundingClientRect()]) : []);
+  const one = typeof focus === 'number', lines = one ? 4 : 3, cap = one ? 400 : 150;
+  const bl = blocks().map(b => ({ ...b, v: b.rows.reduce((a, r) => a + emWidth(r.body, lines, cap) + .3, 0) + 6 })).sort((a, b) => b.v - a.v);
+  const rects = bl.length > 1 ? squarify(bl.map(b => b.v), 0, 0, W, H) : [{ x: 0, y: 0, w: W, h: H }];
+  m.textContent = ''; m.style.setProperty('--lines', lines);
+  bl.forEach((b, n) => { const r = rects[n], box = el('div', null, 'block'), tiles = el('div', null, 'tiles');
+    box.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px`;
+    if (b.label && !one) { const t = el('div', b.label + ' ', 'btitle ' + b.cls()); t.append(el('span', '· ' + b.rows.length));
+      if (typeof b.key === 'number') t.onclick = () => go(b.key); box.append(t); }
+    b.rows.forEach(r => { const e = old.get(String(r.id)) || tileEl(r), w = emWidth(r.body, lines, cap);
+      e.className = 'tile ' + b.cls(r); e.style.flex = `${Math.round(w * 10)} 1 ${w}em`; e.style.maxWidth = w * 2.4 + 'em'; e.title = r.body; tiles.append(e); });
+    box.append(tiles); m.append(box); });
+  // groesste Schrift suchen, bei der in jedem Block alles hineinpasst
+  let lo = 5, hi = bl.length > 1 ? 22 : 30;
+  const fits = f => { m.style.fontSize = f + 'px'; return [...m.querySelectorAll('.tiles')].every(t => t.scrollHeight <= t.clientHeight + 1); };
+  if (fits(hi)) lo = hi; else for (let k = 0; k < 8; k++) { const mid = (lo + hi) / 2; if (fits(mid)) lo = mid; else hi = mid; }
+  m.style.fontSize = lo + 'px';
+  if (!animate) return;
   let i = 0;
-  els.forEach((e, id) => { if (!e.isConnected) return; const a = first.get(id), b = e.getBoundingClientRect(); if (!b.width) return;
+  m.querySelectorAll('.btitle').forEach(t => t.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: 700, fill: 'backwards' }));
+  m.querySelectorAll('.tile').forEach(e => { const a = first.get(e.dataset.id), b = e.getBoundingClientRect();
+    if (!a || !a.width) { e.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 }); return; }
+    if (Math.abs(a.left - b.left) < 1 && Math.abs(a.top - b.top) < 1 && Math.abs(a.width - b.width) < 1) return;
     e.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})` }, { transform: 'none' }],
-              { duration: 1300, delay: Math.min(i++ * 5, 500), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
-  await sleep(1900);
+              { duration: 1200, delay: Math.min(i++ * 4, 450), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }); });
+}
+
+// ---------- Knoepfe: Alle · Themen · KI-Auswertung ----------
+function buildLegend() {
+  const legend = $('legend'); legend.textContent = '';
+  const chip = (label, n, cls, key) => { const b = el('button', label + ' ', cls); if (n != null) b.append(el('small', '· ' + n)); b.dataset.key = String(key);
+    b.classList.toggle('dim', focus !== null && focus !== key); b.onclick = () => go(focus === key ? null : key); legend.append(b); };
+  if (view && view.themes.length && !counter) { const ids = new Set(view.rows.map(r => r.id));
+    chip('Alle', view.rows.filter(r => view.themed.includes(r.step)).length, 'c-none', null);
+    view.themes.forEach((t, k) => chip(t.label, t.ids.filter(i => ids.has(i)).length, 'c-' + t.color, k)); }
+  if (ai) chip('✨ KI-Auswertung', ai.released ? null : 'zeigen', 'c-ai', 'ai');
+  legend.hidden = !legend.children.length;
+}
+
+async function go(key) {
+  if (busy) return;
+  if (key === 'ai' && ai && !ai.released) {   // Freigabe direkt auf der Wand
+    await rpc('lf_release', { p_key: K, p_step: ai.step, p_released: true });
+    ai.released = true; if (prevReleased) prevReleased.push(ai.step);
+  }
+  focus = key; draw(true);
+}
+
+function renderPanel() {
+  const box = $('panel'), r = ai.data || {}; box.textContent = ''; let n = 0;
+  const rv = e => { e.classList.add('rv'); e.style.animationDelay = (n++ * .22) + 's'; return e; };
+  box.append(rv(el('h2', 'KI-Auswertung · aus ' + (view ? view.rows.length + ' Post-its' : 'euren Post-its'))));
+  if (r.headline) box.append(rv(el('p', r.headline, 'headline')));
+  const cols = el('div', null, 'cols'); box.append(cols);
+  const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
+  card('Was viele ähnlich sehen', r.convergence, c => { const d = el('div', null, 'item'), k = view ? view.themes.findIndex(t => t.label === c.label) : -1;
+    if (k >= 0) { const b = el('button', c.label + ' · ' + c.ids.length, 'c-' + view.themes[k].color); b.onclick = () => go(k); d.append(b); }   // fuehrt zu den Post-its des Themas
+    else d.append(el('b', c.label + (c.ids ? ' · ' + c.ids.length : '')));
+    if (c.quote) d.append(el('q', c.quote)); return d; });
+  card('Wo es auseinandergeht', r.tension, t => { const d = el('div', null, 'item'); d.append(el('b', t.label), document.createTextNode(t.a + ' ↔ ' + t.b)); return d; });
+  card('Was noch fehlt', r.blind_spots, b => { const d = el('div', null, 'item'); d.append(el('b', b.label), document.createTextNode(b.why || '')); return d; });
+}
+
+function draw(animate) {
+  buildLegend();
+  const showAi = focus === 'ai' && ai && ai.released;
+  $('counter').hidden = !counter || showAi;
+  $('panel').hidden = !showAi; if (showAi) renderPanel();
+  $('mosaic').hidden = counter || showAi || !view;
+  if (!$('mosaic').hidden) layoutMosaic(animate); else if (!view) $('mosaic').textContent = '';
+}
+
+// Show-Effekt (reine Browser-Animation, keine KI): Themen erscheinen nacheinander, ihre Post-its faerben sich an Ort und Stelle,
+// dann fliegen alle in ihre Themenflaeche.
+async function showThemes() {
+  busy = true;
+  buildLegend(); const chips = [...$('legend').children]; chips.forEach(c => c.classList.add('off'));
+  const els = new Map([...$('mosaic').querySelectorAll('.tile')].map(e => [+e.dataset.id, e]));
+  await sleep(500);
+  for (const [k, t] of view.themes.entries()) {
+    chips[k + 1].classList.remove('off');
+    t.ids.forEach((id, j) => { const e = els.get(id); if (e) setTimeout(() => { e.className = 'tile pop c-' + t.color; }, j * 30); });
+    await sleep(650);
+  }
+  chips.forEach(c => c.classList.remove('off')); await sleep(900);
+  layoutMosaic(true); await sleep(1800);
+  busy = false;
 }
 
 addEventListener('keydown', async e => {
-  if (!view || !view.themes.length || polling) return;
-  const n = view.themes.length;
-  if (e.key === 'ArrowRight') setFocus(focus === null ? 0 : focus + 1 < n ? focus + 1 : null);
-  else if (e.key === 'ArrowLeft') setFocus(focus === null ? n - 1 : focus > 0 ? focus - 1 : null);
-  else if (e.key === 'Escape') setFocus(null);
-  else if (e.key.toLowerCase() === 'r') { polling = true; focus = null; $('legend').hidden = true; renderFlat(); await sleep(900); await showThemes(); polling = false; }  // Uebergang nochmal zeigen
+  if (busy || polling || !view || !view.themes.length) return;
+  const order = [null, ...view.themes.map((t, k) => k), ...(ai ? ['ai'] : [])], i = order.indexOf(focus);
+  if (e.key === 'ArrowRight') go(order[(i + 1) % order.length]);
+  else if (e.key === 'ArrowLeft') go(order[(i - 1 + order.length) % order.length]);
+  else if (e.key === 'Escape') go(null);
+  else if (e.key.toLowerCase() === 'r') {   // Uebergang nochmal zeigen
+    focus = null; forceFlat = true; draw(false); $('legend').hidden = true; forceFlat = false; busy = true; await sleep(1200); await showThemes(); }
 });
+let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (!busy) draw(false); }, 150); });
 
-function renderResult(r) {
-  const box = $('result'); box.textContent = ''; box.hidden = !r; if (!r) return;
-  box.append(el('h2', 'KI-Auswertung'));
-  if (r.headline) box.append(el('p', r.headline, 'headline'));
-  const sec = (title, arr, fn) => { if (!arr || !arr.length) return; box.append(el('h3', title)); const ul = el('ul'); arr.forEach(x => ul.append(fn(x))); box.append(ul); };
-  sec('Was viele ähnlich sehen', r.convergence, c => { const li = el('li'); li.append(el('strong', c.label + (c.ids ? ' (' + c.ids.length + ')' : '')));
-        if (c.quote) { li.append(document.createTextNode(' ')); li.append(el('q', c.quote)); } return li; });
-  sec('Wo es auseinandergeht', r.tension, t => { const li = el('li'); li.append(el('strong', t.label)); li.append(document.createTextNode(': ' + t.a + ' ↔ ' + t.b)); return li; });
-  sec('Was noch fehlt', r.blind_spots, b => { const li = el('li'); li.append(el('strong', b.label)); if (b.why) li.append(document.createTextNode(': ' + b.why)); return li; });
-}
-
+// ---------- Zustand holen ----------
 async function refresh(st) {
   const s = stepById(st.step);
   $('step').textContent = s.label; $('q').textContent = s.q; $('how').textContent = s.how || '';
   $('join').className = 'join' + (st.step === 0 ? ' big' : '');
   $('foot').textContent = st.people + (st.people === 1 ? ' Handy hat' : ' Handys haben') + ' schon beigetragen';
-  const counter = s.solo && st.wall === 'counter';
-  $('counter').hidden = !counter; $('n').textContent = st.count;
-  $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
-  const notes = $('notes'), legend = $('legend'); notes.hidden = counter;
+  counter = s.solo && st.wall === 'counter';
+  $('n').textContent = st.count; $('nlabel').textContent = st.count === 1 ? 'Gedanke bisher' : 'Gedanken bisher';
   let themes = [];
   if (!counter && s.show.length) {
     const rows = await rpc('lf_wall', { p_steps: s.show });
-    // Themen: sobald die KI zugeordnet hat, haengen die Post-its nach Themen gruppiert und eingefaerbt (ohne Freigabe).
+    // Themen: sobald die KI zugeordnet hat, erscheinen sie ohne Freigabe (Felix, 12.11.).
     const themed = s.show.filter(x => st.released.includes(String(THEMES + x)));
     themes = (await Promise.all(themed.map(x => rpc('lf_result', { p_step: THEMES + x })))).flatMap(t => (t && t.themes) || []);
     view = { rows, themes, themed, s };
-    if (focus !== null && focus >= themes.length) focus = null;
-    if (!themes.length) renderFlat();
-    else if (!wasThemed && notes.querySelector(':scope > .note')) await showThemes();   // Post-its hingen schon: Uebergang zeigen
-    else { buildLegend(); renderGrouped(); }
-  } else { notes.textContent = ''; view = null; }
-  wasThemed = themes.length > 0; legend.hidden = !themes.length;
-  // KI-Auswertung: eine frisch freigegebene erscheint sofort, egal in welchem Schritt, auch im Zaehler-Modus (Felix, 12.11.).
-  // Sonst bleibt die angezeigte stehen; beim Laden: die zum Schritt passende, sonst die hoechste.
+  } else view = null;
+  if (typeof focus === 'number' && focus >= themes.length) focus = null;
+  // KI-Auswertung: mit Schluessel sieht die Wand auch Entwuerfe (Knopf gibt frei), sonst nur Freigegebenes.
   const rel = st.released.map(Number).filter(x => x < THEMES);
+  const drafts = K ? await rpc('lf_drafts', { p_key: K }).catch(() => ({})) : {};
+  const have = [...new Set([...rel, ...Object.keys(drafts || {}).map(Number).filter(x => x < THEMES)])];
   const fresh = prevReleased ? rel.filter(x => !prevReleased.includes(x)) : [];
-  if (fresh.length) shownResult = Math.max(...fresh);
-  else if (!rel.includes(shownResult)) {
-    const mine = s.show.filter(x => rel.includes(x));
-    shownResult = mine.length ? mine[mine.length - 1] : (rel.length ? Math.max(...rel) : null);
-  }
+  const mine = s.show.filter(x => have.includes(x));
+  const pick = fresh.length ? Math.max(...fresh) : mine.length ? mine[mine.length - 1] : have.length ? Math.max(...have) : null;
   prevReleased = rel;
-  renderResult(shownResult != null ? await rpc('lf_result', { p_step: shownResult }) : null);
+  if (pick == null) ai = null;
+  else { const released = rel.includes(pick);
+    ai = { step: pick, released, data: released ? await rpc('lf_result', { p_step: pick }) : (drafts[pick] || {}).data }; }
+  if (fresh.length) focus = 'ai';                       // frisch freigegeben: sofort zeigen, egal in welchem Schritt
+  if (focus === 'ai' && !(ai && ai.released)) focus = null;
+  if (themes.length && !wasThemed && focus === null && $('mosaic').querySelector('.tile')) await showThemes();   // Post-its hingen schon: Uebergang zeigen
+  else draw(false);
+  wasThemed = themes.length > 0;
 }
 
 async function poll() {
-  if (polling) return; polling = true;
+  if (polling || busy) return; polling = true;
   try { const st = await rpc('lf_get_state', null, 5000);
         const sig = st.rev + '|' + st.step + '|' + st.wall + '|' + st.released.join(',');
         if (sig !== lastRev) { lastRev = sig; await refresh(st); } }
