@@ -21,6 +21,17 @@
 //             short: 'S/4 bis 2027' }],   //   Beitraege als Punkt + Kurztext auf der Karte; short (≤ 30 Zeichen) ist der Kurztext, sonst der Anfang von body.
 //   bands: [.38, .75, 1.1],          // optional (nur bands): Grenzradien zwischen den Zonen, Abstand √(x²+y²) vom Eck (lo, lo)
 //   marks: { "12": "robust", "17": "hedge" } }   // optional: robust = traegt in mehreren Szenarien, hedge = Absicherung nur fuer eines
+//
+// Ecocycle Planning (layout: 'ecocycle'): Aktivitaeten liegen auf der Ecocycle-Schleife (liegende Acht, Laufrichtung
+// Birth → Maturity → Rigidity Trap → Creative Destruction → Renewal → Poverty Trap → Birth).
+// { viz: 'map', layout: 'ecocycle',
+//   zones: [{ phase: 'birth' | 'maturity' | 'rigidity' | 'destruction' | 'renewal' | 'poverty',   // fehlt phase, gilt diese Reihenfolge
+//             label?, hint?, color?, summary?, ids: [..] }],   // label/hint/color haben Standards (englischer Name, deutscher Untertitel)
+//   items: [{ id: 3, t: .4, short: 'Repair Café' }] }   // t = Fortschritt innerhalb der Phase in Laufrichtung (0 = Anfang, 1 = Ende); fehlt t: gleichmaessig verteilt
+// x/y/bands/marks entfallen. Leere Fallen werden weggelassen; count = Zahl der uebrigen Zonen in Laufrichtung.
+// Uebersicht: links die Karten Renewal, Poverty Trap, Birth, rechts Maturity, Rigidity Trap, Creative Destruction (je neben ihrem Abschnitt),
+// dazwischen die Schleife mit Punkten und Kurztexten. Fallen-Karten nennen, was dort festhaengt.
+// Show-Effekt Ecocycle: die Schleife zeichnet sich in Laufrichtung, Aktivitaeten fliegen Phase fuer Phase, die Fallen leuchten auf, dann die Karten.
 // Beitraege ohne Zone zeigt der Baustein nicht. count = Zahl der Zonen; Fokus k = Zone k gross im Volltext, daneben die Karte klein.
 // Uebersicht mit Positionen: Karte links (Baender bzw. Quadranten, Punkte mit Kurztext, kollisionsfrei gesetzt, bei Abstand mit Fuehrungslinie),
 // rechts je Zone eine Karte (Name, Untertitel, Zahl, KI-Satz). Ohne Positionen: 2×2, jedes Feld traegt Name, KI-Satz und seine Kacheln.
@@ -30,6 +41,20 @@ const N = 'vz-map-';
 const INK = { gelb: '#B98D00', grün: '#2F9A5C', blau: '#3B78CF', rosa: '#CC4A7C', orange: '#D07A22', lila: '#7A5CC2', türkis: '#24999A', koralle: '#D9573F' };
 const PASTEL = { gelb: '#FFF1B8', grün: '#D3EFDD', blau: '#D6E6FB', rosa: '#FAD9E6', orange: '#FFDDBB', lila: '#E6DBF7', türkis: '#CDEEEE', koralle: '#FFD5CC' };
 const DEF = { bands: ['grün', 'blau', 'lila', 'koralle'], grid: ['blau', 'grün', 'orange', 'lila'] };
+// Ecocycle: Phasen in Laufrichtung, Standardnamen und -farben; Schleife = Lemniskate, Winkelbereiche je Abschnitt
+const ECO = [
+  { phase: 'birth', label: 'Birth', hint: 'Geburt', color: 'grün' },
+  { phase: 'maturity', label: 'Maturity', hint: 'Reife', color: 'blau' },
+  { phase: 'rigidity', label: 'Rigidity Trap', hint: 'Starrheitsfalle', color: 'gelb', trap: true },
+  { phase: 'destruction', label: 'Creative Destruction', hint: 'Kreative Zerstörung', color: 'koralle' },
+  { phase: 'renewal', label: 'Renewal', hint: 'Erneuerung', color: 'lila' },
+  { phase: 'poverty', label: 'Poverty Trap', hint: 'Armutsfalle', color: 'orange', trap: true },
+];
+const ECO_D = .5, PI = Math.PI;
+const ECO_SEG = { birth: [PI + ECO_D, 1.5 * PI], maturity: [1.5 * PI, 2 * PI - ECO_D], rigidity: [2 * PI - ECO_D, 2 * PI + ECO_D],
+                  destruction: [2 * PI + ECO_D, 2.5 * PI], renewal: [2.5 * PI, 3 * PI - ECO_D], poverty: [3 * PI - ECO_D, 3 * PI + ECO_D] };
+// Punkt der Schleife in 0..1 (y nach oben): Birth unten links, Maturity oben rechts, Creative Destruction unten rechts, Renewal oben links
+const ecoXY = th => { const s = Math.sin(th), c = Math.cos(th), d = 1 + s * s; return [.5 + .41 * c / d, .5 - .37 * (s * c / d) / .35355]; };
 const MARK = { robust: { text: 'robust', cls: 'robust' }, hedge: { text: 'Absicherung', cls: 'hedge' } };
 
 const css = `
@@ -108,6 +133,15 @@ const css = `
 .${N}item { break-inside: avoid; background: #FFFDF6; border: 1px solid #E8E2CF; border-left: 4px solid; border-radius: .3em; padding: .45em .7em; margin: 0 0 .6em;
             box-shadow: 0 1px 2px rgba(0,0,0,.07); line-height: 1.32; overflow-wrap: anywhere; }
 .${N}item b { display: block; margin-bottom: .1em; }
+.${N}eco .${N}col { flex: none; display: flex; flex-direction: column; gap: 10px; }
+.${N}eco .${N}field { flex: 1; min-width: 0; border: 0; }
+.${N}eco .${N}card { flex: 1 1 auto; }
+.${N}eco .${N}card > * { flex: none; }
+.${N}eco .${N}name { flex-wrap: wrap; row-gap: .1em; }
+.${N}eco .${N}name small { flex-basis: 100%; order: 3; font-size: .62em; }
+.${N}eco .${N}name > span:first-child { flex: 1 1 0; min-width: 0; }
+.${N}stuck { color: #5F5F5F; line-height: 1.28; font-size: .9em; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.${N}seg { transition: opacity .4s; }
 .${N}ghost { position: absolute; inset: 0; z-index: 3; pointer-events: none; transition: opacity .6s; }
 .${N}ghost .tile { position: absolute; }
 `;
@@ -118,8 +152,9 @@ function model(ctx) {
   const d = ctx.data || {}, rows = ctx.rows || [], byId = new Map(rows.map(r => [String(r.id), r]));
   const pos = new Map((d.items || []).filter(i => i && isFinite(i.x) && isFinite(i.y)).map(i => [String(i.id), { x: clamp01(i.x), y: clamp01(i.y), short: i.short }]));
   const shorts = new Map((d.items || []).filter(i => i && i.short).map(i => [String(i.id), i.short]));
-  const layout = d.layout === 'grid' || d.layout === 'bands' ? d.layout : pos.size ? 'bands' : 'grid';
+  const layout = d.layout === 'grid' || d.layout === 'bands' || d.layout === 'ecocycle' ? d.layout : pos.size ? 'bands' : 'grid';
   const seen = new Set(), zoneOf = new Map();
+  if (layout === 'ecocycle') return ecoModel(ctx, d, rows, byId, shorts);
   const zones = (d.zones || []).slice(0, 4).map((z, k) => {
     const color = INK[z.color] ? z.color : DEF[layout][k % 4];
     const ids = (z.ids || []).map(String).filter(i => byId.has(i) && !seen.has(i) && seen.add(i));
@@ -147,6 +182,23 @@ function model(ctx) {
   const noun = (ctx.s && ctx.s.lsDef && ctx.s.lsDef.noun) || 'Beiträge';
   return { d, rows, byId, pos, shorts, layout, points, zones, zoneOf, marks, bands, noun, x: d.x || {}, y: d.y || {} };
 }
+function ecoModel(ctx, d, rows, byId, shorts) {
+  const raw = d.zones || [], seen = new Set(), zoneOf = new Map(), pos = new Map();
+  const ts = new Map((d.items || []).filter(i => i && isFinite(i.t)).map(i => [String(i.id), clamp01(i.t)]));
+  const zones = [];
+  ECO.forEach((e, j) => {
+    const z = raw.find(r => r && r.phase === e.phase) || (raw.every(r => r && !r.phase) ? raw[j] : null);
+    const ids = ((z && z.ids) || []).map(String).filter(i => byId.has(i) && !seen.has(i) && seen.add(i));
+    if (e.trap && !ids.length) return;   // leere Falle: weglassen
+    const k = zones.length, color = z && INK[z.color] ? z.color : e.color, [a, b] = ECO_SEG[e.phase];
+    ids.forEach((i, n) => { zoneOf.set(i, k); const t = ts.has(i) ? ts.get(i) : (n + 1) / (ids.length + 1), [x, y] = ecoXY(a + (b - a) * (.08 + .84 * t)); pos.set(i, { x, y }); });
+    zones.push({ k, phase: e.phase, trap: !!e.trap, seg: [a, b], label: (z && z.label) || e.label, hint: (z && z.hint) || e.hint, summary: (z && z.summary) || '',
+                 color, ink: INK[color], pastel: PASTEL[color], ids, rows: ids.map(i => byId.get(i)) });
+  });
+  const curve = []; for (let th = PI + ECO_D; th <= 3 * PI + ECO_D; th += .03) curve.push(ecoXY(th));
+  const noun = (ctx.s && ctx.s.lsDef && ctx.s.lsDef.noun) || 'Beiträge';
+  return { d, rows, byId, pos, shorts, layout: 'ecocycle', points: true, zones, zoneOf, marks: new Map(), bands: [], noun, curve, x: {}, y: {} };
+}
 const shortOf = (m, id) => { const s = m.shorts.get(id); if (s) return s; const b = (m.byId.get(id).body || '').trim(); return b.length > 48 ? b.slice(0, 46).replace(/\s+\S*$/, '') + ' …' : b; };
 const many = (m, n) => n + ' ' + (n === 1 ? 'Beitrag' : m.noun);
 function markEl(m, id) { const k = m.marks.get(id); if (!k) return null; return el('i', MARK[k].text, N + 'mk ' + MARK[k].cls); }
@@ -166,6 +218,7 @@ function background(m, W, H, k, onPick) {
   const svg = svgEl('svg', { class: N + 'bg', viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: 'none' }), dim = k != null;
   const paint = (z, e) => { e.setAttribute('fill', dim && z.k !== k ? '#F1F1EC' : z.pastel); if (dim && z.k === k) { e.setAttribute('stroke', z.ink); e.setAttribute('stroke-width', '2'); }
     if (onPick) { e.style.cursor = 'pointer'; e.addEventListener('click', () => onPick(z.k)); } svg.append(e); };
+  if (m.layout === 'ecocycle') return ecoBg(m, W, H, k, onPick);
   if (m.layout === 'bands') {
     const zs = m.zones;
     // aussen zuerst: die aeusserste Zone fuellt das Feld, jede innere liegt als Viertel-Ellipse um das Eck unten links darueber
@@ -185,6 +238,28 @@ function background(m, W, H, k, onPick) {
   return svg;
 }
 
+// Schleife: grauer Grundstrich (waechst im Show-Effekt), darueber je Abschnitt Farbe, Fallen mit weichem Hof und gestrichelt, Pfeile in Laufrichtung
+function ecoBg(m, W, H, k, onPick) {
+  const svg = svgEl('svg', { class: N + 'bg', viewBox: `0 0 ${W} ${H}` }), dim = k != null, sw = W < 500 ? 3.5 : 6;
+  const P = th => { const [x, y] = ecoXY(th); return [PAD + x * (W - 2 * PAD), PAD + (1 - y) * (H - 2 * PAD)]; };
+  const pathD = (a, b) => { const n = Math.max(8, Math.round((b - a) * 40)); let d = '';
+    for (let i = 0; i <= n; i++) { const [x, y] = P(a + (b - a) * i / n); d += (i ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1); } return d; };
+  svg.append(svgEl('path', { class: N + 'loop', d: pathD(PI + ECO_D, 3 * PI + ECO_D), fill: 'none', stroke: '#D9D9D1', 'stroke-width': sw + 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+  m.zones.forEach(z => {
+    const g = svgEl('g', { class: N + 'seg' }), [a, b] = z.seg, d = pathD(a, b), off = dim && z.k !== k, ink = off ? '#CFCFC7' : z.ink;
+    g.dataset.z = z.k;
+    if (z.trap) { g.append(svgEl('path', { class: N + 'halo', d, fill: 'none', stroke: off ? '#EFEFEA' : z.pastel, 'stroke-width': sw * 4.2, 'stroke-linecap': 'round' }),
+                           svgEl('path', { d, fill: 'none', stroke: ink, 'stroke-width': sw * .8, 'stroke-dasharray': `${sw * 1.3} ${sw * 1.1}`, 'stroke-linecap': 'round' })); }
+    else { g.append(svgEl('path', { d, fill: 'none', stroke: ink, 'stroke-width': sw, 'stroke-linecap': 'round', opacity: .85 }));
+      const tm = (a + b) / 2, [x, y] = P(tm), [x1, y1] = P(tm - .02), [x2, y2] = P(tm + .02), ang = Math.atan2(y2 - y1, x2 - x1) * 180 / PI, s = sw * 1.9;
+      g.append(svgEl('path', { d: `M${s},0 L${-s * .8},${s * .85} L${-s * .8},${-s * .85} Z`, fill: ink, transform: `translate(${x.toFixed(1)},${y.toFixed(1)}) rotate(${ang.toFixed(1)})` })); }
+    if (onPick) { const hitP = svgEl('path', { d, fill: 'none', stroke: 'transparent', 'stroke-width': 26, 'pointer-events': 'stroke' }); hitP.style.cursor = 'pointer';
+      hitP.addEventListener('click', () => onPick(z.k)); g.append(hitP); }
+    svg.append(g);
+  });
+  return svg;
+}
+
 // ---------- Punkte mit Kurztext, kollisionsfrei gesetzt
 const PAD = 14;
 function place(m, field, W, H, k, small) {
@@ -200,6 +275,8 @@ function place(m, field, W, H, k, small) {
   ids.forEach(id => { const z = m.zones[m.zoneOf.get(id)], l = el('div', shortOf(m, id), N + 'lab'); l.style.borderColor = z.ink; l.title = m.byId.get(id).body;
     l.dataset.mid = id; l._z = z.k; field.append(l); labs.set(id, l); });
   const dotR = ids.map(id => { const [x, y] = at(id); return [x - 7, y - 7, x + 7, y + 7]; });
+  // Ecocycle: Kurztexte sollen die Schleife moeglichst nicht verdecken (weiches Hindernis)
+  const curveR = (m.curve || []).map(([cx, cy]) => { const x = PAD + cx * (W - 2 * PAD), y = PAD + (1 - cy) * (H - 2 * PAD); return [x - 4, y - 4, x + 4, y + 4]; });
   const hit = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3];
   // dichte Stellen zuerst setzen, dann haben sie die naechsten Plaetze
   const crowd = id => { const [x, y] = at(id); return ids.reduce((s, j) => { const [a, b] = at(j); return s + (Math.hypot(a - x, b - y) < 120 ? 1 : 0); }, 0); };
@@ -218,10 +295,14 @@ function place(m, field, W, H, k, small) {
           const cx = x + c * (dd + w / 2), cy = y + sn * (dd + h / 2);
           cands.push([cx - w / 2, cy - h / 2, ring + (Math.abs(sn) > .9 ? .15 : 0) + (c < -.3 ? .1 : 0), dd]); } }
       cands.sort((a, b) => a[2] - b[2]);
-      let ok = null;
-      for (const [l, t, , dd] of cands) { const r = [l - 2, t - 2, l + w + 2, t + h + 2];
+      let ok = null, any = null;
+      for (const [l, t, cost, dd] of cands) { const r = [l - 2, t - 2, l + w + 2, t + h + 2];
+        if (any && cost > any[3] + 3) break;
         if (l < 2 || t < 2 || l + w > W - 2 || t + h > H - 2) continue;
-        if (dotR.some(d => hit(r, d))) continue; if (done.some(d => hit(r, d))) continue; ok = [l, t, dd]; break; }
+        if (dotR.some(d => hit(r, d))) continue; if (done.some(d => hit(r, d))) continue;
+        if (curveR.length && curveR.some(d => hit(r, d))) { if (!any) any = [l, t, dd, cost]; continue; }
+        ok = [l, t, dd]; break; }
+      if (!ok && any) ok = any;
       if (!ok) { miss++; res.set(id, null); continue; }
       dist += ok[2] - 7; done.push([ok[0], ok[1], ok[0] + w, ok[1] + h]); res.set(id, [ok[0], ok[1], w, h]);
     }
@@ -286,6 +367,35 @@ function pointsView(box, ctx, m) {
   return v;
 }
 
+// ---------- Uebersicht Ecocycle: Karten links und rechts neben ihrem Abschnitt, Schleife in der Mitte
+function ecoView(box, ctx, m) {
+  box.textContent = '';
+  const W = box.clientWidth, H = box.clientHeight, wrap = el('div', null, N + 'all ' + N + 'eco');
+  const colL = el('div', null, N + 'col'), colR = el('div', null, N + 'col'), field = el('div', null, N + 'field');
+  const cw = Math.round(Math.max(230, Math.min(420, W * .2))) + 'px'; colL.style.width = colR.style.width = cw;
+  wrap.append(colL, field, colR); box.append(wrap);
+  const cards = [];
+  const side = { renewal: colL, poverty: colL, birth: colL, maturity: colR, rigidity: colR, destruction: colR };
+  ['renewal', 'poverty', 'birth', 'maturity', 'rigidity', 'destruction'].forEach(ph => { const z = m.zones.find(q => q.phase === ph); if (!z) return;
+    const c = el('div', null, N + 'card'); c.style.borderColor = z.ink; c.style.background = `linear-gradient(90deg, ${z.pastel}, #fff 75%)`;
+    c.append(zoneHead(z, m)); if (z.summary) c.append(sumEl(z, N + 'sum'));
+    if (z.trap && z.ids.length) c.append(el('div', z.ids.map(i => shortOf(m, i)).join(' · '), N + 'stuck'));   // was dort festhaengt
+    c.onclick = () => ctx.go(z.k); side[ph].append(c); cards[z.k] = c; });
+  const fw = field.clientWidth, fh = field.clientHeight;
+  field.append(background(m, fw, fh));
+  const pl = place(m, field, fw, fh);
+  const v = { m, wrap, field, cardsBox: wrap, cards, axes: [], ...pl };
+  const all = cards.filter(Boolean);
+  const fit = (lo, hi) => { const ok = f => { colL.style.fontSize = colR.style.fontSize = f + 'px'; return all.every(c => c.scrollHeight <= c.clientHeight + 1) && [colL, colR].every(c => c.scrollHeight <= c.clientHeight + 1); };
+    if (!ok(lo)) return null; if (ok(hi)) return hi; for (let i = 0; i < 7; i++) { const mid = (lo + hi) / 2; if (ok(mid)) lo = mid; else hi = mid; } return lo; };
+  const cap = Math.max(16, Math.min(24, Math.round(H / 30)));
+  let f = fit(14, cap); if (f === null) { wrap.classList.add(N + 'clamp'); f = fit(13, cap) || 13; }
+  colL.style.fontSize = colR.style.fontSize = Math.floor(f * 2) / 2 + 'px';
+  cards.forEach((c, k) => { if (!c) return; c.onmouseenter = () => light(v, k); c.onmouseleave = () => light(v, null); });
+  [...pl.dots.values(), ...pl.labs.values()].forEach(e => { e.onclick = () => ctx.go(e._z); });
+  return v;
+}
+
 // ---------- Uebersicht 2×2 mit Kacheln
 const emW = (t, lines, cap) => Math.max(8, Math.min(t.length, cap)) / lines * 0.55 + 1.7;
 function tileEl(m, r, color, lines) {
@@ -329,7 +439,10 @@ function gridView(box, ctx, m) {
 // ---------- Fokus: Zone k gross, Karte klein daneben
 function mini(m, ctx, k, w) {
   const side = el('div', null, N + 'mini');
-  if (m.points) {
+  if (m.layout === 'ecocycle') {
+    const h = Math.round(w * .62), field = el('div', null, N + 'field'); field.style.cssText = `width:${w}px;height:${h}px;border:0`;
+    side.append(field); field.append(background(m, w, h, k, ctx.go)); place(m, field, w, h, k, true);
+  } else if (m.points) {
     const h = Math.round(w * .78), plot = el('div', null, N + 'plot'), field = el('div', null, N + 'field'), { xa, ya } = axes(m, true);
     field.style.width = w + 'px'; field.style.height = h + 'px'; plot.append(ya, field, xa); side.append(plot);
     field.append(background(m, w, h, k, ctx.go)); place(m, field, w, h, k, true);
@@ -388,12 +501,14 @@ function draw(box, ctx) {
   const m = model(ctx);
   if (!m.zones.length) { box.textContent = ''; return { count: 0, pages: 1 }; }
   if (ctx.focus != null && m.zones[ctx.focus]) return { count: m.zones.length, pages: focusView(box, ctx, m, ctx.focus) };
-  const v = m.points ? pointsView(box, ctx, m) : gridView(box, ctx, m);
+  const v = view(box, ctx, m);
   // Material bekommt data-id erst hier am Ende: fuer Uebergaenge des Rahmens (flip) sind alle Beitraege auffindbar
   box.querySelectorAll('[data-mid]').forEach(e => { if (!e.classList.contains(N + 'dot') && e.tagName !== 'line') e.dataset.id = e.dataset.mid; });
   if (ctx.dir) v.wrap.animate([{ transform: `translateX(${ctx.dir * 90}px)`, opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 380, easing: 'ease-out' });
   return { count: m.zones.length, pages: 1 };
 }
+
+const view = (box, ctx, m) => m.layout === 'ecocycle' ? ecoView(box, ctx, m) : m.points ? pointsView(box, ctx, m) : gridView(box, ctx, m);
 
 // ---------- Show-Effekt
 async function reveal(box, ctx) {
@@ -402,7 +517,7 @@ async function reveal(box, ctx) {
   revealing = true; try { await show(box, ctx, m, sleep, from); } finally { revealing = false; }
 }
 async function show(box, ctx, m, sleep, from) {
-  const v = m.points ? pointsView(box, ctx, m) : gridView(box, ctx, m);
+  const v = view(box, ctx, m), eco = m.layout === 'ecocycle';
   const fade = (e, ms, delay = 0, dy = 0) => e.animate([{ opacity: 0, transform: `translateY(${dy}px)` }, { opacity: 1, transform: 'none' }], { duration: ms, delay, easing: 'ease-out', fill: 'backwards' });
   // Material je Zone (das, was fliegt) und Beiwerk (Punkte, Fuehrungslinien), Namen und KI-Saetze
   const mat = new Map(m.zones.map(z => [z.k, []])), extra = new Map(m.zones.map(z => [z.k, []])), names = [];
@@ -427,14 +542,21 @@ async function show(box, ctx, m, sleep, from) {
   box.append(ghost);
   await sleep(400);
   // 1. Achsen und Flaeche erscheinen, das Mosaik tritt zurueck
-  ghost.style.opacity = .5;
+  ghost.style.opacity = eco ? .3 : .5;
   (m.points ? [v.field] : [v.grid]).forEach(f => { f.style.transition = 'border-color .6s'; f.style.borderColor = ''; });
   v.axes.forEach((a, i) => { a.style.opacity = 1; fade(a, 600, i * 200, 8); });
-  if (bg) { bg.style.opacity = 1; fade(bg, 900, 300); }
+  if (bg && !eco) { bg.style.opacity = 1; fade(bg, 900, 300); }
   cells.forEach((c, i) => { c.style.opacity = 1; fade(c, 500, 300 + i * 120); });
-  await sleep(1100);
+  if (eco && bg) {   // Ecocycle: der Strich waechst in Laufrichtung, dann faerben sich die Abschnitte
+    const loop = bg.querySelector('.' + N + 'loop'), segs = [...bg.querySelectorAll('.' + N + 'seg')], L = loop.getTotalLength();
+    segs.forEach(s => s.style.opacity = 0); loop.style.strokeDasharray = L; loop.style.strokeDashoffset = L; bg.style.opacity = 1;
+    loop.animate([{ strokeDashoffset: L }, { strokeDashoffset: 0 }], { duration: 1500, easing: 'ease-in-out' });
+    await sleep(1550); loop.style.strokeDashoffset = 0; loop.style.strokeDasharray = '';
+    for (const s of segs) { s.style.opacity = 1; fade(s, 300); await sleep(110); }
+    await sleep(250);
+  } else await sleep(1100);
   // 2. Zone fuer Zone: Kacheln faerben sich im Mosaik und fliegen an ihren Ort
-  const per = m.zones.length > 3 ? 1250 : 1500;
+  const per = eco ? 1000 : m.zones.length > 3 ? 1250 : 1500;
   for (const z of m.zones) {
     const els = mat.get(z.k); if (!els.length) continue;
     z.ids.forEach((id, j) => { const g = ghosts.get(id); if (g) { g.className = 'tile pop c-' + z.color; g.style.opacity = 1; g.style.zIndex = 2; } });
@@ -449,6 +571,13 @@ async function show(box, ctx, m, sleep, from) {
     await sleep(250);
   }
   ghost.style.opacity = 0; await sleep(400); ghost.remove();
+  // Ecocycle: die Fallen leuchten kurz mit ihren Aktivitaeten auf
+  if (eco && bg) for (const z of m.zones.filter(q => q.trap)) {
+    const halo = bg.querySelector(`.${N}seg[data-z="${z.k}"] .${N}halo`);
+    if (halo) halo.animate([{ opacity: 1 }, { opacity: 1, stroke: z.ink, strokeOpacity: .35 }, { opacity: 1 }], { duration: 1000, easing: 'ease-in-out' });
+    mat.get(z.k).forEach(e => e.animate([{ boxShadow: '0 0 0 0 transparent' }, { boxShadow: `0 0 0 4px ${z.ink}` }, { boxShadow: '0 1px 2px rgba(0,0,0,.14)' }], { duration: 1000, easing: 'ease-in-out' }));
+    await sleep(900);
+  }
   // 3. Namen und KI-Saetze
   for (const n of (m.points && m.layout === 'bands' ? names.slice() : names)) { n.style.visibility = ''; fade(n, 450, 0, 10); await sleep(m.points ? 380 : 140); }
   await sleep(500);

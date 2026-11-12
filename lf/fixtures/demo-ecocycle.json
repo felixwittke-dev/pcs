@@ -1,0 +1,576 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten gerade?",
+  "how": "Schaut nach vorn: Was sollten wir loslassen, was fördern?",
+  "show": [
+   4
+  ]
+ },
+ "people": 30,
+ "rows": [
+  {
+   "id": 1,
+   "step": 4,
+   "body": "Gaming-Nachmittag für Jugendliche, seit September jeden 2. Freitag"
+  },
+  {
+   "id": 2,
+   "step": 4,
+   "body": "Bibliothek der Dinge – Werkzeug, Nähmaschine, Beamer ausleihen. läuft seit Sommer, Nachfrage steigt"
+  },
+  {
+   "id": 3,
+   "step": 4,
+   "body": "Sprachcafé Deutsch mit Ehrenamtlichen, waren erst 3 Termine"
+  },
+  {
+   "id": 4,
+   "step": 4,
+   "body": "Instagram-Account, macht unsere Azubi, ca 400 Follower"
+  },
+  {
+   "id": 5,
+   "step": 4,
+   "body": "Open Library sonntags mit Selbstverbuchung, Pilot in Nord"
+  },
+  {
+   "id": 6,
+   "step": 4,
+   "body": "Repair Café zusammen mit dem Seniorenbüro"
+  },
+  {
+   "id": 7,
+   "step": 4,
+   "body": "Makerspace mit 3D-Drucker, noch viel ausprobieren"
+  },
+  {
+   "id": 8,
+   "step": 4,
+   "body": "Sommerleseclub, läuft super, 600 Kinder dieses Jahr"
+  },
+  {
+   "id": 9,
+   "step": 4,
+   "body": "Onleihe / E-Books, wird jedes jahr mehr genutzt"
+  },
+  {
+   "id": 10,
+   "step": 4,
+   "body": "Klassenführungen für Grundschulen, fest im Lehrplan"
+  },
+  {
+   "id": 11,
+   "step": 4,
+   "body": "Vorlesestunde samstag vormittag"
+  },
+  {
+   "id": 12,
+   "step": 4,
+   "body": "Medienkisten für Kitas"
+  },
+  {
+   "id": 13,
+   "step": 4,
+   "body": "Lernplätze für Schüler und Studis, nachmittags immer voll"
+  },
+  {
+   "id": 14,
+   "step": 4,
+   "body": "Lesungen mit Autor*innen aus der Region, 6 pro Jahr"
+  },
+  {
+   "id": 15,
+   "step": 4,
+   "body": "Fernleihe"
+  },
+  {
+   "id": 16,
+   "step": 4,
+   "body": "Brettspiele ausleihen"
+  },
+  {
+   "id": 17,
+   "step": 4,
+   "body": "Bücherbus für die Ortsteile"
+  },
+  {
+   "id": 18,
+   "step": 4,
+   "body": "CD und DVD Bestand, wird kaum noch ausgeliehen aber keiner traut sich ihn abzubauen"
+  },
+  {
+   "id": 19,
+   "step": 4,
+   "body": "Zeitschriftenlesesaal mit 120 Abos, morgens sitzen da 3 Leute"
+  },
+  {
+   "id": 20,
+   "step": 4,
+   "body": "Jahresstatistik für den Kulturausschuss, 2 Wochen Arbeit, liest keiner"
+  },
+  {
+   "id": 21,
+   "step": 4,
+   "body": "Mahnungen per Brief"
+  },
+  {
+   "id": 22,
+   "step": 4,
+   "body": "Öffnungszeiten seit 20 Jahren gleich, montags zu, mittwochs nur bis 13 Uhr"
+  },
+  {
+   "id": 23,
+   "step": 4,
+   "body": "Interner Rundbrief auf Papier ins Postfach"
+  },
+  {
+   "id": 24,
+   "step": 4,
+   "body": "Bestandsaufbau fast nur über Lektoratsdienst, eigener Blick fehlt"
+  },
+  {
+   "id": 25,
+   "step": 4,
+   "body": "Kopierservice eingestellt, jeder hat ein Handy"
+  },
+  {
+   "id": 26,
+   "step": 4,
+   "body": "Katalog-PCs im Foyer abgebaut, Katalog am Handy reicht"
+  },
+  {
+   "id": 27,
+   "step": 4,
+   "body": "Videokassetten endlich ausgesondert"
+  },
+  {
+   "id": 28,
+   "step": 4,
+   "body": "Musikabteilung als eigener Bereich aufgelöst"
+  },
+  {
+   "id": 29,
+   "step": 4,
+   "body": "alte Homepage abgeschaltet, Relaunch läuft"
+  },
+  {
+   "id": 30,
+   "step": 4,
+   "body": "Leseprojekt mit der Hauptschule beendet, die Schule gibts nicht mehr"
+  },
+  {
+   "id": 31,
+   "step": 4,
+   "body": "Idee: Bibliothek als Dritter Ort, Café-Ecke mit Sofas"
+  },
+  {
+   "id": 32,
+   "step": 4,
+   "body": "Digitalsprechstunde für Senioren, Handy und Online-Banking"
+  },
+  {
+   "id": 33,
+   "step": 4,
+   "body": "Podcast mit Buchtipps von uns Mitarbeitenden"
+  },
+  {
+   "id": 34,
+   "step": 4,
+   "body": "Kooperation mit der VHS zu KI-Kursen"
+  },
+  {
+   "id": 35,
+   "step": 4,
+   "body": "Saatgutbibliothek"
+  },
+  {
+   "id": 36,
+   "step": 4,
+   "body": "Pop-up-Bibliothek im Freibad"
+  },
+  {
+   "id": 37,
+   "step": 4,
+   "body": "Lesepaten für Kinder mit Leseschwäche - Konzept seit 2 Jahren fertig, aber keiner hat Zeit das zu koordinieren"
+  },
+  {
+   "id": 38,
+   "step": 4,
+   "body": "Escape Room in der Bibliothek, Lust hätten wir, Budget nicht"
+  },
+  {
+   "id": 39,
+   "step": 4,
+   "body": "Mehrsprachige Beschilderung, wird immer wieder verschoben"
+  },
+  {
+   "id": 40,
+   "step": 4,
+   "body": "Zweigstelle Süd wieder öffnen, die Räume wären da"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "phase": "birth",
+    "label": "Birth",
+    "hint": "Geburt",
+    "summary": "Viel Neues aus dem Team selbst. Jetzt helfen Schutz und kleine Mittel mehr als Kennzahlen.",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ]
+   },
+   {
+    "phase": "maturity",
+    "label": "Maturity",
+    "hint": "Reife",
+    "summary": "Der stabile Kern: Kinder, Schulen, digitale Ausleihe. Pflegen, nicht aufblähen.",
+    "ids": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   },
+   {
+    "phase": "rigidity",
+    "label": "Rigidity Trap",
+    "hint": "Starrheitsfalle",
+    "summary": "Gewohnheit bindet hier Zeit und Geld: Abos, Statistik, Öffnungszeiten. Kandidaten zum Loslassen.",
+    "ids": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ]
+   },
+   {
+    "phase": "destruction",
+    "label": "Creative Destruction",
+    "hint": "Kreative Zerstörung",
+    "summary": "Mutig abgebaut, was keiner mehr braucht. Das schafft Platz für Café-Ecke und Makerspace.",
+    "ids": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30
+    ]
+   },
+   {
+    "phase": "renewal",
+    "label": "Renewal",
+    "hint": "Erneuerung",
+    "summary": "Ideen für den Dritten Ort und digitale Teilhabe. Jetzt klein testen, bevor sie verblassen.",
+    "ids": [
+     31,
+     32,
+     33,
+     34,
+     35,
+     36
+    ]
+   },
+   {
+    "phase": "poverty",
+    "label": "Poverty Trap",
+    "hint": "Armutsfalle",
+    "summary": "Gute Ideen ohne Kümmerer: Lesepaten und Zweigstelle Süd brauchen Zeit, nicht nur Geld.",
+    "ids": [
+     37,
+     38,
+     39,
+     40
+    ]
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.12,
+    "short": "Gaming-Nachmittag Jugend"
+   },
+   {
+    "id": 2,
+    "t": 0.25,
+    "short": "Bibliothek der Dinge"
+   },
+   {
+    "id": 3,
+    "t": 0.38,
+    "short": "Sprachcafé Deutsch"
+   },
+   {
+    "id": 4,
+    "t": 0.5,
+    "short": "Instagram durch Azubi"
+   },
+   {
+    "id": 5,
+    "t": 0.62,
+    "short": "Open Library sonntags"
+   },
+   {
+    "id": 6,
+    "t": 0.75,
+    "short": "Repair Café"
+   },
+   {
+    "id": 7,
+    "t": 0.88,
+    "short": "Makerspace 3D-Druck"
+   },
+   {
+    "id": 8,
+    "t": 0.09,
+    "short": "Sommerleseclub"
+   },
+   {
+    "id": 9,
+    "t": 0.18,
+    "short": "Onleihe E-Books"
+   },
+   {
+    "id": 10,
+    "t": 0.27,
+    "short": "Klassenführungen"
+   },
+   {
+    "id": 11,
+    "t": 0.36,
+    "short": "Vorlesestunde Samstag"
+   },
+   {
+    "id": 12,
+    "t": 0.45,
+    "short": "Medienkisten Kitas"
+   },
+   {
+    "id": 13,
+    "t": 0.55,
+    "short": "Lernplätze nachmittags"
+   },
+   {
+    "id": 14,
+    "t": 0.64,
+    "short": "Autorenlesungen"
+   },
+   {
+    "id": 15,
+    "t": 0.73,
+    "short": "Fernleihe"
+   },
+   {
+    "id": 16,
+    "t": 0.82,
+    "short": "Brettspiele-Ausleihe"
+   },
+   {
+    "id": 17,
+    "t": 0.91,
+    "short": "Bücherbus"
+   },
+   {
+    "id": 18,
+    "t": 0.12,
+    "short": "CD/DVD-Bestand"
+   },
+   {
+    "id": 19,
+    "t": 0.25,
+    "short": "120 Zeitschriften-Abos"
+   },
+   {
+    "id": 20,
+    "t": 0.38,
+    "short": "Jahresstatistik, 2 Wochen"
+   },
+   {
+    "id": 21,
+    "t": 0.5,
+    "short": "Mahnungen per Brief"
+   },
+   {
+    "id": 22,
+    "t": 0.62,
+    "short": "Starre Öffnungszeiten"
+   },
+   {
+    "id": 23,
+    "t": 0.75,
+    "short": "Papier-Rundbrief intern"
+   },
+   {
+    "id": 24,
+    "t": 0.88,
+    "short": "Bestand nur per Lektoratsdienst"
+   },
+   {
+    "id": 25,
+    "t": 0.14,
+    "short": "Kopierservice eingestellt"
+   },
+   {
+    "id": 26,
+    "t": 0.29,
+    "short": "Katalog-PCs abgebaut"
+   },
+   {
+    "id": 27,
+    "t": 0.43,
+    "short": "Videokassetten ausgesondert"
+   },
+   {
+    "id": 28,
+    "t": 0.57,
+    "short": "Musikabteilung aufgelöst"
+   },
+   {
+    "id": 29,
+    "t": 0.71,
+    "short": "Alte Homepage abgeschaltet"
+   },
+   {
+    "id": 30,
+    "t": 0.86,
+    "short": "Leseprojekt Hauptschule beendet"
+   },
+   {
+    "id": 31,
+    "t": 0.14,
+    "short": "Café-Ecke, Dritter Ort"
+   },
+   {
+    "id": 32,
+    "t": 0.29,
+    "short": "Digitalsprechstunde Senioren"
+   },
+   {
+    "id": 33,
+    "t": 0.43,
+    "short": "Buchtipp-Podcast"
+   },
+   {
+    "id": 34,
+    "t": 0.57,
+    "short": "KI-Kurse mit der VHS"
+   },
+   {
+    "id": 35,
+    "t": 0.71,
+    "short": "Saatgutbibliothek"
+   },
+   {
+    "id": 36,
+    "t": 0.86,
+    "short": "Pop-up im Freibad"
+   },
+   {
+    "id": 37,
+    "t": 0.2,
+    "short": "Lesepaten-Konzept liegt"
+   },
+   {
+    "id": 38,
+    "t": 0.4,
+    "short": "Escape Room ohne Budget"
+   },
+   {
+    "id": 39,
+    "t": 0.6,
+    "short": "Mehrsprachige Schilder"
+   },
+   {
+    "id": 40,
+    "t": 0.8,
+    "short": "Zweigstelle Süd"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Was in der Rigidity Trap festhängt, bindet genau die Stunden, die den Ideen in der Poverty Trap fehlen.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "quote": "keiner traut sich ihn abzubauen"
+   },
+   {
+    "label": "Maturity",
+    "ids": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ],
+    "quote": "läuft super, 600 Kinder dieses Jahr"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Maturity",
+    "a": "Onleihe ist ein sicherer Kern",
+    "b": "Onleihe ersetzt bald den Präsenzbestand und gehört in die Erneuerung"
+   },
+   {
+    "label": "Poverty Trap",
+    "a": "Es fehlt Geld",
+    "b": "Es fehlt eine Person, die sich kümmert"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer entscheidet das Loslassen?",
+    "why": "Niemand nennt, wer CD-Bestand oder Abos tatsächlich beenden darf."
+   },
+   {
+    "label": "Nutzer*innen",
+    "why": "Keine Aktivität stammt aus einer Befragung der Menschen, die (nicht mehr) kommen."
+   }
+  ]
+ }
+}

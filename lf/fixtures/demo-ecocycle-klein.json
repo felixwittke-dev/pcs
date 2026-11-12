@@ -1,0 +1,202 @@
+{
+ "step": {
+  "label": "Ecocycle Planning · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Ecocycle Planning",
+   "icon": "ecocycle-planning",
+   "noun": "Aktivitäten",
+   "panel": [
+    "Was festhängt, was frei werden kann",
+    "Wo die Verortung strittig ist",
+    "Was im Zyklus fehlt"
+   ]
+  },
+  "q": "Wo im Ecocycle steht jede unserer Aktivitäten gerade?",
+  "how": "Schaut nach vorn: Was sollten wir loslassen, was fördern?",
+  "show": [
+   4
+  ]
+ },
+ "people": 8,
+ "rows": [
+  {
+   "id": 1,
+   "step": 4,
+   "body": "Bibliothek der Dinge – Werkzeug, Nähmaschine, Beamer ausleihen. läuft seit Sommer, Nachfrage steigt"
+  },
+  {
+   "id": 2,
+   "step": 4,
+   "body": "Sommerleseclub, läuft super, 600 Kinder dieses Jahr"
+  },
+  {
+   "id": 3,
+   "step": 4,
+   "body": "Onleihe / E-Books, wird jedes jahr mehr genutzt"
+  },
+  {
+   "id": 4,
+   "step": 4,
+   "body": "CD und DVD Bestand, wird kaum noch ausgeliehen aber keiner traut sich ihn abzubauen"
+  },
+  {
+   "id": 5,
+   "step": 4,
+   "body": "Zeitschriftenlesesaal mit 120 Abos, morgens sitzen da 3 Leute"
+  },
+  {
+   "id": 6,
+   "step": 4,
+   "body": "Kopierservice eingestellt, jeder hat ein Handy"
+  },
+  {
+   "id": 7,
+   "step": 4,
+   "body": "Idee: Bibliothek als Dritter Ort, Café-Ecke mit Sofas"
+  },
+  {
+   "id": 8,
+   "step": 4,
+   "body": "Lesepaten für Kinder mit Leseschwäche - Konzept seit 2 Jahren fertig, aber keiner hat Zeit das zu koordinieren"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "ecocycle",
+  "zones": [
+   {
+    "phase": "birth",
+    "label": "Birth",
+    "hint": "Geburt",
+    "summary": "Viel Neues aus dem Team selbst. Jetzt helfen Schutz und kleine Mittel mehr als Kennzahlen.",
+    "ids": [
+     1
+    ]
+   },
+   {
+    "phase": "maturity",
+    "label": "Maturity",
+    "hint": "Reife",
+    "summary": "Der stabile Kern: Kinder, Schulen, digitale Ausleihe. Pflegen, nicht aufblähen.",
+    "ids": [
+     2,
+     3
+    ]
+   },
+   {
+    "phase": "rigidity",
+    "label": "Rigidity Trap",
+    "hint": "Starrheitsfalle",
+    "summary": "Gewohnheit bindet hier Zeit und Geld: Abos, Statistik, Öffnungszeiten. Kandidaten zum Loslassen.",
+    "ids": [
+     4,
+     5
+    ]
+   },
+   {
+    "phase": "destruction",
+    "label": "Creative Destruction",
+    "hint": "Kreative Zerstörung",
+    "summary": "Mutig abgebaut, was keiner mehr braucht. Das schafft Platz für Café-Ecke und Makerspace.",
+    "ids": [
+     6
+    ]
+   },
+   {
+    "phase": "renewal",
+    "label": "Renewal",
+    "hint": "Erneuerung",
+    "summary": "Ideen für den Dritten Ort und digitale Teilhabe. Jetzt klein testen, bevor sie verblassen.",
+    "ids": [
+     7
+    ]
+   },
+   {
+    "phase": "poverty",
+    "label": "Poverty Trap",
+    "hint": "Armutsfalle",
+    "summary": "Gute Ideen ohne Kümmerer: Lesepaten und Zweigstelle Süd brauchen Zeit, nicht nur Geld.",
+    "ids": [
+     8
+    ]
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "t": 0.5,
+    "short": "Bibliothek der Dinge"
+   },
+   {
+    "id": 2,
+    "t": 0.33,
+    "short": "Sommerleseclub"
+   },
+   {
+    "id": 3,
+    "t": 0.67,
+    "short": "Onleihe E-Books"
+   },
+   {
+    "id": 4,
+    "t": 0.33,
+    "short": "CD/DVD-Bestand"
+   },
+   {
+    "id": 5,
+    "t": 0.67,
+    "short": "120 Zeitschriften-Abos"
+   },
+   {
+    "id": 6,
+    "t": 0.5,
+    "short": "Kopierservice eingestellt"
+   },
+   {
+    "id": 7,
+    "t": 0.5,
+    "short": "Café-Ecke, Dritter Ort"
+   },
+   {
+    "id": 8,
+    "t": 0.5,
+    "short": "Lesepaten-Konzept liegt"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Zwei Gewohnheiten binden Zeit, die der Lesepaten-Idee fehlt.",
+  "convergence": [
+   {
+    "label": "Rigidity Trap",
+    "ids": [
+     4,
+     5
+    ],
+    "quote": "keiner traut sich ihn abzubauen"
+   },
+   {
+    "label": "Maturity",
+    "ids": [
+     2,
+     3
+    ],
+    "quote": "läuft super, 600 Kinder dieses Jahr"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Maturity",
+    "a": "Onleihe ist ein sicherer Kern",
+    "b": "Onleihe ersetzt bald den Präsenzbestand und gehört in die Erneuerung"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Wer entscheidet das Loslassen?",
+    "why": "Niemand nennt, wer CD-Bestand oder Abos tatsächlich beenden darf."
+   }
+  ]
+ }
+}
