@@ -1,0 +1,429 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft eintritt?",
+  "how": "Schaut nach vorn: Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 24,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "Prozesswissen der Alten jetzt in eine KI-Wissensdatenbank bringen"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "Eigenes kleines Data-Team, 2-3 Leute, nicht alles an Berater geben"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "Angebotskalkulation mit KI automatisieren"
+  },
+  {
+   "id": 4,
+   "step": 5,
+   "body": "Lernzeit fest einplanen, 2h pro Woche für jeden"
+  },
+  {
+   "id": 5,
+   "step": 5,
+   "body": "Roboterzellen für einfache Bestückung leasen statt kaufen"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "Instandhaltung predictive mit Sensoren an den Fräsen"
+  },
+  {
+   "id": 7,
+   "step": 5,
+   "body": "Meister zu Coaches ausbilden, die führen Mensch UND Maschine"
+  },
+  {
+   "id": 8,
+   "step": 5,
+   "body": "Partnerschaft mit der Hochschule für KI-Projekte, Studis ins Haus holen"
+  },
+  {
+   "id": 9,
+   "step": 5,
+   "body": "Qualitätsprüfung per Kamera an Linie 3"
+  },
+  {
+   "id": 10,
+   "step": 5,
+   "body": "Arbeitsplätze so umbauen dass auch Ältere länger bleiben können"
+  },
+  {
+   "id": 11,
+   "step": 5,
+   "body": "Sprachmodelle für Doku und Anleitungen in mehreren Sprachen"
+  },
+  {
+   "id": 12,
+   "step": 5,
+   "body": "Notfallplan falls ein Schlüsselsystem ausfällt"
+  },
+  {
+   "id": 13,
+   "step": 5,
+   "body": "Umschulungsprogramm Fertigung -> Datenanalyse"
+  },
+  {
+   "id": 14,
+   "step": 5,
+   "body": "Jobrotation zwischen Konstruktion und IT"
+  },
+  {
+   "id": 15,
+   "step": 5,
+   "body": "KI-Führerschein für alle Führungskräfte"
+  },
+  {
+   "id": 16,
+   "step": 5,
+   "body": "Neue Rollen definieren, zB Prompt-Verantwortliche je Abteilung"
+  },
+  {
+   "id": 17,
+   "step": 5,
+   "body": "Mit dem Betriebsrat eine KI-Vereinbarung abschließen bevor es knallt"
+  },
+  {
+   "id": 18,
+   "step": 5,
+   "body": "Interne Ideenbörse: Leute schlagen selbst KI-Anwendungen vor"
+  },
+  {
+   "id": 19,
+   "step": 5,
+   "body": "Teilzeitmodelle für Eltern ausbauen, damit wir die Guten halten"
+  },
+  {
+   "id": 20,
+   "step": 5,
+   "body": "Lernzeit fest einplanen, 2h pro Woche für jeden (wie oben)"
+  },
+  {
+   "id": 21,
+   "step": 5,
+   "body": "Neue Produkte: Service + Daten statt nur Teile"
+  },
+  {
+   "id": 22,
+   "step": 5,
+   "body": "Lieber zwei Juniors einstellen und selbst ausbilden als einen teuren Senior"
+  },
+  {
+   "id": 23,
+   "step": 5,
+   "body": "Einstellungsstopp für reine Sachbearbeitung, die fällt weg"
+  },
+  {
+   "id": 24,
+   "step": 5,
+   "body": "Mitarbeiter an Effizienzgewinnen beteiligen"
+  },
+  {
+   "id": 25,
+   "step": 5,
+   "body": "Azubi-Kampagne auf TikTok/Insta, von Azubis selbst gemacht"
+  },
+  {
+   "id": 26,
+   "step": 5,
+   "body": "Kooperation mit Berufsschule und 2 Realschulen"
+  },
+  {
+   "id": 27,
+   "step": 5,
+   "body": "Fachkräfte aus dem Ausland, Vietnam oder Indien, mit Sprachkurs und Wohnung"
+  },
+  {
+   "id": 28,
+   "step": 5,
+   "body": "Prozesswissen der Alten aufschreiben bzw filmen bevor sie gehen"
+  },
+  {
+   "id": 29,
+   "step": 5,
+   "body": "Rentner als Teilzeit-Mentoren zurückholen"
+  },
+  {
+   "id": 30,
+   "step": 5,
+   "body": "4-Tage-Woche in der Montage testen"
+  },
+  {
+   "id": 31,
+   "step": 5,
+   "body": "Werkswohnungen? wir haben das Grundstück neben Halle 2"
+  },
+  {
+   "id": 32,
+   "step": 5,
+   "body": "Meister zu Coaches ausbilden"
+  },
+  {
+   "id": 33,
+   "step": 5,
+   "body": "Fertigungstiefe reduzieren, mehr zukaufen"
+  },
+  {
+   "id": 34,
+   "step": 5,
+   "body": "Prämie für Mitarbeiter-werben-Mitarbeiter verdoppeln"
+  },
+  {
+   "id": 35,
+   "step": 5,
+   "body": "Arbeitgebermarke: endlich zeigen was wir eigentlich können"
+  },
+  {
+   "id": 36,
+   "step": 5,
+   "body": "Werk 2 in Tschechien ausbauen"
+  },
+  {
+   "id": 37,
+   "step": 5,
+   "body": "Quereinsteiger aus der Gastro anlernen"
+  },
+  {
+   "id": 38,
+   "step": 5,
+   "body": "Auf Kosten und Effizienz gehen, Lean ausrollen"
+  },
+  {
+   "id": 39,
+   "step": 5,
+   "body": "Kundenstamm verbreitern, weg von den 2 Großkunden"
+  },
+  {
+   "id": 40,
+   "step": 5,
+   "body": "In neue Maschinen investieren statt in Software"
+  },
+  {
+   "id": 41,
+   "step": 5,
+   "body": "Vertrieb in Skandinavien aufbauen"
+  },
+  {
+   "id": 42,
+   "step": 5,
+   "body": "Preise erhöhen solange die Kunden mitgehen"
+  },
+  {
+   "id": 43,
+   "step": 5,
+   "body": "Trotzdem kleine KI-Experimente laufen lassen damit wir nicht abgehängt werden"
+  },
+  {
+   "id": 44,
+   "step": 5,
+   "body": "Weiterbildung in klassischen Technikthemen (CNC, Schweißen)"
+  },
+  {
+   "id": 45,
+   "step": 5,
+   "body": "Führungskräfte-Feedback einführen"
+  },
+  {
+   "id": 46,
+   "step": 5,
+   "body": "Eigenkapital stärken, Rücklagen für schlechte Jahre"
+  },
+  {
+   "id": 47,
+   "step": 5,
+   "body": "Mehr Azubis als wir brauchen, Überhang an Partner weitergeben"
+  },
+  {
+   "id": 48,
+   "step": 5,
+   "body": "Nix ändern, läuft doch"
+  },
+  {
+   "id": 49,
+   "step": 5,
+   "body": "Energie: PV auf alle Hallendächer"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "Fachkräfte",
+   "lo": "knapp",
+   "hi": "verfügbar"
+  },
+  "y": {
+   "label": "KI im Kerngeschäft",
+   "lo": "Randthema",
+   "hi": "verändert alles"
+  },
+  "zones": [
+   {
+    "label": "Maschinen statt Menschen",
+    "hint": "Fachkräfte knapp · KI verändert alles",
+    "color": "lila",
+    "summary": "Wer wenig Leute hat, muss Wissen in Systeme bringen und die Wenigen zu Gestaltern machen.",
+    "ids": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ]
+   },
+   {
+    "label": "Neue Arbeitsteilung",
+    "hint": "Fachkräfte verfügbar · KI verändert alles",
+    "color": "blau",
+    "summary": "Genug Leute, aber andere Arbeit: Umschulen schlägt Einstellen, Tempo bei Weiterbildung entscheidet.",
+    "ids": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ]
+   },
+   {
+    "label": "Leere Werkbank",
+    "hint": "Fachkräfte knapp · KI bleibt Randthema",
+    "color": "orange",
+    "summary": "Der Engpass sind Menschen. Was hilft: Arbeitgeber werden, zu dem man wechselt, und Wissen sichern.",
+    "ids": [
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37
+    ]
+   },
+   {
+    "label": "Weiter wie bisher",
+    "hint": "Fachkräfte verfügbar · KI bleibt Randthema",
+    "color": "grün",
+    "summary": "Das bequemste Szenario und das gefährlichste: Wer hier nur verwaltet, verliert in den drei anderen.",
+    "ids": [
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49
+    ]
+   }
+  ],
+  "marks": {
+   "1": "robust",
+   "4": "robust",
+   "5": "hedge",
+   "7": "robust",
+   "10": "robust",
+   "12": "hedge",
+   "15": "robust",
+   "17": "robust",
+   "19": "robust",
+   "23": "hedge",
+   "31": "hedge",
+   "33": "hedge",
+   "35": "robust",
+   "36": "hedge",
+   "39": "robust",
+   "40": "hedge",
+   "43": "robust",
+   "45": "robust",
+   "46": "robust",
+   "49": "robust"
+  }
+ },
+ "ai": {
+  "headline": "Wissen sichern, Führung erneuern und Kundenstamm verbreitern tragen in jeder Zukunft. Alles andere ist eine Wette.",
+  "convergence": [
+   {
+    "label": "Maschinen statt Menschen",
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "quote": "Prozesswissen der Alten jetzt in eine KI-Wissensdatenbank bringen"
+   },
+   {
+    "label": "Leere Werkbank",
+    "ids": [
+     25,
+     26,
+     27,
+     28
+    ]
+   }
+  ],
+  "tension": [
+   {
+    "label": "Weiter wie bisher",
+    "a": "KI-Experimente als Versicherung",
+    "b": "Nix ändern, läuft doch"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kunden",
+    "why": "Keine Strategie fragt, wie sich eure Kunden in diesen Szenarien verhalten."
+   },
+   {
+    "label": "Finanzierung",
+    "why": "Viele Strategien kosten Geld; wie ihr sie bezahlt, bleibt offen."
+   }
+  ]
+ }
+}

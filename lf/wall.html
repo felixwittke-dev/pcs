@@ -259,7 +259,7 @@ function renderPanel(animate) {
   const cols = el('div', null, 'cols'); box.append(cols);
   const card = (title, arr, fn) => { if (!arr || !arr.length) return; const c = rv(el('div', null, 'card')); c.append(el('h3', title)); arr.forEach(x => c.append(rv(fn(x)))); cols.append(c); };
   // Eintraege, deren Name zu einem Thema / einer Bahn / einem Muster / einem Paar passt, fuehren per Klick dorthin.
-  const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes || d0.patterns || d0.pairs || []) : [];
+  const d0 = view && view.data || {}, things = view ? (view.themes.length ? view.themes : d0.lanes || d0.patterns || d0.pairs || d0.zones || []) : [];
   const find = label => things.findIndex(t => t.label === label || t.question === label);
   const link = (d, label, text) => { const k = find(label); if (k < 0) return d.append(el('b', text));
     const b = el('button', text, 'c-' + (things[k].color || 'none')); b.onclick = () => go(k); d.append(b); };

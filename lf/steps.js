@@ -15,6 +15,8 @@ const LS = {
   '25-10':        { name: '25/10 Crowd Sourcing', icon: '25-10-crowdsourcing', viz: 'ranking', noun: 'Ideen', panel: ['Was ganz oben steht', 'Wo die Wertungen auseinandergehen', 'Mutige Ideen weiter unten'] },
   'wicked':       { name: 'Wicked Questions', icon: 'wicked-questions', viz: 'pairs', panel: ['Spannungen, die viele spüren', 'Die Pole Seite an Seite', 'Was noch keiner fragt'] },
   'appreciative': { name: 'Appreciative Interviews', icon: 'appreciative-interviews', viz: 'patterns', noun: 'Geschichten', panel: ['Was Erfolg möglich gemacht hat', 'Wo Geschichten sich widersprechen', 'Was in keiner Geschichte vorkommt'] },
+  'acm':          { name: 'Agreement & Certainty Matrix', icon: 'agreement-certainty-matrix', viz: 'map', noun: 'Herausforderungen' },
+  'critical':     { name: 'Critical Uncertainties', icon: 'critical-uncertainties', viz: 'map', noun: 'Strategien' },
 };
 
 // Darstellungs-Bausteine der Wand (viz-*.js tragen sich hier ein). Ohne Baustein gilt das Themen-Mosaik.

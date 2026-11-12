@@ -1,0 +1,155 @@
+{
+ "step": {
+  "label": "Critical Uncertainties · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Critical Uncertainties",
+   "icon": "critical-uncertainties",
+   "noun": "Strategien",
+   "panel": [
+    "Was in jeder Zukunft trägt",
+    "Wo Szenarien sich widersprechen",
+    "Was keine Strategie abdeckt"
+   ]
+  },
+  "q": "Was tun wir, wenn diese Zukunft eintritt?",
+  "how": "Schaut nach vorn: Welche Strategien tragen in mehreren Szenarien?",
+  "show": [
+   5
+  ]
+ },
+ "people": 8,
+ "rows": [
+  {
+   "id": 1,
+   "step": 5,
+   "body": "Prozesswissen der Alten jetzt in eine KI-Wissensdatenbank bringen"
+  },
+  {
+   "id": 2,
+   "step": 5,
+   "body": "Lernzeit fest einplanen, 2h pro Woche für jeden"
+  },
+  {
+   "id": 3,
+   "step": 5,
+   "body": "KI-Führerschein für alle Führungskräfte"
+  },
+  {
+   "id": 4,
+   "step": 5,
+   "body": "Mit dem Betriebsrat eine KI-Vereinbarung abschließen bevor es knallt"
+  },
+  {
+   "id": 5,
+   "step": 5,
+   "body": "Azubi-Kampagne auf TikTok/Insta, von Azubis selbst gemacht"
+  },
+  {
+   "id": 6,
+   "step": 5,
+   "body": "Arbeitgebermarke: endlich zeigen was wir eigentlich können"
+  },
+  {
+   "id": 7,
+   "step": 5,
+   "body": "Kundenstamm verbreitern, weg von den 2 Großkunden"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "grid",
+  "x": {
+   "label": "Fachkräfte",
+   "lo": "knapp",
+   "hi": "verfügbar"
+  },
+  "y": {
+   "label": "KI im Kerngeschäft",
+   "lo": "Randthema",
+   "hi": "verändert alles"
+  },
+  "zones": [
+   {
+    "label": "Maschinen statt Menschen",
+    "hint": "Fachkräfte knapp · KI verändert alles",
+    "color": "lila",
+    "summary": "Wer wenig Leute hat, muss Wissen in Systeme bringen und die Wenigen zu Gestaltern machen.",
+    "ids": [
+     1,
+     2
+    ]
+   },
+   {
+    "label": "Neue Arbeitsteilung",
+    "hint": "Fachkräfte verfügbar · KI verändert alles",
+    "color": "blau",
+    "summary": "Genug Leute, aber andere Arbeit: Umschulen schlägt Einstellen, Tempo bei Weiterbildung entscheidet.",
+    "ids": [
+     3,
+     4
+    ]
+   },
+   {
+    "label": "Leere Werkbank",
+    "hint": "Fachkräfte knapp · KI bleibt Randthema",
+    "color": "orange",
+    "summary": "Der Engpass sind Menschen. Was hilft: Arbeitgeber werden, zu dem man wechselt, und Wissen sichern.",
+    "ids": [
+     5,
+     6
+    ]
+   },
+   {
+    "label": "Weiter wie bisher",
+    "hint": "Fachkräfte verfügbar · KI bleibt Randthema",
+    "color": "grün",
+    "summary": "Das bequemste Szenario und das gefährlichste: Wer hier nur verwaltet, verliert in den drei anderen.",
+    "ids": [
+     7
+    ]
+   }
+  ],
+  "marks": {
+   "1": "robust",
+   "2": "robust",
+   "3": "robust",
+   "4": "robust",
+   "6": "robust",
+   "7": "robust"
+  }
+ },
+ "ai": {
+  "headline": "Lernzeit und eine starke Arbeitgebermarke tragen in jedem Szenario.",
+  "convergence": [
+   {
+    "label": "Maschinen statt Menschen",
+    "ids": [
+     1,
+     2
+    ],
+    "quote": "Prozesswissen der Alten jetzt in eine KI-Wissensdatenbank bringen"
+   },
+   {
+    "label": "Leere Werkbank",
+    "ids": [
+     5,
+     6
+    ]
+   }
+  ],
+  "tension": [
+   {
+    "label": "Weiter wie bisher",
+    "a": "KI-Experimente als Versicherung",
+    "b": "Nix ändern, läuft doch"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kunden",
+    "why": "Keine Strategie fragt, wie sich eure Kunden in diesen Szenarien verhalten."
+   }
+  ]
+ }
+}

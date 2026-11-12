@@ -1,0 +1,565 @@
+{
+ "step": {
+  "label": "Agreement & Certainty Matrix · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Agreement & Certainty Matrix",
+   "icon": "agreement-certainty-matrix",
+   "noun": "Herausforderungen",
+   "panel": [
+    "Wo sich Herausforderungen ballen",
+    "Wo die Einschätzungen auseinandergehen",
+    "Was auf keiner Karte steht"
+   ]
+  },
+  "q": "Welche Herausforderungen beschäftigen euch gerade, und wie einig und sicher seid ihr euch dabei?",
+  "how": "Schaut nach vorn: Welche Zone braucht welche Art von Vorgehen?",
+  "show": [
+   3
+  ]
+ },
+ "people": 34,
+ "rows": [
+  {
+   "id": 1,
+   "step": 3,
+   "body": "Urlaubsplanung läuft immer noch über die excel liste im flur, keiner weiß wer wann weg ist"
+  },
+  {
+   "id": 2,
+   "step": 3,
+   "body": "Besprechungsraum EG ist ständig doppelt gebucht"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Neue Leute bekommen am ersten Tag keinen Laptop, IT erfährt oft garnicht dass jemand anfängt"
+  },
+  {
+   "id": 4,
+   "step": 3,
+   "body": "Reisekostenabrechnung dauert 6 wochen bis das geld da ist!!"
+  },
+  {
+   "id": 5,
+   "step": 3,
+   "body": "ERP Umstellung von R3 auf S/4 bis 2027, Termin wackelt jetzt schon"
+  },
+  {
+   "id": 6,
+   "step": 3,
+   "body": "Lieferzeiten Elektronikbauteile schwanken extrem, teilweise 40 wochen"
+  },
+  {
+   "id": 7,
+   "step": 3,
+   "body": "Energiekosten Härterei. lohnt sich eigene PV + Speicher? rechnet das mal jemand durch"
+  },
+  {
+   "id": 8,
+   "step": 3,
+   "body": "Ausschuss Linie 3 seit Frühjahr bei 4% statt 1,5%. Ursache unklar"
+  },
+  {
+   "id": 9,
+   "step": 3,
+   "body": "ISO 50001 Audit im März, Unterlagen noch nicht mal angefangen"
+  },
+  {
+   "id": 10,
+   "step": 3,
+   "body": "Preiserhöhung bei Bestandskunden durchsetzen - Vertrieb will nicht, GF schon"
+  },
+  {
+   "id": 11,
+   "step": 3,
+   "body": "Schichtmodell: 3-Schicht oder 2-Schicht plus Samstag? BR und Produktion sehen das völlig anders"
+  },
+  {
+   "id": 12,
+   "step": 3,
+   "body": "CO2 Bilanz Scope 3 für die OEMs, ab nächstem Jahr Pflicht für Lieferanten"
+  },
+  {
+   "id": 13,
+   "step": 3,
+   "body": "Beim Zulieferer gabs letztes jahr nen Cyberangriff. wie sicher sind wir eigentlich?"
+  },
+  {
+   "id": 14,
+   "step": 3,
+   "body": "Alte Fräsen, für die DMG von 2004 gibts teils keine Ersatzteile mehr"
+  },
+  {
+   "id": 15,
+   "step": 3,
+   "body": "Lager platzt aus allen nähten. Neubau Halle 4 oder Fremdlager?"
+  },
+  {
+   "id": 16,
+   "step": 3,
+   "body": "Homeoffice in der Verwaltung, jede Abteilung macht es anders, das sorgt für Neid"
+  },
+  {
+   "id": 17,
+   "step": 3,
+   "body": "Angebote dauern zu lange, Kalkulation hängt an zwei Personen"
+  },
+  {
+   "id": 18,
+   "step": 3,
+   "body": "Wie gewinnen wir überhaupt noch Azubis? Bewerbungen haben sich seit 2022 halbiert"
+  },
+  {
+   "id": 19,
+   "step": 3,
+   "body": "Nachfolge GF. Der Senior will nicht loslassen und keiner spricht offen drüber"
+  },
+  {
+   "id": 20,
+   "step": 3,
+   "body": "KI in der Konstruktion - Spielerei oder echter Wettbewerbsfaktor?"
+  },
+  {
+   "id": 21,
+   "step": 3,
+   "body": "Vertrieb und Produktion, bei jedem Eiltermin gegenseitige Vorwürfe"
+  },
+  {
+   "id": 22,
+   "step": 3,
+   "body": "In 5 Jahren gehen 30 erfahrene Kollegen in Rente, das Wissen ist nur in deren Köpfen"
+  },
+  {
+   "id": 23,
+   "step": 3,
+   "body": "Service-/Wartungsverträge als neues Geschäftsfeld, aber Kunden wollen dafür eigentlich nicht zahlen"
+  },
+  {
+   "id": 24,
+   "step": 3,
+   "body": "Unsere Meister führen wie vor 30 jahren, die Jungen kündigen nach einem Jahr"
+  },
+  {
+   "id": 25,
+   "step": 3,
+   "body": "60% vom Umsatz mit 2 Großkunden. Das ist ein Klumpenrisiko"
+  },
+  {
+   "id": 26,
+   "step": 3,
+   "body": "Digitalisierung Shopfloor: viele Piloten, nix wird ausgerollt"
+  },
+  {
+   "id": 27,
+   "step": 3,
+   "body": "Wie bleiben wir attraktiv als Arbeitgeber ohne Konzerngehälter zahlen zu können"
+  },
+  {
+   "id": 28,
+   "step": 3,
+   "body": "Fluktuation in der Montage bei 18%"
+  },
+  {
+   "id": 29,
+   "step": 3,
+   "body": "Werk 2 in Tschechien ausbauen oder zurückholen?"
+  },
+  {
+   "id": 30,
+   "step": 3,
+   "body": "Infos kommen nur übern Flurfunk, von oben kommt nix"
+  },
+  {
+   "id": 31,
+   "step": 3,
+   "body": "Elektrifizierung: unsere Getriebeteile braucht im E-Auto keiner mehr. was dann"
+  },
+  {
+   "id": 32,
+   "step": 3,
+   "body": "Wenn der Hauptkunde wirklich nach Mexiko verlagert, was dann???"
+  },
+  {
+   "id": 33,
+   "step": 3,
+   "body": "Zölle USA, keiner weiß was nächstes Jahr gilt"
+  },
+  {
+   "id": 34,
+   "step": 3,
+   "body": "Gerüchte über Verkauf an einen Investor, die Leute sind total verunsichert"
+  },
+  {
+   "id": 35,
+   "step": 3,
+   "body": "Was wenn Gas wieder knapp wird, Härterei steht dann"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "bands",
+  "bands": [
+   0.38,
+   0.75,
+   1.1
+  ],
+  "x": {
+   "label": "Wie sicher wissen wir, was wirkt?",
+   "lo": "sicher",
+   "hi": "unklar"
+  },
+  "y": {
+   "label": "Wie einig sind wir uns?",
+   "lo": "einig",
+   "hi": "uneinig"
+  },
+  "zones": [
+   {
+    "label": "Simple",
+    "hint": "Einfach",
+    "color": "grün",
+    "ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "summary": "Ärgernisse mit klarer Lösung: entscheiden, umsetzen, abhaken."
+   },
+   {
+    "label": "Complicated",
+    "hint": "Kompliziert",
+    "color": "blau",
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ],
+    "summary": "Fachleute und Analyse helfen; bei Preisen, Schichtmodell und Homeoffice fehlt vor allem eine klare Entscheidung."
+   },
+   {
+    "label": "Complex",
+    "hint": "Komplex",
+    "color": "lila",
+    "ids": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "summary": "Der größte Block dreht sich um Menschen: Nachwuchs, Führung, Wissen. Kleine Experimente statt großer Pläne."
+   },
+   {
+    "label": "Chaotic",
+    "hint": "Chaotisch",
+    "color": "koralle",
+    "ids": [
+     32,
+     33,
+     34,
+     35
+    ],
+    "summary": "Äußere Schocks: erst handeln, dann verstehen. Notfallpläne jetzt vorbereiten, nicht im Ernstfall."
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "x": 0.15,
+    "y": 0.12,
+    "short": "Urlaubsplanung per Excel-Liste"
+   },
+   {
+    "id": 2,
+    "x": 0.08,
+    "y": 0.22,
+    "short": "Raum EG doppelt gebucht"
+   },
+   {
+    "id": 3,
+    "x": 0.22,
+    "y": 0.18,
+    "short": "Kein Laptop am ersten Tag"
+   },
+   {
+    "id": 4,
+    "x": 0.28,
+    "y": 0.08,
+    "short": "Reisekosten dauern 6 Wochen"
+   },
+   {
+    "id": 5,
+    "x": 0.55,
+    "y": 0.2,
+    "short": "S/4-Umstellung bis 2027"
+   },
+   {
+    "id": 6,
+    "x": 0.62,
+    "y": 0.26,
+    "short": "Lieferzeiten Elektronik"
+   },
+   {
+    "id": 7,
+    "x": 0.45,
+    "y": 0.3,
+    "short": "PV + Speicher für Härterei?"
+   },
+   {
+    "id": 8,
+    "x": 0.5,
+    "y": 0.14,
+    "short": "Ausschuss Linie 3 bei 4 %"
+   },
+   {
+    "id": 9,
+    "x": 0.36,
+    "y": 0.24,
+    "short": "ISO-50001-Audit im März"
+   },
+   {
+    "id": 10,
+    "x": 0.18,
+    "y": 0.56,
+    "short": "Preiserhöhung Bestandskunden"
+   },
+   {
+    "id": 11,
+    "x": 0.3,
+    "y": 0.62,
+    "short": "3-Schicht oder 2 + Samstag"
+   },
+   {
+    "id": 12,
+    "x": 0.56,
+    "y": 0.3,
+    "short": "CO2-Bilanz Scope 3"
+   },
+   {
+    "id": 13,
+    "x": 0.6,
+    "y": 0.2,
+    "short": "Cyberschutz prüfen"
+   },
+   {
+    "id": 14,
+    "x": 0.42,
+    "y": 0.36,
+    "short": "Ersatzteile alte Fräsen"
+   },
+   {
+    "id": 15,
+    "x": 0.46,
+    "y": 0.46,
+    "short": "Neubau Halle 4 oder Fremdlager"
+   },
+   {
+    "id": 16,
+    "x": 0.14,
+    "y": 0.6,
+    "short": "Homeoffice-Regel Verwaltung"
+   },
+   {
+    "id": 17,
+    "x": 0.52,
+    "y": 0.32,
+    "short": "Kalkulation hängt an zwei"
+   },
+   {
+    "id": 18,
+    "x": 0.76,
+    "y": 0.44,
+    "short": "Azubis gewinnen"
+   },
+   {
+    "id": 19,
+    "x": 0.55,
+    "y": 0.8,
+    "short": "Nachfolge Geschäftsführung"
+   },
+   {
+    "id": 20,
+    "x": 0.82,
+    "y": 0.5,
+    "short": "KI in der Konstruktion"
+   },
+   {
+    "id": 21,
+    "x": 0.44,
+    "y": 0.7,
+    "short": "Vertrieb vs. Produktion"
+   },
+   {
+    "id": 22,
+    "x": 0.7,
+    "y": 0.34,
+    "short": "Wissen der Rentner sichern"
+   },
+   {
+    "id": 23,
+    "x": 0.74,
+    "y": 0.56,
+    "short": "Servicegeschäft aufbauen"
+   },
+   {
+    "id": 24,
+    "x": 0.6,
+    "y": 0.66,
+    "short": "Führungskultur der Meister"
+   },
+   {
+    "id": 25,
+    "x": 0.7,
+    "y": 0.48,
+    "short": "Abhängigkeit 2 Großkunden"
+   },
+   {
+    "id": 26,
+    "x": 0.66,
+    "y": 0.44,
+    "short": "Piloten ohne Rollout"
+   },
+   {
+    "id": 27,
+    "x": 0.68,
+    "y": 0.62,
+    "short": "Attraktiv ohne Konzerngehalt"
+   },
+   {
+    "id": 28,
+    "x": 0.56,
+    "y": 0.56,
+    "short": "Fluktuation Montage 18 %"
+   },
+   {
+    "id": 29,
+    "x": 0.62,
+    "y": 0.74,
+    "short": "Werk 2: ausbauen oder zurück?"
+   },
+   {
+    "id": 30,
+    "x": 0.34,
+    "y": 0.76,
+    "short": "Infos nur über Flurfunk"
+   },
+   {
+    "id": 31,
+    "x": 0.86,
+    "y": 0.56,
+    "short": "Getriebeteile ohne Zukunft?"
+   },
+   {
+    "id": 32,
+    "x": 0.9,
+    "y": 0.82,
+    "short": "Hauptkunde geht nach Mexiko?"
+   },
+   {
+    "id": 33,
+    "x": 0.96,
+    "y": 0.72,
+    "short": "US-Zölle ungewiss"
+   },
+   {
+    "id": 34,
+    "x": 0.7,
+    "y": 0.95,
+    "short": "Gerüchte: Verkauf an Investor"
+   },
+   {
+    "id": 35,
+    "x": 0.93,
+    "y": 0.76,
+    "short": "Gas knapp, Härterei steht"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Die meisten Herausforderungen sind keine Wissensfragen, sondern Fragen, bei denen ihr euch erst einig werden müsst.",
+  "convergence": [
+   {
+    "label": "Complex",
+    "ids": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "quote": "die Jungen kündigen nach einem Jahr"
+   },
+   {
+    "label": "Complicated",
+    "ids": [
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ],
+    "quote": "rechnet das mal jemand durch"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Complicated",
+    "a": "Preiserhöhung ist eine Rechenaufgabe",
+    "b": "Preiserhöhung ist eine Machtfrage zwischen Vertrieb und GF"
+   },
+   {
+    "label": "Complex",
+    "a": "Azubis fehlen, weil es zu wenige gibt",
+    "b": "Azubis fehlen, weil die Führung sie vergrault"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kundensicht",
+    "why": "Keine Herausforderung beschreibt, was Kunden von euch künftig erwarten."
+   },
+   {
+    "label": "Eigene Stärken",
+    "why": "Alles ist Problem; worauf ihr bauen könnt, steht nirgends."
+   }
+  ]
+ }
+}

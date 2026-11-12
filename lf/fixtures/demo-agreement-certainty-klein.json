@@ -1,0 +1,210 @@
+{
+ "step": {
+  "label": "Agreement & Certainty Matrix · alle",
+  "phase": "alle",
+  "lsDef": {
+   "name": "Agreement & Certainty Matrix",
+   "icon": "agreement-certainty-matrix",
+   "noun": "Herausforderungen",
+   "panel": [
+    "Wo sich Herausforderungen ballen",
+    "Wo die Einschätzungen auseinandergehen",
+    "Was auf keiner Karte steht"
+   ]
+  },
+  "q": "Welche Herausforderungen beschäftigen euch gerade, und wie einig und sicher seid ihr euch dabei?",
+  "how": "Schaut nach vorn: Welche Zone braucht welche Art von Vorgehen?",
+  "show": [
+   3
+  ]
+ },
+ "people": 8,
+ "rows": [
+  {
+   "id": 1,
+   "step": 3,
+   "body": "Urlaubsplanung läuft immer noch über die excel liste im flur, keiner weiß wer wann weg ist"
+  },
+  {
+   "id": 2,
+   "step": 3,
+   "body": "Reisekostenabrechnung dauert 6 wochen bis das geld da ist!!"
+  },
+  {
+   "id": 3,
+   "step": 3,
+   "body": "Preiserhöhung bei Bestandskunden durchsetzen - Vertrieb will nicht, GF schon"
+  },
+  {
+   "id": 4,
+   "step": 3,
+   "body": "Alte Fräsen, für die DMG von 2004 gibts teils keine Ersatzteile mehr"
+  },
+  {
+   "id": 5,
+   "step": 3,
+   "body": "Wie gewinnen wir überhaupt noch Azubis? Bewerbungen haben sich seit 2022 halbiert"
+  },
+  {
+   "id": 6,
+   "step": 3,
+   "body": "Nachfolge GF. Der Senior will nicht loslassen und keiner spricht offen drüber"
+  },
+  {
+   "id": 7,
+   "step": 3,
+   "body": "60% vom Umsatz mit 2 Großkunden. Das ist ein Klumpenrisiko"
+  },
+  {
+   "id": 8,
+   "step": 3,
+   "body": "Wenn der Hauptkunde wirklich nach Mexiko verlagert, was dann???"
+  }
+ ],
+ "data": {
+  "viz": "map",
+  "layout": "bands",
+  "bands": [
+   0.38,
+   0.75,
+   1.1
+  ],
+  "x": {
+   "label": "Wie sicher wissen wir, was wirkt?",
+   "lo": "sicher",
+   "hi": "unklar"
+  },
+  "y": {
+   "label": "Wie einig sind wir uns?",
+   "lo": "einig",
+   "hi": "uneinig"
+  },
+  "zones": [
+   {
+    "label": "Simple",
+    "hint": "Einfach",
+    "color": "grün",
+    "ids": [
+     1,
+     2
+    ],
+    "summary": "Klar, was zu tun ist: einfach erledigen."
+   },
+   {
+    "label": "Complicated",
+    "hint": "Kompliziert",
+    "color": "blau",
+    "ids": [
+     3,
+     4
+    ],
+    "summary": "Hier helfen Fachleute und eine saubere Analyse."
+   },
+   {
+    "label": "Complex",
+    "hint": "Komplex",
+    "color": "lila",
+    "ids": [
+     5,
+     6,
+     7
+    ],
+    "summary": "Niemand weiß die Antwort vorher: klein ausprobieren und lernen."
+   },
+   {
+    "label": "Chaotic",
+    "hint": "Chaotisch",
+    "color": "koralle",
+    "ids": [
+     8
+    ],
+    "summary": "Erst handeln, dann verstehen."
+   }
+  ],
+  "items": [
+   {
+    "id": 1,
+    "x": 0.15,
+    "y": 0.12,
+    "short": "Urlaubsplanung per Excel-Liste"
+   },
+   {
+    "id": 2,
+    "x": 0.28,
+    "y": 0.08,
+    "short": "Reisekosten dauern 6 Wochen"
+   },
+   {
+    "id": 3,
+    "x": 0.18,
+    "y": 0.56,
+    "short": "Preiserhöhung Bestandskunden"
+   },
+   {
+    "id": 4,
+    "x": 0.42,
+    "y": 0.36,
+    "short": "Ersatzteile alte Fräsen"
+   },
+   {
+    "id": 5,
+    "x": 0.76,
+    "y": 0.44,
+    "short": "Azubis gewinnen"
+   },
+   {
+    "id": 6,
+    "x": 0.55,
+    "y": 0.8,
+    "short": "Nachfolge Geschäftsführung"
+   },
+   {
+    "id": 7,
+    "x": 0.7,
+    "y": 0.48,
+    "short": "Abhängigkeit 2 Großkunden"
+   },
+   {
+    "id": 8,
+    "x": 0.9,
+    "y": 0.82,
+    "short": "Hauptkunde geht nach Mexiko?"
+   }
+  ]
+ },
+ "ai": {
+  "headline": "Wenig ist wirklich einfach, das meiste braucht Ausprobieren.",
+  "convergence": [
+   {
+    "label": "Complex",
+    "ids": [
+     5,
+     6,
+     7
+    ],
+    "quote": "die Jungen kündigen nach einem Jahr"
+   },
+   {
+    "label": "Complicated",
+    "ids": [
+     3,
+     4
+    ],
+    "quote": "rechnet das mal jemand durch"
+   }
+  ],
+  "tension": [
+   {
+    "label": "Complicated",
+    "a": "Preiserhöhung ist eine Rechenaufgabe",
+    "b": "Preiserhöhung ist eine Machtfrage zwischen Vertrieb und GF"
+   }
+  ],
+  "blind_spots": [
+   {
+    "label": "Kundensicht",
+    "why": "Keine Herausforderung beschreibt, was Kunden von euch künftig erwarten."
+   }
+  ]
+ }
+}
